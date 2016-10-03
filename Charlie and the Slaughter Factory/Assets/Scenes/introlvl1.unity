@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 112934720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 112934719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: -18.6, z: 0}
+  m_LocalPosition: {x: 1.8, y: -25.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481194172}
   - 68: {fileID: 481194173}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: GameObject3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,13 +300,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 622235134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: -0.22, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -12.4, z: -526.8542}
+  m_LocalScale: {x: 52.68542, y: 52.68542, z: 52.68542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 2057526654}
+  m_RootOrder: 1
 --- !u!1 &919130714
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 919130715}
   - 61: {fileID: 919130716}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: GameObject2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ Transform:
   - {fileID: 481194172}
   - {fileID: 317861015}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1932367662
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1932367663}
   - 60: {fileID: 1932367664}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,9 +480,9 @@ GameObject:
   - 50: {fileID: 2057526651}
   - 114: {fileID: 2057526655}
   - 95: {fileID: 2057526656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chicken sprite-02
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563,8 +563,9 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 112934720}
+  - {fileID: 622235139}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &2057526655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,7 +581,8 @@ MonoBehaviour:
   jump: 1
   maxSpeed: 3
   speed: 50
-  jumpPower: 150
+  jumpForce: 1000
+  groundCheck: {fileID: 112934720}
   grounded: 0
 --- !u!95 &2057526656
 Animator:
