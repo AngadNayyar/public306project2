@@ -10,8 +10,16 @@ public class StartGame : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Username");
 	}
 
+	public void setWarningText(GameObject warning) {
+		if (username == "") {
+			warning.GetComponentInChildren<Text>().text = "Please input a valid username.";
+		}
+	}
+
 	public void submitAndStart(GameObject usernameInput) {
 		username = usernameInput.GetComponentInChildren<Text>().text;
-		UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
+		if (username != "") {
+			UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
+		}
 	}
 }
