@@ -18,6 +18,7 @@ public class StartGame : MonoBehaviour {
 
 	public void submitAndStart(GameObject usernameInput) {
 		username = usernameInput.GetComponentInChildren<Text>().text;
+		PlayerPrefs.SetString("Player1", username);
 		if (username != "") {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
 		}
