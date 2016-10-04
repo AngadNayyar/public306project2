@@ -128,7 +128,7 @@ GameObject:
   - 4: {fileID: 317861015}
   - 61: {fileID: 317861016}
   - 114: {fileID: 317861017}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GameObject4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650256081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.482, y: -3.652, z: 0}
+  m_LocalPosition: {x: -4.14, y: -3.69, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -465,8 +465,11 @@ MonoBehaviour:
   colliding: 0
   detectWhat:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   facingRight: 0
+  rightLimit: 20
+  leftLimit: 5
+  speed: 2
 --- !u!50 &1650256087
 Rigidbody2D:
   serializedVersion: 2
@@ -482,7 +485,7 @@ Rigidbody2D:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1780980044
 GameObject:
@@ -493,7 +496,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1780980046}
   - 212: {fileID: 1780980045}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: intro_lvl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +564,7 @@ GameObject:
   - 60: {fileID: 1932367664}
   m_Layer: 12
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

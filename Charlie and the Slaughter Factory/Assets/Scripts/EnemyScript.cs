@@ -24,17 +24,44 @@ public class EnemyScript : MonoBehaviour { // Moving Object
         //   base.Start();
     }
 
-    // Update is called once per frame
-    void Update() {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
+    public float rightLimit = 20f;
+    public float leftLimit = -4.3f;
+    public float speed = 1.0f;
+    private int direction = 1;
 
-        colliding = Physics2D.Linecast(transform.position, transform.position, detectWhat);
-
-        if (colliding)
+    void Update()
+    {
+        
+        if (transform.position.x > rightLimit)
         {
+            // facingRight = true;
+            print("right");
+            print(transform.position.x);
             Flip();
         }
+        else if (transform.position.x < leftLimit)
+        {
+            //facingRight = false;
+            print("left");
+            print(transform.position.x);
+            print(leftLimit);
+            Flip();
+        }
+      //  Vector3 movement = 
+       // transform.Translate(movement);
     }
+
+    // Update is called once per frame
+    /* void Update() {
+         GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
+
+         colliding = Physics2D.Linecast(transform.position, transform.position, detectWhat);
+
+         if (colliding)
+         {
+             Flip();
+         }
+     }*/
 
     void Flip()
     {
