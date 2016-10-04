@@ -579,9 +579,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 1
+  canDoubleJump: 0
   maxSpeed: 3
   speed: 50
-  jumpForce: 1000
+  jumpForce: 500
   groundCheck: {fileID: 112934720}
   grounded: 0
 --- !u!95 &2057526656
