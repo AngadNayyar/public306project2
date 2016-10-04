@@ -7,6 +7,6 @@ public class SceneScript : MonoBehaviour {
 
 
     void OnTriggerEnter2D() {
-        SceneManager.LoadScene("introlvl2");
+        SceneManager.LoadScene("CompletedLevelExit");
     }
 }

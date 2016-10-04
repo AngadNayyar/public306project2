@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Username.unity
   - enabled: 1
     path: Assets/Scenes/GameChooser.unity
+  - enabled: 1
+    path: Assets/Scenes/CompletedLevelExit.unity
