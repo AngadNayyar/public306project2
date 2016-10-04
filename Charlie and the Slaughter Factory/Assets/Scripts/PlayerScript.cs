@@ -48,13 +48,15 @@ public class PlayerScript : MonoBehaviour {
 		// If the down arrow key is pressed, make the character slide, and set the box collider to a smaller height. 
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			slide = true; 
-			bc.size = new Vector2 (51, 20); 
+			//bc.size = new Vector2 (5.5f, 2.5f); 
+			anim.SetBool ("Slide", true); 
 		}
 	
 		// If the down arrow key is released, make the character stop sliding, and set the box collider to a original height. 
 		if (Input.GetKeyUp (KeyCode.DownArrow)) {
 			slide = false;
-			bc.size = new Vector2 (51, 47);
+			anim.SetBool ("Slide", false); 
+			//bc.size = new Vector2 (5.5f, 5.3f);
 		}
 
 
