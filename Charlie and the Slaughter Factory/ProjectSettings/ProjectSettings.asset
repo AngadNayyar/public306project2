@@ -4,14 +4,14 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  productGUID: 2175eaef6b56ce840b5d9f4809a2bd9e
+  productGUID: 3a8984573b6d44decadf1ac29eacc6ec
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Charlie and the Slaughter Factory
+  productName: _2D v3
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenStyle: 0
@@ -51,7 +51,7 @@ PlayerSettings:
   forceSingleInstance: 0
   resizableWindow: 0
   useMacAppStoreValidation: 0
-  gpuSkinning: 0
+  gpuSkinning: 1
   graphicsJobs: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
@@ -104,7 +104,7 @@ PlayerSettings:
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
-  aotOptions: 
+  aotOptions:
   apiCompatibilityLevel: 2
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -120,7 +120,7 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 238
   iPhoneSdkVersion: 988
-  iPhoneTargetOSVersion: 24
+  iPhoneTargetOSVersion: 22
   tvOSSdkVersion: 0
   tvOSTargetOSVersion: 900
   uIPrerenderedIcon: 0
@@ -151,7 +151,7 @@ PlayerSettings:
     rgba: 0
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
-  iOSLaunchScreenCustomXibPath: 
+  iOSLaunchScreenCustomXibPath:
   iOSLaunchScreeniPadType: 0
   iOSLaunchScreeniPadImage: {fileID: 0}
   iOSLaunchScreeniPadBackgroundColor:
@@ -159,14 +159,14 @@ PlayerSettings:
     rgba: 0
   iOSLaunchScreeniPadFillPct: 100
   iOSLaunchScreeniPadSize: 100
-  iOSLaunchScreeniPadCustomXibPath: 
+  iOSLaunchScreeniPadCustomXibPath:
   iOSDeviceRequirements: []
   iOSURLSchemes: []
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName:
+  AndroidKeyaliasName:
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
@@ -176,9 +176,21 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget:
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching: []
-  m_BuildTargetGraphicsAPIs: []
+  m_BuildTargetGraphicsAPIs:
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 01000000
+    m_Automatic: 0
+  - m_BuildTarget: AndroidPlayer
+    m_APIs: 08000000
+    m_Automatic: 0
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   wiiUTitleID: 0005000011000000
@@ -197,15 +209,15 @@ PlayerSettings:
   wiiUSystemHeapSize: 128
   wiiUTVStartupScreen: {fileID: 0}
   wiiUGamePadStartupScreen: {fileID: 0}
-  wiiUProfilerLibPath: 
+  wiiUProfilerLibPath:
   actionOnDotNetUnhandledException: 1
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  locationUsageDescription: 
-  XboxTitleId: 
-  XboxImageXexPath: 
-  XboxSpaPath: 
+  locationUsageDescription:
+  XboxTitleId:
+  XboxImageXexPath:
+  XboxSpaPath:
   XboxGenerateSpa: 0
   XboxDeployKinectResources: 0
   XboxSplashScreen: {fileID: 0}
@@ -213,17 +225,17 @@ PlayerSettings:
   xboxAdditionalTitleMemorySize: 0
   xboxDeployKinectHeadOrientation: 0
   xboxDeployKinectHeadPosition: 0
-  ps3TitleConfigPath: 
-  ps3DLCConfigPath: 
-  ps3ThumbnailPath: 
-  ps3BackgroundPath: 
-  ps3SoundPath: 
+  ps3TitleConfigPath:
+  ps3DLCConfigPath:
+  ps3ThumbnailPath:
+  ps3BackgroundPath:
+  ps3SoundPath:
   ps3NPAgeRating: 12
-  ps3TrophyCommId: 
-  ps3NpCommunicationPassphrase: 
-  ps3TrophyPackagePath: 
+  ps3TrophyCommId:
+  ps3NpCommunicationPassphrase:
+  ps3TrophyPackagePath:
   ps3BootCheckMaxSaveGameSizeKB: 128
-  ps3TrophyCommSig: 
+  ps3TrophyCommSig:
   ps3SaveGameSlots: 1
   ps3TrialMode: 0
   ps3VideoMemoryForAudio: 0
@@ -232,30 +244,30 @@ PlayerSettings:
   ps3EnableMoveSupport: 1
   ps3DisableDolbyEncoding: 0
   ps4NPAgeRating: 12
-  ps4NPTitleSecret: 
-  ps4NPTrophyPackPath: 
+  ps4NPTitleSecret:
+  ps4NPTrophyPackPath:
   ps4ParentalLevel: 1
   ps4ContentID: ED1633-NPXX51362_00-0000000000000000
   ps4Category: 0
   ps4MasterVersion: 01.00
   ps4AppVersion: 01.00
   ps4AppType: 0
-  ps4ParamSfxPath: 
+  ps4ParamSfxPath:
   ps4VideoOutPixelFormat: 0
   ps4VideoOutResolution: 4
-  ps4PronunciationXMLPath: 
-  ps4PronunciationSIGPath: 
-  ps4BackgroundImagePath: 
-  ps4StartupImagePath: 
-  ps4SaveDataImagePath: 
-  ps4SdkOverride: 
-  ps4BGMPath: 
-  ps4ShareFilePath: 
-  ps4ShareOverlayImagePath: 
-  ps4PrivacyGuardImagePath: 
-  ps4NPtitleDatPath: 
+  ps4PronunciationXMLPath:
+  ps4PronunciationSIGPath:
+  ps4BackgroundImagePath:
+  ps4StartupImagePath:
+  ps4SaveDataImagePath:
+  ps4SdkOverride:
+  ps4BGMPath:
+  ps4ShareFilePath:
+  ps4ShareOverlayImagePath:
+  ps4PrivacyGuardImagePath:
+  ps4NPtitleDatPath:
   ps4RemotePlayKeyAssignment: -1
-  ps4RemotePlayKeyMappingDir: 
+  ps4RemotePlayKeyMappingDir:
   ps4PlayTogetherPlayerCount: 0
   ps4EnterButtonAssignment: 1
   ps4ApplicationParam1: 0
@@ -276,9 +288,9 @@ PlayerSettings:
   ps4SocialScreenEnabled: 0
   ps4Audio3dVirtualSpeakerCount: 14
   ps4attribCpuUsage: 0
-  ps4PatchPkgPath: 
-  ps4PatchLatestPkgPath: 
-  ps4PatchChangeinfoPath: 
+  ps4PatchPkgPath:
+  ps4PatchLatestPkgPath:
+  ps4PatchChangeinfoPath:
   ps4PatchDayOne: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
@@ -287,37 +299,37 @@ PlayerSettings:
   ps4attribExclusiveVR: 0
   ps4disableAutoHideSplash: 0
   ps4IncludedModules: []
-  monoEnv: 
+  monoEnv:
   psp2Splashimage: {fileID: 0}
-  psp2NPTrophyPackPath: 
+  psp2NPTrophyPackPath:
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
-  psp2NPTitleDatPath: 
-  psp2NPCommsID: 
-  psp2NPCommunicationsID: 
-  psp2NPCommsPassphrase: 
-  psp2NPCommsSig: 
-  psp2ParamSfxPath: 
-  psp2ManualPath: 
-  psp2LiveAreaGatePath: 
-  psp2LiveAreaBackroundPath: 
-  psp2LiveAreaPath: 
-  psp2LiveAreaTrialPath: 
-  psp2PatchChangeInfoPath: 
-  psp2PatchOriginalPackage: 
+  psp2NPTitleDatPath:
+  psp2NPCommsID:
+  psp2NPCommunicationsID:
+  psp2NPCommsPassphrase:
+  psp2NPCommsSig:
+  psp2ParamSfxPath:
+  psp2ManualPath:
+  psp2LiveAreaGatePath:
+  psp2LiveAreaBackroundPath:
+  psp2LiveAreaPath:
+  psp2LiveAreaTrialPath:
+  psp2PatchChangeInfoPath:
+  psp2PatchOriginalPackage:
   psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
-  psp2KeystoneFile: 
+  psp2KeystoneFile:
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
   psp2StorageType: 0
   psp2MediaCapacity: 0
-  psp2DLCConfigPath: 
-  psp2ThumbnailPath: 
-  psp2BackgroundPath: 
-  psp2SoundPath: 
-  psp2TrophyCommId: 
-  psp2TrophyPackagePath: 
-  psp2PackagedResourcesPath: 
+  psp2DLCConfigPath:
+  psp2ThumbnailPath:
+  psp2BackgroundPath:
+  psp2SoundPath:
+  psp2TrophyCommId:
+  psp2TrophyPackagePath:
+  psp2PackagedResourcesPath:
   psp2SaveDataQuota: 10240
   psp2ParentalLevel: 1
   psp2ShortTitle: Not Set
@@ -336,7 +348,7 @@ PlayerSettings:
   psp2InfoBarColor: 0
   psp2UseDebugIl2cppLibs: 0
   psmSplashimage: {fileID: 0}
-  spritePackerPolicy: 
+  spritePackerPolicy: DefaultPackerPolicy
   scriptingDefineSymbols:
     1: CROSS_PLATFORM_INPUT
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
@@ -345,35 +357,34 @@ PlayerSettings:
     17: MOBILE_INPUT
     20: MOBILE_INPUT
     22: MOBILE_INPUT
-  metroPackageName: Charlie and the Slaughter Factory
-  metroPackageVersion: 
-  metroCertificatePath: 
-  metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
+  metroPackageName: _2D v3
+  metroPackageVersion:
+  metroCertificatePath:
+  metroCertificatePassword:
+  metroCertificateSubject:
+  metroCertificateIssuer:
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Charlie and the Slaughter Factory
+  metroApplicationDescription: _2D v3
   wsaImages: {}
-  metroTileShortName: 
-  metroCommandLineArgsFile: 
-  metroTileShowName: 0
+  metroTileShortName:
+  metroCommandLineArgsFile:
+  metroTileShowName: 1
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
   metroWideTileShowName: 0
   metroDefaultTileSize: 1
   metroTileForegroundText: 1
-  metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
-  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
-    a: 1}
+  metroTileBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities: {}
-  metroFTAName: 
+  metroFTAName:
   metroFTAFileTypes: []
-  metroProtocolName: 
+  metroProtocolName:
   metroCompilationOverrides: 1
-  tizenProductDescription: 
-  tizenProductURL: 
-  tizenSigningProfileName: 
+  tizenProductDescription:
+  tizenProductURL:
+  tizenSigningProfileName:
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
   tizenMinOSVersion: 0
@@ -386,26 +397,26 @@ PlayerSettings:
   n3dsMediaSize: 0
   n3dsLogoStyle: 3
   n3dsTitle: GameName
-  n3dsProductCode: 
+  n3dsProductCode:
   n3dsApplicationId: 0xFF3FF
-  stvDeviceAddress: 
-  stvProductDescription: 
-  stvProductAuthor: 
-  stvProductAuthorEmail: 
-  stvProductLink: 
+  stvDeviceAddress:
+  stvProductDescription:
+  stvProductAuthor:
+  stvProductAuthorEmail:
+  stvProductLink:
   stvProductCategory: 0
-  XboxOneProductId: 
-  XboxOneUpdateKey: 
-  XboxOneSandboxId: 
-  XboxOneContentId: 
-  XboxOneTitleId: 
-  XboxOneSCId: 
-  XboxOneGameOsOverridePath: 
-  XboxOnePackagingOverridePath: 
-  XboxOneAppManifestOverridePath: 
+  XboxOneProductId:
+  XboxOneUpdateKey:
+  XboxOneSandboxId:
+  XboxOneContentId:
+  XboxOneTitleId:
+  XboxOneSCId:
+  XboxOneGameOsOverridePath:
+  XboxOnePackagingOverridePath:
+  XboxOneAppManifestOverridePath:
   XboxOnePackageEncryption: 0
   XboxOnePackageUpdateGranularity: 2
-  XboxOneDescription: 
+  XboxOneDescription:
   XboxOneIsContentPackage: 0
   XboxOneEnableGPUVariability: 0
   XboxOneSockets: {}
@@ -414,46 +425,8 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
   - Standalone::ScriptingBackend
-  - WebPlayer::ScriptingBackend
   Standalone::ScriptingBackend: 0
-  WebPlayer::ScriptingBackend: 0
-  boolPropertyNames:
-  - Android::VR::enable
-  - Metro::VR::enable
-  - N3DS::VR::enable
-  - PS3::VR::enable
-  - PS4::VR::enable
-  - PSM::VR::enable
-  - PSP2::VR::enable
-  - SamsungTV::VR::enable
-  - Standalone::VR::enable
-  - Tizen::VR::enable
-  - WebGL::VR::enable
-  - WebPlayer::VR::enable
-  - WiiU::VR::enable
-  - Xbox360::VR::enable
-  - XboxOne::VR::enable
-  - XboxOne::enus
-  - iOS::VR::enable
-  - tvOS::VR::enable
-  Android::VR::enable: 0
-  Metro::VR::enable: 0
-  N3DS::VR::enable: 0
-  PS3::VR::enable: 0
-  PS4::VR::enable: 0
-  PSM::VR::enable: 0
-  PSP2::VR::enable: 0
-  SamsungTV::VR::enable: 0
-  Standalone::VR::enable: 0
-  Tizen::VR::enable: 0
-  WebGL::VR::enable: 0
-  WebPlayer::VR::enable: 0
-  WiiU::VR::enable: 0
-  Xbox360::VR::enable: 0
-  XboxOne::VR::enable: 0
-  XboxOne::enus: 1
-  iOS::VR::enable: 0
-  tvOS::VR::enable: 0
+  boolPropertyNames: []
   stringPropertyNames:
   - Analytics_ServiceEnabled::Analytics_ServiceEnabled
   - Build_ServiceEnabled::Build_ServiceEnabled
@@ -471,47 +444,10 @@ PlayerSettings:
   Game_Performance_ServiceEnabled::Game_Performance_ServiceEnabled: False
   Hub_ServiceEnabled::Hub_ServiceEnabled: False
   Purchasing_ServiceEnabled::Purchasing_ServiceEnabled: False
-  UNet_ServiceEnabled::UNet_ServiceEnabled: True
+  UNet_ServiceEnabled::UNet_ServiceEnabled: False
   Unity_Ads_ServiceEnabled::Unity_Ads_ServiceEnabled: False
-  vectorPropertyNames:
-  - Android::VR::enabledDevices
-  - Metro::VR::enabledDevices
-  - N3DS::VR::enabledDevices
-  - PS3::VR::enabledDevices
-  - PS4::VR::enabledDevices
-  - PSM::VR::enabledDevices
-  - PSP2::VR::enabledDevices
-  - SamsungTV::VR::enabledDevices
-  - Standalone::VR::enabledDevices
-  - Tizen::VR::enabledDevices
-  - WebGL::VR::enabledDevices
-  - WebPlayer::VR::enabledDevices
-  - WiiU::VR::enabledDevices
-  - Xbox360::VR::enabledDevices
-  - XboxOne::VR::enabledDevices
-  - iOS::VR::enabledDevices
-  - tvOS::VR::enabledDevices
-  Android::VR::enabledDevices:
-  - Oculus
-  Metro::VR::enabledDevices: []
-  N3DS::VR::enabledDevices: []
-  PS3::VR::enabledDevices: []
-  PS4::VR::enabledDevices:
-  - PlayStationVR
-  PSM::VR::enabledDevices: []
-  PSP2::VR::enabledDevices: []
-  SamsungTV::VR::enabledDevices: []
-  Standalone::VR::enabledDevices:
-  - Oculus
-  Tizen::VR::enabledDevices: []
-  WebGL::VR::enabledDevices: []
-  WebPlayer::VR::enabledDevices: []
-  WiiU::VR::enabledDevices: []
-  Xbox360::VR::enabledDevices: []
-  XboxOne::VR::enabledDevices: []
-  iOS::VR::enabledDevices: []
-  tvOS::VR::enabledDevices: []
+  vectorPropertyNames: []
   cloudProjectId: cc36036c-f6a9-4734-93da-e4f3cbbc5e76
   projectName: Charlie and the Slaughter Factory
   organizationId: hjadenz
-  cloudEnabled: 0
+cloudEnabled: 0
