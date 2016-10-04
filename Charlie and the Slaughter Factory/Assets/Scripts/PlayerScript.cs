@@ -40,15 +40,16 @@ public class PlayerScript : MonoBehaviour {
 		// Check if the character is on the gorund. 
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-		// If the space bar is pressed and the character is gounded make him jump 
-		if (Input.GetKeyDown(KeyCode.Space) && grounded) {
+		// If the space bar is pressed and the character is gounded and not sliding make him jump 
+		if (Input.GetKeyDown(KeyCode.Space) && grounded && !slide) {
 			jump = true; 
 		}
 
-		// If the down arrow key is pressed, make the character slide, and set the box collider to a smaller height. 
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+		// If the down arrow key is pressed and he is not jumping, make the character slide, and set the box collider to a smaller height. 
+		if (Input.GetKeyDown (KeyCode.DownArrow) && grounded) {
+			canDoubleJump = false; 
 			slide = true; 
-			//bc.size = new Vector2 (5.5f, 2.5f); 
+			bc.size = new Vector2 (5.5f, 4.0f); 
 			anim.SetBool ("Slide", true); 
 		}
 	
@@ -56,7 +57,7 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.DownArrow)) {
 			slide = false;
 			anim.SetBool ("Slide", false); 
-			//bc.size = new Vector2 (5.5f, 5.3f);
+			bc.size = new Vector2 (5.52f, 5.36f);
 		}
 
 
