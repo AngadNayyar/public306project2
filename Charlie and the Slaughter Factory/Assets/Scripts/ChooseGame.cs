@@ -14,6 +14,7 @@ public class ChooseGame : MonoBehaviour {
 	}
 
 	public void SetUpGame() {
+		gameSlotName = PlayerPrefs.GetString(name);
 		PlayerPrefs.SetString("CurrentGame", name);
 		PlayerPrefs.Save();
 		if (gameSlotName == "") {
