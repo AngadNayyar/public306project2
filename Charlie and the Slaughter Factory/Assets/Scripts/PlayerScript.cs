@@ -9,12 +9,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public float maxSpeed = 5f;
 	public float speed = 365f;
-<<<<<<< HEAD
 	public float jumpForce = 550f;
-
-=======
-	public float jumpForce = 500f;
->>>>>>> refs/remotes/origin/master
 	public Transform groundCheck; 
 	public bool grounded = false;
 
