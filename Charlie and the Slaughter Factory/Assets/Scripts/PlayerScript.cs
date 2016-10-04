@@ -5,6 +5,7 @@ public class PlayerScript : MonoBehaviour {
 
 	[HideInInspector] public bool facingRight = true;
 	[HideInInspector] public bool jump = false;
+	[HideInInspector] public bool canDoubleJump = false;
 
 	public float maxSpeed = 5f;
 	public float speed = 365f;
@@ -32,7 +33,6 @@ public class PlayerScript : MonoBehaviour {
 			jump = true; 
 			//rb2d.AddForce (new Vector2 (0, 6), ForceMode2D.Impulse);
 		}
-
 	}
 
 	void FixedUpdate() {
@@ -61,13 +61,21 @@ public class PlayerScript : MonoBehaviour {
 		else if (h < 0 && facingRight)
 			Flip();
 
-		if (jump)
-		{
+		if (jump) {
 			anim.SetTrigger("Jump");
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 			jump = false;
+			canDoubleJump = true; 
 		}
+		if (Input.GetKeyDown(KeyCode.Space) && canDoubleJump) {
+			canDoubleJump = false; 
+			//anim.SetTrigger("Jump");
+			//rigidbody2D.velocity.y = 0;
+			rb2d.AddForce(new Vector2(0f, jumpForce));
+		}
+
 	}
+
 
 
 	void Flip()
