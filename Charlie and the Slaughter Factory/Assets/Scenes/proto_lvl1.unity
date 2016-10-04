@@ -255,6 +255,62 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1.5}
+--- !u!1 &273286865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 273286868}
+  - 68: {fileID: 273286867}
+  - 114: {fileID: 273286866}
+  m_Layer: 0
+  m_Name: death
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &273286866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 273286865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667c4d793480d56439cbc26e509e244b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &273286867
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 273286865}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.5083239, y: -0.39324665}
+  - {x: 1.6797383, y: -0.39324617}
+--- !u!4 &273286868
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 273286865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.13, y: -4.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1 &398906436
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +997,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.7475204
+  orthographic size: 3.2405815
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -965,6 +1021,7 @@ GameObject:
   - 4: {fileID: 1117081967}
   - 212: {fileID: 1117081966}
   - 58: {fileID: 1117081968}
+  - 114: {fileID: 1117081969}
   m_Layer: 0
   m_Name: saw
   m_TagString: Untagged
@@ -1032,6 +1089,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 21.588581
+--- !u!114 &1117081969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117081965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667c4d793480d56439cbc26e509e244b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1170307176
 GameObject:
   m_ObjectHideFlags: 0
