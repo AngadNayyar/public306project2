@@ -4,49 +4,29 @@ using System.Collections;
 public class EnemyScript : MonoBehaviour
 {
 
-    [HideInInspector]
-    public bool facingRight = true;
-
-    private Rigidbody2D rb2d;
-    private Animator anim;
-
+    // instantiates the boundaries's and speed of the object
     public float rightLimit = 1.0f;
     public float leftLimit = -4.0f;
     public float speed = 1.0f;
-    private int direction = 1;
 
     // Use this for initialization
-    void Start()
-    {
-    }
+    void Start(){}
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update(){}
 
     void FixedUpdate()
     {
-        Vector3 movement;
-        if (transform.position.x > rightLimit)
+        Vector3 movement = Vector3.right * speed * Time.deltaTime; // makes the speed/ movement of the dog
+        transform.Translate(movement); // applies the movement to the dog
+
+        if (transform.position.x > rightLimit) // checks if the dog is past the right edge
         {
-            direction = -1;         
-            movement = Vector3.right * speed * Time.deltaTime;
-            transform.Translate(movement);
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.localRotation = Quaternion.Euler(0, 180, 0); // flips the dog
         }
-        else if (transform.position.x < leftLimit)
+        else if (transform.position.x < leftLimit) // checks if the dog is past the left edge
         {
-           direction = 1;
-           movement = Vector3.right * speed * Time.deltaTime;
-           transform.Translate(movement);
-           transform.localRotation = Quaternion.Euler(0, 0, 0); // flips it
+           transform.localRotation = Quaternion.Euler(0, 0, 0); // flips the dog
         }
-        else {
-            movement = Vector3.right * speed * Time.deltaTime;
-            transform.Translate(movement);
-        }
-        
     }
 }
