@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Assets\SceneScript.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
+    <Compile Include="Assets\Scripts\DisplayUserData.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
