@@ -16,8 +16,8 @@ public class CameraFollow : MonoBehaviour
 	private float yMargin = 2f;		// Distance in the y axis the player can move before the camera follows.
 	private float xSmooth = 2f;		// How smoothly the camera catches up with it's target movement in the x axis.
 	private float ySmooth = 2f;		// How smoothly the camera catches up with it's target movement in the y axis.
-	private Vector2 maxXAndY = new Vector2(59, 30);		// The maximum x and y coordinates the camera can have.
-	private Vector2 minXAndY = new Vector2(-1.5f, -1.5f);		// The minimum x and y coordinates the camera can have.
+	private Vector2 maxXAndY = new Vector2(63, 30);		// The maximum x and y coordinates the camera can have.
+	private Vector2 minXAndY = new Vector2(-5f, -1.5f);		// The minimum x and y coordinates the camera can have.
 
 	private Transform player;		// Reference to the player's transform.
 
