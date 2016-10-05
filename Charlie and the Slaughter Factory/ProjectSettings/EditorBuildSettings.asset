@@ -13,3 +13,13 @@ EditorBuildSettings:
     path: Assets/Scenes/introlvl2.unity
   - enabled: 1
     path: Assets/Scenes/proto_lvl1.unity
+  - enabled: 1
+    path: Assets/Scenes/GameChooser.unity
+  - enabled: 1
+    path: Assets/Scenes/introlvl3.unity
+  - enabled: 1
+    path: Assets/Scenes/introlvl4.unity
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Username.unity
