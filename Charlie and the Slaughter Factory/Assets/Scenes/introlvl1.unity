@@ -231,8 +231,8 @@ GameObject:
   - 212: {fileID: 562456129}
   - 61: {fileID: 562456128}
   - 114: {fileID: 562456127}
-  - 111: {fileID: 562456126}
   - 95: {fileID: 562456131}
+  - 50: {fileID: 562456126}
   m_Layer: 10
   m_Name: Dog_Sprite-01
   m_TagString: Enemy
@@ -240,20 +240,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!111 &562456126
-Animation:
+--- !u!50 &562456126
+Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 562456125}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b51f8970ceb1e9743972c125b66dc83c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!114 &562456127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,18 +268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c8515a11ea86243b37e910b5e101d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDamage: 0
-  velocity: 1
-  sightStart: {fileID: 0}
-  sightEnd: {fileID: 0}
-  colliding: 0
-  detectWhat:
-    serializedVersion: 2
-    m_Bits: 0
   facingRight: 1
-  rightLimit: 20
-  leftLimit: -4.3
-  speed: 1
+  rightLimit: 1
+  leftLimit: -4
+  speed: 2
 --- !u!61 &562456128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 562456125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.65, y: -3.28, z: 0}
+  m_LocalPosition: {x: -2.19, y: -3.25, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
