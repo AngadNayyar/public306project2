@@ -18,9 +18,9 @@ public class DisplayUserData : MonoBehaviour {
 
 	public void UpdateDataHighScore(int newScore) {
 		string currentGame = PlayerPrefs.GetString("CurrentGame");
-		int currentScore = PlayerPrefs.GetInt(currentGame + "HighScore");
-		if (currentScore < newScore) {
-			PlayerPrefs.SetInt(currentGame + "HighScore", currentScore + newScore);
+		int highScore = PlayerPrefs.GetInt(currentGame + "HighScore");
+		if (highScore < newScore) {
+			PlayerPrefs.SetInt(currentGame + "HighScore", newScore);
 		}
 	}
 }

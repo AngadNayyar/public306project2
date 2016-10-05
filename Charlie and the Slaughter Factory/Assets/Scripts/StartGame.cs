@@ -21,7 +21,15 @@ public class StartGame : MonoBehaviour {
 		PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentGame"), username);
 		PlayerPrefs.Save();
 		if (username != "") {
-			UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
+			startGame();
 		}
+	}
+
+	public void startGame() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
+	}
+
+	public void backToMain() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
 	}
 }
