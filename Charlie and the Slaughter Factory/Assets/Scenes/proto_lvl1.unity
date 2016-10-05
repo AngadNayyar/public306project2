@@ -2484,6 +2484,7 @@ GameObject:
   - 212: {fileID: 1985665128}
   - 61: {fileID: 1985665130}
   - 114: {fileID: 1985665131}
+  - 114: {fileID: 1985665132}
   m_Layer: 0
   m_Name: prototypelvl_7
   m_TagString: Untagged
@@ -2560,6 +2561,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 667c4d793480d56439cbc26e509e244b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1985665132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1985665127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f281767e92bdbf42bc41434748e7ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1989370093
