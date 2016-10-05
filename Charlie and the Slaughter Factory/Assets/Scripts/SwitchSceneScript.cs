@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class SwitchSceneScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void OnTriggerEnter2D()
+    {
+    	int currentScene = int.Parse(PlayerPrefs.GetString("CurrentScene"));
+    	string newScene = (currentScene + 1).ToString();
+    	PlayerPrefs.SetString("CurrentScene", newScene);
+        SceneManager.LoadScene(PlayerPrefs.GetString(newScene));
+    }
 }
