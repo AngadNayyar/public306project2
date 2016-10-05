@@ -12,12 +12,13 @@ public class PlayerScript : MonoBehaviour {
 	[HideInInspector] public bool facingRight = true;
 	[HideInInspector] public bool jump = false;
 	[HideInInspector] public bool canDoubleJump = false;
+	private bool doubleJump = false; 
 
 	private float maxSpeed = 5f;
 	private float speed = 365f;
 	private float walkingMaxSpeed = 5f; 
 	private float maxSlideSpeed = 1f; 
-	private float jumpForce = 500f;
+	private float jumpForce = 600f;
 	public Transform groundCheck; 
 	public bool slide = false; 
 	public bool grounded = false;
@@ -25,7 +26,6 @@ public class PlayerScript : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	private BoxCollider2D bc; 
-
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +45,10 @@ public class PlayerScript : MonoBehaviour {
 			jump = true; 
 		}
 
+		if (Input.GetKeyDown(KeyCode.Space) && !grounded && canDoubleJump){
+			doubleJump = true; 
+		} 
+
 		// If the down arrow key is pressed and he is not jumping, make the character slide, and set the box collider to a smaller height. 
 		if (Input.GetKeyDown (KeyCode.DownArrow) && grounded) {
 			canDoubleJump = false; 
@@ -52,7 +56,7 @@ public class PlayerScript : MonoBehaviour {
 			bc.size = new Vector2 (5.5f, 4.0f); 
 			anim.SetBool ("Slide", true); 
 		}
-	
+
 		// If the down arrow key is released, make the character stop sliding, and set the box collider to a original height. 
 		if (Input.GetKeyUp (KeyCode.DownArrow)) {
 			slide = false;
@@ -69,7 +73,7 @@ public class PlayerScript : MonoBehaviour {
 		// Gets the horizontal direction of the movement from the user 
 		float h = Input.GetAxis("Horizontal");
 		anim.SetFloat("Speed", Mathf.Abs(h)); 
-	
+
 		// If the character is facing right and moving left, or facing left and moving right, flip the character
 		if (h > 0 && !facingRight)
 			Flip();
@@ -85,18 +89,18 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		// If the space bar is pressed while the character is jumping - it will double jump 
-		if (Input.GetKeyDown(KeyCode.Space) && canDoubleJump) {
+		if (Input.GetKey(KeyCode.Space) && doubleJump) {
 			canDoubleJump = false; 
-			//anim.SetTrigger("Jump");
-			//rigidbody2D.velocity.y = 0;
+			doubleJump = false; 
+			anim.SetTrigger("Jump");
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 		}
-			
+
 		// Slide functionality - set a slower max speed value 
 		if (slide) {
 			maxSpeed = maxSlideSpeed;  
 		} 
-			
+
 		// Makes the character move left and right
 		if (h * rb2d.velocity.x < maxSpeed)
 			rb2d.AddForce(Vector2.right * h * speed); 
@@ -119,6 +123,6 @@ public class PlayerScript : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-		
+
 
 }
