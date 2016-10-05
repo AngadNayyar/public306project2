@@ -2,10 +2,13 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class SwitchSceneScript : MonoBehaviour {
 
     void OnTriggerEnter2D()
     {
-        SceneManager.LoadScene("proto_lvl1");
+    	int currentScene = int.Parse(PlayerPrefs.GetString("CurrentScene"));
+    	string newScene = (currentScene + 1).ToString();
+    	PlayerPrefs.SetString("CurrentScene", newScene);
+        SceneManager.LoadScene(PlayerPrefs.GetString(newScene));
     }
 }
