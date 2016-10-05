@@ -50,5 +50,7 @@ public class PlayerHealth : MonoBehaviour{
     {
         // Set the death flag so this function won't be called again.
         isDead = true;
+        DisplayUserData.UpdateDataHighScore();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Death");
     }
 }
