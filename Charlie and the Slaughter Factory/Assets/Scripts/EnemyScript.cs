@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour
     public float rightLimit = 1.0f;
     public float leftLimit = -4.0f;
     public float speed = 1.0f;
+    public bool facingRight = true;
     public GameObject player;
 
     // Use this for initialization
@@ -24,7 +25,7 @@ public class EnemyScript : MonoBehaviour
         float player_pos = player.transform.position.x;
         if (player_pos < rightLimit && player_pos > leftLimit)
         {
-            if (true) {
+            if ((player_pos < transform.position.x && !facingRight) || (player_pos > transform.position.x && facingRight)) {
                 speed = 5.0f;
             }
             else
@@ -43,10 +44,12 @@ public class EnemyScript : MonoBehaviour
         if (transform.position.x > rightLimit) // checks if the dog is past the right edge
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0); // flips the dog
+            facingRight = false;
         }
         else if (transform.position.x < leftLimit) // checks if the dog is past the left edge
         {
            transform.localRotation = Quaternion.Euler(0, 0, 0); // flips the dog
+            facingRight = true;
         }
     }
 }
