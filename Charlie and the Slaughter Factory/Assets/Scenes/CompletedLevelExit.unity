@@ -352,6 +352,7 @@ GameObject:
   - 223: {fileID: 359851543}
   - 114: {fileID: 359851542}
   - 114: {fileID: 359851541}
+  - 114: {fileID: 359851545}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -439,6 +440,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &359851545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359851540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b74291b51f75164a8c9ff52092f6040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 1395993427}
 --- !u!1 &409461893
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +832,7 @@ GameObject:
   - 224: {fileID: 1192410808}
   - 222: {fileID: 1192410810}
   - 114: {fileID: 1192410809}
+  - 114: {fileID: 1192410811}
   m_Layer: 5
   m_Name: NumberOfCoinsText
   m_TagString: Untagged
@@ -883,6 +897,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1192410807}
+--- !u!114 &1192410811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1192410807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9d687c5231180498d7621f6d993c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsText: {fileID: 1192410809}
+  coins: 0
 --- !u!1 &1395993425
 GameObject:
   m_ObjectHideFlags: 0
