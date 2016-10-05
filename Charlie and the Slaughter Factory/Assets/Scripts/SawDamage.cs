@@ -17,7 +17,7 @@ public class SawDamage : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
+        if(other.gameObject == player){
             playerHealth.TakeDamage(attackDamage);
         }
     }
