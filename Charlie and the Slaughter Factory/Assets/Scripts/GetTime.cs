@@ -7,7 +7,7 @@ public class GetTime : MonoBehaviour {
     public Text timeText;
     private float time;
 
-	// Use this for initialization
+	// set the text for the timer label as the time taken to complete the level
 	void Start () {
         time = PlayerPrefs.GetFloat("endTime");
         timeText.text = time.ToString("0.00");
