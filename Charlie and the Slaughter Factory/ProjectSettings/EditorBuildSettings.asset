@@ -27,3 +27,19 @@ EditorBuildSettings:
     path: Assets/Scenes/introlvl3.unity
   - enabled: 0
     path: Assets/Scenes/introlvl4.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene1.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene2.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene3.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene4.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene5.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene6.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene7.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene8.unity
