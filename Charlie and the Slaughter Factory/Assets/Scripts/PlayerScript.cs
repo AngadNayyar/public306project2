@@ -26,12 +26,14 @@ public class PlayerScript : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	private BoxCollider2D bc; 
+	private CircleCollider2D cc; 
 
 	// Use this for initialization
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
 		bc = gameObject.GetComponent<BoxCollider2D> (); 
+		cc = gameObject.GetComponent<CircleCollider2D> (); 
 	}
 
 	// Update is called once per frame
@@ -50,18 +52,20 @@ public class PlayerScript : MonoBehaviour {
 		} 
 
 		// If the down arrow key is pressed and he is not jumping, make the character slide, and set the box collider to a smaller height. 
-		if (Input.GetKeyDown (KeyCode.DownArrow) && grounded) {
+		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && grounded) {
 			canDoubleJump = false; 
 			slide = true; 
-			bc.size = new Vector2 (5.5f, 4.0f); 
+			bc.size = new Vector2 (5.95f, 1.7f); 
+			cc.radius = 1.6f; 
 			anim.SetBool ("Slide", true); 
 		}
 
 		// If the down arrow key is released, make the character stop sliding, and set the box collider to a original height. 
-		if (Input.GetKeyUp (KeyCode.DownArrow)) {
+		if (Input.GetKeyUp (KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S)) {
 			slide = false;
 			anim.SetBool ("Slide", false); 
-			bc.size = new Vector2 (5.52f, 5.36f);
+			bc.size = new Vector2 (5.95f, 3.16f);
+			cc.radius = 2.07f; 
 		}
         
 
