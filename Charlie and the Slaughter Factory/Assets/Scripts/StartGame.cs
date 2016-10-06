@@ -28,7 +28,9 @@ public class StartGame : MonoBehaviour {
 	public void submitAndStart(GameObject usernameInput) {
 		username = usernameInput.GetComponentInChildren<Text>().text;
 		PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentGame"), username);
+		PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentGame") + "Achieved1", "notAchieved1");
 		PlayerPrefs.Save();
+
 		if (username != "") {
 			startGame();
 		}

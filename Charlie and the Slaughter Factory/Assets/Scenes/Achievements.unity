@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753758ca0f968aa4194279e8db962b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteren: {fileID: 318576552}
   grey: {fileID: 21300000, guid: 17ce80131600e9141a3b307c6a65f37c, type: 3}
   reward1: {fileID: 21300000, guid: ab40d140240d909478803938eed295f4, type: 3}
 --- !u!1 &378885144
