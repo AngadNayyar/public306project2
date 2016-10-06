@@ -52,4 +52,8 @@ public class StartGame : MonoBehaviour {
 	public void backToMain() {
 		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
 	}
+
+	public void DisplayCredits() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+	}
 }
