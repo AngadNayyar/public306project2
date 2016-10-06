@@ -20,7 +20,7 @@ public class ChooseGame : MonoBehaviour {
 		if (gameSlotName == "") {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Username");
 		} else {
-			UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
+			UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
 		}
 	}
 }

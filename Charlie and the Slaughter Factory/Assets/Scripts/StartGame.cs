@@ -7,6 +7,15 @@ public class StartGame : MonoBehaviour {
 	private string username;
 
 	public void toUsername() {
+		PlayerPrefs.SetString("1", "introlvl1");
+		PlayerPrefs.SetString("2", "introlvl2");
+		PlayerPrefs.SetString("3", "introlvl3");
+		PlayerPrefs.SetString("4", "introlvl4");
+		PlayerPrefs.SetString("5", "proto_lvl1");
+		PlayerPrefs.SetString("6", "FinishedGame");
+
+		PlayerPrefs.SetString("CurrentScene", "1");
+
 		UnityEngine.SceneManagement.SceneManager.LoadScene("GameChooser");
 	}
 
@@ -21,7 +30,15 @@ public class StartGame : MonoBehaviour {
 		PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentGame"), username);
 		PlayerPrefs.Save();
 		if (username != "") {
-			UnityEngine.SceneManagement.SceneManager.LoadScene("introlvl1");
+			startGame();
 		}
+	}
+
+	public void startGame() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
+	}
+
+	public void backToMain() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
 	}
 }
