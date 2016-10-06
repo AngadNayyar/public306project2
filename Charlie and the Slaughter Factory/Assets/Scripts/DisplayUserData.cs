@@ -24,4 +24,8 @@ public class DisplayUserData : MonoBehaviour {
 			PlayerPrefs.SetInt(currentGame + "HighScore", newScore);
 		}
 	}
+
+	public static void UpdatefirstReward(){
+		Debug.Log ("here"); 
+	}
 }
