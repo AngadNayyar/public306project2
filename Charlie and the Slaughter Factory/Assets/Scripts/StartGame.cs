@@ -4,18 +4,20 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour {
 
-	private string username;
+    private string username;
+
+    private void setPrefabs() {
+        PlayerPrefs.SetString("1", "introlvl1");
+        //PlayerPrefs.SetString("2", "introlvl2");
+        //PlayerPrefs.SetString("3", "introlvl3");
+        //PlayerPrefs.SetString("4", "introlvl4");
+        PlayerPrefs.SetString("2", "proto_lvl1");
+        PlayerPrefs.SetString("3", "FinishedGame");
+        PlayerPrefs.SetString("CurrentScene", "1");
+    }
 
 	public void toUsername() {
-		PlayerPrefs.SetString("1", "introlvl1");
-		//PlayerPrefs.SetString("2", "introlvl2");
-		//PlayerPrefs.SetString("3", "introlvl3");
-		//PlayerPrefs.SetString("4", "introlvl4");
-		PlayerPrefs.SetString("2", "proto_lvl1");
-		PlayerPrefs.SetString("3", "FinishedGame");
-
-		PlayerPrefs.SetString("CurrentScene", "1");
-
+        setPrefabs();
 		UnityEngine.SceneManagement.SceneManager.LoadScene("GameChooser");
 	}
 
@@ -35,7 +37,8 @@ public class StartGame : MonoBehaviour {
 	}
 
 	public void startGame() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
+        setPrefabs();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
 	}
 
 	public void backToMain() {
