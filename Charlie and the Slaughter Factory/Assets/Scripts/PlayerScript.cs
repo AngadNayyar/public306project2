@@ -97,6 +97,7 @@ public class PlayerScript : MonoBehaviour {
 			canDoubleJump = false; 
 			doubleJump = false; 
 			anim.SetTrigger("Jump");
+            rb2d.Sleep();
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 		}
 
