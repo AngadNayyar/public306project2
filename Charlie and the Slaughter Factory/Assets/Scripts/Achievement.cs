@@ -15,6 +15,16 @@ public class Achievement : MonoBehaviour {
 
 	public static void UpdatefirstReward(){
 		string gameSlotName = PlayerPrefs.GetString("CurrentGame");
-		Debug.Log(gameSlotName); 
+		//Debug.Log(gameSlotName); 
+		PlayerPrefs.SetString ("Achievement1", "achieved1"); 
+		//Debug.Log(PlayerPrefs.GetString("Achievement1")); 
 	}
+
+	public static void checkFirstAchievement(){
+		string gameSlotName = PlayerPrefs.GetString("CurrentGame"); 
+		//Debug.Log (gameSlotName);
+		//Debug.Log ("achieved:");
+		//Debug.Log(PlayerPrefs.GetString("Achievement1")); 
+	}
+
 }
