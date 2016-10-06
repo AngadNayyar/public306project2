@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
-		bc = gameObject.GetComponent<BoxCollider2D> (); 
+		//bc = gameObject.GetComponent<BoxCollider2D> (); 
 		cc = gameObject.GetComponent<CircleCollider2D> (); 
 	}
 
@@ -55,8 +55,9 @@ public class PlayerScript : MonoBehaviour {
 		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && grounded) {
 			canDoubleJump = false; 
 			slide = true; 
-			bc.size = new Vector2 (5.95f, 1.5f); 
-			cc.radius = 1.5f; 
+			//bc.size = new Vector2 (5.95f, 1.7f); 
+			cc.radius = 2.0f; 
+
 			anim.SetBool ("Slide", true); 
 		}
 
@@ -64,12 +65,12 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S)) {
 			slide = false;
 			anim.SetBool ("Slide", false); 
-			bc.size = new Vector2 (5.95f, 3.16f);
-			cc.radius = 2.07f; 
+			//bc.size = new Vector2 (5.95f, 3.16f);
+			cc.radius = 3.0f; 
 		}
+        
 
-
-	}
+    }
 
 	// Update function 
 	void FixedUpdate() {
@@ -97,6 +98,7 @@ public class PlayerScript : MonoBehaviour {
 			canDoubleJump = false; 
 			doubleJump = false; 
 			anim.SetTrigger("Jump");
+            rb2d.Sleep();
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 		}
 
@@ -114,10 +116,9 @@ public class PlayerScript : MonoBehaviour {
 			rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);  
 
 		// Reset the max speed to be the original value for the walk/run 
-		maxSpeed = walkingMaxSpeed;  
+		maxSpeed = walkingMaxSpeed;
 
-
-	}
+    }
 
 	// Flip the sprite to face the other direction 
 	void Flip()

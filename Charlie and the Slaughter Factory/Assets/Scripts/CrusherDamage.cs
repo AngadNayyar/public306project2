@@ -2,8 +2,8 @@
 using System.Collections;
 
 
-public class SawDamage : MonoBehaviour {
-    private int attackDamage = 40;  //Damage taken due to hit
+public class CrusherDamage : MonoBehaviour {
+    private int attackDamage = 100;  //Damage taken due to hit
 
     PlayerHealth playerHealth;  // Reference to the Charlie's health.
     PlayerScript playerScript; //Reference to Charlie's movement controls
