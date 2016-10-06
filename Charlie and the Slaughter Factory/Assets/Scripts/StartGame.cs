@@ -7,11 +7,21 @@ public class StartGame : MonoBehaviour {
 	private string username;
 
     private void createPrefabs() {
-        PlayerPrefs.SetString("1", "introlvl1");
-        PlayerPrefs.SetString("2", "CompletedLevelExit");
-        PlayerPrefs.SetString("3", "proto_lvl1");
-        PlayerPrefs.SetString("4", "FinishedGame");
+    	PlayerPrefs.SetString("1", "CutScene1");
+    	PlayerPrefs.SetString("2", "CutScene2");
+    	PlayerPrefs.SetString("3", "CutScene3");
+    	PlayerPrefs.SetString("4", "CutScene4");
+    	PlayerPrefs.SetString("5", "CutScene5");
+    	PlayerPrefs.SetString("6", "CutScene6");
+    	PlayerPrefs.SetString("7", "CutScene7");
+    	PlayerPrefs.SetString("8", "CutScene8");
+        PlayerPrefs.SetString("9", "introlvl1");
+        PlayerPrefs.SetString("10", "CompletedLevelExit");
+        PlayerPrefs.SetString("11", "proto_lvl1");
+        PlayerPrefs.SetString("12", "CompletedLevelExit");
+        PlayerPrefs.SetString("13", "FinishedGame");
         PlayerPrefs.SetString("CurrentScene", "1");
+        PlayerPrefs.SetInt("CurrentScore", 0);
     }
 
 	public void toUsername() {
@@ -43,5 +53,9 @@ public class StartGame : MonoBehaviour {
 
 	public void backToMain() {
 		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+	}
+
+	public void DisplayCredits() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
 	}
 }

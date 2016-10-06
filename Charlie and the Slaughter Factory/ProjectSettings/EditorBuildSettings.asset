@@ -21,6 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Death.unity
   - enabled: 1
     path: Assets/Scenes/FinishedGame.unity
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
   - enabled: 0
     path: Assets/Scenes/introlvl2.unity
   - enabled: 0
@@ -28,4 +30,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/introlvl4.unity
   - enabled: 1
-    path: Assets/Scenes/Achievements.unity
+    path: Assets/Scenes/CutScene1.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene2.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene3.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene4.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene5.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene6.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene7.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScene8.unity

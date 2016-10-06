@@ -167,7 +167,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1006554838}
-        m_MethodName: backToMain
+        m_MethodName: DisplayCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
