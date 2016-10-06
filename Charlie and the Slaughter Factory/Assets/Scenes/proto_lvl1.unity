@@ -193,8 +193,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: 1.3197289, y: 0.51395607}
-  - {x: 1.3299999, y: -0.5367985}
+  - {x: 1.3577318, y: 0.5234568}
+  - {x: 1.3632526, y: -0.5320482}
 --- !u!68 &5899607
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -747,8 +747,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: 0.33610702, y: 0.8205198}
-  - {x: 0.3286183, y: 0.14540839}
+  - {x: 0.31473684, y: 0.8290678}
+  - {x: 0.31152225, y: 0.1411345}
 --- !u!68 &559135120
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -762,8 +762,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: 1.6967161, y: -0.85167885}
-  - {x: 1.7100005, y: 0.774838}
+  - {x: 1.7213252, y: -0.857831}
+  - {x: 1.7223049, y: 0.8548174}
 --- !u!1001 &575179456
 Prefab:
   m_ObjectHideFlags: 0
@@ -2156,8 +2156,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: 0.61037254, y: 0.098109245}
-  - {x: 1.6853776, y: -0.84373736}
+  - {x: 0.58187056, y: 0.15511274}
+  - {x: 1.7091289, y: -0.8342366}
 --- !u!68 &1604367015
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2171,8 +2171,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -0.35109568, y: 0.8241153}
-  - {x: -0.33566713, y: 0.117730856}
+  - {x: -0.3172121, y: 0.8434775}
+  - {x: -0.3211453, y: 0.10804987}
 --- !u!68 &1604367016
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2187,7 +2187,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: -1.724622, y: 0.843737}
-  - {x: -1.7091925, y: -0.863359}
+  - {x: -1.7324481, y: -0.8788626}
 --- !u!1 &1704381960
 GameObject:
   m_ObjectHideFlags: 0

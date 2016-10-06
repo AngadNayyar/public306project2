@@ -23,15 +23,15 @@ public class EnemyScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         float player_pos = player.transform.position.x;
-        if (player_pos < rightLimit && player_pos > leftLimit)
+        if (player_pos < rightLimit && player_pos > leftLimit && player.transform.position.y < -3)
         {
-            if ((player_pos < transform.position.x && !facingRight) || (player_pos > transform.position.x && facingRight)) {
-                speed = 5.0f;
-            }
-            else
-            {
-                speed = 1.0f;
-            }
+                if ((player_pos < transform.position.x && !facingRight) || (player_pos > transform.position.x && facingRight)) {
+                    speed = 5.0f;
+                }
+                else
+                {
+                    speed = 1.0f;
+                }
         }
         else
         {
