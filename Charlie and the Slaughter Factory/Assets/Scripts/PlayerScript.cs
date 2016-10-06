@@ -36,6 +36,7 @@ public class PlayerScript : MonoBehaviour {
 		//bc = gameObject.GetComponent<BoxCollider2D> ();
 		cc = gameObject.GetComponent<CircleCollider2D> ();
         coinCount = 0;
+        PlayerPrefs.SetInt("LevelCoins", coinCount);
 	}
 
 	// Update is called once per frame
@@ -130,16 +131,17 @@ public class PlayerScript : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-    //method to increase player's number of coins when they collide with one
+    /* //method to increase player's number of coins when they collide with one
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coin"))
         {
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
             coinCount = coinCount + 1;
+            Debug.Log(coinCount);
             PlayerPrefs.SetInt("LevelCoins", coinCount);
         }
         
-    }
+    } */
     
 }
