@@ -12,4 +12,8 @@ public class TimerScript : MonoBehaviour {
         time += Time.deltaTime;
         timerText.text = time.ToString("0.00");
 	}
+
+    void OnDestroy() {
+        PlayerPrefs.SetFloat("endTime", time);
+    }
 }
