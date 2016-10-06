@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
-		bc = gameObject.GetComponent<BoxCollider2D> (); 
+		//bc = gameObject.GetComponent<BoxCollider2D> (); 
 		cc = gameObject.GetComponent<CircleCollider2D> (); 
 	}
 
@@ -55,8 +55,8 @@ public class PlayerScript : MonoBehaviour {
 		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && grounded) {
 			canDoubleJump = false; 
 			slide = true; 
-			bc.size = new Vector2 (5.95f, 1.7f); 
-			cc.radius = 1.6f; 
+			//bc.size = new Vector2 (5.95f, 1.7f); 
+			cc.radius = 2.0f; 
 			anim.SetBool ("Slide", true); 
 		}
 
@@ -64,8 +64,8 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S)) {
 			slide = false;
 			anim.SetBool ("Slide", false); 
-			bc.size = new Vector2 (5.95f, 3.16f);
-			cc.radius = 2.07f; 
+			//bc.size = new Vector2 (5.95f, 3.16f);
+			cc.radius = 3.0f; 
 		}
         
 
@@ -97,6 +97,7 @@ public class PlayerScript : MonoBehaviour {
 			canDoubleJump = false; 
 			doubleJump = false; 
 			anim.SetTrigger("Jump");
+            rb2d.Sleep();
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 		}
 

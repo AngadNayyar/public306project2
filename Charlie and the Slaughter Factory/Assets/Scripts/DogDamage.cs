@@ -2,8 +2,8 @@
 using System.Collections;
 
 
-public class SawDamage : MonoBehaviour {
-    private int attackDamage = 40;  //Damage taken due to hit
+public class DogDamage : MonoBehaviour {
+    private int attackDamage = 25;  //Damage taken due to hit
 
     PlayerHealth playerHealth;  // Reference to the Charlie's health.
     PlayerScript playerScript; //Reference to Charlie's movement controls
@@ -15,6 +15,7 @@ public class SawDamage : MonoBehaviour {
         playerHealth = player.GetComponent<PlayerHealth>();
         playerScript = player.GetComponent<PlayerScript>();
         rigidBody = player.GetComponent<Rigidbody2D>();
+        
     }
 
     void Update() {
