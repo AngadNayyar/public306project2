@@ -55,8 +55,8 @@ public class PlayerScript : MonoBehaviour {
 		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && grounded) {
 			canDoubleJump = false; 
 			slide = true; 
-			bc.size = new Vector2 (5.95f, 1.7f); 
-			cc.radius = 1.6f; 
+			bc.size = new Vector2 (5.95f, 1.5f); 
+			cc.radius = 1.5f; 
 			anim.SetBool ("Slide", true); 
 		}
 
