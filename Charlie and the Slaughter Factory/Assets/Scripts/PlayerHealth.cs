@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour{
             damageImage.color = flashColour;
         }
         else{
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+ //           damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         // Change damage boolean to false
         damaged = false;
@@ -44,6 +44,9 @@ public class PlayerHealth : MonoBehaviour{
         if (currentHealth <= 0 && !isDead)
         {
             Die();
+        } else
+        {
+            PlayerPrefs.SetInt("endHealth", currentHealth);
         }
     }
     void Die()

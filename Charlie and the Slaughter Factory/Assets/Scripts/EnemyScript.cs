@@ -5,11 +5,11 @@ public class EnemyScript : MonoBehaviour
 {
 
     // instantiates the boundaries's and speed of the object
-    public float rightLimit = 1.0f;
-    public float leftLimit = -4.0f;
-    public float speed = 1.0f;
-    public bool facingRight = true;
-    public GameObject player;
+    private float rightLimit = 3.8f;
+    private float leftLimit = -1.4f;
+    private float speed = 1.0f;
+    private bool facingRight = true;
+    GameObject player;
 
     // Use this for initialization
     void Start(){

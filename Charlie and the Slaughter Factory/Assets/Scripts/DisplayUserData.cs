@@ -11,10 +11,12 @@ public class DisplayUserData : MonoBehaviour {
 		}
 	}
 
-	public void UpdateCurrentScore(int newScore) {
+	public int UpdateCurrentScore(int newScore) {
 		int currentScore = PlayerPrefs.GetInt("CurrentScore");
-		PlayerPrefs.SetInt("CurrentScore", currentScore + newScore);
-	}
+        int updatedScore = currentScore + newScore;
+        PlayerPrefs.SetInt("CurrentScore", updatedScore);
+        return updatedScore;
+    }
 
 	public static void UpdateDataHighScore() {
 		int newScore = PlayerPrefs.GetInt("CurrentScore");
