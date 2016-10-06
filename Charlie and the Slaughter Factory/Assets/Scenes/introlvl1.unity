@@ -440,6 +440,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481194172}
   - 68: {fileID: 481194173}
+  - 68: {fileID: 481194174}
   m_Layer: 12
   m_Name: GameObject3
   m_TagString: Untagged
@@ -478,6 +479,23 @@ EdgeCollider2D:
   - {x: 9.584178, y: -5.440983}
   - {x: 9.514934, y: 5.3578334}
   - {x: -9.900257, y: 5.3776917}
+--- !u!68 &481194174
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 481194171}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -9.601339, y: -5.331677}
+  - {x: -9.582143, y: 5.3137956}
+  - {x: 9.474699, y: 5.313192}
+  - {x: 9.5322075, y: -2.4112997}
 --- !u!1001 &571222821
 Prefab:
   m_ObjectHideFlags: 0
@@ -746,6 +764,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 919130715}
   - 61: {fileID: 919130716}
+  - 68: {fileID: 919130717}
+  - 68: {fileID: 919130718}
   m_Layer: 12
   m_Name: GameObject2
   m_TagString: Untagged
@@ -780,6 +800,36 @@ BoxCollider2D:
   m_Offset: {x: 1.6030388, y: -1.3141218}
   serializedVersion: 2
   m_Size: {x: 4.46704, y: 0.7204038}
+--- !u!68 &919130717
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919130714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 3.8425024, y: -1.6719607}
+  - {x: 3.8403113, y: -0.9576722}
+--- !u!68 &919130718
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919130714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -0.6350613, y: -1.6763359}
+  - {x: -0.6371486, y: -0.9577472}
 --- !u!1 &955353788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1820,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1932367663}
   - 60: {fileID: 1932367664}
+  - 68: {fileID: 1932367665}
+  - 68: {fileID: 1932367667}
+  - 68: {fileID: 1932367666}
+  - 68: {fileID: 1932367668}
   m_Layer: 12
   m_Name: GameObject
   m_TagString: Untagged
@@ -1812,6 +1866,66 @@ PolygonCollider2D:
       - {x: 9.578552, y: -5.401252}
       - {x: -5.725375, y: -5.3912373}
       - {x: -5.0285087, y: -4.7175384}
+--- !u!68 &1932367665
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932367662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.7146409, y: -4.682489}
+  - {x: 2.725262, y: -3.5791385}
+--- !u!68 &1932367666
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932367662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -5.7534084, y: -5.4013977}
+  - {x: -5.0368643, y: -4.7042375}
+--- !u!68 &1932367667
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932367662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 6.111957, y: -3.5880713}
+  - {x: 6.106733, y: -2.4285963}
+--- !u!68 &1932367668
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932367662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -0.6710218, y: -1.6848431}
+  - {x: -0.6802246, y: -0.9801974}
 --- !u!1 &1956510456
 GameObject:
   m_ObjectHideFlags: 0
