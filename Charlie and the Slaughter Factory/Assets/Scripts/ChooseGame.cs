@@ -23,4 +23,19 @@ public class ChooseGame : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
 		}
 	}
+
+	public void goToAchievements(){
+		gameSlotName = PlayerPrefs.GetString(name);
+		Debug.Log(gameSlotName); 
+		if (gameSlotName != ""){
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("Achievements"); 
+		}
+
+	}
+
+	public void returnToGameChooser(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("GameChooser"); 
+	}
+
+
 }

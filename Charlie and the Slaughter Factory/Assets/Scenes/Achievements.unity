@@ -807,13 +807,25 @@ GameObject:
   - 222: {fileID: 1918164536}
   - 114: {fileID: 1918164535}
   - 114: {fileID: 1918164534}
+  - 114: {fileID: 1918164533}
   m_Layer: 5
-  m_Name: Player1
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1918164533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918164532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19663b737d5cc547b335bd921a05337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1918164534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,7 +865,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1918164533}
         m_MethodName: returnToGameChooser
         m_Mode: 1
         m_Arguments:
