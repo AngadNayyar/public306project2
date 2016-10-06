@@ -8,11 +8,9 @@ public class StartGame : MonoBehaviour {
 
     private void createPrefabs() {
         PlayerPrefs.SetString("1", "introlvl1");
-        //PlayerPrefs.SetString("2", "introlvl2");
-        //PlayerPrefs.SetString("3", "introlvl3");
-        //PlayerPrefs.SetString("4", "introlvl4");
-        PlayerPrefs.SetString("2", "proto_lvl1");
-        PlayerPrefs.SetString("3", "FinishedGame");
+        PlayerPrefs.SetString("2", "CompletedLevelExit");
+        PlayerPrefs.SetString("3", "proto_lvl1");
+        PlayerPrefs.SetString("4", "FinishedGame");
         PlayerPrefs.SetString("CurrentScene", "1");
     }
 

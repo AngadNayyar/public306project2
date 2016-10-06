@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour {
 	private Animator anim;
 	private BoxCollider2D bc;
 	private CircleCollider2D cc;
+    private int coinCount;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,7 @@ public class PlayerScript : MonoBehaviour {
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
 		//bc = gameObject.GetComponent<BoxCollider2D> ();
 		cc = gameObject.GetComponent<CircleCollider2D> ();
+        coinCount = 0;
 	}
 
 	// Update is called once per frame
@@ -128,5 +130,16 @@ public class PlayerScript : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-
+    //method to increase player's number of coins when they collide with one
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            other.gameObject.SetActive(false);
+            coinCount = coinCount + 1;
+            PlayerPrefs.SetInt("LevelCoins", coinCount);
+        }
+        
+    }
+    
 }
