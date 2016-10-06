@@ -13,7 +13,6 @@ public class DogDamage : MonoBehaviour {
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
-        playerScript = player.GetComponent<PlayerScript>();
         rigidBody = player.GetComponent<Rigidbody2D>();
         
     }
