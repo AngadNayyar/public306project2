@@ -15,6 +15,7 @@ public class DisplayUserData : MonoBehaviour {
 		int currentScore = PlayerPrefs.GetInt("CurrentScore");
         int updatedScore = currentScore + newScore;
         PlayerPrefs.SetInt("CurrentScore", updatedScore);
+        UpdateDataHighScore();
         return updatedScore;
     }
 
