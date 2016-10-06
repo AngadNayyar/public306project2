@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
     <Compile Include="Assets\Scripts\CoinCalculate.cs" />
+    <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
