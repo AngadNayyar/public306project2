@@ -7,6 +7,5 @@ public class FailedLevel : MonoBehaviour {
 	public void Start() {
 		int score = PlayerPrefs.GetInt("CurrentScore");
 		gameObject.GetComponent<Text>().text = "Score: " + score;
-        Debug.Log(score);
 	}
 }
