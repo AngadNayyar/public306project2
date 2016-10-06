@@ -72,10 +72,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SceneScript.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
+    <Compile Include="Assets\Scripts\CoinCalculate.cs" />
+    <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
+    <Compile Include="Assets\Scripts\GetTime.cs" />
+    <Compile Include="Assets\Scripts\NextLevel.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\FailedLevel.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\SawDamage.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />

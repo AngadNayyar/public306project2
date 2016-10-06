@@ -12,12 +12,13 @@ public class PlayerScript : MonoBehaviour {
 	[HideInInspector] public bool facingRight = true;
 	[HideInInspector] public bool jump = false;
 	[HideInInspector] public bool canDoubleJump = false;
+	private bool doubleJump = false; 
 
 	private float maxSpeed = 5f;
 	private float speed = 365f;
 	private float walkingMaxSpeed = 5f; 
 	private float maxSlideSpeed = 1f; 
-	private float jumpForce = 500f;
+	private float jumpForce = 600f;
 	public Transform groundCheck; 
 	public bool slide = false; 
 	public bool grounded = false;
@@ -25,13 +26,14 @@ public class PlayerScript : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	private BoxCollider2D bc; 
-
+	private CircleCollider2D cc; 
 
 	// Use this for initialization
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
 		bc = gameObject.GetComponent<BoxCollider2D> (); 
+		cc = gameObject.GetComponent<CircleCollider2D> (); 
 	}
 
 	// Update is called once per frame
@@ -45,23 +47,29 @@ public class PlayerScript : MonoBehaviour {
 			jump = true; 
 		}
 
+		if (Input.GetKeyDown(KeyCode.Space) && !grounded && canDoubleJump){
+			doubleJump = true; 
+		} 
+
 		// If the down arrow key is pressed and he is not jumping, make the character slide, and set the box collider to a smaller height. 
-		if (Input.GetKeyDown (KeyCode.DownArrow) && grounded) {
+		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && grounded) {
 			canDoubleJump = false; 
 			slide = true; 
-			bc.size = new Vector2 (5.5f, 4.0f); 
+			bc.size = new Vector2 (5.95f, 1.7f); 
+			cc.radius = 1.6f; 
 			anim.SetBool ("Slide", true); 
 		}
-	
+
 		// If the down arrow key is released, make the character stop sliding, and set the box collider to a original height. 
-		if (Input.GetKeyUp (KeyCode.DownArrow)) {
+		if (Input.GetKeyUp (KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S)) {
 			slide = false;
 			anim.SetBool ("Slide", false); 
-			bc.size = new Vector2 (5.52f, 5.36f);
+			bc.size = new Vector2 (5.95f, 3.16f);
+			cc.radius = 2.07f; 
 		}
+        
 
-
-	}
+    }
 
 	// Update function 
 	void FixedUpdate() {
@@ -69,7 +77,7 @@ public class PlayerScript : MonoBehaviour {
 		// Gets the horizontal direction of the movement from the user 
 		float h = Input.GetAxis("Horizontal");
 		anim.SetFloat("Speed", Mathf.Abs(h)); 
-	
+
 		// If the character is facing right and moving left, or facing left and moving right, flip the character
 		if (h > 0 && !facingRight)
 			Flip();
@@ -85,18 +93,18 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		// If the space bar is pressed while the character is jumping - it will double jump 
-		if (Input.GetKeyDown(KeyCode.Space) && canDoubleJump) {
+		if (Input.GetKey(KeyCode.Space) && doubleJump) {
 			canDoubleJump = false; 
-			//anim.SetTrigger("Jump");
-			//rigidbody2D.velocity.y = 0;
+			doubleJump = false; 
+			anim.SetTrigger("Jump");
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 		}
-			
+
 		// Slide functionality - set a slower max speed value 
 		if (slide) {
 			maxSpeed = maxSlideSpeed;  
 		} 
-			
+
 		// Makes the character move left and right
 		if (h * rb2d.velocity.x < maxSpeed)
 			rb2d.AddForce(Vector2.right * h * speed); 
@@ -106,10 +114,9 @@ public class PlayerScript : MonoBehaviour {
 			rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);  
 
 		// Reset the max speed to be the original value for the walk/run 
-		maxSpeed = walkingMaxSpeed;  
+		maxSpeed = walkingMaxSpeed;
 
-
-	}
+    }
 
 	// Flip the sprite to face the other direction 
 	void Flip()
@@ -119,6 +126,6 @@ public class PlayerScript : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-		
+
 
 }
