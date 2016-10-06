@@ -3816,6 +3816,8 @@ GameObject:
   - 68: {fileID: 1474531874}
   - 68: {fileID: 1474531873}
   - 68: {fileID: 1474531872}
+  - 68: {fileID: 1474531879}
+  - 68: {fileID: 1474531878}
   m_Layer: 12
   m_Name: prototypelvlpart2_3
   m_TagString: Untagged
@@ -3994,6 +3996,38 @@ EdgeCollider2D:
   m_Points:
   - {x: -6.5322356, y: -0.9481366}
   - {x: -6.559283, y: -1.6296104}
+--- !u!68 &1474531878
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1474531868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -5.4530506, y: 0.5309384}
+  - {x: -5.432942, y: 0.5115851}
+  - {x: -5.433668, y: 0.26946422}
+  - {x: -5.4521885, y: 0.2587503}
+--- !u!68 &1474531879
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1474531868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -7.0869007, y: 0.51179093}
+  - {x: -7.0819607, y: 0.25706542}
 --- !u!1 &1499328485
 GameObject:
   m_ObjectHideFlags: 0
