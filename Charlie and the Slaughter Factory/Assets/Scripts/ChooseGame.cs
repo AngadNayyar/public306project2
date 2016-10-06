@@ -7,15 +7,18 @@ public class ChooseGame : MonoBehaviour {
 	private string gameSlotName;
 
 	public void Start() {
+		
 		gameSlotName = PlayerPrefs.GetString(name);
 		if (gameSlotName != "") {
 			GetComponentInChildren<Text>().text = gameSlotName;
+			//PlayerPrefs.SetString ("Achieved1", "notAchieved1"); 
 		}
 	}
 
 	public void SetUpGame() {
 		gameSlotName = PlayerPrefs.GetString(name);
 		PlayerPrefs.SetString("CurrentGame", name);
+
 		PlayerPrefs.Save();
 		if (gameSlotName == "") {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Username");
@@ -23,4 +26,20 @@ public class ChooseGame : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
 		}
 	}
+
+	public void goToAchievements(){
+		gameSlotName = PlayerPrefs.GetString(name);
+
+			
+		if (gameSlotName != ""){
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("Achievements"); 
+		}
+			
+	}
+
+	public void returnToGameChooser(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("GameChooser"); 
+	}
+
+
 }

@@ -24,7 +24,8 @@ public class DisplayUserData : MonoBehaviour {
 		string currentGame = PlayerPrefs.GetString("CurrentGame");
 		int highScore = PlayerPrefs.GetInt(currentGame + "HighScore");
 		if (highScore < newScore) {
-			PlayerPrefs.SetInt(currentGame + "HighScore", newScore);
+			PlayerPrefs.SetInt(currentGame + " HighScore", newScore);
 		}
 	}
+		
 }
