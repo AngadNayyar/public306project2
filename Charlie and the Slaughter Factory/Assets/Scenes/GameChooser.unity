@@ -102,6 +102,8 @@ GameObject:
   - 114: {fileID: 73418193}
   - 114: {fileID: 73418192}
   - 114: {fileID: 73418195}
+  - 114: {fileID: 73418196}
+  - 212: {fileID: 73418197}
   m_Layer: 5
   m_Name: Player3
   m_TagString: Untagged
@@ -226,6 +228,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19663b737d5cc547b335bd921a05337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &73418196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73418190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753758ca0f968aa4194279e8db962b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteren: {fileID: 73418197}
+  grey: {fileID: 21300000, guid: 17ce80131600e9141a3b307c6a65f37c, type: 3}
+  reward1: {fileID: 21300000, guid: ab40d140240d909478803938eed295f4, type: 3}
+--- !u!212 &73418197
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73418190}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &97175542
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +836,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1772521303}
+        m_MethodName: checkFirstAchievement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1772521297}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &331120228
@@ -1296,6 +1356,8 @@ GameObject:
   - 114: {fileID: 1023605676}
   - 114: {fileID: 1023605675}
   - 114: {fileID: 1023605678}
+  - 114: {fileID: 1023605679}
+  - 212: {fileID: 1023605680}
   m_Layer: 5
   m_Name: Player4
   m_TagString: Untagged
@@ -1420,6 +1482,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19663b737d5cc547b335bd921a05337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1023605679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1023605673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753758ca0f968aa4194279e8db962b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteren: {fileID: 1023605680}
+  grey: {fileID: 21300000, guid: 17ce80131600e9141a3b307c6a65f37c, type: 3}
+  reward1: {fileID: 21300000, guid: ab40d140240d909478803938eed295f4, type: 3}
+--- !u!212 &1023605680
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1023605673}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1089185456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1678,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1023605679}
+        m_MethodName: checkFirstAchievement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1023605673}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1138284194
@@ -1690,6 +1810,8 @@ GameObject:
   - 114: {fileID: 1198430206}
   - 114: {fileID: 1198430205}
   - 114: {fileID: 1198430208}
+  - 114: {fileID: 1198430209}
+  - 212: {fileID: 1198430210}
   m_Layer: 5
   m_Name: Player1
   m_TagString: Untagged
@@ -1814,6 +1936,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19663b737d5cc547b335bd921a05337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1198430209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198430203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753758ca0f968aa4194279e8db962b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteren: {fileID: 1198430210}
+  grey: {fileID: 21300000, guid: 17ce80131600e9141a3b307c6a65f37c, type: 3}
+  reward1: {fileID: 21300000, guid: ab40d140240d909478803938eed295f4, type: 3}
+--- !u!212 &1198430210
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198430203}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1236643403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +2139,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 73418196}
+        m_MethodName: checkFirstAchievement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 73418190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2702,6 +2882,8 @@ GameObject:
   - 114: {fileID: 1772521300}
   - 114: {fileID: 1772521299}
   - 114: {fileID: 1772521302}
+  - 114: {fileID: 1772521303}
+  - 212: {fileID: 1772521304}
   m_Layer: 5
   m_Name: Player2
   m_TagString: Untagged
@@ -2826,6 +3008,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19663b737d5cc547b335bd921a05337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1772521303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772521297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753758ca0f968aa4194279e8db962b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteren: {fileID: 1772521304}
+  grey: {fileID: 21300000, guid: 17ce80131600e9141a3b307c6a65f37c, type: 3}
+  reward1: {fileID: 21300000, guid: ab40d140240d909478803938eed295f4, type: 3}
+--- !u!212 &1772521304
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772521297}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1778482509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3327,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1198430209}
+        m_MethodName: checkFirstAchievement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1198430203}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
       - m_Target: {fileID: 1198430208}
         m_MethodName: goToAchievements
         m_Mode: 1

@@ -10,7 +10,7 @@ public class ChooseGame : MonoBehaviour {
 		gameSlotName = PlayerPrefs.GetString(name);
 		if (gameSlotName != "") {
 			GetComponentInChildren<Text>().text = gameSlotName;
-			PlayerPrefs.SetString ("Achieved1", "notAchieved1"); 
+			//PlayerPrefs.SetString ("Achieved1", "notAchieved1"); 
 		}
 	}
 
@@ -32,7 +32,7 @@ public class ChooseGame : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene ("Achievements"); 
 		}
 
-		Achievement.checkFirstAchievement (); 
+		//Achievement.checkFirstAchievement (); 
 
 	}
 
