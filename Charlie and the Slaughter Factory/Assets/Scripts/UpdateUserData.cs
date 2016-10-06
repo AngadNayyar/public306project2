@@ -2,6 +2,14 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
+/*
+ * This Script controls the user data 
+ * Deletes a user when the player deletes one of the 4 spaces. 
+ * Updates the current user for achievements (not playing) * 
+ * 
+ * Charlie and the Slaughter factory - Teven Studios
+ */
+
 public class UpdateUserData : MonoBehaviour {
 	
 	public void DeleteData(GameObject player) {
@@ -15,7 +23,6 @@ public class UpdateUserData : MonoBehaviour {
 		
 		PlayerPrefs.SetString("CurrentAchievements", player.name);
 		PlayerPrefs.Save();
-		//Debug.Log( PlayerPrefs.GetString ("CurrentAchievements"+ "Achievement1")); 
-	
+
 	}
 }

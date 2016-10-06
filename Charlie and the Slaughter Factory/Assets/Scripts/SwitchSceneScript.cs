@@ -6,7 +6,7 @@ public class SwitchSceneScript : MonoBehaviour {
 
      void OnTriggerEnter2D()
     {
-	Achievement.UpdatefirstReward ();
+		Achievement.UpdatefirstReward ();
     	int currentScene = int.Parse(PlayerPrefs.GetString("CurrentScene"));
     	string newScene = (currentScene + 1).ToString();
     	PlayerPrefs.SetString("CurrentScene", newScene);
@@ -14,7 +14,6 @@ public class SwitchSceneScript : MonoBehaviour {
     }
 
     public void OnClick() {
-	Achievement.UpdatefirstReward ();
     	int currentScene = int.Parse(PlayerPrefs.GetString("CurrentScene"));
     	string newScene = (currentScene + 1).ToString();
     	PlayerPrefs.SetString("CurrentScene", newScene);

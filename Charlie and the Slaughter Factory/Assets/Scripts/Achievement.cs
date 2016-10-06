@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * This Script controls the achievement data. 
+ * When a user completes their first level they recieve a 'first level completed' shield.
+ * This shield can be viewed on the achievements page and will be further developed to allow for multiple sheilds. 
+ *
+ * Charlie and the Slaughter factory - Teven Studios
+ */
+
 public class Achievement : MonoBehaviour {
 
 	private static string achieved = "achieved"; 
@@ -18,8 +26,8 @@ public class Achievement : MonoBehaviour {
 		checkFirstAchievement ();
 	}
 
-	// Method to set the playerpref variable for the player achieving the first reward - completing their first level
-	// called when the player goes through a door 
+	// Method to set the playerpref variable for the player achieving the first reward - completing their first level.
+	// This method is called when the player goes through a door (from the switch scene script)
 	public static void UpdatefirstReward(){
 
 		string gameSlotName = PlayerPrefs.GetString("CurrentGame");
@@ -28,6 +36,8 @@ public class Achievement : MonoBehaviour {
 			
 	}
 
+	// This method checks whether the user has completed their first level, and it used to determine whether the 
+	// shield should be displayed or whether it should be greyed out. 
 	public void checkFirstAchievement(){
 		spriteren = GetComponent<SpriteRenderer> (); 
 
