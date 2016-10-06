@@ -18,7 +18,8 @@ public class StartGame : MonoBehaviour {
         PlayerPrefs.SetString("9", "introlvl1");
         PlayerPrefs.SetString("10", "CompletedLevelExit");
         PlayerPrefs.SetString("11", "proto_lvl1");
-        PlayerPrefs.SetString("12", "FinishedGame");
+        PlayerPrefs.SetString("12", "CompletedLevelExit");
+        PlayerPrefs.SetString("13", "FinishedGame");
         PlayerPrefs.SetString("CurrentScene", "1");
     }
 
