@@ -21,6 +21,7 @@ public class StartGame : MonoBehaviour {
         PlayerPrefs.SetString("12", "CompletedLevelExit");
         PlayerPrefs.SetString("13", "FinishedGame");
         PlayerPrefs.SetString("CurrentScene", "1");
+        PlayerPrefs.SetInt("CurrentScore", 0);
     }
 
 	public void toUsername() {
