@@ -63,9 +63,9 @@ public class PlayerScript : MonoBehaviour {
 			anim.SetBool ("Slide", false); 
 			bc.size = new Vector2 (5.52f, 5.36f);
 		}
+        
 
-
-	}
+    }
 
 	// Update function 
 	void FixedUpdate() {
@@ -110,10 +110,9 @@ public class PlayerScript : MonoBehaviour {
 			rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);  
 
 		// Reset the max speed to be the original value for the walk/run 
-		maxSpeed = walkingMaxSpeed;  
+		maxSpeed = walkingMaxSpeed;
 
-
-	}
+    }
 
 	// Flip the sprite to face the other direction 
 	void Flip()
