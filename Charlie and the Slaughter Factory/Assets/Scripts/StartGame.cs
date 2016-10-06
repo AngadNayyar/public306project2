@@ -6,7 +6,7 @@ public class StartGame : MonoBehaviour {
 
     private string username;
 
-    private void setPrefabs() {
+    private void createPrefabs() {
         PlayerPrefs.SetString("1", "introlvl1");
         //PlayerPrefs.SetString("2", "introlvl2");
         //PlayerPrefs.SetString("3", "introlvl3");
@@ -17,8 +17,8 @@ public class StartGame : MonoBehaviour {
     }
 
 	public void toUsername() {
-        setPrefabs();
-		UnityEngine.SceneManagement.SceneManager.LoadScene("GameChooser");
+        createPrefabs();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameChooser");
 	}
 
 	public void setWarningText(GameObject warning) {
@@ -37,7 +37,7 @@ public class StartGame : MonoBehaviour {
 	}
 
 	public void startGame() {
-        setPrefabs();
+        createPrefabs();
         UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
 	}
 
