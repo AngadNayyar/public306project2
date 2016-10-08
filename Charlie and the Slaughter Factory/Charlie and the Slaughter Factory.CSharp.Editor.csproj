@@ -93,10 +93,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Charlie and the Slaughter Factory.CSharp.Plugins.csproj">
-      <Project>{1FD1FA46-25C7-2CC9-CDC0-FD0289B695C4}</Project>
-      <Name>Charlie and the Slaughter Factory.CSharp.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="Charlie and the Slaughter Factory.CSharp.csproj">
       <Project>{E66094BA-2C96-502A-FA17-105CBE76ED5C}</Project>
       <Name>Charlie and the Slaughter Factory.CSharp</Name>
@@ -104,9 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

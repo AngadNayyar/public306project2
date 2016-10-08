@@ -45,3 +45,5 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScene7.unity
   - enabled: 1
     path: Assets/Scenes/CutScene8.unity
+  - enabled: 1
+    path: Assets/Scenes/Achievements.unity
