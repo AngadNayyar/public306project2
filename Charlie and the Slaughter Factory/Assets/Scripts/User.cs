@@ -7,6 +7,10 @@ public class User {
 	private string username;
 	private int score;
 	private int highScore;
+
+	private bool viewedCutScene1;
+	private bool viewedCutScene2;
+	private bool viewedCutScene3;
 	// Implement some kind of list of achievements
 
 	// Check that this method works with a constructor!!
@@ -30,14 +34,22 @@ public class User {
 				username = PlayerPrefs.GetString(playerSlot);
 				score = 0;
 				highScore = PlayerPrefs.GetInt("HighScore" + playerSlot);
+				viewedCutScene1 = PlayerPrefs.GetInt("CutScene1" + playerSlot) == 1;
+				viewedCutScene2 = PlayerPrefs.GetInt("CutScene2" + playerSlot) == 1;
+				viewedCutScene3 = PlayerPrefs.GetInt("CutScene3" + playerSlot) == 1;
 			} else {
 				// If new player:
 				username = "";
 				score = 0;
 				highScore = 0;
+				viewedCutScene1 = false;
+				viewedCutScene2 = false;
+				viewedCutScene3 = false;
 			}
 		}
 	}
+
+	// Multiple getters and setters for provate variables.
 
 	public string GetPlayerSlot() {
 		return player;
@@ -53,5 +65,25 @@ public class User {
 
 	public void SetUsername(string usernameInput) {
 		username = usernameInput;
+	}
+
+	public void ResetScore() {
+		score = 0;
+	}
+
+	public bool hasViewedCutScene1() {
+		return viewedCutScene1;
+	}
+
+	public bool hasViewedCutScene2() {
+		return viewedCutScene2;
+	}
+
+	public bool hasViewedCutScene3() {
+		return viewedCutScene3;
+	}
+
+	public void SetHasViewedCutScene1() {
+		viewedCutScene1 = true;
 	}
 }

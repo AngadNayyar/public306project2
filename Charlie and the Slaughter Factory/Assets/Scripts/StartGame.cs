@@ -1,61 +1,55 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour {
 
-	private string username;
+	private GameController gameController;
+	private GameObject cutScenes;
+	private GameObject button;
+	private List<GameObject> cutSceneImages = new List<GameObject>();
+	private int[] cutScenes1;
+	private int index = 0;
+	private string[] dialogue;
 
-    private void createPrefabs() {
-    	PlayerPrefs.SetString("1", "CutScene1");
-    	PlayerPrefs.SetString("2", "CutScene2");
-    	PlayerPrefs.SetString("3", "CutScene3");
-    	PlayerPrefs.SetString("4", "CutScene4");
-    	PlayerPrefs.SetString("5", "CutScene5");
-    	PlayerPrefs.SetString("6", "CutScene6");
-    	PlayerPrefs.SetString("7", "CutScene7");
-    	PlayerPrefs.SetString("8", "CutScene8");
-        PlayerPrefs.SetString("9", "introlvl1");
-        PlayerPrefs.SetString("10", "CompletedLevelExit");
-        PlayerPrefs.SetString("11", "proto_lvl1");
-        PlayerPrefs.SetString("12", "CompletedLevelExit");
-        PlayerPrefs.SetString("13", "FinishedGame");
-        PlayerPrefs.SetString("CurrentScene", "1");
-        PlayerPrefs.SetInt("CurrentScore", 0);
+    void Awake() {
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        cutScenes = GameObject.Find("CutScenes");
+        button = GameObject.Find("Button");
+        cutSceneImages.Add(GameObject.Find("CutScene1"));
+        GameObject.Find("CutScene1").SetActive(false);
+        cutSceneImages.Add(GameObject.Find("CutSceneCharlie"));
+        GameObject.Find("CutSceneCharlie").SetActive(false);
+        cutSceneImages.Add(GameObject.Find("CutSceneOldChicken"));
+        GameObject.Find("CutSceneOldChicken").SetActive(false);
+        cutSceneImages.Add(GameObject.Find("CutSceneOldChickenCard"));
+        GameObject.Find("CutSceneOldChickenCard").SetActive(false);
+        cutScenes.SetActive(false);
+        cutScenes1 = new int[]{0,1,2,3,1,2,1,2};
+        dialogue = new string[]{
+        	"It's a rough place out in that factory for a little chicken like you ...",
+        	"Who ... who are you?",
+        	"Charlie, I'm your ticket out of here.",
+        	"Take this card, it will open the doors to the outside.",
+        	"Aren't you coming with me?",
+        	"No ... I lost my leg on my last attempt. I'll only slow you down.",
+        	"But ...",
+        	"No buts Charlie. Avoid the machines and don't get caught."
+        };
     }
 
-	public void toUsername() {
-        createPrefabs();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameChooser");
-	}
-
-	public void setWarningText(GameObject warning) {
-		if (username == "") {
-			warning.GetComponentInChildren<Text>().text = "Please input a valid username.";
-		}
-	}
-
-	public void submitAndStart(GameObject usernameInput) {
-		username = usernameInput.GetComponentInChildren<Text>().text;
-		PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentGame"), username);
-		PlayerPrefs.SetString(PlayerPrefs.GetString("CurrentGame") + "Achieved1", "notAchieved1");
-		PlayerPrefs.Save();
-
-		if (username != "") {
-			startGame();
-		}
-	}
-
 	public void startGame() {
-        createPrefabs();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetString("1"));
-	}
-
-	public void backToMain() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
-	}
-
-	public void DisplayCredits() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+		gameController.PlayGame();
+		cutScenes.SetActive(true);
+		if (index != 0) {
+			cutSceneImages[cutScenes1[index-1]].SetActive(false);
+		}
+		cutSceneImages[cutScenes1[index]].SetActive(true);
+		button.GetComponentInChildren<Text>().text = dialogue[index];
+		index = index + 1;
+		if (index > cutSceneImages.Count) {
+			gameController.currentPlayer.SetHasViewedCutScene1();
+		}
 	}
 }

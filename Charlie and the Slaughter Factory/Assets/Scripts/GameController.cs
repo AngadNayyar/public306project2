@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour {
 
 	private static GameController gameController;
 
-	public string[] levels;
+	private string[] levels;
 	public User currentPlayer;
 	public List<User> leaderboard;
 
@@ -16,19 +16,20 @@ public class GameController : MonoBehaviour {
 	public void Awake() {
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
+			RunReset();
 			return;
 		}
 		gameController = this;
 		DontDestroyOnLoad(gameObject);
-		usernameInput = GameObject.Find("UsernameInput");
-		UpdateUsernames();
-		usernameInput.SetActive(false);
-		InitialSetUp();
-		CreateStartMenu();
+		RunReset();
 	}
 
 	public void GoToMainMenu() {
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
+		RunReset();
+	}
+
+	public void RunReset() {
 		usernameInput = GameObject.Find("UsernameInput");
 		UpdateUsernames();
 		usernameInput.SetActive(false);
@@ -109,6 +110,15 @@ public class GameController : MonoBehaviour {
 			GameObject.Find("WarningText").GetComponentInChildren<Text>().text = "Please input a valid username.";
 		} else {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
+		}
+	}
+
+	public void PlayGame() {
+		currentPlayer.ResetScore();
+		if (!currentPlayer.hasViewedCutScene1()) {
+			return;
+		} else {
+			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[1]);
 		}
 	}
 }
