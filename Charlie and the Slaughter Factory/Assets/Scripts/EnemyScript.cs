@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/**
+ * This script is used by the Enemy dogs
+ * Runs faster if the dog is facing charlie and he is within 4 units of charlie
+ * If hits a "Wall", turns around
+ * @author Ida
+ * */
 public class EnemyScript : MonoBehaviour
 {
-
     // instantiates the boundaries's and speed of the object
-    private float rightLimit = 3.8f;
-    private float leftLimit = -1.4f;
-    private float speed = 1.0f;
     public float velocity = 1.0f;
-    private bool facingRight = true;
     GameObject player;
-
     public Transform sightStart;
     public Transform sightEnd;
-
     public bool colliding;
     public LayerMask detectWhat;
-
 
     // Use this for initialization
     void Start(){}
@@ -35,44 +32,32 @@ public class EnemyScript : MonoBehaviour
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
             velocity *= -1;
         }
-
+        
         player = GameObject.FindGameObjectWithTag("Player"); // gets the player
         float player_pos = player.transform.position.x; // gets the player's position
-        float player_dif_x = player_pos - transform.position.x;
-        float player_dif_y = player.transform.position.y - transform.position.y;
+
+        float player_dif_x = player_pos - transform.position.x; // gets charlie and the dogs difference in x values
+        float player_dif_y = player.transform.position.y - transform.position.y;  // gets charlie and the dogs difference in y values
+
         if (velocity > 0) //going right
         {
-            if (player_dif_x < 4 && player_dif_x > 0 && player_dif_y < 0) // if facing the chicken
-            {
+            if (player_dif_x < 4 && player_dif_x > 0 && player_dif_y < 0) // if within 4 units of eachother and charlie is lower then the dog
+            { //make dog run faster
                 velocity = 5f;
             } else
-            {
+            { //make dog run normal
                 velocity = 1f;
             }
         }
         else //going left
         {
-            if (player_dif_x > -4 && player_dif_x < 0 && player_dif_y < 0) // if facing the chicken
-            {
+            if (player_dif_x > -4 && player_dif_x < 0 && player_dif_y < 0) // if within 4 units of eachother and charlie is lower then the dog
+            { // make dog run faster
                 velocity = -5f;
             } else
-            {
+            { // make dog run normal
                 velocity = -1f;
             }
         }
-
-       /* if (player_pos < rightLimit && player_pos > leftLimit && player.transform.position.y < -3)
-        {
-            if ((player_pos < transform.position.x && !facingRight) || (player_pos > transform.position.x && facingRight))
-            {
-                velocity = -5.0f;
-            }
-            else
-            {
-                velocity = -1.0f;
-            }
-        }
-        */
-
     }
 }
