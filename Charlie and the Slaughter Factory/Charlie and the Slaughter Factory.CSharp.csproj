@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
     <Compile Include="Assets\Scripts\UpdateUserData.cs" />
+    <Compile Include="Assets\Scripts\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

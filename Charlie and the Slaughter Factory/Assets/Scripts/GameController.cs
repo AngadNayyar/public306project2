@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour {
 	private GameObject[] buttons;
 	private String[] levels;
 	private User currentPlayer;
-	private User[] leaderboard;
+	private List<User> leaderboard;
 
 	void Awake() {
 		InitialSetUp();
@@ -21,8 +21,9 @@ public class GameController : MonoBehaviour {
         	"FinishedGame"
 		};
 		// Fetch data for leaderboard
-		leaderboard = new User[]{
-
-		};
+		leaderboard = new List<User>();
+		for (int i = 0; i < 10; i++) {
+			leaderboard.Add(new User(PlayerPrefs.GetString("LeaderboardUsername" + count), PlayerPrefs.GetString("LeaderboardScore" + count)));
+		}
 	}
 }
