@@ -5,18 +5,33 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	private GameObject[] buttons;
-	private string[] levels;
-	private User currentPlayer;
-	private List<User> leaderboard;
+	private static GameController gameController;
+
+	public string[] levels;
+	public User currentPlayer;
+	public List<User> leaderboard;
 
 	private GameObject usernameInput;
 
 	public void Awake() {
+		if (gameController != null) {
+			DestroyImmediate(gameObject);
+			return;
+		}
+		gameController = this;
+		DontDestroyOnLoad(gameObject);
 		usernameInput = GameObject.Find("UsernameInput");
 		UpdateUsernames();
 		usernameInput.SetActive(false);
-		DontDestroyOnLoad(transform.gameObject);
+		InitialSetUp();
+		CreateStartMenu();
+	}
+
+	public void GoToMainMenu() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
+		usernameInput = GameObject.Find("UsernameInput");
+		UpdateUsernames();
+		usernameInput.SetActive(false);
 		InitialSetUp();
 		CreateStartMenu();
 	}
