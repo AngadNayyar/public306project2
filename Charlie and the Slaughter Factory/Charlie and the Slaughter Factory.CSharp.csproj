@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\DogDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\FailedLevel.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GetCoinCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
