@@ -25,9 +25,25 @@ public class GameController : MonoBehaviour {
 		};
 		// Fetch data for leaderboard
 		leaderboard = new List<User>();
-		for (int i = 0; i < 10; i++) {
+		PlayerPrefs.SetString("LeaderboardUsername1", "My name is");
+		PlayerPrefs.SetInt("LeaderboardScore1", 2);
+		PlayerPrefs.Save();
+		for (int i = 1; i < 11; i++) {
 			leaderboard.Add(new User(0, PlayerPrefs.GetString("LeaderboardUsername" + i), PlayerPrefs.GetInt("LeaderboardScore" + i)));
 		}
+	}
+
+	public void UpdateLeaderboardView(GameObject panel) {
+		Text[] textViews = panel.GetComponentsInChildren<Text>();
+		panel.SetActive(true);
+		string usernames = "";
+		string scores = "";
+		for (int i = 0; i < leaderboard.Count; i++) {
+			usernames = usernames + (i+1) + ". " + leaderboard[i].GetUsername() + "\n";
+			scores = scores + leaderboard[i].GetHighScore() + "\n";
+		}
+		textViews[4].GetComponentInChildren<Text>().text = usernames;
+		textViews[5].GetComponentInChildren<Text>().text = scores;
 	}
 
 	public void CreateStartMenu() {
@@ -35,6 +51,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void ShowPopup(GameObject panel) {
+		if (panel.name == "Leaderboard") {
+			UpdateLeaderboardView(panel);
+		}
 		panel.SetActive(true);
 	}
 

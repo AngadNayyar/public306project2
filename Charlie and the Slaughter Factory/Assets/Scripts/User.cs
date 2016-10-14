@@ -36,4 +36,12 @@ public class User {
 			}
 		}
 	}
+
+	public string GetUsername() {
+		return username;
+	}
+
+	public int GetHighScore() {
+		return highScore;
+	}
 }
