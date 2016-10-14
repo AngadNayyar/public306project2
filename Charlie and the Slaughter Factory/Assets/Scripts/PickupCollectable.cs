@@ -11,9 +11,9 @@ public class PickupCollectable : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player")) {
-            int oldCoins = PlayerPrefs.GetInt("LevelCoins");
+            int oldCoins = PlayerPrefs.GetInt("LevelChickens");
             int newCoins = oldCoins + 1;
-            PlayerPrefs.SetInt("LevelCoins", newCoins);
+            PlayerPrefs.SetInt("LevelChickens", newCoins);
             Destroy(gameObject);
         }
     }
