@@ -1,21 +1,25 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
 	private GameObject[] buttons;
-	private String[] levels;
+	private string[] levels;
 	private User currentPlayer;
 	private List<User> leaderboard;
+	// Want stored but may need to be different :P
+	private string audio;
 
-	void Awake() {
+	public void Awake() {
 		InitialSetUp();
+		CreateStartMenu();
 	}
 
-	void InitialSetUp() {
+	public void InitialSetUp() {
 		// Initialise list of levels
-		levels = new String[]{
+		levels = new string[]{
         	"introlvl1",
         	"proto_lvl1",
         	"FinishedGame"
@@ -23,7 +27,11 @@ public class GameController : MonoBehaviour {
 		// Fetch data for leaderboard
 		leaderboard = new List<User>();
 		for (int i = 0; i < 10; i++) {
-			leaderboard.Add(new User(PlayerPrefs.GetString("LeaderboardUsername" + count), PlayerPrefs.GetString("LeaderboardScore" + count)));
+			leaderboard.Add(new User(0, PlayerPrefs.GetString("LeaderboardUsername" + i), PlayerPrefs.GetInt("LeaderboardScore" + i)));
 		}
+	}
+
+	public void CreateStartMenu() {
+		
 	}
 }
