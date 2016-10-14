@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class User {
+	private string player;
 	private string username;
 	private int score;
 	private int highScore;
@@ -16,16 +17,17 @@ public class User {
 	// If passed a string name and a score, create a user object to hold this leaderboard data.
 
 	// Note that the extra if/else statements are necessary as you cannot overload constructors in c#
-	public User(int playerSlot, string name, int storedScore) {
+	public User(string playerSlot, string name, int storedScore) {
+		player = playerSlot;
 		// If leaderboard data only:
-		if (playerSlot == 0) {
+		if (playerSlot == "") {
 			username = name;
 			highScore = storedScore;
 			score = 0;
 		} else {
 			// If existing player:
-			if (PlayerPrefs.HasKey("Player" + playerSlot)) {
-				username = PlayerPrefs.GetString("Player" + playerSlot);
+			if (PlayerPrefs.HasKey(playerSlot)) {
+				username = PlayerPrefs.GetString(playerSlot);
 				score = 0;
 				highScore = PlayerPrefs.GetInt("HighScore" + playerSlot);
 			} else {
@@ -37,11 +39,19 @@ public class User {
 		}
 	}
 
+	public string GetPlayerSlot() {
+		return player;
+	}
+
 	public string GetUsername() {
 		return username;
 	}
 
 	public int GetHighScore() {
 		return highScore;
+	}
+
+	public void SetUsername(string usernameInput) {
+		username = usernameInput;
 	}
 }
