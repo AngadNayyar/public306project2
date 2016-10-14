@@ -9,10 +9,9 @@ public class GameController : MonoBehaviour {
 	private string[] levels;
 	private User currentPlayer;
 	private List<User> leaderboard;
-	// Want stored but may need to be different :P
-	private string audio;
 
 	public void Awake() {
+		DontDestroyOnLoad(transform.gameObject);
 		InitialSetUp();
 		CreateStartMenu();
 	}
@@ -33,5 +32,13 @@ public class GameController : MonoBehaviour {
 
 	public void CreateStartMenu() {
 		
+	}
+
+	public void ShowPopup(GameObject panel) {
+		panel.SetActive(true);
+	}
+
+	public void HidePopup(GameObject panel) {
+		panel.SetActive(false);
 	}
 }
