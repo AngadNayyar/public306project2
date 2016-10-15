@@ -3,22 +3,10 @@ using System.Collections;
 
 public class Mincer : MonoBehaviour
 {
-    public float speed = 3; // mincer doors speed
-    public float dir = 1; // 1 = right, -1 = left
-
-    private int attackDamage = 100;  //Damage taken due to hit
-    PlayerHealth playerHealth;  // Reference to the Charlie's health.
-    PlayerScript playerScript; //Reference to Charlie's movement controls
-    GameObject player;  // Reference to Charlie
-    Rigidbody2D rigidBody;
-
-    void Awake()
-    {
-        //used later for player damage
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
-        rigidBody = player.GetComponent<Rigidbody2D>();
-    }
+    //speed at which the object moves back and forth
+    public float speed = 3;
+    //direction in which the object moves. 1 is for right and -1 for left
+    public float dir = 1;
 
     void Update()
     {
@@ -26,17 +14,14 @@ public class Mincer : MonoBehaviour
         transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime * dir * speed);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    //check if the object hits the other two cubes
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        //check if mincer hits another mincer
-        if (col.gameObject.tag == "Mincer")
+        //check if the object enter into a trigger with objects named Mincer
+        if (coll.gameObject.tag == "Mincer")
         {
-            //reverse the direction of the mincer door
+            //reverse the current direction 
             dir *= -1;
-        }
-        if (col.gameObject == player)
-        {
-            //damage player
         }
     }
 
