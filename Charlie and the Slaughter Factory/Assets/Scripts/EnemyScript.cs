@@ -1,10 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 /**
  * This script is used by the Enemy dogs
  * Runs faster if the dog is facing charlie and he is within 4 units of charlie
  * If hits a "Wall", turns around
- * @author Ida
  * */
 public class EnemyScript : MonoBehaviour
 {
