@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class User {
-	private string player;
+	private string playerGameSlot;
 	private string username;
 	private int score;
 	private int highScore;
@@ -22,7 +22,7 @@ public class User {
 
 	// Note that the extra if/else statements are necessary as you cannot overload constructors in c#
 	public User(string playerSlot, string name, int storedScore) {
-		player = playerSlot;
+		playerGameSlot = playerSlot;
 		// If leaderboard data only:
 		if (playerSlot == "") {
 			username = name;
@@ -39,12 +39,17 @@ public class User {
 				viewedCutScene3 = PlayerPrefs.GetInt("CutScene3" + playerSlot) == 1;
 			} else {
 				// If new player:
-				username = "";
+				username = name;
+				PlayerPrefs.SetString(playerSlot, username);
 				score = 0;
 				highScore = 0;
+				PlayerPrefs.SetInt("HighScore" + playerSlot, 0);
 				viewedCutScene1 = false;
 				viewedCutScene2 = false;
 				viewedCutScene3 = false;
+				PlayerPrefs.SetInt("CutScene1" + playerSlot, 0);
+				PlayerPrefs.SetInt("CutScene2" + playerSlot, 0);
+				PlayerPrefs.SetInt("CutScene3" + playerSlot, 0);
 			}
 		}
 	}
@@ -52,7 +57,7 @@ public class User {
 	// Multiple getters and setters for provate variables.
 
 	public string GetPlayerSlot() {
-		return player;
+		return playerGameSlot;
 	}
 
 	public string GetUsername() {

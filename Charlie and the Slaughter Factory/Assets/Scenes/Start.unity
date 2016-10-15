@@ -2056,7 +2056,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1138935406}
-        m_MethodName: ShowPlayerData
+        m_MethodName: SaveNewPlayer
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 372003385}
