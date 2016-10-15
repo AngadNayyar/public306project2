@@ -72,11 +72,13 @@
     <Compile Include="Assets\Scripts\CoinCalculate.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
+    <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
     <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
     <Compile Include="Assets\Scripts\DogDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\FailedLevel.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GetCoinCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
     <Compile Include="Assets\Scripts\UpdateUserData.cs" />
+    <Compile Include="Assets\Scripts\User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
