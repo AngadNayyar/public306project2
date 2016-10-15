@@ -53,7 +53,6 @@ public class StartGame : MonoBehaviour {
 
     // Play the cut scenes, in the order specified above, until they are finished, and then set that the user has viewed them (so they don't have to next time)
     public void PlayCutScene1() {
-        Debug.Log(index);
         cutScenes.SetActive(true);
         if (index != 0) {
             cutSceneImages[cutScenes1[index-1]].SetActive(false);
@@ -69,5 +68,10 @@ public class StartGame : MonoBehaviour {
     // Hide supplied popup
     public void HidePopup(GameObject panel) {
         panel.SetActive(false);
+    }
+
+    // Show popup
+    public void ShowPopup(GameObject panel) {
+        gameController.ShowPopup(panel);
     }
 }

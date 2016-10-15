@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    	"introlvl1",
     	"proto_lvl1"
 	};
 	private User currentPlayer;
@@ -140,6 +139,7 @@ public class GameController : MonoBehaviour {
 			isFinished = true;
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
 		} else {
+			Debug.Log("me?");
 			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			currentLevel = currentLevel + 1;
 		}

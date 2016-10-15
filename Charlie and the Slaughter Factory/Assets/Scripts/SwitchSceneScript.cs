@@ -10,8 +10,13 @@ public class SwitchSceneScript : MonoBehaviour {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
-    void OnTriggerEnter2D(){
-		Achievement.UpdatefirstReward ();
-        gameController.ShowPopup(gameController.getFinishedLevel());
+    // When you walk through the door, open the finished level popup
+    void OnTriggerEnter2D(Collider2D coll){
+        Debug.Log(coll.name);
+        // Make sure that it only runs when charlie collides with the door.
+        if (coll.name == "Charlie") {
+            Achievement.UpdatefirstReward ();
+            gameController.ShowPopup(gameController.getFinishedLevel());
+        }
     }
 }
