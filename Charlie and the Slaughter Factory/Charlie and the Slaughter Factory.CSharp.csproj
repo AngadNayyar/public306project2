@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
     <Compile Include="Assets\Scripts\Claw_follow_player.cs" />
+    <Compile Include="Assets\Scripts\Claw_lookat_player.cs" />
     <Compile Include="Assets\Scripts\CoinCalculate.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
