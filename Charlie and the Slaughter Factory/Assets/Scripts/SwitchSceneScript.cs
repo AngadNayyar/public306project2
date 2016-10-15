@@ -4,19 +4,19 @@ using UnityEngine.SceneManagement;
 
 public class SwitchSceneScript : MonoBehaviour {
 
-     void OnTriggerEnter2D()
-    {
-		Achievement.UpdatefirstReward ();
-    	int currentScene = int.Parse(PlayerPrefs.GetString("CurrentScene"));
-    	string newScene = (currentScene + 1).ToString();
-    	PlayerPrefs.SetString("CurrentScene", newScene);
-        SceneManager.LoadScene(PlayerPrefs.GetString(newScene));
+    private GameController gameController;
+
+    void Awake() {
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
-    public void OnClick() {
-    	int currentScene = int.Parse(PlayerPrefs.GetString("CurrentScene"));
-    	string newScene = (currentScene + 1).ToString();
-    	PlayerPrefs.SetString("CurrentScene", newScene);
-        SceneManager.LoadScene(PlayerPrefs.GetString(newScene));
+    // When you walk through the door, open the finished level popup
+    void OnTriggerEnter2D(Collider2D coll){
+        Debug.Log(coll.name);
+        // Make sure that it only runs when charlie collides with the door.
+        if (coll.name == "Charlie") {
+            Achievement.UpdatefirstReward ();
+            gameController.ShowPopup(gameController.getFinishedLevel());
+        }
     }
 }
