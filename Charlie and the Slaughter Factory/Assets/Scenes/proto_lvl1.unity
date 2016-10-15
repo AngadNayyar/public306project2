@@ -1324,7 +1324,7 @@ GameObject:
   - 114: {fileID: 480576300}
   m_Layer: 12
   m_Name: moving_platform (1)
-  m_TagString: ground
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1862,11 +1862,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.18
+      value: -11.33
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.28
+      value: -4.47
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4016,7 +4016,7 @@ GameObject:
   - 114: {fileID: 1358614280}
   m_Layer: 12
   m_Name: moving_platform (2)
-  m_TagString: ground
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

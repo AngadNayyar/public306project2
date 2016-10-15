@@ -87,7 +87,6 @@ public class PlayerScript : MonoBehaviour
     // Update function
     void FixedUpdate()
     {
-
         // Gets the horizontal direction of the movement from the user
         float h = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", Mathf.Abs(h));
@@ -145,30 +144,31 @@ public class PlayerScript : MonoBehaviour
         transform.localScale = theScale;
     }
     //added but commmented out for platform collision
-/*
-    void OnCollisionStay2D(Collision2D hit)
+
+    void OnCollisionStay2D(Collision2D col)
     {
-        if (hit.gameObject.tag == "Platform")
+        if (col.gameObject.tag == "Platform")
         {
-            print("colliding");
-            transform.position = hit.transform.position;
+           transform.parent = col.transform;
         }
-        else
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
         {
             transform.parent = null;
         }
-    }*/
-
-        /* //method to increase player's number of coins when they collide with one
-        void OnTriggerEnter2D(Collider2D other)
+    }
+    /* //method to increase player's number of coins when they collide with one
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
         {
-            if (other.gameObject.CompareTag("Coin"))
-            {
-                //other.gameObject.SetActive(false);
-                coinCount = coinCount + 1;
-                Debug.Log(coinCount);
-                PlayerPrefs.SetInt("LevelCoins", coinCount);
-            }
+            //other.gameObject.SetActive(false);
+            coinCount = coinCount + 1;
+            Debug.Log(coinCount);
+            PlayerPrefs.SetInt("LevelCoins", coinCount);
+        }
 
-        } */
+    } */
 }
