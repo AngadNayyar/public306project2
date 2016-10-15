@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Achievement.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
-    <Compile Include="Assets\Scripts\CoinCalculate.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
@@ -78,8 +77,9 @@
     <Compile Include="Assets\Scripts\DogDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\FailedLevel.cs" />
+    <Compile Include="Assets\Scripts\FallingPlatform.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\GetCoinCount.cs" />
+    <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
     <Compile Include="Assets\Scripts\PickupCollectable.cs" />
