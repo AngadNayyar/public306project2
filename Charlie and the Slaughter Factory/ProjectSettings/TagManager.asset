@@ -15,6 +15,7 @@ TagManager:
   - HealthBar
   - Coin
   - Platform
+  - Mincer
   layers:
   - Default
   - TransparentFX
@@ -66,4 +67,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 149272721
+    locked: 0
+  - name: Mincer
+    uniqueID: 2019212989
     locked: 0
