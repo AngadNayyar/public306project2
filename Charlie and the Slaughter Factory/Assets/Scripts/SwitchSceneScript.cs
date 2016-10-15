@@ -12,6 +12,6 @@ public class SwitchSceneScript : MonoBehaviour {
 
     void OnTriggerEnter2D(){
 		Achievement.UpdatefirstReward ();
-        gameController.NextLevel();
+        gameController.ShowPopup(gameController.getFinishedLevel());
     }
 }

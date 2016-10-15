@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
 	private string gameSlot;
 	private List<User> leaderboard  = new List<User>();
 	private GameObject usernameInput;
+	private GameObject finishedLevel;
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
@@ -25,6 +26,8 @@ public class GameController : MonoBehaviour {
 	public void Awake() {
 		usernameInput = GameObject.Find("UsernameInput");
 		usernameInput.SetActive(false);
+		finishedLevel = GameObject.Find("FinishedLevel");
+		finishedLevel.SetActive(false);
 		GameObject.Find("PickPlayer").SetActive(false);
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
@@ -82,6 +85,9 @@ public class GameController : MonoBehaviour {
 	// Hide the supplied popup
 	public void HidePopup(GameObject panel) {
 		panel.SetActive(false);
+		if (panel.name == "FinishedLevel") {
+			NextLevel();
+		}
 	}
 
 	// If the user selects a game slot, check if it's initialised. If not, set up the new user and then display the player's data page.
@@ -151,5 +157,9 @@ public class GameController : MonoBehaviour {
 
 	public User getCurrentPlayer() {
 		return currentPlayer;
+	}
+
+	public GameObject getFinishedLevel() {
+		return finishedLevel;
 	}
 }
