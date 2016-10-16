@@ -22,7 +22,7 @@ public class FallingObject : MonoBehaviour {
 	private int fallDamage = 20; 
 
 	// Set the distance for when the object should start falling when Charlie is within a certain distance 
-	private int triggerDistance = 3.0f; 
+	private float triggerDistance = 3.0f; 
 
 	//Set the gravity scale for the objects - a larger number is a faster fall 
 	private float gravityScale = 0.1f; 
