@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ChooseGame.cs" />
+     <Compile Include="Assets\Scripts\Cog.cs" />
      <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
      <Compile Include="Assets\Scripts\Conveyor.cs" />
      <Compile Include="Assets\Scripts\CrusherDamage.cs" />
