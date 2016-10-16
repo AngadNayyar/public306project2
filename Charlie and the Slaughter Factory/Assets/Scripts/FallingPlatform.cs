@@ -34,7 +34,6 @@ public class FallingPlatform : MonoBehaviour {
 		}
 		if (other.gameObject.CompareTag("ground")  ||  (other.gameObject.CompareTag("Enemy"))) 
 		{
-			Invoke ("Fall", fallDelay);
 			Destroy (this.gameObject); 
 		}
 	}
