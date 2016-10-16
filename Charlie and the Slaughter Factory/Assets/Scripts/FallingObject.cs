@@ -22,7 +22,7 @@ public class FallingObject : MonoBehaviour {
 	private int fallDamage = 20; 
 
 	// Set the distance for when the object should start falling when Charlie is within a certain distance 
-	private int triggerDistance = 3.0f; 
+	private int triggerDistance = 3; 
 
 	//Set the gravity scale for the objects - a larger number is a faster fall 
 	private float gravityScale = 0.1f; 
@@ -49,7 +49,6 @@ public class FallingObject : MonoBehaviour {
 
 		if (Mathf.Abs(player_pos - transform.position.x) < triggerDistance) {
 			rb2d.gravityScale = gravityScale; 
-			Debug.Log ("fall");
 		}
 
 		transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
