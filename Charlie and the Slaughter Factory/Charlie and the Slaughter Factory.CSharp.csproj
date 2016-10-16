@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Achievement.cs" />
+    <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
     <Compile Include="Assets\Scripts\DogDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
-    <Compile Include="Assets\Scripts\FailedLevel.cs" />
+    <Compile Include="Assets\Scripts\FallingObject.cs" />
     <Compile Include="Assets\Scripts\FallingPlatform.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GetCollectableCount.cs" />

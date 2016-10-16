@@ -30,7 +30,7 @@ public class GetCollectableCount : MonoBehaviour
 
     void Update()
     {
-        // change the chickens saved text to the latest increment until the new total score is displayed
+        // change the chickens saved text to the latest increment until the new total is displayed
         pointAnimTimer += Time.deltaTime;
         float prcComplete = pointAnimTimer / pointAnimDurationSec;
         displayedScore = Mathf.Lerp(oldTotalScore, newTotalScore, prcComplete);
