@@ -1,11 +1,15 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="Charlie and the Slaughter Factory.CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SawAudio.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Leaderboard.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerScript.cs" Line="80" Column="38" />
-      <File FileName="Assets\Scripts\FallingObject.cs" Line="64" Column="3" />
-      <File FileName="Assets\Scripts\EnemyScript.cs" Line="26" Column="37" />
-      <File FileName="Assets\Scripts\SawAudio.cs" Line="33" Column="93" />
+      <File FileName="Assets/Scripts/User.cs" Line="7" Column="10" />
+      <File FileName="Assets/Scripts/StartGame.cs" Line="31" Column="14" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="27" Column="30" />
+      <File FileName="Assets/Scripts/EnemyScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ChooseGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Achievement.cs" Line="5" Column="18" />
+      <File FileName="Assets/Scripts/Leaderboard.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
