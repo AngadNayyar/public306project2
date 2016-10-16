@@ -30,7 +30,7 @@ public class SawAudio : MonoBehaviour {
 
 		float player_pos = player.transform.position.x;
 
-		if (Mathf.Abs(player_pos - transform.position.x) < triggerDistance) {
+		if ((Mathf.Abs(player_pos - transform.position.x) < triggerDistance) && (!source.isPlaying)) {
 			source.Play();
 		}
 	
