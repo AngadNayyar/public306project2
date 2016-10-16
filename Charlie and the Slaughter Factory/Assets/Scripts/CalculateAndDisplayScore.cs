@@ -12,10 +12,17 @@ public class CalculateAndDisplayScore : MonoBehaviour
     private float newTotalScore;
     private float pointAnimDurationSec = 1f;
     private float pointAnimTimer = 0f;
-
-
+    
     void Start()
     {
+        /*
+         * Get the current player
+         */
+        GameObject gameO = GameObject.Find("GameController");
+        GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
+        User currentPlayer = gameC.getCurrentPlayer();
+        string playerNumber = currentPlayer.GetPlayerSlot();
+
         /* 
          * Calculate new score
          */
@@ -42,14 +49,14 @@ public class CalculateAndDisplayScore : MonoBehaviour
          */
         // get the old total score for the start point of the Lerp and 
         // the calculation of the new score
-        oldTotalScore = PlayerPrefs.GetInt("CurrentScore");
+        oldTotalScore = PlayerPrefs.GetInt("CurrentScore" + playerNumber);
 
         // the score to be updated and displayed (start at old total score)
         displayedScore = oldTotalScore;
 
         // get the new total score for the end point of the Lerp
         newTotalScore = oldTotalScore + thisLevelScore;
-        PlayerPrefs.SetInt("CurrentScore", (int)newTotalScore);
+        PlayerPrefs.SetInt("CurrentScore" + playerNumber, (int)newTotalScore);
 
     }
 

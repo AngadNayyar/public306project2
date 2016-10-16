@@ -1730,13 +1730,14 @@ GameObject:
   - 223: {fileID: 432166898}
   - 114: {fileID: 432166897}
   - 114: {fileID: 432166896}
+  - 114: {fileID: 432166899}
   m_Layer: 5
   m_Name: Leaderboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &432166895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1812,6 +1813,25 @@ Canvas:
   m_SortingLayerID: 149272721
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!114 &432166899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432166894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34aea5685899cc4988b553e391237fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPlaceUsername: {fileID: 359064062}
+  firstPlaceScore: {fileID: 2101561878}
+  secondPlaceUsername: {fileID: 378522814}
+  secondPlaceScore: {fileID: 1564185944}
+  thirdPlaceUsername: {fileID: 1516149138}
+  thirdPlaceScore: {fileID: 911531035}
+  fourthPlaceUsername: {fileID: 1817311531}
+  fourthPlaceScore: {fileID: 1975361298}
 --- !u!1 &432867864
 GameObject:
   m_ObjectHideFlags: 0
@@ -6038,7 +6058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1679566651
 RectTransform:
   m_ObjectHideFlags: 0

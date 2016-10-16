@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 /*
@@ -8,31 +9,35 @@ using System.Collections.Generic;
  */
 public class Leaderboard : MonoBehaviour {
 
-    public GameController gc;
+    public Text firstPlaceUsername;
+    public Text firstPlaceScore;
+    public Text secondPlaceUsername;
+    public Text secondPlaceScore;
+    public Text thirdPlaceUsername;
+    public Text thirdPlaceScore;
+    public Text fourthPlaceUsername;
+    public Text fourthPlaceScore;
 
-	void Start () {
+    void Start () {
+        GameObject gameO = GameObject.Find("GameController");
+        GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
+        
+        List<User> players = gameC.SetUpLeaderboard();
 
-        //List<User> players = gc.SetUpLeaderboard();
+        firstPlaceUsername.text = players[0].GetUsername();
+        firstPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer1").ToString();
 
-	    
-	}
+        secondPlaceUsername.text = players[1].GetUsername();
+        secondPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer2").ToString();
 
-    /*
-    // Update the strings contained in the leaderboard.
-    public void UpdateLeaderboardView(GameObject panel)
-    {
-        Text[] textViews = panel.GetComponentsInChildren<Text>();
-        panel.SetActive(true);
-        string usernames = "";
-        string scores = "";
-        for (int i = 0; i < leaderboard.Count; i++)
-        {
-            usernames = usernames + (i + 1) + ". " + leaderboard[i].GetUsername() + "\n";
-            scores = scores + leaderboard[i].GetHighScore() + "\n";
-        }
-        textViews[4].GetComponentInChildren<Text>().text = usernames;
-        textViews[5].GetComponentInChildren<Text>().text = scores;
+        thirdPlaceUsername.text = players[2].GetUsername();
+        thirdPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer3").ToString();
+
+        fourthPlaceUsername.text = players[3].GetUsername();
+        fourthPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer4").ToString();
+
+        //implement check to see if empty username - don't display anything
+
     }
-    */
 
 }

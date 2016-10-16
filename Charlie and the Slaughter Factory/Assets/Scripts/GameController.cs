@@ -47,14 +47,24 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+
+
+
+
 	// Set up the data for the leaderboard.
 	// Should be called whenever a new score is saved to the current user.
-	public void SetUpLeaderboard() {
+	public List<User> SetUpLeaderboard() {
 		// Fetch data for leaderboard
-		for (int i = 1; i < 11; i++) {
-			leaderboard.Add(new User("", PlayerPrefs.GetString("LeaderboardUsername" + i), PlayerPrefs.GetInt("LeaderboardScore" + i)));
+		for (int i = 1; i < 5; i++) {
+			leaderboard.Add(new User("", PlayerPrefs.GetString("Player" + i), PlayerPrefs.GetInt("CurrentScorePlayer" + i)));
 		}
+        return leaderboard;
 	}
+
+
+
+
+
 
 	// Update the strings contained in the leaderboard.
 	public void UpdateLeaderboardView(GameObject panel) {
