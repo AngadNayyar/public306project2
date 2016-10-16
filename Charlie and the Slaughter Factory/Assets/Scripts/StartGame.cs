@@ -8,6 +8,7 @@ public class StartGame : MonoBehaviour {
 	private GameController gameController;
 	private GameObject cutScenes;
 	private GameObject button;
+	private GameObject skipbutton;
     private GameObject finishedGame;
 	private List<GameObject> cutSceneImages = new List<GameObject>();
 	private int[] cutScenes1 = new int[]{0,1,2,3,1,2,1,2};
@@ -38,6 +39,7 @@ public class StartGame : MonoBehaviour {
         GameObject.Find("CutSceneOldChicken").SetActive(false);
         GameObject.Find("CutSceneOldChickenCard").SetActive(false);
         button = GameObject.Find("Button");
+		skipbutton = GameObject.Find("Skip");
         cutScenes.SetActive(false);
 
         finishedGame = GameObject.Find("FinishedGame");
@@ -53,12 +55,14 @@ public class StartGame : MonoBehaviour {
 
     // Play the cut scenes, in the order specified above, until they are finished, and then set that the user has viewed them (so they don't have to next time)
     public void PlayCutScene1() {
+		
         cutScenes.SetActive(true);
         if (index != 0) {
             cutSceneImages[cutScenes1[index-1]].SetActive(false);
         }
         cutSceneImages[cutScenes1[index]].SetActive(true);
         button.GetComponentInChildren<Text>().text = dialogue[index];
+
         index = index + 1;
         if (index >= dialogue.Length) {
             gameController.getCurrentPlayer().SetHasViewedCutScene1();
@@ -74,4 +78,9 @@ public class StartGame : MonoBehaviour {
     public void ShowPopup(GameObject panel) {
         gameController.ShowPopup(panel);
     }
+
+	// Skip in video
+	public void nextLevel() {
+		gameController.NextLevel();
+	}
 }
