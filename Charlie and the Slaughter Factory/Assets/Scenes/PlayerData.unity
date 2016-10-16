@@ -426,7 +426,6 @@ GameObject:
   - 224: {fileID: 191825555}
   - 222: {fileID: 191825559}
   - 114: {fileID: 191825558}
-  - 114: {fileID: 191825557}
   - 114: {fileID: 191825556}
   m_Layer: 5
   m_Name: Score
@@ -465,17 +464,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 191825558}
---- !u!114 &191825557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 191825554}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e9dcd20d6d9c284795d7dc3d7b4d531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &191825558
 MonoBehaviour:
   m_ObjectHideFlags: 0
