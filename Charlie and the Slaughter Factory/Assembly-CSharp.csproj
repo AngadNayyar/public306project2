@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
      <Compile Include="Assets\Scripts\GetTime.cs" />
+     <Compile Include="Assets\Scripts\Leaderboard.cs" />
      <Compile Include="Assets\Scripts\NextLevel.cs" />
      <Compile Include="Assets\Scripts\PickupCollectable.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
