@@ -9,70 +9,90 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000011277925982}
+  m_RootGameObject: {fileID: 1000013886058558}
   m_IsPrefabParent: 1
---- !u!1 &1000011277925982
+--- !u!1 &1000013886058558
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000013163081034}
-  - 212: {fileID: 212000012511805076}
-  - 114: {fileID: 114000010587508858}
-  - 58: {fileID: 58000013051269352}
+  - 4: {fileID: 4000012220064072}
+  - 212: {fileID: 212000011338988680}
+  - 114: {fileID: 114000010247255828}
+  - 58: {fileID: 58000012800289282}
+  - 50: {fileID: 50000013788928934}
   m_Layer: 0
-  m_Name: coin
+  m_Name: FallingCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013163081034
+--- !u!4 &4000012220064072
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011277925982}
+  m_GameObject: {fileID: 1000013886058558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: -2.76, y: 3.06, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &58000013051269352
+--- !u!50 &50000013788928934
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013886058558}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58000012800289282
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011277925982}
+  m_GameObject: {fileID: 1000013886058558}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.675
---- !u!114 &114000010587508858
+  m_Radius: 1.6749998
+--- !u!114 &114000010247255828
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011277925982}
+  m_GameObject: {fileID: 1000013886058558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc47199ee227514fa5a71742995a034, type: 3}
+  m_Script: {fileID: 11500000, guid: e89e48f9bbf1d234ab64eacf38f53900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &212000012511805076
+  fallSpeed: 8
+  spinSpeed: 250
+--- !u!212 &212000011338988680
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011277925982}
+  m_GameObject: {fileID: 1000013886058558}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

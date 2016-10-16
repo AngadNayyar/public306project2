@@ -14,6 +14,7 @@ TagManager:
   - ExplosionFX
   - HealthBar
   - Coin
+  - ChickenCollectable
   layers:
   - Default
   - TransparentFX

@@ -2253,7 +2253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1070572973}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 64.5, y: 49.25}
@@ -3127,7 +3127,7 @@ GameObject:
   - 114: {fileID: 856333845}
   - 114: {fileID: 856333844}
   m_Layer: 5
-  m_Name: NumberOfCoinsText
+  m_Name: NumberOfChickensText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3145,7 +3145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1070572973}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 64.5, y: -44}
@@ -3159,10 +3159,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 856333842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03141b05d1938d44b80aaa66ce4a95f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2df4934b62d36f04392fee6bdd5b4eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 856333845}
+  chickenText: {fileID: 856333845}
 --- !u!114 &856333845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3798,10 +3798,10 @@ RectTransform:
   - {fileID: 1587061445}
   - {fileID: 965038569}
   - {fileID: 1777552212}
+  - {fileID: 1158874870}
   - {fileID: 489252199}
   - {fileID: 1853030953}
   - {fileID: 856333843}
-  - {fileID: 1158874870}
   m_Father: {fileID: 2075257498}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -4202,7 +4202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1070572973}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 64.5, y: 12}
@@ -4216,7 +4216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1158874869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7f501ff17264e418c69a5ab9aac379, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1158874872}
@@ -6264,7 +6264,7 @@ GameObject:
   - 222: {fileID: 1853030955}
   - 114: {fileID: 1853030954}
   m_Layer: 5
-  m_Name: CoinsText
+  m_Name: ChickensText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6282,7 +6282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1070572973}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -74, y: -44}
