@@ -10,7 +10,15 @@ public class DisplayScore : MonoBehaviour
     // display the players total score for the game
     public void Start()
     {
-        int score = PlayerPrefs.GetInt("CurrentScore");
+        /*
+         * Get the current player
+         */
+        GameObject gameO = GameObject.Find("GameController");
+        GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
+        User currentPlayer = gameC.getCurrentPlayer();
+        string playerNumber = currentPlayer.GetPlayerSlot();
+
+        int score = PlayerPrefs.GetInt("CurrentScore" + playerNumber);
         scoreText.text = "Score: " + score;
     }
 }
