@@ -50,6 +50,7 @@ public class GameController : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 	}
 
+	// Display and close the pause screen if the p or enter is pressed
 	public void Update() {
 		if (isPausable) {
 			if ((Input.GetKeyDown(KeyCode.Return)) | (Input.GetKeyDown(KeyCode.P))) {
@@ -58,6 +59,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	// Display and close the pause screen
 	public void Pause() {
 		Debug.Log("here");
 		if (isPaused) {
