@@ -1560,10 +1560,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 460865647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afad4034ee569447b59ec03a2145001, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b308ec072e2f75419938a8aa2b81aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 100
 --- !u!1 &480576299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,8 +3104,7 @@ Transform:
   m_LocalPosition: {x: 33.7, y: -5, z: 0}
   m_LocalScale: {x: 2.1, y: 1.6000006, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1659651534}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 56
 --- !u!114 &842642387
@@ -5660,63 +5658,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 40787059}
   m_RootOrder: 1
---- !u!1 &1659651533
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1659651534}
-  - 68: {fileID: 1659651535}
-  - 114: {fileID: 1659651536}
-  m_Layer: 12
-  m_Name: m_left_edge
-  m_TagString: Mincer
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1659651534
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1659651533}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.902, y: -0.47, z: 0}
-  m_LocalScale: {x: 0.4761905, y: 0.62499976, z: 0.5}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 842642386}
-  m_RootOrder: 0
---- !u!68 &1659651535
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1659651533}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 5.2641144, y: 1.5605888}
-  - {x: 5.2195206, y: -0.07551196}
---- !u!114 &1659651536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1659651533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afad4034ee569447b59ec03a2145001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 100
 --- !u!1 &1662506094
 GameObject:
   m_ObjectHideFlags: 0
