@@ -9,8 +9,4 @@ public class AttachToGameController : MonoBehaviour {
     public void Awake() {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
-
-    public void Pause() {
-        gameController.Pause();
-    }
 }

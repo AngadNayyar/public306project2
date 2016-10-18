@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour {
 	private GameObject pauseLevel;
 	private GameObject menuMusic;
 	private GameObject levelMusic;
+	private GameObject pauseButton;
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
@@ -41,6 +42,8 @@ public class GameController : MonoBehaviour {
 		menuMusic = GameObject.Find("MenuMusic");
 		levelMusic = GameObject.Find("LevelMusic");
 		levelMusic.SetActive(false);
+		pauseButton = GameObject.Find("PauseCanvas");
+		pauseButton.SetActive(false);
 		GameObject.Find("PickPlayer").SetActive(false);
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
@@ -61,7 +64,6 @@ public class GameController : MonoBehaviour {
 
 	// Display and close the pause screen
 	public void Pause() {
-		Debug.Log("here");
 		if (isPaused) {
 			pauseLevel.SetActive(false);
 			Time.timeScale = 1;
@@ -187,6 +189,7 @@ public class GameController : MonoBehaviour {
 			menuMusic.SetActive(true);
 			isFinished = true;
 			isPausable = false;
+			pauseButton.SetActive(false);
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
 		} else {
 			menuMusic.SetActive(false);
@@ -194,6 +197,7 @@ public class GameController : MonoBehaviour {
 			isPausable = true;
 			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			currentLevel = currentLevel + 1;
+			pauseButton.SetActive(true);
 		}
 	}
 
