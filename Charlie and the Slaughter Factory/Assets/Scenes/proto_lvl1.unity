@@ -2475,6 +2475,7 @@ GameObject:
   - 114: {fileID: 605747138}
   - 50: {fileID: 605747137}
   - 61: {fileID: 605747136}
+  - 61: {fileID: 605747141}
   m_Layer: 12
   m_Name: Mincer_side_right
   m_TagString: Mincer
@@ -2507,7 +2508,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2572,6 +2573,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 57
+--- !u!61 &605747141
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605747135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.0031442642, y: 0.0019128866}
+  serializedVersion: 2
+  m_Size: {x: 0.82969856, y: 1.0206577}
 --- !u!1 &638988379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,6 +2952,7 @@ GameObject:
   - 114: {fileID: 842642387}
   - 50: {fileID: 842642382}
   - 61: {fileID: 842642383}
+  - 61: {fileID: 842642384}
   m_Layer: 12
   m_Name: Mincer_side_left
   m_TagString: Mincer
@@ -2955,7 +2971,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2975,6 +2991,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.88, y: 1.07}
+--- !u!61 &842642384
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 842642381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.0022270565, y: -0.005559621}
+  serializedVersion: 2
+  m_Size: {x: 0.8395646, y: 1.0112716}
 --- !u!212 &842642385
 SpriteRenderer:
   m_ObjectHideFlags: 0
