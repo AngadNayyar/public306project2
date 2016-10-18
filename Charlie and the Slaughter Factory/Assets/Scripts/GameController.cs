@@ -59,6 +59,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void Pause() {
+		Debug.Log("here");
 		if (isPaused) {
 			pauseLevel.SetActive(false);
 			Time.timeScale = 1;
