@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour {
 		menuMusic = GameObject.Find("MenuMusic");
 		levelMusic = GameObject.Find("LevelMusic");
 		levelMusic.SetActive(false);
-		pauseButton = GameObject.Find("PauseCanvas");
+		pauseButton = GameObject.Find("PauseButton");
 		pauseButton.SetActive(false);
 		GameObject.Find("PickPlayer").SetActive(false);
 		if (gameController != null) {
