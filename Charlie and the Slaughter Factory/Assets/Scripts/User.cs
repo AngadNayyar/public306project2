@@ -60,16 +60,16 @@ public class User {
 	// Delete Player Data by setting the variables to the initial, and wiping the PlayerPrefs.
 	public void DeletePlayer() {
 		username = "";
-		PlayerPrefs.SetString(playerGameSlot, username);
+		PlayerPrefs.DeleteKey(playerGameSlot);
 		score = 0;
 		highScore = 0;
-		PlayerPrefs.SetInt(playerGameSlot + "Score", 0);
+		PlayerPrefs.DeleteKey(playerGameSlot + "Score");
 		viewedCutScene1 = false;
 		viewedCutScene2 = false;
 		viewedCutScene3 = false;
-		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 0);
-		PlayerPrefs.SetInt(playerGameSlot + "CutScene2", 0);
-		PlayerPrefs.SetInt(playerGameSlot + "CutScene3", 0);
+		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene1");
+		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene2");
+		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene3");
 	}
 
 	// Multiple getters and setters for provate variables.

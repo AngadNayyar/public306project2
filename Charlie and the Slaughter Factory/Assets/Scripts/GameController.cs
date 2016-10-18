@@ -84,7 +84,7 @@ public class GameController : MonoBehaviour {
 	public void UpdateGameSlots() {
 		for (int i = 1; i < 5; i++) {
 			GameObject player = GameObject.Find("Player" + i);
-			if (PlayerPrefs.GetString("Player" + i) != "") {
+			if (PlayerPrefs.HasKey("Player" + i)) {
 				player.GetComponentInChildren<Text>().text = PlayerPrefs.GetString("Player" + i);
 			}
 		}
@@ -146,6 +146,7 @@ public class GameController : MonoBehaviour {
 		if (PlayerPrefs.GetString(slot.name) == "") {
 			usernameInput.SetActive(true);
 			usernameInput.GetComponentInChildren<InputField>().text = "";
+			UpdateGameSlots();
 		} else {
 			// Otherwise go straight to the player's data page.
 			// Initialise the user currently playing.
