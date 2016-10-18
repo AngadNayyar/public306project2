@@ -969,7 +969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e1fadfc6c25f45a9e197826cdd5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawSound: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
   triggerDistance: 6
 --- !u!1 &661266696
 GameObject:
@@ -3567,6 +3566,7 @@ MonoBehaviour:
   - {fileID: 1457126569}
   collectible: {fileID: 1000010619378492, guid: 727b094d04ae4724abda96b3c96a82a3,
     type: 2}
+  fixedCollectibleNumber: 5
 --- !u!1 &2048147996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,7 +3764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e1fadfc6c25f45a9e197826cdd5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawSound: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
   triggerDistance: 10
 --- !u!1 &2070645601
 GameObject:
@@ -3963,7 +3962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e1fadfc6c25f45a9e197826cdd5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawSound: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
   triggerDistance: 6
 --- !u!1 &2105057677
 GameObject:
@@ -4138,6 +4136,7 @@ GameObject:
   - 58: {fileID: 2144998359}
   - 95: {fileID: 2144998358}
   - 58: {fileID: 2144998357}
+  - 82: {fileID: 2144998361}
   m_Layer: 0
   m_Name: saw_the_round_saw_thing-09 (4)
   m_TagString: Untagged
@@ -4152,7 +4151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2144998355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 264, y: 58.3, z: 0}
+  m_LocalPosition: {x: 263.3, y: 58.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -4236,3 +4235,77 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!82 &2144998361
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2144998355}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 0.8
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
