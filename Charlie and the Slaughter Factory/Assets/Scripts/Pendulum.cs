@@ -1,57 +1,69 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * This code controls the pendulum object.  
+ * The variables are publically set from the inspector for a larger swing.  
+ * 
+ * To make a pendulum use the pendulum prefab.  
+ * If adaptations to the pendulum object need to be made ensure that the pendulum has
+ * a collider, a rigid body and a hinge joint where the axis of rotation occurs. 
+ * The hinge joint position needs to be moved to where the rotation is occuring.  
+ * 
+ * Code adapted from free resource at http://www.youcontributegames.com/ 
+ * Charlie and the Slaughter factory - Teven Studios
+ * 
+ */ 
+
 public class Pendulum : MonoBehaviour
 {
-    #region Public Variables
-    public Rigidbody2D body2d;
+	// These variables are set via the constructor to change the height of the pendulum swing 
+	public Rigidbody2D rb2d;
     public float leftPushRange;
     public float rightPushRange;
     public float velocityThreshold;
-    #endregion //Public Variables
 
-    #region Private Variables
 
-    #endregion //Private Variables
-
-    // (Unity Named Methods)
-    #region Main Methods
+	// On starting get the rigidbody and angular velocity of the pendulum object. 
     void Start()
     {
-        body2d = GetComponent<Rigidbody2D>();
-        body2d.angularVelocity = velocityThreshold;
+        rb2d = GetComponent<Rigidbody2D>();
+		rb2d.angularVelocity = velocityThreshold;
     }
-    //Update is called by Unity every frame
+
+    //Update is called by Unity every frame - call the push the pendulum function
     void Update()
     {
         Push();
     }
-    #endregion //Main Methods
 
-    //(Custom Named Methods)
-    #region Utility Methods 
+	// This function 
     public void Push()
     {
+		// If the pendulum is on the right side, still within the range,
+		// and the velocity is a positive (moving right) then set the velocity 
+		// to the velocity threshold (to keep it moving to the right).  
+		// (Note: positive velocity is movement to the right)
+
         if (transform.rotation.z > 0
             && transform.rotation.z < rightPushRange
-            && (body2d.angularVelocity > 0)
-            && body2d.angularVelocity < velocityThreshold)
+			&& (rb2d.angularVelocity > 0)
+			&& rb2d.angularVelocity < velocityThreshold)
         {
-            body2d.angularVelocity = velocityThreshold;
+			rb2d.angularVelocity = velocityThreshold;
         }
+		// If the pendulum is on the left side, still within the range,
+		// and the velocity is a negative (moving left) then set the velocity 
+		// to a negative velocity threshold (to keep it moving to the left).  
+		// (Note: negative velocity is movement to the left)
         else if (transform.rotation.z < 0
             && transform.rotation.z > leftPushRange
-            && (body2d.angularVelocity < 0)
-            && body2d.angularVelocity > velocityThreshold * -1)
+			&& (rb2d.angularVelocity < 0)
+			&& rb2d.angularVelocity > velocityThreshold * -1)
         {
-            body2d.angularVelocity = velocityThreshold * -1;
+			rb2d.angularVelocity = velocityThreshold * -1;
         }
 
     }
-    #endregion //Utility Methods
 
-    //Coroutines run parallel to other fucntions
-    #region Coroutines
-
-    #endregion //Coroutines
 }
