@@ -43,7 +43,7 @@ public class StartGame : MonoBehaviour {
         cutScenes.SetActive(false);
 
         finishedGame = GameObject.Find("FinishedGame");
-        if (gameController.hasFinished() != true) {
+        if ((gameController.hasFinished() != true) & (finishedGame != null)) {
             finishedGame.SetActive(false);
         }
     }
