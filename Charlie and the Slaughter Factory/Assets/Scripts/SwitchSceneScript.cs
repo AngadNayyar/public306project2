@@ -12,9 +12,9 @@ public class SwitchSceneScript : MonoBehaviour {
 
     // When you walk through the door, open the finished level popup
     void OnTriggerEnter2D(Collider2D coll){
-        Debug.Log(coll.name);
         // Make sure that it only runs when charlie collides with the door.
         if (coll.name == "Charlie") {
+            Time.timeScale = 0;
             Achievement.UpdatefirstReward ();
             gameController.ShowPopup(gameController.getFinishedLevel());
         }
