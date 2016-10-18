@@ -28,8 +28,8 @@ public class CollectableSpawn : MonoBehaviour
 			for (int i = collectibleSpawns.Count-1; i >= 0; i--)
 			{
 				//If the random number is greater than zero, instatiante the chicken.
-				int collectibleFlip = UnityEngine.Random.Range(0, 2);
-				if ((collectibleFlip > 0)&&(collectibleCount < fixedCollectibleNumber)) {
+				int collectibleFlip = UnityEngine.Random.Range(0, 4);
+				if ((collectibleFlip > 2)&&(collectibleCount < fixedCollectibleNumber)) {
 					Instantiate (collectible, collectibleSpawns [i].position, Quaternion.identity);
 					collectibleCount = collectibleCount + 1; 
 					collectibleSpawns.RemoveAt (i);
