@@ -13,7 +13,7 @@ public class SawAudio : MonoBehaviour {
 	Rigidbody2D playerBody;
 	Rigidbody2D sawBody;
 
-	private int triggerDistance = 8;
+	public int triggerDistance;
 
 	void Awake () {
 

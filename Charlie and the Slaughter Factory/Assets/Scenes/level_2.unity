@@ -895,7 +895,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.58
+  m_Volume: 1
   m_Pitch: 0.8
   Loop: 0
   Mute: 0
@@ -903,9 +903,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -970,6 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sawSound: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
+  triggerDistance: 6
 --- !u!1 &661266696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,7 +3508,6 @@ Transform:
   - {fileID: 50585748}
   - {fileID: 1121991114}
   - {fileID: 1457126569}
-  - {fileID: 1000843240}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!61 &2011794753
@@ -3565,7 +3565,6 @@ MonoBehaviour:
   - {fileID: 50585748}
   - {fileID: 1121991114}
   - {fileID: 1457126569}
-  - {fileID: 1000843240}
   collectible: {fileID: 1000010619378492, guid: 727b094d04ae4724abda96b3c96a82a3,
     type: 2}
 --- !u!1 &2048147996
@@ -3699,9 +3698,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 13.88
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3766,6 +3765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sawSound: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
+  triggerDistance: 10
 --- !u!1 &2070645601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,7 +3808,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3964,6 +3964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sawSound: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
+  triggerDistance: 6
 --- !u!1 &2105057677
 GameObject:
   m_ObjectHideFlags: 0
