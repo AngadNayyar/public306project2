@@ -9,7 +9,7 @@ public class CollectableSpawn : MonoBehaviour
 	public List<Transform> collectibleSpawns = new List<Transform>();
     public GameObject collectible;
 
-	private int fixedCollectibleNumber = 8; //This means that there will always be exactly 10 collectible spawns per level.
+	public int fixedCollectibleNumber; //This means that there will always be exactly 10 collectible spawns per level.
 	private int collectibleCount = 0; //Keeps track of how many collectibles have already been spawned.
 
     // Call spawn method to spawn a chicken
