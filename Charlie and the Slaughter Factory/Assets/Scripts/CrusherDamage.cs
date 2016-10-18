@@ -19,16 +19,9 @@ public class CrusherDamage : MonoBehaviour {
     void Update() {
     }
 
-    void OnTriggerEnter2D(Collider2D other){
+	void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject == player){
             playerHealth.TakeDamage(attackDamage);
-
-            rigidBody.Sleep();
-            if (other.transform.position.x < transform.position.x){
-                rigidBody.AddForce(new Vector2(-300f, 600f));
-            } else if (other.transform.position.x > transform.position.x){
-                rigidBody.AddForce(new Vector2(300f, 600f));
-            }
         }
     }
 }
