@@ -4,7 +4,7 @@ using System.Collections;
 public class CollectableSpawn : MonoBehaviour
 {
 	//This array is all of the spawn points and gets added in from the inspector.
-	public List<Transform> collectibleSpawns = new List<Transform>();
+	public Transform[] collectibleSpawns;
     public GameObject collectible;
 
 	private int fixedCollectibleNumber = 10; //This means that there will always be exactly 10 collectible spawns per level.
@@ -30,9 +30,6 @@ public class CollectableSpawn : MonoBehaviour
 				if ((collectibleFlip > 0)&&(collectibleCount < fixedCollectibleNumber)) {
 					Instantiate (collectible, collectibleSpawns [i].position, Quaternion.identity);
 					collectibleCount = collectibleCount + 1; 
-					int index = i;
-					collectibleSpawns.RemoveAt (index);
-					i = i - 1;
 				}
 			}
 		}
