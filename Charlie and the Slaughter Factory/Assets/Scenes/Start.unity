@@ -620,7 +620,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: HidePopup
         m_Mode: 2
         m_Arguments:
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: SelectGameSlot
         m_Mode: 2
         m_Arguments:
@@ -2560,7 +2560,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: SaveNewPlayer
         m_Mode: 2
         m_Arguments:
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: ShowPopup
         m_Mode: 2
         m_Arguments:
@@ -3545,7 +3545,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: HidePopup
         m_Mode: 2
         m_Arguments:
@@ -5489,7 +5489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: SelectGameSlot
         m_Mode: 2
         m_Arguments:
@@ -5685,7 +5685,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: HidePopup
         m_Mode: 2
         m_Arguments:
@@ -5881,7 +5881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: ShowPopup
         m_Mode: 2
         m_Arguments:
@@ -6261,7 +6261,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: HidePopup
         m_Mode: 2
         m_Arguments:
@@ -6570,7 +6570,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: SelectGameSlot
         m_Mode: 2
         m_Arguments:
@@ -6628,6 +6628,7 @@ GameObject:
   - 92: {fileID: 1447820595}
   - 124: {fileID: 1447820594}
   - 81: {fileID: 1447820593}
+  - 114: {fileID: 1447820598}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6708,6 +6709,17 @@ Transform:
   - {fileID: 1679566651}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1447820598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1447820592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c634b064c17f84d409fe271957dae548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1449516524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8003,7 +8015,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: SelectGameSlot
         m_Mode: 2
         m_Arguments:
@@ -8247,7 +8259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138935406}
+      - m_Target: {fileID: 1447820598}
         m_MethodName: ShowPopup
         m_Mode: 2
         m_Arguments:
