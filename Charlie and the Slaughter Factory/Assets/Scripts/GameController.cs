@@ -8,18 +8,27 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    	"proto_lvl1"
+    	"proto_lvl1",
+    	"level_1",
+    	"level_2",
+    	"level_3",
+    	"level_4"
 	};
 	private User currentPlayer;
 	private string gameSlot;
 	private List<User> leaderboard  = new List<User>();
 	private GameObject usernameInput;
 	private GameObject finishedLevel;
+	private GameObject pauseLevel;
+	private GameObject menuMusic;
+	private GameObject levelMusic;
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
 	private int currentLevel = 0;
 	private bool playerDied = false;
+	private bool isPausable = false;
+	private bool isPaused = false;
 
 	// When the gamecontroller is initially created make sure that only the original one exists.
 	public void Awake() {
@@ -27,6 +36,11 @@ public class GameController : MonoBehaviour {
 		usernameInput.SetActive(false);
 		finishedLevel = GameObject.Find("FinishedLevel");
 		finishedLevel.SetActive(false);
+		pauseLevel = GameObject.Find("Pause");
+		pauseLevel.SetActive(false);
+		menuMusic = GameObject.Find("MenuMusic");
+		levelMusic = GameObject.Find("LevelMusic");
+		levelMusic.SetActive(false);
 		GameObject.Find("PickPlayer").SetActive(false);
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
@@ -34,6 +48,25 @@ public class GameController : MonoBehaviour {
 		}
 		gameController = this;
 		DontDestroyOnLoad(gameObject);
+	}
+
+	public void Update() {
+		if (isPausable) {
+			if ((Input.GetKeyDown(KeyCode.Return)) | (Input.GetKeyDown(KeyCode.P))) {
+				Pause();
+			}
+		}
+	}
+
+	public void Pause() {
+		if (isPaused) {
+			pauseLevel.SetActive(false);
+			Time.timeScale = 1;
+		} else {
+			pauseLevel.SetActive(true);
+			Time.timeScale = 0;
+		}
+		isPaused = !isPaused;
 	}
 
 	// Cycle through each game slot button and check if a username exists for this slot: if it does, set the username as the text.
@@ -143,13 +176,19 @@ public class GameController : MonoBehaviour {
 
 	// Play the next level, or if all levels have been finished, display the finish screen.
 	public void NextLevel() {
+		Time.timeScale = 1;
 		// If the player finishes, make it so they reset from the beginning.
 		if (currentLevel >= levels.Length) {
 			currentLevel = 0;
+			levelMusic.SetActive(false);
+			menuMusic.SetActive(true);
 			isFinished = true;
+			isPausable = false;
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
 		} else {
-			Debug.Log("me?");
+			menuMusic.SetActive(false);
+			levelMusic.SetActive(true);
+			isPausable = true;
 			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			currentLevel = currentLevel + 1;
 		}
