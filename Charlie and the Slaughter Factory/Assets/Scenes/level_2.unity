@@ -100,7 +100,7 @@ GameObject:
   - 4: {fileID: 50585748}
   m_Layer: 12
   m_Name: Spawn13
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +267,7 @@ GameObject:
   - 4: {fileID: 163872600}
   m_Layer: 12
   m_Name: Spawn6
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +636,7 @@ GameObject:
   - 4: {fileID: 444784145}
   m_Layer: 12
   m_Name: Spawn1
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,7 +664,7 @@ GameObject:
   - 4: {fileID: 465538893}
   m_Layer: 12
   m_Name: Spawn3
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -692,7 +692,7 @@ GameObject:
   - 4: {fileID: 494456727}
   m_Layer: 12
   m_Name: Spawn10
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,7 +969,7 @@ GameObject:
   - 4: {fileID: 747824884}
   m_Layer: 12
   m_Name: Spawn7
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,7 +1137,7 @@ GameObject:
   - 4: {fileID: 799041766}
   m_Layer: 12
   m_Name: Spawn5
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1544,7 +1544,7 @@ GameObject:
   - 4: {fileID: 1000843240}
   m_Layer: 12
   m_Name: Spawn16
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1744,7 +1744,7 @@ GameObject:
   - 4: {fileID: 1056085862}
   m_Layer: 12
   m_Name: Spawn12
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1849,7 +1849,7 @@ GameObject:
   - 4: {fileID: 1064712558}
   m_Layer: 12
   m_Name: Spawn11
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2108,7 +2108,7 @@ GameObject:
   - 4: {fileID: 1121991114}
   m_Layer: 12
   m_Name: Spawn14
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2136,7 +2136,7 @@ GameObject:
   - 4: {fileID: 1190434572}
   m_Layer: 12
   m_Name: Spawn8
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2347,7 +2347,7 @@ GameObject:
   - 4: {fileID: 1457126569}
   m_Layer: 12
   m_Name: Spawn15
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3107,7 +3107,7 @@ GameObject:
   - 4: {fileID: 1762171230}
   m_Layer: 12
   m_Name: Spawn2
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3325,7 +3325,7 @@ GameObject:
   - 4: {fileID: 1898832513}
   m_Layer: 12
   m_Name: Spawn9
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3353,7 +3353,7 @@ GameObject:
   - 4: {fileID: 1967613070}
   m_Layer: 12
   m_Name: Spawn4
-  m_TagString: Untagged
+  m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
