@@ -29,20 +29,30 @@ public class Claw_follow_player : MonoBehaviour {
     }
 	
 	void Update () {
-        // new position that the claw will move to
-
         if (!goDown) {
                 if (transform.position.y >= yvalue)
                 {
                     newPosition = transform.position - (transform.right * speed * Time.deltaTime);
                     newPosition.y = yvalue;
+                    rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+                    transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
                 }
                 else
                 {
                     newPosition.y = transform.position.y + (speed * Time.deltaTime);
-                }
+                Vector3 position = new Vector3();
+                position.x = transform.position.x;
+                position.y = transform.position.y -5 ;
+                rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up));
+                transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+            }
         } else {
             newPosition.y -= speed * Time.deltaTime;
+            Vector3 position = new Vector3();
+            position.x = transform.position.x;
+            position.y = transform.position.y - 5;
+            rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up));
+            transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
         }
 
         if (Time.time > randomVar)
@@ -51,11 +61,10 @@ public class Claw_follow_player : MonoBehaviour {
             {
                 goDown = (Random.Range(0, 2) == 0);
             }
-            randomVar += Random.Range(5f, 10f);
+            randomVar += Random.Range(2f, 6f);
         }
 
-        rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
-        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+
 
         transform.position = newPosition; // set claw position as new value
 
