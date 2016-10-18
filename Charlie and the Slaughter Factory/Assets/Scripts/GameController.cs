@@ -12,7 +12,12 @@ public class GameController : MonoBehaviour {
     	"level_1",
     	"level_2",
     	"level_3",
-    	"level_4"
+    	"level_4",
+    	"level_5",
+    	"level_6",
+    	"level_7",
+    	"level_8",
+    	"level_9"
 	};
 	private User currentPlayer;
 	private string gameSlot;
@@ -45,13 +50,12 @@ public class GameController : MonoBehaviour {
 		levelMusic.SetActive(false);
 		pauseButton = GameObject.Find("PauseButton");
 		pauseButton.SetActive(false);
-		GameObject.Find("PickPlayer").SetActive(false);
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
-			return;
+		} else {
+			gameController = this;
+			DontDestroyOnLoad(gameObject);
 		}
-		gameController = this;
-		DontDestroyOnLoad(gameObject);
 	}
 
 	// Display and close the pause screen if the p or enter is pressed
@@ -113,6 +117,7 @@ public class GameController : MonoBehaviour {
 	// Delete current User Data, and go back to the main menu (with popup visible for picking slot).
 	public void DeleteUser() {
 		currentPlayer.DeletePlayer();
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
 	}
 
 	// Show the supplied popup.
@@ -140,21 +145,23 @@ public class GameController : MonoBehaviour {
 		// If the game slot the user selected has not yet been initialised, ask for a username:
 		if (PlayerPrefs.GetString(slot.name) == "") {
 			usernameInput.SetActive(true);
+			usernameInput.GetComponentInChildren<InputField>().text = "";
 		} else {
 			// Otherwise go straight to the player's data page.
 			// Initialise the user currently playing.
-			currentPlayer = new User(gameSlot, PlayerPrefs.GetString(gameSlot), PlayerPrefs.GetInt("Highscore" + gameSlot));
+			currentPlayer = new User(gameSlot, PlayerPrefs.GetString(gameSlot), PlayerPrefs.GetInt(gameSlot + "Score"));
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
 		}
 	}
 
 	// Create a new user (and set at the current player) based on the username (as long as the username is valid).
-	public void SaveNewPlayer(Text usernameInput) {
-		if (usernameInput.text == "") {
+	public void SaveNewPlayer(Text username) {
+		if (username.text == "") {
 			GameObject.Find("WarningText").GetComponentInChildren<Text>().text = "Please input a valid username.";
 		} else {
 			// Create new user object.
-			currentPlayer = new User(gameSlot, usernameInput.text, 0);
+			currentPlayer = new User(gameSlot, username.text, 0);
+			usernameInput.SetActive(false);
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
 		}
 	}
