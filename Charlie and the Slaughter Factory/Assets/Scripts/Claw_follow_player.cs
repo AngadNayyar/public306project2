@@ -11,15 +11,14 @@ public class Claw_follow_player : MonoBehaviour {
 
     public Transform player;
     public float speed = 4.0f;
+    public Vector3 position;
 
     private Vector3 newPosition;
-
     private float yvalue;
     private float randomVar;
     private bool goDown;
     private bool hasPlayer = false;
     private Quaternion rotation;
-    private Vector3 position;
 
     void Start()
     {
