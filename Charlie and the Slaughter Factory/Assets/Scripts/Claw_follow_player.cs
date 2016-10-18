@@ -4,37 +4,37 @@ using System.Collections;
 /**
  * This script is the claw following charlie as he runs across the game
  * 
- * 
+ * Charlie and the Slaughter Factory : Teven Studios
  * */
 
 public class Claw_follow_player : MonoBehaviour {
 
     public Transform player;
     public float speed = 4.0f;
+
     private Vector3 newPosition;
-    private GameObject Claws;
+
     private float yvalue;
-    private float variable;
+    private float randomVar;
     private bool goDown;
     private bool hasPlayer = false;
+    Quaternion rotation;
 
     void Start()
     {
         //finds the y value of the gameobject to use for the claw's position
-        Claws = GameObject.FindGameObjectWithTag("Claw");
+        GameObject Claws = GameObject.FindGameObjectWithTag("Claw");
         yvalue = Claws.transform.position.y;
-        variable = Random.Range(1f, 5f);
+        randomVar = Random.Range(1f, 5f);
     }
 	
 	void Update () {
-        // rotate the claw to be facing Charlie
+        // new position that the claw will move to
 
-        newPosition = transform.position - (transform.right * speed * Time.deltaTime);
-
-        if (!goDown)
-        {
+        if (!goDown) {
                 if (transform.position.y >= yvalue)
                 {
+                    newPosition = transform.position - (transform.right * speed * Time.deltaTime);
                     newPosition.y = yvalue;
                 }
                 else
@@ -45,30 +45,29 @@ public class Claw_follow_player : MonoBehaviour {
             newPosition.y -= speed * Time.deltaTime;
         }
 
-        if (hasPlayer)
-        {
-            player.position = newPosition;
-            if (player.position.y == yvalue){
-                hasPlayer = false;
-            }
-        }
-
-        if (Time.time > variable)
+        if (Time.time > randomVar)
         {
             if (!goDown)
             {
                 goDown = (Random.Range(0, 2) == 0);
             }
-            variable += Random.Range(5f, 10f);
+            randomVar += Random.Range(5f, 10f);
         }
 
-        if (!hasPlayer && !goDown)
-        {
-            Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
-            transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
-        }
+        rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
 
         transform.position = newPosition; // set claw position as new value
+
+        if (hasPlayer)
+        {
+            newPosition.y-= 2;
+            player.position = newPosition;
+            if (transform.position.y == yvalue)
+            {
+                hasPlayer = false;
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D coll)
