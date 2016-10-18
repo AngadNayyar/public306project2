@@ -2094,6 +2094,11 @@ Prefab:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 270901201}
+    - target: {fileID: 61000010303422998, guid: 81413601e83e7d54f89b84676788f94c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
     - {fileID: 114000014127275600, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
@@ -3099,7 +3104,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -7148,7 +7153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2065422801}
-  speed: 3
+  speed: 5
 --- !u!212 &2076193615
 SpriteRenderer:
   m_ObjectHideFlags: 0
