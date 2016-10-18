@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
 	private bool isPaused = false;
 
 	// When the gamecontroller is initially created make sure that only the original one exists.
+	// Grab references to popups that need to be manipulated by script, and then set to inactive (i.e. not visible).
 	public void Awake() {
 		usernameInput = GameObject.Find("UsernameInput");
 		usernameInput.SetActive(false);
@@ -85,24 +86,15 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-
-
-
-
 	// Set up the data for the leaderboard.
 	// Should be called whenever a new score is saved to the current user.
 	public List<User> SetUpLeaderboard() {
 		// Fetch data for leaderboard
 		for (int i = 1; i < 5; i++) {
-			leaderboard.Add(new User("", PlayerPrefs.GetString("Player" + i), PlayerPrefs.GetInt("CurrentScorePlayer" + i)));
+			leaderboard.Add(new User("Player" + i, PlayerPrefs.GetString("Player" + i), PlayerPrefs.GetInt("CurrentScorePlayer" + i)));
 		}
         return leaderboard;
 	}
-
-
-
-
-
 
 	// Update the strings contained in the leaderboard.
 	public void UpdateLeaderboardView(GameObject panel) {
@@ -116,6 +108,11 @@ public class GameController : MonoBehaviour {
 		}
 		textViews[4].GetComponentInChildren<Text>().text = usernames;
 		textViews[5].GetComponentInChildren<Text>().text = scores;
+	}
+
+	// Delete current User Data, and go back to the main menu (with popup visible for picking slot).
+	public void DeleteUser() {
+		currentPlayer.DeletePlayer();
 	}
 
 	// Show the supplied popup.
