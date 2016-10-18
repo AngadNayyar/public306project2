@@ -7,27 +7,23 @@ using System.Collections;
 public class SawAudio : MonoBehaviour {
 
 	GameObject player;  // Reference to Charlie
-	public AudioClip sawSound; //This is the variable for the .wav file.
-
-	private AudioSource source; 
-	Rigidbody2D playerBody;
-	Rigidbody2D sawBody;
 
 	public int triggerDistance;
+	private AudioClip sawSound; //This is the variable for the .wav file.
+	private AudioSource source; //The audio source for the saw object.
 
 	void Awake () {
 
 		player = GameObject.FindGameObjectWithTag("Player"); //Sets Charlie to the player variable
 		source = GetComponent<AudioSource> (); //Sets the saw audio source to the source variable
-		sawSound = source.GetComponent<AudioClip>();
-		//playerBody = player.GetComponent<Rigidbody2D>();
-		//sawBody = GetComponent<Rigidbody2D>();	
-	
+		sawSound = source.GetComponent<AudioClip>(); //Gets the AudioClip that is to be played from the source.
 	}
 	
-	// Update is called once per frame
+	//The Update checks Charlie's distance from the saw, and if he is within the trigger distance specified and 
+	//the source isn't already playing, then the AudioClip will be played.
 	void Update () {
 
+		//Get Charlie's x coordinate
 		float player_pos = player.transform.position.x;
 
 		if ((Mathf.Abs(player_pos - transform.position.x) < triggerDistance) && (!source.isPlaying)) {
