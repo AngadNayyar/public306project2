@@ -321,6 +321,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &79774235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 79774236}
+  m_Layer: 12
+  m_Name: Spawn3
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &79774236
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79774235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.51, y: 8.2, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 25
 --- !u!1 &86066070
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +719,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &241380071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 241380072}
+  m_Layer: 12
+  m_Name: Spawn5
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &241380072
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 241380071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.72, y: -11.23, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 27
 --- !u!1 &279505531
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +1016,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &354201078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 354201079}
+  m_Layer: 12
+  m_Name: Spawn6
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &354201079
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354201078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.35, y: -11.2, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 28
 --- !u!1 &385988419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1198,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &576872655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 576872656}
+  m_Layer: 12
+  m_Name: Spawn11
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &576872656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576872655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 87.93, y: -5.7, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 33
 --- !u!1 &597736592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1380,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &642451914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 642451915}
+  m_Layer: 12
+  m_Name: Spawn9
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642451915
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 642451914}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 65, y: -11.2, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 31
 --- !u!1 &715223797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1485,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &717171214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 717171215}
+  m_Layer: 12
+  m_Name: Spawn2
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717171215
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 717171214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.34, y: 3.9, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 24
 --- !u!1 &723193707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1821,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &763436105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 763436106}
+  m_Layer: 12
+  m_Name: Spawn1
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &763436106
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 763436105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.69, y: 3.9, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 23
 --- !u!1 &813724493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,6 +2080,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &969369795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 969369796}
+  m_Layer: 12
+  m_Name: Spawn8
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969369796
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969369795}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.4, y: -6.7, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 30
 --- !u!1 &1041932575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2592,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1163817758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1163817759}
+  m_Layer: 12
+  m_Name: Spawn4
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163817759
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163817758}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.59, y: 12.3, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 26
 --- !u!1 &1196583020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,6 +2915,34 @@ Transform:
   - {fileID: 1088048609}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &1391778125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1391778126}
+  m_Layer: 12
+  m_Name: Spawn7
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1391778126
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391778125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.05, y: -6.7, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 29
 --- !u!1 &1405365633
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +4074,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2011794752}
   m_RootOrder: 0
+--- !u!1 &1696123074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1696123075}
+  m_Layer: 12
+  m_Name: Spawn10
+  m_TagString: ChickenCollectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1696123075
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696123074}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 73.74, y: -5.7, z: 0}
+  m_LocalScale: {x: 0.7218783, y: 0.72187847, z: 0.72187847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2011794752}
+  m_RootOrder: 32
 --- !u!1 &1800979439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,6 +4828,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1980872127 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012951671620, guid: 81413601e83e7d54f89b84676788f94c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1633494143}
+--- !u!114 &1980872128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980872127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc47199ee227514fa5a71742995a034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2002568431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,6 +4931,7 @@ GameObject:
   - 4: {fileID: 2011794752}
   - 61: {fileID: 2011794754}
   - 61: {fileID: 2011794753}
+  - 114: {fileID: 2011794755}
   m_Layer: 12
   m_Name: Floor
   m_TagString: Untagged
@@ -4648,6 +4973,17 @@ Transform:
   - {fileID: 935483975}
   - {fileID: 1455127171}
   - {fileID: 2002568432}
+  - {fileID: 763436106}
+  - {fileID: 717171215}
+  - {fileID: 79774236}
+  - {fileID: 1163817759}
+  - {fileID: 241380072}
+  - {fileID: 354201079}
+  - {fileID: 1391778126}
+  - {fileID: 969369796}
+  - {fileID: 642451915}
+  - {fileID: 1696123075}
+  - {fileID: 576872656}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!61 &2011794753
@@ -4678,6 +5014,32 @@ BoxCollider2D:
   m_Offset: {x: 12.5135355, y: -0.00034189224}
   serializedVersion: 2
   m_Size: {x: 29.99298, y: 4.965226}
+--- !u!114 &2011794755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011794751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6b4e19245f238458c8894bd525075a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleSpawns:
+  - {fileID: 763436106}
+  - {fileID: 717171215}
+  - {fileID: 79774236}
+  - {fileID: 1163817759}
+  - {fileID: 241380072}
+  - {fileID: 354201079}
+  - {fileID: 1391778126}
+  - {fileID: 969369796}
+  - {fileID: 642451915}
+  - {fileID: 1696123075}
+  - {fileID: 576872656}
+  collectible: {fileID: 1000010619378492, guid: 727b094d04ae4724abda96b3c96a82a3,
+    type: 2}
+  fixedCollectibleNumber: 5
 --- !u!1 &2075359634
 GameObject:
   m_ObjectHideFlags: 0
