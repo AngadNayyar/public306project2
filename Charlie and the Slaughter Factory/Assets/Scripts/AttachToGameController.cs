@@ -26,4 +26,8 @@ public class AttachToGameController : MonoBehaviour {
     public void SelectGameSlot(GameObject slot) {
         gameController.SelectGameSlot(slot);
     }
+
+    public void DeleteUser() {
+        gameController.DeleteUser();
+    }
 }
