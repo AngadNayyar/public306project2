@@ -36,8 +36,15 @@ public class Mincer : MonoBehaviour
         }
         if (col.gameObject == player)
         {
-            //damage player
+            print("Hit player");
+
+            EdgeCollider2D edge = transform.GetComponent<EdgeCollider2D>();
+            if (this.gameObject == edge)
+            {
+                print("it's the edge");
+                playerHealth.TakeDamage(attackDamage);
+            }
+            
         }
     }
-
 }
