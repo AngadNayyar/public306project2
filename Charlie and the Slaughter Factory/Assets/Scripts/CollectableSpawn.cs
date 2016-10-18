@@ -4,7 +4,7 @@ using System.Collections;
 public class CollectableSpawn : MonoBehaviour
 {
 	//This array is all of the spawn points and gets added in from the inspector.
-	public Transform[] collectibleSpawns;
+	public List<Transform> collectibleSpawns = new List<Transform>();
     public GameObject collectible;
 
 	private int fixedCollectibleNumber = 10; //This means that there will always be exactly 10 collectible spawns per level.
@@ -27,9 +27,12 @@ public class CollectableSpawn : MonoBehaviour
 			{
 				//If the random number is greater than zero, instatiante the chicken.
 				int collectibleFlip = Random.Range(0, 2);
-				if (collectibleFlip > 0) {
+				if ((collectibleFlip > 0)&&(collectibleCount < fixedCollectibleNumber)) {
 					Instantiate (collectible, collectibleSpawns [i].position, Quaternion.identity);
 					collectibleCount = collectibleCount + 1; 
+					int index = i;
+					collectibleSpawns.RemoveAt (index);
+					i = i - 1;
 				}
 			}
 		}
