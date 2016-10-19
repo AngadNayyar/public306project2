@@ -1914,7 +1914,7 @@ GameObject:
   - 114: {fileID: 464508058}
   - 114: {fileID: 464508059}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (7)
+  m_Name: Saw_4
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2708,7 +2708,7 @@ GameObject:
   - 114: {fileID: 554768052}
   - 114: {fileID: 554768053}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (2)
+  m_Name: Saw_2
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4207,7 +4207,7 @@ GameObject:
   - 114: {fileID: 828486380}
   - 114: {fileID: 828486381}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (3)
+  m_Name: Saw_3
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8591,7 +8591,7 @@ GameObject:
   - 114: {fileID: 1674257996}
   - 114: {fileID: 1674257997}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (4)
+  m_Name: Saw_5
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10637,7 +10637,7 @@ GameObject:
   - 95: {fileID: 2070645603}
   - 58: {fileID: 2070645607}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (1)
+  m_Name: Saw_1
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
