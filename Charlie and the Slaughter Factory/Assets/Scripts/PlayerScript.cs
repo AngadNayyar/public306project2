@@ -46,11 +46,11 @@ public class PlayerScript : MonoBehaviour {
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
 		// If the space bar is pressed and the character is gounded and not sliding make him jump
-		if (Input.GetKeyDown(KeyCode.Space) && grounded && !slide) {
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) )&& grounded && !slide) {
 			jump = true;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space) && !grounded && canDoubleJump){
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) ) && !grounded && canDoubleJump ){
 			doubleJump = true;
 		}
 
@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		// If the space bar is pressed while the character is jumping - it will double jump
-		if (Input.GetKey(KeyCode.Space) && doubleJump) {
+		if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && doubleJump) {
 			canDoubleJump = false;
 			doubleJump = false;
 			anim.SetTrigger("Jump");
@@ -131,6 +131,23 @@ public class PlayerScript : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+    //checks if stays on a platform object
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
+        {
+            transform.parent = col.transform; // move at the rate of the platform
+        }
+    }
+    //check if gets off the platform object
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
+        {
+            transform.parent = null; // set movement to null again
+        }
+    }
+
     /* //method to increase player's number of coins when they collide with one
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -143,5 +160,5 @@ public class PlayerScript : MonoBehaviour {
         }
         
     } */
-    
+
 }

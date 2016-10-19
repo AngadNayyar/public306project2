@@ -1,34 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/*
+ * This Script controls the pop ups in level one for introducting the game mechanics  
+ *
+ * The pop up sprite is set through the inspector to be the image of the popup desired.  
+ *
+ * Charlie and the Slaughter factory - Teven Studios
+ */
 public class TutorialPopups : MonoBehaviour {
+
+	public SpriteRenderer popup; 
+
 
 	// Use this for initialization
 	void Start () {
-	
+		popup.enabled = false; 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.CompareTag("Player")){
-
-
-			if (this.gameObject.name == "JumpTrigger") {
-				Debug.Log ("Jump"); 
-
-			} else if (this.gameObject.name == "SlideTrigger") {
-				Debug.Log ("Slide"); 
-
-
-			} else if (this.gameObject.name == "DoubleJumpTrigger") {
-				Debug.Log ("Double jump"); 
-
-			}
-
+			popup.enabled = true; 
 		} 
 	}
 

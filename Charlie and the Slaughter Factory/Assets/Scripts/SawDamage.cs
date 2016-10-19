@@ -3,16 +3,13 @@ using System.Collections;
 
 
 public class SawDamage : MonoBehaviour {
-    private int attackDamage = 40;  //Damage taken due to hit
 
-    PlayerHealth playerHealth;  // Reference to the Charlie's health.
     PlayerScript playerScript; //Reference to Charlie's movement controls
     GameObject player;  // Reference to Charlie
     Rigidbody2D rigidBody;
 
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
         rigidBody = player.GetComponent<Rigidbody2D>();
     }
 
@@ -21,8 +18,6 @@ public class SawDamage : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject == player){
-            playerHealth.TakeDamage(attackDamage);
-
             rigidBody.Sleep();
             if (other.transform.position.x < transform.position.x){
                 rigidBody.AddForce(new Vector2(-300f, 600f));
