@@ -131,6 +131,23 @@ public class PlayerScript : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+    //checks if stays on a platform object
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
+        {
+            transform.parent = col.transform; // move at the rate of the platform
+        }
+    }
+    //check if gets off the platform object
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
+        {
+            transform.parent = null; // set movement to null again
+        }
+    }
+
     /* //method to increase player's number of coins when they collide with one
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -143,5 +160,5 @@ public class PlayerScript : MonoBehaviour {
         }
         
     } */
-    
+
 }

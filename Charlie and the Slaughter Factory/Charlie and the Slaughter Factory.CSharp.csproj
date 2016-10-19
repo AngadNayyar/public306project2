@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\Conveyor.cs" />
     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
+    <Compile Include="Assets\Scripts\CrusherMotion.cs" />
     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
     <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
