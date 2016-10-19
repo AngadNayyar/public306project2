@@ -14,12 +14,12 @@ using System.Collections;
 public class FallingObject : MonoBehaviour {
 
 	public float spinSpeed = 250.0f;
-	PlayerHealth playerHealth;  // Reference to the Charlie's health.
+	//PlayerHealth playerHealth;  // Reference to the Charlie's health.
 	GameObject player;  // Reference to Charlie
-	Rigidbody2D playerBody;
+	//Rigidbody2D playerBody;
 
 	// Set the amount of damage to take off
-	private int fallDamage = 20;
+//	private int fallDamage = 20;
 
 	// Set the distance for when the object should start falling when Charlie is within a certain distance
 	private int triggerDistance = 3; 
@@ -31,8 +31,8 @@ public class FallingObject : MonoBehaviour {
 
 	void Awake() {
 		player = GameObject.FindGameObjectWithTag("Player");
-		playerHealth = player.GetComponent<PlayerHealth>();
-		playerBody = player.GetComponent<Rigidbody2D>();
+//		playerHealth = player.GetComponent<PlayerHealth>();
+	//	playerBody = player.GetComponent<Rigidbody2D>();
 
 	}
 
@@ -56,9 +56,9 @@ public class FallingObject : MonoBehaviour {
 
 	// When the object collides with player, take health and then destroy the object
 	void OnCollisionEnter2D(Collision2D other){
-		if (other.gameObject.CompareTag("Player")){
-			playerHealth.TakeDamage(fallDamage);
-		}
+//		if (other.gameObject.CompareTag("Player")){
+	//		playerHealth.TakeDamage(fallDamage);
+		//}
 		Destroy (this.gameObject);
 
 	}

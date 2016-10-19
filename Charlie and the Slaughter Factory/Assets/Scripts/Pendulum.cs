@@ -22,7 +22,7 @@ public class Pendulum : MonoBehaviour
     public float leftPushRange;
     public float rightPushRange;
     public float velocityThreshold;
-	public int pendulumDamage = 30; 
+	//public int pendulumDamage = 30; 
 
 	PlayerHealth playerHealth;  // Reference to the Charlie's health.
 	GameObject player;  // Reference to Charlie
@@ -36,7 +36,7 @@ public class Pendulum : MonoBehaviour
 		rb2d.angularVelocity = velocityThreshold;
 
 		player = GameObject.FindGameObjectWithTag("Player");
-		playerHealth = player.GetComponent<PlayerHealth>();
+	//	playerHealth = player.GetComponent<PlayerHealth>();
 		playerBody = player.GetComponent<Rigidbody2D>();
     }
 
@@ -76,10 +76,10 @@ public class Pendulum : MonoBehaviour
     }
 
 	// When the object collides with player, take health and then destroy the object
-	void OnCollisionEnter2D(Collision2D other){
-		if (other.gameObject.CompareTag("Player")){
-			playerHealth.TakeDamage(pendulumDamage);
-		}
-	}
+	//void OnCollisionEnter2D(Collision2D other){
+		//if (other.gameObject.CompareTag("Player")){
+			//playerHealth.TakeDamage(pendulumDamage);
+	//	}
+	//}
 
 }
