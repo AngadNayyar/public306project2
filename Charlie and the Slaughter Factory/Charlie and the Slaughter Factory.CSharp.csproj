@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
+    <Compile Include="Assets\Scripts\TutorialPopups.cs" />
     <Compile Include="Assets\Scripts\UpdateUserData.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\damage.cs" />

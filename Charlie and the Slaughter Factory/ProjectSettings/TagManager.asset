@@ -19,6 +19,7 @@ TagManager:
   - Farmer
   - Platform
   - Claw
+  - Saw
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,6 @@ TagManager:
   - Wall
   - Claw
   - Platform
-  - 
   - 
   - 
   - 
