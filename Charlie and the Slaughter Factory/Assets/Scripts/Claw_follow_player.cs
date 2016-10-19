@@ -3,16 +3,19 @@ using System.Collections;
 
 /**
  * This script is the claw following charlie as he runs across the game
+ * NOTE: The claw MUST start to the right of Charlie
  * 
  * Charlie and the Slaughter Factory : Teven Studios
  * */
 
 public class Claw_follow_player : MonoBehaviour {
 
+    //public instantaitions - so can change
     public Transform player;
     public float speed = 4.0f;
-    public Vector3 position;
 
+    // private instantiations
+    private Vector3 position;
     private Vector3 newPosition;
     private float yvalue;
     private float randomVar;
@@ -30,10 +33,6 @@ public class Claw_follow_player : MonoBehaviour {
         // This is so the claw faces down when it goes down/ up
         position = new Vector3();
         position.y = transform.position.y - 5;
-
-        // initialises first new position values
-        newPosition = transform.position - (transform.right * speed * Time.deltaTime);
-        newPosition.y = yvalue;
     }
 
 	void Update () {
@@ -41,18 +40,18 @@ public class Claw_follow_player : MonoBehaviour {
         if (!goDown) {
                 if (transform.position.y >= yvalue) // checks it goes to max the yvalue
                 {
-                    newPosition -= (transform.right * speed * Time.deltaTime); //decrease y position
+                    newPosition = transform.position - (transform.right * speed * Time.deltaTime); //decrease y position
                     newPosition.y = yvalue; // makes max yvalue
                     rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up)); // looks at the player
                 }
                 else // makes go up
                 {
-                    newPosition.y += (speed * Time.deltaTime); // increase y position
-                position.x = transform.position.x;
-                rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); // looks directly down
+                    newPosition = transform.position + (transform.right * speed * Time.deltaTime); // increase y position
+                    position.x = transform.position.x;
+                    rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); // looks directly down
                 }
         } else { // makes go down
-            newPosition.y -= speed * Time.deltaTime; //decrease y position
+            newPosition = transform.position - (transform.right * speed * Time.deltaTime); //decrease y position
             position.x = transform.position.x;
             rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); //looks directly down
         }
@@ -62,7 +61,7 @@ public class Claw_follow_player : MonoBehaviour {
         //RNG
         if (Time.time > randomVar)
         {
-            if (!goDown) //if it isn't going down
+            if (transform.position.y == yvalue) //if it isn't going down (at the top value)
             {
                 goDown = (Random.Range(0, 2) == 0); // 50% chance of true
             }
