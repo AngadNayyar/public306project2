@@ -3,16 +3,19 @@ using System.Collections;
 
 /**
  * This script is the claw following charlie as he runs across the game
+ * NOTE: The claw MUST start to the right of Charlie
  * 
  * Charlie and the Slaughter Factory : Teven Studios
  * */
 
 public class Claw_follow_player : MonoBehaviour {
 
+    //public instantaitions - so can change
     public Transform player;
     public float speed = 4.0f;
     public Vector3 position;
 
+    // private instantiations
     private Vector3 newPosition;
     private float yvalue;
     private float randomVar;
