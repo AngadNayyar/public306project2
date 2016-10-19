@@ -44,7 +44,7 @@ public class Claw_follow_player : MonoBehaviour {
         if (!goDown) {
                 if (transform.position.y >= yvalue) // checks it goes to max the yvalue
                 {
-                    newPosition -= (transform.right * speed * Time.deltaTime); //decrease y position
+                    newPosition = transform.position - (transform.right * speed * Time.deltaTime); //decrease y position
                     newPosition.y = yvalue; // makes max yvalue
                     rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up)); // looks at the player
                 }
