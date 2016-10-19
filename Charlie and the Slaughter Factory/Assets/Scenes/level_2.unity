@@ -992,9 +992,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 554768046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &661266696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1233,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 783741394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &798571383
@@ -1426,7 +1427,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 828486374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &853793933
@@ -4231,7 +4232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2048147996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2070645601
@@ -4454,9 +4455,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070645601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &2105057677
 GameObject:
   m_ObjectHideFlags: 0
@@ -4825,6 +4827,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2144998355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

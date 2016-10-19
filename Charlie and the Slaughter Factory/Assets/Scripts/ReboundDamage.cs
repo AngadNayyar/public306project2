@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class SawDamage : MonoBehaviour {
+public class ReboundDamage : MonoBehaviour {
 
     PlayerScript playerScript; //Reference to Charlie's movement controls
     GameObject player;  // Reference to Charlie
