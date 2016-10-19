@@ -36,6 +36,12 @@ public class Claw_follow_player : MonoBehaviour {
     }
 
 	void Update () {
+
+        if (player.transform.position.y > yvalue)
+        {
+            return;
+        }
+
         //checks if claw is going down
         if (!goDown) {
                 if (transform.position.y >= yvalue) // checks it goes to max the yvalue
@@ -87,6 +93,7 @@ public class Claw_follow_player : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player") // sets the boolean as true for when it hits a player
         {
+            print("collided against Charlie");
             hasPlayer = true;
         }
         goDown = false; // sets goDown boolean to false, so can goes back up
