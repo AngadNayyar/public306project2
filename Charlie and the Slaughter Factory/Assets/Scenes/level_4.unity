@@ -6334,7 +6334,7 @@ MonoBehaviour:
   - {fileID: 160904216}
   collectible: {fileID: 1000010619378492, guid: 727b094d04ae4724abda96b3c96a82a3,
     type: 2}
-  fixedCollectibleNumber: 0
+  fixedCollectibleNumber: 8
 --- !u!1 &2038990050
 GameObject:
   m_ObjectHideFlags: 0

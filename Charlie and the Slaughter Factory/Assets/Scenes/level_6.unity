@@ -9500,6 +9500,7 @@ GameObject:
   - 4: {fileID: 2011794752}
   - 61: {fileID: 2011794754}
   - 61: {fileID: 2011794753}
+  - 114: {fileID: 2011794755}
   m_Layer: 12
   m_Name: Floor
   m_TagString: Untagged
@@ -9595,6 +9596,53 @@ BoxCollider2D:
   m_Offset: {x: 12.5135355, y: -0.00034189224}
   serializedVersion: 2
   m_Size: {x: 29.99298, y: 4.965226}
+--- !u!114 &2011794755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011794751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6b4e19245f238458c8894bd525075a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleSpawns:
+  - {fileID: 1693571770}
+  - {fileID: 305079337}
+  - {fileID: 1778200287}
+  - {fileID: 292603356}
+  - {fileID: 336352385}
+  - {fileID: 790271592}
+  - {fileID: 2110829736}
+  - {fileID: 1655499441}
+  - {fileID: 1342081663}
+  - {fileID: 1081232720}
+  - {fileID: 2049751524}
+  - {fileID: 2022354600}
+  - {fileID: 153146484}
+  - {fileID: 1662730215}
+  - {fileID: 428041466}
+  - {fileID: 475898065}
+  - {fileID: 2011412033}
+  - {fileID: 1249251990}
+  - {fileID: 1925115071}
+  - {fileID: 771278242}
+  - {fileID: 973137167}
+  - {fileID: 594767981}
+  - {fileID: 2004159878}
+  - {fileID: 1693343800}
+  - {fileID: 938857448}
+  - {fileID: 140214583}
+  - {fileID: 29514055}
+  - {fileID: 1080194372}
+  - {fileID: 855740937}
+  - {fileID: 256956433}
+  - {fileID: 944715229}
+  - {fileID: 647668059}
+  collectible: {fileID: 1000010619378492, guid: 727b094d04ae4724abda96b3c96a82a3,
+    type: 2}
+  fixedCollectibleNumber: 12
 --- !u!1 &2022354599
 GameObject:
   m_ObjectHideFlags: 0
