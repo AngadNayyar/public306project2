@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\damage.cs" />
     <Compile Include="Assets\Scripts\moving_platform.cs" />
+    <Compile Include="Assets\increase_gravity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\LevelDesign\New Assets\Scifi Art Demo Pack\Demo Readme.txt" />
