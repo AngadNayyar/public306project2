@@ -47,8 +47,7 @@ public class Achievement {
 
 	// Use this for initialization
 	void Start () {
-		Achievement myAchievement = new Achievement ("run"); //instantiating object
-
+ 
 	}
 	
 	// Update is called once per frame
