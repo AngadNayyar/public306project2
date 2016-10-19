@@ -19,6 +19,6 @@ public class DisplayScore : MonoBehaviour
         string playerNumber = currentPlayer.GetPlayerSlot();
 
         int score = PlayerPrefs.GetInt("CurrentScore" + playerNumber);
-        scoreText.text = "Score: " + score;
+        scoreText.text = score.ToString();
     }
 }
