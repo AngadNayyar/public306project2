@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011441681864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.850174, y: 6.234046, z: 0}
+  m_LocalPosition: {x: 34.14949, y: -3.1509001, z: 0}
   m_LocalScale: {x: 0.18604514, y: 0.19216135, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -217,9 +217,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011441681864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!212 &212000011760860340
 SpriteRenderer:
   m_ObjectHideFlags: 1
