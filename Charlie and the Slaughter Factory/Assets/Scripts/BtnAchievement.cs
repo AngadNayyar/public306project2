@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 
-	public void Click(){
+	public void Click(){ //changing the unity default button settings
 		if (sprite.sprite == neutral) {
 			sprite.sprite = highlight;
 			achievementList.SetActive (true);

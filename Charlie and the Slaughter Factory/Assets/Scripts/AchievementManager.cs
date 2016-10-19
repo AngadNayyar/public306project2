@@ -12,9 +12,15 @@ public class AchievementManager : MonoBehaviour {
 
 	public Sprite[] sprites; //for the sprite image for the achievement
 
+	private btnAch activeButton;
+	public ScrollRect scrollRect;
+
 	// Use this for initialization
 	void Start () {
 		CreateAchievement("General","yo", "you did the things", 100, 0);
+		activeButton = GameObject.Find("GenBtn").GetComponent<btnAch> ();
+
+		activeButton.Click ();
 	}
 	
 	// Update is called once per frame
@@ -41,4 +47,13 @@ public class AchievementManager : MonoBehaviour {
 		achievement.transform.GetChild(3).GetComponent<Image>().sprite = sprites[spriteIndex];
 
 	}
+	public void ChangeCategory(GameObject button){
+		btnAch achievementButton = button.GetComponent<btnAch>();
+
+		scrollRect.content = achievementButton.achievementList.GetComponent<RectTransform>();
+
+		achievementButton.Click();
+		activeButton.Click();
+		activeButton = achievementButton;
+	}	
 }
