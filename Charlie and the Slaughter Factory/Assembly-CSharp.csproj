@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Achievement.cs" />
+     <Compile Include="Assets\Scripts\AchievementButton.cs" />
      <Compile Include="Assets\Scripts\AchievementManager.cs" />
      <Compile Include="Assets\Scripts\AttachToGameController.cs" />
      <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />

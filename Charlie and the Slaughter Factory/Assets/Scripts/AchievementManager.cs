@@ -27,7 +27,7 @@ public class AchievementManager : MonoBehaviour {
 		SetAchievementInfo (category, achievement, title, description, points, spriteIndex);
 	}
 
-	public void SetAchievementInfo(string category, GameObject achievement, string title, string description, int points){
+	public void SetAchievementInfo(string category, GameObject achievement, string title, string description, int points, int spriteIndex){
 		//set parent, find game object and set category of this achievement
 		achievement.transform.SetParent(GameObject.Find(category).transform);
 
