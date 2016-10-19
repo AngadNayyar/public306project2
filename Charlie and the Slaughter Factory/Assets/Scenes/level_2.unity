@@ -820,7 +820,6 @@ GameObject:
   - 82: {fileID: 554768052}
   - 114: {fileID: 554768053}
   - 114: {fileID: 554768054}
-  - 114: {fileID: 554768055}
   m_Layer: 0
   m_Name: Saw_2
   m_TagString: Saw
@@ -1017,18 +1016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
---- !u!114 &554768055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 554768046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!1 &661266696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4593,7 +4580,6 @@ GameObject:
   - 82: {fileID: 2070645602}
   - 114: {fileID: 2070645608}
   - 114: {fileID: 2070645609}
-  - 114: {fileID: 2070645610}
   m_Layer: 0
   m_Name: Saw_1
   m_TagString: Saw
@@ -4790,18 +4776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
---- !u!114 &2070645610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2070645601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!1 &2105057677
 GameObject:
   m_ObjectHideFlags: 0
