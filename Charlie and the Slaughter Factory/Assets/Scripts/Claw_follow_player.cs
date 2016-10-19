@@ -18,6 +18,7 @@ public class Claw_follow_player : MonoBehaviour {
     private Vector3 position;
     private Vector3 newPosition;
     private float yvalue;
+    private float xvalue;
     private float randomVar;
     private bool goDown;
     private bool hasPlayer = false;
@@ -28,6 +29,7 @@ public class Claw_follow_player : MonoBehaviour {
         //finds the y value of the gameobject to use for the claw's position
         GameObject Claws = GameObject.FindGameObjectWithTag("Claw");
         yvalue = Claws.transform.position.y;
+        xvalue = Claws.transform.position.x;
         randomVar = Random.Range(1f, 5f);
 
         // This is so the claw faces down when it goes down/ up
@@ -37,7 +39,7 @@ public class Claw_follow_player : MonoBehaviour {
 
 	void Update () {
 
-        if (player.transform.position.y > yvalue)
+        if (player.transform.position.y > yvalue || player.transform.position.x > xvalue)
         {
             return;
         }
@@ -93,7 +95,6 @@ public class Claw_follow_player : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player") // sets the boolean as true for when it hits a player
         {
-            print("collided against Charlie");
             hasPlayer = true;
         }
         goDown = false; // sets goDown boolean to false, so can goes back up

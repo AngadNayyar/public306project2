@@ -2722,11 +2722,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011176470964, guid: c464ba7ff9c50cb45b578d17bb38a438, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.4
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 4000011176470964, guid: c464ba7ff9c50cb45b578d17bb38a438, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.2
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 4000011176470964, guid: c464ba7ff9c50cb45b578d17bb38a438, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3487,11 +3487,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011671844746, guid: da1f9683d094d5341acef63a316da927, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.2
+      value: -2.96
       objectReference: {fileID: 0}
     - target: {fileID: 4000011671844746, guid: da1f9683d094d5341acef63a316da927, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.8
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4000011671844746, guid: da1f9683d094d5341acef63a316da927, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7413,10 +7413,10 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011794751}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 12.5135355, y: -0.00034189224}
   serializedVersion: 2
