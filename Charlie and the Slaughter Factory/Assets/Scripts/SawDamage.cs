@@ -19,7 +19,7 @@ public class SawDamage : MonoBehaviour {
     void Update() {
     }
 
-    void OnTriggerEnter2D(Collider2D other){
+   /* void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject == player){
             playerHealth.TakeDamage(attackDamage);
 
@@ -30,5 +30,5 @@ public class SawDamage : MonoBehaviour {
                 rigidBody.AddForce(new Vector2(300f, 600f));
             }
         }
-    }
+    }*/
 }
