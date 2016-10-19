@@ -1115,7 +1115,7 @@ GameObject:
   - 114: {fileID: 783741400}
   - 114: {fileID: 783741401}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (6)
+  m_Name: Saw_6
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,7 +1309,7 @@ GameObject:
   - 114: {fileID: 828486380}
   - 114: {fileID: 828486381}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (3)
+  m_Name: Saw_3
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3276,8 +3276,6 @@ GameObject:
   - 68: {fileID: 1661435384}
   - 68: {fileID: 1661435383}
   - 114: {fileID: 1661435388}
-  - 114: {fileID: 1661435387}
-  - 251: {fileID: 1661435389}
   m_Layer: 12
   m_Name: moving_platform
   m_TagString: Platform
@@ -3376,18 +3374,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1661435387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1661435381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d6699520365204dbf479a20cd699ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Points: []
 --- !u!114 &1661435388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3403,23 +3389,6 @@ MonoBehaviour:
   Path: {fileID: 853793934}
   Speed: 3
   MaxDistanceToGoal: 0.1
---- !u!251 &1661435389
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1661435381}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
 --- !u!1 &1695330231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,7 +4028,7 @@ GameObject:
   - 114: {fileID: 2048148004}
   - 114: {fileID: 2048148005}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (5)
+  m_Name: Saw_5
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4665,7 +4634,7 @@ GameObject:
   - 114: {fileID: 2144998362}
   - 114: {fileID: 2144998363}
   m_Layer: 0
-  m_Name: saw_the_round_saw_thing-09 (4)
+  m_Name: Saw_4
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
