@@ -90,6 +90,52 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &30323816
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 67.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012351712024, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_Name
+      value: crusher2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &52795858
 Prefab:
   m_ObjectHideFlags: 0
@@ -402,7 +448,7 @@ GameObject:
   - 61: {fileID: 176377587}
   m_Layer: 12
   m_Name: floortexture (10)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1732,6 +1778,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224000010039136940, guid: f675ac7007e32d948a0523ea243f1d33,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010039136940, guid: f675ac7007e32d948a0523ea243f1d33,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f675ac7007e32d948a0523ea243f1d33, type: 2}
   m_IsPrefabParent: 0
@@ -2233,7 +2289,7 @@ GameObject:
   - 68: {fileID: 598173570}
   m_Layer: 12
   m_Name: floortexture_both
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2343,7 +2399,7 @@ GameObject:
   - 68: {fileID: 621311478}
   m_Layer: 12
   m_Name: floortexture_right (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2574,7 +2630,7 @@ GameObject:
   - 61: {fileID: 683145602}
   m_Layer: 12
   m_Name: floortexture
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2773,7 +2829,7 @@ GameObject:
   - 61: {fileID: 771667478}
   m_Layer: 12
   m_Name: floortexture (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2850,7 +2906,7 @@ GameObject:
   - 61: {fileID: 800912520}
   m_Layer: 12
   m_Name: floortexture (7)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3156,7 +3212,7 @@ GameObject:
   - 61: {fileID: 890425363}
   m_Layer: 12
   m_Name: floortexture (8)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3345,6 +3401,52 @@ Transform:
   m_PrefabParentObject: {fileID: 4000014187624580, guid: 6fad622b9cf53e0428cbd09e5cceea55,
     type: 2}
   m_PrefabInternal: {fileID: 934518259}
+--- !u!1001 &940947163
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 57.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012351712024, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_Name
+      value: crusher3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &969652544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,6 +3601,52 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1016172519
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 48.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013661405220, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012351712024, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+      propertyPath: m_Name
+      value: crusher1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c46522a661121c84982fd548b3b708dc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1024951979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3736,7 @@ GameObject:
   - 61: {fileID: 1054340480}
   m_Layer: 12
   m_Name: floortexture (3)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4007,7 +4155,7 @@ GameObject:
   - 61: {fileID: 1334992412}
   m_Layer: 12
   m_Name: floortexture (2)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4251,7 +4399,7 @@ GameObject:
   - 61: {fileID: 1429661445}
   m_Layer: 12
   m_Name: floortexture (5)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4542,7 +4690,7 @@ GameObject:
   - 61: {fileID: 1492465720}
   m_Layer: 12
   m_Name: floortexture (6)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5055,11 +5203,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.31
+      value: 39.94
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.36
+      value: -6.65
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5366,7 +5514,7 @@ GameObject:
   - 68: {fileID: 1798370333}
   m_Layer: 12
   m_Name: floortexture_left
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5459,7 +5607,7 @@ GameObject:
   - 61: {fileID: 1849921176}
   m_Layer: 12
   m_Name: floortexture (9)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5688,9 +5836,9 @@ GameObject:
   - 4: {fileID: 1952128266}
   - 212: {fileID: 1952128268}
   - 61: {fileID: 1952128267}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: greytexture (8)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5887,7 +6035,7 @@ GameObject:
   - 61: {fileID: 1988573166}
   m_Layer: 12
   m_Name: floortexture (4)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5965,7 +6113,7 @@ GameObject:
   - 68: {fileID: 2004787122}
   m_Layer: 12
   m_Name: floortexture_right
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6059,7 +6207,7 @@ GameObject:
   - 114: {fileID: 2011794755}
   m_Layer: 12
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
