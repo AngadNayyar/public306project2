@@ -23,7 +23,7 @@ GameObject:
   - 114: {fileID: 114000013738258208}
   - 50: {fileID: 50000010745254956}
   - 61: {fileID: 61000011760267124}
-  - 61: {fileID: 61000013790096358}
+  - 61: {fileID: 61000011967573154}
   m_Layer: 12
   m_Name: Mincer_left
   m_TagString: Mincer
@@ -37,9 +37,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010181336614}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -0.29000008, z: 0}
-  m_LocalScale: {x: 3.438749, y: 0.86000144, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.7, y: -5, z: 0}
+  m_LocalScale: {x: 2.1, y: 1.6000006, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.88, y: 1.07}
---- !u!61 &61000013790096358
+--- !u!61 &61000011967573154
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,9 +86,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0022270565, y: -0.005559621}
   serializedVersion: 2
-  m_Size: {x: 0.87999994, y: 1.07}
+  m_Size: {x: 0.8395646, y: 1.0112716}
 --- !u!114 &114000013738258208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c305da64df222e64799b43b6e771ab64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
   dir: 1
 --- !u!212 &212000010503631656
 SpriteRenderer:
