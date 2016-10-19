@@ -13,9 +13,9 @@ public class Claw_follow_player : MonoBehaviour {
     //public instantaitions - so can change
     public Transform player;
     public float speed = 4.0f;
-    public Vector3 position;
 
     // private instantiations
+    private Vector3 position;
     private Vector3 newPosition;
     private float yvalue;
     private float randomVar;
