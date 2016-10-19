@@ -15,6 +15,10 @@ TagManager:
   - HealthBar
   - Coin
   - ChickenCollectable
+  - Mincer
+  - Farmer
+  - Platform
+  - Claw
   layers:
   - Default
   - TransparentFX
@@ -29,7 +33,7 @@ TagManager:
   - Enemies
   - Pickups
   - Ground
-  - 
+  - Wall
   - 
   - 
   - 
