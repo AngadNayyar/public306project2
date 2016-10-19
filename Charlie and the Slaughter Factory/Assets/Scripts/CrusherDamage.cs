@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * This Script controls the damage of the crusher 
+ *
+ * Charlie and the Slaughter factory - Teven Studios
+ */
 
 public class CrusherDamage : MonoBehaviour {
     private int attackDamage = 100;  //Damage taken due to hit
@@ -8,19 +13,18 @@ public class CrusherDamage : MonoBehaviour {
     PlayerHealth playerHealth;  // Reference to the Charlie's health.
     PlayerScript playerScript; //Reference to Charlie's movement controls
     GameObject player;  // Reference to Charlie
-    Rigidbody2D rigidBody;
 
-    void Awake() {
+    void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
-        rigidBody = player.GetComponent<Rigidbody2D>();
+
     }
 
     void Update() {
     }
 
 	void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject == player){
+		if (other.gameObject.CompareTag("Player")) {
             playerHealth.TakeDamage(attackDamage);
         }
     }
