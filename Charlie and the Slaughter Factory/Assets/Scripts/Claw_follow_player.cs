@@ -47,8 +47,8 @@ public class Claw_follow_player : MonoBehaviour {
                 else // makes go up
                 {
                     newPosition = transform.position + (transform.right * speed * Time.deltaTime); // increase y position
-                position.x = transform.position.x;
-                rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); // looks directly down
+                    position.x = transform.position.x;
+                    rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); // looks directly down
                 }
         } else { // makes go down
             newPosition = transform.position - (transform.right * speed * Time.deltaTime); //decrease y position
@@ -61,7 +61,7 @@ public class Claw_follow_player : MonoBehaviour {
         //RNG
         if (Time.time > randomVar)
         {
-            if (!goDown) //if it isn't going down
+            if (transform.position.y == yvalue) //if it isn't going down (at the top value)
             {
                 goDown = (Random.Range(0, 2) == 0); // 50% chance of true
             }
