@@ -71,10 +71,12 @@
     <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
+    <Compile Include="Assets\Scripts\Claw_follow_player.cs" />
     <Compile Include="Assets\Scripts\Cog.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\Conveyor.cs" />
     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
+    <Compile Include="Assets\Scripts\CrusherMotion.cs" />
     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
     <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
@@ -86,9 +88,11 @@
     <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
     <Compile Include="Assets\Scripts\Leaderboard.cs" />
+    <Compile Include="Assets\Scripts\Mincer.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
     <Compile Include="Assets\Scripts\Pendulum.cs" />
     <Compile Include="Assets\Scripts\PickupCollectable.cs" />
+    <Compile Include="Assets\Scripts\Platform_path_def.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\QuitGame.cs" />
@@ -97,8 +101,11 @@
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
+    <Compile Include="Assets\Scripts\TutorialPopups.cs" />
     <Compile Include="Assets\Scripts\UpdateUserData.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
+    <Compile Include="Assets\Scripts\damage.cs" />
+    <Compile Include="Assets\Scripts\moving_platform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\LevelDesign\New Assets\Scifi Art Demo Pack\Demo Readme.txt" />
