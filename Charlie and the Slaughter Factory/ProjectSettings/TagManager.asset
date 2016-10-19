@@ -17,7 +17,6 @@ TagManager:
   - Platform
   - Mincer
   - Claw
-  - Farmer
   layers:
   - Default
   - TransparentFX
