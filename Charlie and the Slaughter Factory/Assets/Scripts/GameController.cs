@@ -28,11 +28,11 @@ public class GameController : MonoBehaviour {
 	private GameObject menuMusic;
 	private GameObject levelMusic;
 	private GameObject pauseButton;
+	private GameObject deathScreen;
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
-	private int currentLevel = 0;
-	private bool playerDied = false;
+	private int currentLevel = -1;
 	private bool isPausable = false;
 	private bool isPaused = false;
 
@@ -50,6 +50,8 @@ public class GameController : MonoBehaviour {
 		levelMusic.SetActive(false);
 		pauseButton = GameObject.Find("PauseButton");
 		pauseButton.SetActive(false);
+		deathScreen = GameObject.Find("DeathScreen");
+		deathScreen.SetActive(false);
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
 		} else {
@@ -171,25 +173,33 @@ public class GameController : MonoBehaviour {
 	public void PlayGame(StartGame start) {
 		isFinished = false;
 		currentPlayer.ResetScore();
-		// If the player died, reset their score to zero and let them start from the beginning of their last played level.
-		if (playerDied) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
+		// If the user hasn't seen the cut scenes yet, play them.
+		if (!currentPlayer.hasViewedCutScene1()) {
+			start.PlayCutScene1();
 		} else {
-			// If the user hasn't seen the cut scenes yet, play them.
-			if (!currentPlayer.hasViewedCutScene1()) {
-				start.PlayCutScene1();
-			} else {
-				NextLevel();
-			}
+			NextLevel();
 		}
+	}
+
+	// Display Death popup.
+	public void PlayerDied() {
+		deathScreen.SetActive(true);
+	}
+
+	// If the player dies and want to continue, reset their score and run the game from the level they were on.
+	public void TryAgain() {
+		Time.timeScale = 1;
+		currentPlayer.ResetScore();
+		deathScreen.SetActive(false);
+		UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 	}
 
 	// Play the next level, or if all levels have been finished, display the finish screen.
 	public void NextLevel() {
 		Time.timeScale = 1;
 		// If the player finishes, make it so they reset from the beginning.
-		if (currentLevel >= levels.Length) {
-			currentLevel = 0;
+		if (currentLevel >= (levels.Length-1)) {
+			currentLevel = -1;
 			levelMusic.SetActive(false);
 			menuMusic.SetActive(true);
 			isFinished = true;
@@ -200,13 +210,14 @@ public class GameController : MonoBehaviour {
 			menuMusic.SetActive(false);
 			levelMusic.SetActive(true);
 			isPausable = true;
-			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			currentLevel = currentLevel + 1;
+			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			pauseButton.SetActive(true);
 		}
 	}
 
 	public void GoToMainMenu() {
+		currentLevel = -1;
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
 	}
 
