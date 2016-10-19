@@ -23,35 +23,53 @@ public class User {
 	// Note that the extra if/else statements are necessary as you cannot overload constructors in c#
 	public User(string playerSlot, string name, int storedScore) {
 		playerGameSlot = playerSlot;
-		// If leaderboard data only:
-		if (playerSlot == "") {
-			username = name;
-			highScore = storedScore;
+		// If existing player:
+		// Get the existing player's data and set up the object
+		if (PlayerPrefs.HasKey(playerSlot)) {
+			username = PlayerPrefs.GetString(playerSlot);
 			score = 0;
+			highScore = PlayerPrefs.GetInt(playerSlot + "Score");
+			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
+			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
+			viewedCutScene3 = PlayerPrefs.GetInt(playerSlot + "CutScene3") == 1;
 		} else {
-			// If existing player:
-			if (PlayerPrefs.HasKey(playerSlot)) {
-				username = PlayerPrefs.GetString(playerSlot);
-				score = 0;
-				highScore = PlayerPrefs.GetInt("HighScore" + playerSlot);
-				viewedCutScene1 = PlayerPrefs.GetInt("CutScene1" + playerSlot) == 1;
-				viewedCutScene2 = PlayerPrefs.GetInt("CutScene2" + playerSlot) == 1;
-				viewedCutScene3 = PlayerPrefs.GetInt("CutScene3" + playerSlot) == 1;
-			} else {
-				// If new player:
-				username = name;
-				PlayerPrefs.SetString(playerSlot, username);
-				score = 0;
-				highScore = 0;
-				PlayerPrefs.SetInt("HighScore" + playerSlot, 0);
-				viewedCutScene1 = false;
-				viewedCutScene2 = false;
-				viewedCutScene3 = false;
-				PlayerPrefs.SetInt("CutScene1" + playerSlot, 0);
-				PlayerPrefs.SetInt("CutScene2" + playerSlot, 0);
-				PlayerPrefs.SetInt("CutScene3" + playerSlot, 0);
-			}
+			// If new player:
+			// Set up data for new player (i.e. no highscore and hasn't viewed cutscenes yet)
+			username = name;
+			PlayerPrefs.SetString(playerSlot, username);
+			score = 0;
+			highScore = 0;
+			PlayerPrefs.SetInt(playerSlot + "Score", 0);
+			viewedCutScene1 = false;
+			viewedCutScene2 = false;
+			viewedCutScene3 = false;
+			PlayerPrefs.SetInt(playerSlot + "CutScene1", 0);
+			PlayerPrefs.SetInt(playerSlot + "CutScene2", 0);
+			PlayerPrefs.SetInt(playerSlot + "CutScene3", 0);
 		}
+	}
+
+	// When a new score is going to be saved, check if it is a highscore.
+	public void CheckIfHighScore() {
+		if (score > highScore) {
+			highScore = score;
+			PlayerPrefs.SetInt(playerGameSlot + "Score", score);
+		}
+	}
+
+	// Delete Player Data by setting the variables to the initial, and wiping the PlayerPrefs.
+	public void DeletePlayer() {
+		username = "";
+		PlayerPrefs.DeleteKey(playerGameSlot);
+		score = 0;
+		highScore = 0;
+		PlayerPrefs.DeleteKey(playerGameSlot + "Score");
+		viewedCutScene1 = false;
+		viewedCutScene2 = false;
+		viewedCutScene3 = false;
+		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene1");
+		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene2");
+		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene3");
 	}
 
 	// Multiple getters and setters for provate variables.
@@ -60,16 +78,17 @@ public class User {
 		return playerGameSlot;
 	}
 
-	public string GetUsername() {
-		return username;
-	}
-
 	public int GetHighScore() {
 		return highScore;
 	}
 
+	public string GetUsername() {
+		return username;
+	}
+
 	public void SetUsername(string usernameInput) {
 		username = usernameInput;
+		PlayerPrefs.SetString(playerGameSlot, usernameInput);
 	}
 
 	public void ResetScore() {
@@ -90,5 +109,16 @@ public class User {
 
 	public void SetHasViewedCutScene1() {
 		viewedCutScene1 = true;
+		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 1);
+	}
+
+	public void SetHasViewedCutScene2() {
+		viewedCutScene2 = true;
+		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 1);
+	}
+
+	public void SetHasViewedCutScene3() {
+		viewedCutScene3 = true;
+		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 1);
 	}
 }
