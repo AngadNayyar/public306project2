@@ -1,55 +1,62 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
-
+/**
+ * This script is used by the Enemy dogs
+ * Runs faster if the dog is facing charlie and he is within 4 units of charlie
+ * If hits a "Wall", turns around
+ * */
 public class EnemyScript : MonoBehaviour
 {
-
     // instantiates the boundaries's and speed of the object
-    private float rightLimit = 3.8f;
-    private float leftLimit = -1.4f;
-    private float speed = 1.0f;
-    private bool facingRight = true;
+    public float velocity = 1.0f;
     GameObject player;
+    public Transform sightStart;
+    public Transform sightEnd;
+    public bool colliding;
+    public LayerMask detectWhat;
 
     // Use this for initialization
-    void Start(){
-        
-    }
+    void Start(){}
 
     // Update is called once per frame
-    void Update(){}
-
-    void FixedUpdate()
+    void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        float player_pos = player.transform.position.x;
-        if (player_pos < rightLimit && player_pos > leftLimit && player.transform.position.y < -3)
-        {
-                if ((player_pos < transform.position.x && !facingRight) || (player_pos > transform.position.x && facingRight)) {
-                    speed = 5.0f;
-                }
-                else
-                {
-                    speed = 1.0f;
-                }
-        }
-        else
-        {
-            speed = 1.0f;
-        }
+        Rigidbody2D rgb = GetComponent<Rigidbody2D>(); //gets the dog's rigid body
+        rgb.velocity = new Vector2(velocity, rgb.velocity.y); //sets the velocity
 
-        Vector3 movement = Vector3.right * speed * Time.deltaTime; // makes the speed/ movement of the dog
-        transform.Translate(movement); // applies the movement to the dog
+        colliding = Physics2D.Linecast(sightStart.position, sightEnd.position, detectWhat);// detects if colliding against a wall
 
-        if (transform.position.x > rightLimit) // checks if the dog is past the right edge
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0); // flips the dog
-            facingRight = false;
+        if (colliding) //checks if it's colliding against a wall
+        { // spins the dog around if it's colliding against a wall
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+            velocity *= -1;
         }
-        else if (transform.position.x < leftLimit) // checks if the dog is past the left edge
+        
+        player = GameObject.FindGameObjectWithTag("Player"); // gets the player
+        float player_pos = player.transform.position.x; // gets the player's position
+
+        float player_dif_x = player_pos - transform.position.x; // gets charlie and the dogs difference in x values
+        float player_dif_y = player.transform.position.y - transform.position.y;  // gets charlie and the dogs difference in y values
+
+        if (velocity > 0) //going right
         {
-           transform.localRotation = Quaternion.Euler(0, 0, 0); // flips the dog
-            facingRight = true;
+            if (player_dif_x < 4 && player_dif_x > 0 && player_dif_y < 0) // if within 4 units of eachother and charlie is lower then the dog
+            { //make dog run faster
+                velocity = 5f;
+            } else
+            { //make dog run normal
+                velocity = 1f;
+            }
+        }
+        else //going left
+        {
+            if (player_dif_x > -4 && player_dif_x < 0 && player_dif_y < 0) // if within 4 units of eachother and charlie is lower then the dog
+            { // make dog run faster
+                velocity = -5f;
+            } else
+            { // make dog run normal
+                velocity = -1f;
+            }
         }
     }
 }
