@@ -2892,7 +2892,6 @@ GameObject:
   - 95: {fileID: 554768049}
   - 58: {fileID: 554768048}
   - 114: {fileID: 554768052}
-  - 114: {fileID: 554768053}
   - 114: {fileID: 554768054}
   m_Layer: 0
   m_Name: Saw_2
@@ -3004,18 +3003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
---- !u!114 &554768053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 554768046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0dd896904ac90499878af67765987b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!114 &554768054
 MonoBehaviour:
   m_ObjectHideFlags: 0
