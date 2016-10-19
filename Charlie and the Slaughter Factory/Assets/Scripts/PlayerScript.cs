@@ -49,7 +49,7 @@ public class PlayerScript : MonoBehaviour {
 		int mask1 = 1 << LayerMask.NameToLayer ("Ground");
 		int mask2 = 1 << LayerMask.NameToLayer ("Pipe");
 		int mask3 = 1 << LayerMask.NameToLayer ("Wall"); 
-		int combinedMask = mask1 | mask2; 
+		int combinedMask = mask1 | mask2 | mask3 ; 
 
 		// Check if the character is on the gorund.
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
