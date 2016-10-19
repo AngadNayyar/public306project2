@@ -46,11 +46,11 @@ public class PlayerScript : MonoBehaviour {
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
 		// If the space bar is pressed and the character is gounded and not sliding make him jump
-		if (Input.GetKeyDown(KeyCode.Space) && grounded && !slide) {
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) )&& grounded && !slide) {
 			jump = true;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space) && !grounded && canDoubleJump){
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) ) && !grounded && canDoubleJump ){
 			doubleJump = true;
 		}
 
@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		// If the space bar is pressed while the character is jumping - it will double jump
-		if (Input.GetKey(KeyCode.Space) && doubleJump) {
+		if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && doubleJump) {
 			canDoubleJump = false;
 			doubleJump = false;
 			anim.SetTrigger("Jump");
