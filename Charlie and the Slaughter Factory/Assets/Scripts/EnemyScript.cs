@@ -8,7 +8,8 @@ using System.Collections;
 public class EnemyScript : MonoBehaviour
 {
     // instantiates the boundaries's and speed of the object
-    public float velocity = 1.0f;
+    public float velocity;
+    private float start_velocity;
     GameObject player;
     public Transform sightStart;
     public Transform sightEnd;
@@ -16,7 +17,9 @@ public class EnemyScript : MonoBehaviour
     public LayerMask detectWhat;
 
     // Use this for initialization
-    void Start(){}
+    void Start(){
+        start_velocity = velocity;
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,20 +45,20 @@ public class EnemyScript : MonoBehaviour
         {
             if (player_dif_x < 4 && player_dif_x > 0 && player_dif_y < 0) // if within 4 units of eachother and charlie is lower then the dog
             { //make dog run faster
-                velocity = 5f;
+                velocity = 2*start_velocity;
             } else
             { //make dog run normal
-                velocity = 1f;
+                velocity = start_velocity;
             }
         }
         else //going left
         {
             if (player_dif_x > -4 && player_dif_x < 0 && player_dif_y < 0) // if within 4 units of eachother and charlie is lower then the dog
             { // make dog run faster
-                velocity = -5f;
+                velocity = -2* start_velocity;
             } else
             { // make dog run normal
-                velocity = -1f;
+                velocity = -start_velocity;
             }
         }
     }

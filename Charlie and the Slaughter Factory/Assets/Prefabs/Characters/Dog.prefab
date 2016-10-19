@@ -26,6 +26,8 @@ GameObject:
   - 61: {fileID: 61000013330618246}
   - 114: {fileID: 114000010618627910}
   - 50: {fileID: 50000012789398204}
+  - 114: {fileID: 114000012223004808}
+  - 114: {fileID: 114000010542640322}
   m_Layer: 10
   m_Name: Dog
   m_TagString: Enemy
@@ -70,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011441681864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55, y: -4.61, z: 0}
+  m_LocalPosition: {x: 37.850174, y: 6.234046, z: 0}
   m_LocalScale: {x: 0.18604514, y: 0.19216135, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -166,13 +168,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010618627910
+--- !u!114 &114000010542640322
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011441681864}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae630297cddf44f8dfd2c807518adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
+--- !u!114 &114000010618627910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011441681864}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 902f5e93b2449fc40bad832d29c08593, type: 3}
   m_Name: 
@@ -188,13 +202,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c8515a11ea86243b37e910b5e101d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 1
+  velocity: 2
   sightStart: {fileID: 4000014171786702}
   sightEnd: {fileID: 4000011740834338}
   colliding: 0
   detectWhat:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 4096
+--- !u!114 &114000012223004808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011441681864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a47945cad87544c9f394b97087cbe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000011760860340
 SpriteRenderer:
   m_ObjectHideFlags: 1

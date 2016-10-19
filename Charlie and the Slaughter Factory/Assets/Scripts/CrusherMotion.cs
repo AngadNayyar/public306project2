@@ -6,6 +6,7 @@ using System.Collections;
  * To use a crusher use a crusher prefab 
  * 
  * To make the crusher go faster change the speed in the inspector 
+ * The layer above and below must be set with the ground tag and ground layer. 
  *
  * Charlie and the Slaughter factory - Teven Studios
  */
