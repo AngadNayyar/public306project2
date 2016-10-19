@@ -20,8 +20,12 @@ public class PlayerScript : MonoBehaviour {
 	private float maxSlideSpeed = 1f;
 	private float jumpForce = 600f;
 	public Transform groundCheck;
+	public Transform topCheck;
+
 	public bool slide = false;
 	public bool grounded = false;
+	public bool sliding = false; 
+	private bool downReleased = false; 
 
 	private Rigidbody2D rb2d;
 	private Animator anim;
@@ -42,8 +46,14 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		int mask1 = 1 << LayerMask.NameToLayer ("Ground");
+		int mask2 = 1 << LayerMask.NameToLayer ("Pipe");
+		int mask3 = 1 << LayerMask.NameToLayer ("Wall"); 
+		int combinedMask = mask1 | mask2 | mask3 ; 
+
 		// Check if the character is on the gorund.
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+		sliding = Physics2D.Linecast(transform.position, topCheck.position, combinedMask );
 
 		// If the space bar is pressed and the character is gounded and not sliding make him jump
 		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) )&& grounded && !slide) {
@@ -63,14 +73,20 @@ public class PlayerScript : MonoBehaviour {
 			anim.SetBool ("Slide", true);
 		}
 
-		// If the down arrow key is released, make the character stop sliding, and set the box collider to a original height.
-		if (Input.GetKeyUp (KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S)) {
+		// If the user releases the down arrow - to stop charlie from sliding 
+		if (Input.GetKeyUp (KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S))  {
+			downReleased = true; 
+		}
+
+		// If the down arrow key is released and the player is not currently sliding under something, 
+		// make the character stop sliding, and set the box collider to a original height.
+		if (downReleased && !sliding){
 			slide = false;
 			anim.SetBool ("Slide", false);
 			//bc.size = new Vector2 (5.95f, 3.16f);
 			cc.radius = 3.0f;
+			downReleased = false; 
 		}
-
 
     }
 
