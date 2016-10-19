@@ -13,8 +13,11 @@ public class PlayerHealth : MonoBehaviour{
     bool isDead;                                                // Whether Charlie is dead.
     bool damaged;                                               // True when the Charlie takes damage.
 
+    private GameController gameController;
+
     void Awake(){
         currentHealth = startingHealth;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     void Update(){
@@ -53,7 +56,7 @@ public class PlayerHealth : MonoBehaviour{
     {
         // Set the death flag so this function won't be called again.
         isDead = true;
-        DisplayUserData.UpdateDataHighScore();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Death");
+        Time.timeScale = 0;
+        gameController.PlayerDied();
     }
 }
