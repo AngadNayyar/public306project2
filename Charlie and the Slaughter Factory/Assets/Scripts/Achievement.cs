@@ -9,52 +9,58 @@ using System.Collections;
  * Charlie and the Slaughter factory - Teven Studios
  */
 
-public class Achievement : MonoBehaviour {
+public class Achievement {
 
-	private static string achieved = "achieved"; 
-	public SpriteRenderer spriteren; 
-	public Sprite grey; 
-	public Sprite reward1; 
+	private string name;
+
+	private string description;
+
+	private bool unlocked;
+
+	private int points;
+
+	private int spriteIndex;
+
+	private GameObject achievementRef; //know which achievement to show when we earn it
+
+	public Achievement(string name, string description, int points,  int spriteIndex, GameObject achievementRef){//constructor of Achievement
+		this.name = name;
+		this.description = description;
+		this.unlocked = false;
+		this.points = points;
+		this.spriteIndex = spriteIndex;
+		this.achievementRef = achievementRef;
+	}
+
+	public bool EarnAchievement(){
+		if (!unlocked) {
+			unlocked = true;
+			return true;
+		} 
+
+		return false;
+			
+	}
+
+
+
 
 	// Use this for initialization
 	void Start () {
-		 
+		Achievement myAchievement = new Achievement ("run"); //instantiating object
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		checkFirstAchievement ();
+		
 	}
 
-	// Method to set the playerpref variable for the player achieving the first reward - completing their first level.
-	// This method is called when the player goes through a door (from the switch scene script)
 	public static void UpdatefirstReward(){
 
-		string gameSlotName = PlayerPrefs.GetString("CurrentGame");
-		string playerAchieve = gameSlotName + "Achievement1"; 
-		PlayerPrefs.SetString (playerAchieve, achieved); 
+
 			
 	}
-
-	// This method checks whether the user has completed their first level, and it used to determine whether the 
-	// shield should be displayed or whether it should be greyed out. 
-	public void checkFirstAchievement(){
-		spriteren = GetComponent<SpriteRenderer> (); 
-
-		string gameSlotName = PlayerPrefs.GetString("CurrentAchievements"); 
-		string playerAchieve = gameSlotName + "Achievement1"; 
-
-		spriteren = GetComponent<SpriteRenderer>(); 
-
-		if (PlayerPrefs.GetString (playerAchieve) == achieved) {
-			//set the shield to be the image 
-			spriteren.sprite = reward1; 
-		} else {
-			// set the image to be the greyed out image 
-			spriteren.sprite = grey; 
-		}
-	}
-
 
 
 

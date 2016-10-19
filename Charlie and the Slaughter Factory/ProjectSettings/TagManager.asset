@@ -15,6 +15,7 @@ TagManager:
   - HealthBar
   - Coin
   - ChickenCollectable
+  - AchievementList
   layers:
   - Default
   - TransparentFX
