@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\AttachToGameController.cs" />
     <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Chasing_farmer.cs" />
     <Compile Include="Assets\Scripts\ChooseGame.cs" />
     <Compile Include="Assets\Scripts\Claw_follow_player.cs" />
     <Compile Include="Assets\Scripts\Cog.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\damage.cs" />
     <Compile Include="Assets\Scripts\moving_platform.cs" />
+    <Compile Include="Assets\increase_gravity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\LevelDesign\New Assets\Scifi Art Demo Pack\Demo Readme.txt" />
