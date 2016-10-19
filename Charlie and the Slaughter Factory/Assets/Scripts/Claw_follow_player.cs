@@ -29,6 +29,7 @@ public class Claw_follow_player : MonoBehaviour {
 
         // This is so the claw faces down when it goes down/ up
         position = new Vector3();
+        position.x = transform.position.x;
         position.y = transform.position.y - 5;
 
         // initialises first new position values
@@ -48,12 +49,10 @@ public class Claw_follow_player : MonoBehaviour {
                 else // makes go up
                 {
                     newPosition.y += (speed * Time.deltaTime); // increase y position
-                position.x = transform.position.x;
-                rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); // looks directly down
+                    rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); // looks directly down
                 }
         } else { // makes go down
             newPosition.y -= speed * Time.deltaTime; //decrease y position
-            position.x = transform.position.x;
             rotation = Quaternion.LookRotation(position - transform.position, transform.TransformDirection(Vector3.up)); //looks directly down
         }
         // set's the claw's rotation, where it should look
