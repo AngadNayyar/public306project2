@@ -33,6 +33,7 @@ TagManager:
   - Enemies
   - Pickups
   - Ground
+  - Crusher
   - Wall
   - Claw
   - Platform
