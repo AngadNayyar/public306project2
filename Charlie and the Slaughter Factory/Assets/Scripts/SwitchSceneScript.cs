@@ -16,7 +16,6 @@ public class SwitchSceneScript : MonoBehaviour {
         if (coll.name == "Charlie") {
             //Time.timeScale = 0;
             gameController.SetPaused(true);
-            Achievement.UpdatefirstReward ();
             gameController.ShowPopup(gameController.getFinishedLevel());
         }
     }
