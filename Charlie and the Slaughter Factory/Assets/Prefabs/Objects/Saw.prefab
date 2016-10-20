@@ -29,6 +29,7 @@ GameObject:
   - 50: {fileID: 50000013284724190}
   - 114: {fileID: 114000011564682640}
   - 114: {fileID: 114000012109460482}
+  - 114: {fileID: 114000013519530110}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Saw
@@ -43,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012790560828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: 3.4, y: -64.2, z: 0}
+  m_LocalScale: {x: 1.0600137, y: 1.0227076, z: 8}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -196,7 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e1fadfc6c25f45a9e197826cdd5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 6
+  normal: {fileID: 8300000, guid: c6b46d9443b928b49a32b479521cfa48, type: 3}
+  xmas: {fileID: 8300000, guid: c38a87009a551334b82752dbbe4c6582, type: 3}
+  space: {fileID: 8300000, guid: cb8b1cc014c09514aa3ff66bedc67bd8, type: 3}
+  triggerDistance: 9
 --- !u!114 &114000011564682640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +236,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
+--- !u!114 &114000013519530110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012790560828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000012576050230
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -58,6 +58,7 @@ GameObject:
   - 4: {fileID: 4000014032921878}
   - 114: {fileID: 114000010824445154}
   - 61: {fileID: 61000011447761248}
+  - 61: {fileID: 61000013038097416}
   m_Layer: 12
   m_Name: Conveyor
   m_TagString: ground
@@ -159,8 +160,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012822675948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.85, y: 7.22, z: 0}
-  m_LocalScale: {x: 0.41656637, y: 0.48062137, z: 1}
+  m_LocalPosition: {x: 4.65, y: -4.3713, z: 0}
+  m_LocalScale: {x: 0.72393775, y: 0.73750025, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 315}
   m_Children:
   - {fileID: 4000012035694610}
@@ -236,9 +237,23 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 7.34457, y: -16.650677}
+  m_Offset: {x: 7.3117614, y: -16.650677}
   serializedVersion: 2
-  m_Size: {x: 17.304031, y: 1.7702401}
+  m_Size: {x: 18.288393, y: 1.7702389}
+--- !u!61 &61000013038097416
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012822675948}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!61 &61000013719715814
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -352,6 +367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e1fadfc6c25f45a9e197826cdd5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 8300000, guid: 071a69aef196de246a610b2518240dc5, type: 3}
+  xmas: {fileID: 8300000, guid: 6326c84de66249347a68d8db544be9b2, type: 3}
+  space: {fileID: 8300000, guid: 8f603423fb6c5004b9e04eb47f81391a, type: 3}
   triggerDistance: 6
 --- !u!114 &114000010824445154
 MonoBehaviour:
@@ -365,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conveyorSpeed: 5
-  movementRight: 1
+  movementRight: 0
 --- !u!212 &212000011632153852
 SpriteRenderer:
   m_ObjectHideFlags: 1
