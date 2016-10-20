@@ -18,6 +18,7 @@ public class Claw_follow_player : MonoBehaviour {
     private Vector3 position;
     private Vector3 newPosition;
     private float yvalue;
+    private float xvalue;
     private float randomVar;
     private bool goDown;
     private bool hasPlayer = false;
@@ -28,6 +29,7 @@ public class Claw_follow_player : MonoBehaviour {
         //finds the y value of the gameobject to use for the claw's position
         GameObject Claws = GameObject.FindGameObjectWithTag("Claw");
         yvalue = Claws.transform.position.y;
+        xvalue = Claws.transform.position.x;
         randomVar = Random.Range(1f, 5f);
 
         // This is so the claw faces down when it goes down/ up
@@ -37,7 +39,7 @@ public class Claw_follow_player : MonoBehaviour {
 
 	void Update () {
 
-        if (player.transform.position.y > yvalue)
+        if (player.transform.position.y > yvalue || player.transform.position.x > xvalue)
         {
             return;
         }
@@ -74,26 +76,52 @@ public class Claw_follow_player : MonoBehaviour {
             randomVar += Random.Range(2f, 6f); // seconds wait is between 2 and 6
         }
 
-        transform.position = newPosition; // set claw position as new value
+        
 
         if (hasPlayer) // checks if the claw has Charlie
         {
-            newPosition.y-= 2; // distance 2 away from the claw
-            player.position = newPosition; // sets this position as the chicken's position
-
             if (transform.position.y == yvalue) // checks if gets back to the top
             {
-                hasPlayer = false; // sets to false so Chicken drops back down
+                //newPosition = transform.position - (transform.right * speed * Time.deltaTime);
+                newPosition.x = transform.position.x + (5 * Time.deltaTime);
+                newPosition.y = yvalue;
+
+                if (newPosition.x >= xvalue)
+                {
+                    newPosition.x = xvalue;
+                    transform.position = newPosition;
+                    hasPlayer = false; // sets to false so Chicken drops back down
+                }
+                else
+                {
+                    // distance 2 away from the claw
+                    transform.position = newPosition;
+
+                    newPosition.y -= 2;
+                    player.position = newPosition;
+                }
+            } else
+            {
+                transform.position = newPosition; // set claw position as new value
+                newPosition.y -= 2;
+                player.position = newPosition; // sets this position as the chicken's position
             }
+        } else
+        {
+            transform.position = newPosition; // set claw position as new value
         }
     }
 
     //checks if it collides with anything on it's way down
     void OnTriggerEnter2D(Collider2D coll)
     {
+        if (coll.gameObject.tag == "ChickenCollectable")
+        {
+            return;
+        }
+
         if (coll.gameObject.tag == "Player") // sets the boolean as true for when it hits a player
         {
-            print("collided against Charlie");
             hasPlayer = true;
         }
         goDown = false; // sets goDown boolean to false, so can goes back up

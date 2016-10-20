@@ -71,6 +71,18 @@ public class StartGame : MonoBehaviour {
 		gameController.PlayGame(this);
 	}
 
+    // When you walk through the door, open the finished level popup, and the cut scenes underneath (if applicable).
+    void OnTriggerEnter2D(Collider2D coll){
+        // Make sure that it only runs when charlie collides with the door.
+        if (coll.name == "Charlie") {
+            Time.timeScale = 0;
+            gameController.SetPaused(true);
+            Achievement.UpdatefirstReward ();
+            gameController.ShowPopup(gameController.getFinishedLevel());
+            startGame();
+        }
+    }
+
     // Play the cut scenes, in the order specified above, until they are finished, and then set that the user has viewed them (so they don't have to next time)
     public void PlayCutScene1() {
 		
