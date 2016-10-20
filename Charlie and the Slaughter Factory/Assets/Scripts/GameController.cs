@@ -9,14 +9,14 @@ public class GameController : MonoBehaviour {
 	private static GameController gameController;
 	private string[] levels = new string[]{
     //	"proto_lvl1",
-//    	"level_1",
-//    	"level_2",
-//    	"level_3",
- //   	"level_4",
-//    	"level_5",
-//    	"level_6",
-    //	"level_7",
-    //	"level_8",
+    	"level_1",
+    	"level_2",
+	   	"level_3",
+    	"level_4",
+    	"level_5",
+	   	"level_6",
+    	"level_7",
+    	"level_8",
     	"level_9"
 	};
 	private User currentPlayer;
@@ -31,7 +31,20 @@ public class GameController : MonoBehaviour {
 	private GameObject pauseButton;
 	private GameObject deathScreen;
     private string theme;
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	string playerSlot;
+	int numChicks;
+	public GameObject achievementPopup;
 
+	public static Achievement achievement1;
+	public static Achievement achievement2;
+	public static Achievement achievement3;
+	public static List<Achievement> achList = new List<Achievement>(); 
+
+	public Sprite[] sprites; 
+
+	public string currentPlayerName;
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
 	private int currentLevel = -1;
@@ -62,6 +75,18 @@ public class GameController : MonoBehaviour {
 			gameController = this;
 			DontDestroyOnLoad(gameObject);
 		}
+
+
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		achList.Add (achievement1);
+		achList.Add (achievement2);
+		achList.Add (achievement3);
+
+		CreateAchievement ("AchievementPopup","Saved 10 Chickens", "Chicken Saviour", 5, 0, 0);
+		CreateAchievement ("AchievementPopup", "Saved 50 Chickens", "Chicken Saint", 5, 0, 1);
+		CreateAchievement ("AchievementPopup", "Saved 100 Chickens", "Chicken God", 10, 0, 2);
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	}
 
 	// Display and close the pause screen if the p or enter is pressed
@@ -71,8 +96,68 @@ public class GameController : MonoBehaviour {
 				Pause();
 			}
 		}
+
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		if (numChicks > 9) {
+			
+			if (PlayerPrefs.GetInt (playerSlot + "achievement1") == 0) {
+				PlayerPrefs.SetInt (playerSlot + "achievement1", 1); 
+				currentPlayer.SetAchievements(1); //set ach to locked;
+				achList[0].EarnAchievement ();
+			}
+		} 
+
+		if (numChicks > 49) {
+			currentPlayer.SetAchievements2(1); //set ach to locked;
+			achList[1].EarnAchievement ();
+			PlayerPrefs.SetInt (playerSlot + "achievement2", 1); 
+
+		}
+		if (numChicks > 99) {
+			currentPlayer.SetAchievements3(1); //set ach to locked;
+			achList[2].EarnAchievement ();
+			PlayerPrefs.SetInt (playerSlot + "achievement3", 1); 	
+		}
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public void CreateAchievement(string parent, string title, string description, int points, int spriteIndex, int index){
+		
+		GameObject achievement = GameObject.Instantiate(achievementPopup);
+
+		achList[index] = new Achievement (currentPlayer, currentPlayerName, title, description, points, spriteIndex, achievement); //create ach
+
+		SetAchievementInfo (parent, achievement, title, index);
+		StartCoroutine (HideAchievement (achievement));
+
+	}
+	public IEnumerator HideAchievement(GameObject achievement) {
+		yield return new WaitForSeconds (3);
+
+		print ("deletion");
+		Destroy (achievement);
 	}
 
+
+	//SHOULD GET THE USER AND SET THAT TO THE USER. 
+	public void SetAchievementInfo(string parent, GameObject achievement, string title, int index){
+		//set parent, find game object and set category of this achievement
+		achievement.transform.SetParent(GameObject.Find(parent).transform);
+
+		//set the scale, cause in unity it changes when adding
+		achievement.transform.localScale = new Vector3(1,1,1);
+
+		achievement.transform.GetChild(0).GetComponent<Text>().text = achList[index].NameAchieve;
+		achievement.transform.GetChild (1).GetComponent<Text> ().text = achList[index].Description;
+		achievement.transform.GetChild(2).GetComponent<Text>().text = achList[index].Points.ToString();
+		achievement.transform.GetChild(3).GetComponent<Image>().sprite = sprites[achList[index].SpriteIndex];
+
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Display and close the pause screen
 	public void Pause() {
 		if (isPaused) {
@@ -196,7 +281,13 @@ public class GameController : MonoBehaviour {
 			// Initialise the user currently playing.
 			currentPlayer = new User(gameSlot, PlayerPrefs.GetString(gameSlot), PlayerPrefs.GetInt(gameSlot + "Score"));
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
+
 		}
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		currentPlayerName = currentPlayer.GetUsername();
+		playerSlot = currentPlayer.GetPlayerSlot();
+		numChicks = currentPlayer.GetCollectables ();
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	}
 
 	// Create a new user (and set at the current player) based on the username (as long as the username is valid).
