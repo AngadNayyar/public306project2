@@ -11,14 +11,14 @@ public class DisplayScore : MonoBehaviour
     public void Start()
     {
         /*
-         * Get the current player
+         * Get the current player's score and set it to the text
          */
         GameObject gameO = GameObject.Find("GameController");
         GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
         User currentPlayer = gameC.getCurrentPlayer();
         string playerNumber = currentPlayer.GetPlayerSlot();
+        int score = currentPlayer.GetScore();
 
-        int score = PlayerPrefs.GetInt("CurrentScore" + playerNumber);
         scoreText.text = score.ToString();
     }
 }
