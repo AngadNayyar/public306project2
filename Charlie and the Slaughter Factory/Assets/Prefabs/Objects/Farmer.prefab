@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010756963982}
   - 212: {fileID: 212000013625617512}
-  - 61: {fileID: 61000010228255894}
   - 50: {fileID: 50000012262136348}
   - 114: {fileID: 114000010028705230}
   - 114: {fileID: 114000012235527678}
@@ -261,20 +260,6 @@ PolygonCollider2D:
       - {x: 1.095, y: 1.0799999}
       - {x: 0.98499995, y: 0.71}
       - {x: 0.97499996, y: 0.65999997}
---- !u!61 &61000010228255894
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012862613630}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.11652387, y: -0.13964494}
-  serializedVersion: 2
-  m_Size: {x: 3.5924575, y: 6.134998}
 --- !u!114 &114000010028705230
 MonoBehaviour:
   m_ObjectHideFlags: 1
