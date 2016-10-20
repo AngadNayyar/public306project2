@@ -9,8 +9,8 @@ public class GameController : MonoBehaviour {
 	private static GameController gameController;
 	private string[] levels = new string[]{
     //	"proto_lvl1",
-    	"level_1",
-    	"level_2",
+    //	"level_1",
+   // 	"level_2",
     	"level_3",
     	"level_4",
     	"level_5",
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour {
 	private GameObject deathMusic;
 	private GameObject pauseButton;
 	private GameObject deathScreen;
-    private string theme = "Xmas";
+    private string theme;
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
@@ -285,7 +285,8 @@ public class GameController : MonoBehaviour {
 			levelMusic.SetActive(true);
 			isPausable = true;
 			currentLevel = currentLevel + 1;
-			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
+            CheckSetHighestLevel();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			pauseButton.SetActive(true);
 		}
 	}
@@ -295,6 +296,15 @@ public class GameController : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
 	}
 
+    // Checks if next scene is the furthest the User has gotten and if so,
+    // sets that level to highestLevel in User object
+    public void CheckSetHighestLevel() {
+        int highestLevel = gameController.getCurrentPlayer().GetHighestLevel();
+        if (highestLevel <= (currentLevel + 1))
+        {
+            gameController.getCurrentPlayer().SetHighestLevel(currentLevel + 1);
+        }
+    }
 
 	// Getters and setters
 	public bool hasFinished() {
@@ -311,6 +321,11 @@ public class GameController : MonoBehaviour {
 		}
 		return levels[currentLevel];
 	}
+
+    public void setCurrentLevel(int level)
+    {
+        currentLevel = level;
+    }
 
 	public GameObject getFinishedLevel() {
 		return finishedLevel;
@@ -329,5 +344,9 @@ public class GameController : MonoBehaviour {
     public string getTheme()
     {
         return theme;
+    }
+
+    public void setTheme(string newTheme) {
+        theme = newTheme;
     }
 }
