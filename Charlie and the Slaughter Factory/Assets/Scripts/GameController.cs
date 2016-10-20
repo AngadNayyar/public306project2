@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
 //    	"level_1",
 //    	"level_2",
 //    	"level_3",
- //   	"level_4",
+//    	"level_4",
 //    	"level_5",
 //    	"level_6",
     //	"level_7",
@@ -26,7 +26,6 @@ public class GameController : MonoBehaviour {
 	private GameObject finishedLevel;
 	private GameObject pauseLevel;
 	private GameObject menuMusic;
-	private GameObject levelMusic;
 	private GameObject deathMusic;
 	private GameObject pauseButton;
 	private GameObject deathScreen;
@@ -48,8 +47,6 @@ public class GameController : MonoBehaviour {
 		pauseLevel = GameObject.Find("Pause");
 		pauseLevel.SetActive(false);
 		menuMusic = GameObject.Find("MenuMusic");
-		levelMusic = GameObject.Find("LevelMusic");
-		levelMusic.SetActive(false);
 		pauseButton = GameObject.Find("PauseButton");
 		pauseButton.SetActive(false);
 		deathScreen = GameObject.Find("DeathScreen");
@@ -218,7 +215,6 @@ public class GameController : MonoBehaviour {
 			currentPlayer.ResetScore();
 		}
 
-		levelMusic.SetActive(true);
 		menuMusic.SetActive(false);
 		deathMusic.SetActive(false);
 
@@ -252,7 +248,6 @@ public class GameController : MonoBehaviour {
 	public void PlayerDied() {
 		isFinished = true;
 		deathScreen.SetActive(true);
-		levelMusic.SetActive(false);
 		deathMusic.SetActive(true);
 	}
 
@@ -262,7 +257,6 @@ public class GameController : MonoBehaviour {
 		currentPlayer.ResetScore();
 		deathScreen.SetActive(false);
 		deathMusic.SetActive(false);
-		levelMusic.SetActive(true);
 		UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 	}
 
@@ -273,7 +267,6 @@ public class GameController : MonoBehaviour {
 		if (currentLevel >= (levels.Length-1)) {
 			currentLevel = -1;
 			isPaused = false;
-			levelMusic.SetActive(false);
 			menuMusic.SetActive(true);
 			isFinished = true;
 			isPausable = false;
@@ -282,7 +275,6 @@ public class GameController : MonoBehaviour {
 		} else {
 			isPaused = false;
 			menuMusic.SetActive(false);
-			levelMusic.SetActive(true);
 			isPausable = true;
 			currentLevel = currentLevel + 1;
             CheckSetHighestLevel();

@@ -876,6 +876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e1fadfc6c25f45a9e197826cdd5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 8300000, guid: 0aaa1995f5ec72641ba83b3891be5a38, type: 3}
+  xmas: {fileID: 0}
+  space: {fileID: 0}
   triggerDistance: 5
 --- !u!114 &114000012892660074
 MonoBehaviour:
