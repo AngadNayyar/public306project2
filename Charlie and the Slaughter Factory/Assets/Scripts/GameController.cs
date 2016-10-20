@@ -230,6 +230,7 @@ public class GameController : MonoBehaviour {
 		}
 		if (currentLevel == -1) {
 			NextLevel();
+			return;
 		}
 		if ((levels[currentLevel] == "level_3") & (!currentPlayer.hasViewedCutScene2())) {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
