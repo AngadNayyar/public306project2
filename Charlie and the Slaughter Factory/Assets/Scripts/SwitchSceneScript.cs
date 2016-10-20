@@ -22,6 +22,8 @@ public class SwitchSceneScript : MonoBehaviour {
             gameController.SetPaused(true);
 			IncreaseScore();
             gameController.ShowPopup(gameController.getFinishedLevel());
+			GameObject.Find("Stage1BGSound").SetActive(false);
+
         }
     }
 	
