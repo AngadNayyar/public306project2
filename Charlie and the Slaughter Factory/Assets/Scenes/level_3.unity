@@ -2267,6 +2267,8 @@ GameObject:
   - 58: {fileID: 464508054}
   - 114: {fileID: 464508058}
   - 114: {fileID: 464508059}
+  - 50: {fileID: 464508061}
+  - 114: {fileID: 464508060}
   m_Layer: 0
   m_Name: Saw_4
   m_TagString: Saw
@@ -2388,6 +2390,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &464508060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 464508052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
+--- !u!50 &464508061
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 464508052}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &464945430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,6 +3154,8 @@ GameObject:
   - 58: {fileID: 554768048}
   - 114: {fileID: 554768052}
   - 114: {fileID: 554768054}
+  - 50: {fileID: 554768055}
+  - 114: {fileID: 554768053}
   m_Layer: 0
   m_Name: Saw_2
   m_TagString: Saw
@@ -3233,6 +3266,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
+--- !u!114 &554768053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554768046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
 --- !u!114 &554768054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3244,6 +3289,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &554768055
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554768046}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &557655105
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,6 +4981,8 @@ GameObject:
   - 58: {fileID: 828486376}
   - 114: {fileID: 828486380}
   - 114: {fileID: 828486381}
+  - 50: {fileID: 828486383}
+  - 114: {fileID: 828486382}
   m_Layer: 0
   m_Name: Saw_3
   m_TagString: Saw
@@ -5040,6 +5104,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &828486382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828486374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
+--- !u!50 &828486383
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828486374}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &834193304
 GameObject:
   m_ObjectHideFlags: 0
@@ -9901,6 +9994,8 @@ GameObject:
   - 58: {fileID: 1674257992}
   - 114: {fileID: 1674257996}
   - 114: {fileID: 1674257997}
+  - 50: {fileID: 1674257999}
+  - 114: {fileID: 1674257998}
   m_Layer: 0
   m_Name: Saw_5
   m_TagString: Saw
@@ -10022,6 +10117,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1674257998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674257990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
+--- !u!50 &1674257999
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674257990}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1695330231
 GameObject:
   m_ObjectHideFlags: 0
@@ -12232,6 +12356,8 @@ GameObject:
   - 58: {fileID: 2070645607}
   - 114: {fileID: 2070645608}
   - 114: {fileID: 2070645602}
+  - 50: {fileID: 2070645610}
+  - 114: {fileID: 2070645609}
   m_Layer: 0
   m_Name: Saw_1
   m_TagString: Saw
@@ -12353,6 +12479,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
+--- !u!114 &2070645609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070645601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
+--- !u!50 &2070645610
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070645601}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2089241057
 GameObject:
   m_ObjectHideFlags: 0

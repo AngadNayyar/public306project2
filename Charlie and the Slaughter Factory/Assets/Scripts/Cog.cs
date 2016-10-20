@@ -18,7 +18,7 @@ public class Cog : MonoBehaviour {
 	Rigidbody2D rb2d; 
 	// Set the speed of the cog spin a larger negative number will cause a faster spin clockwise
 	// For the cog to rotate anticlockwise 
-	private float spinSpeed = -50.0f;
+	public float spinSpeed = -50.0f;
 
 
 	// Use this for initialization
