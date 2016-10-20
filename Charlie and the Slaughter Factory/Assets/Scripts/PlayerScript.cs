@@ -29,7 +29,6 @@ public class PlayerScript : MonoBehaviour {
 
 	private Rigidbody2D rb2d;
 	private Animator anim;
-	private BoxCollider2D bc;
 	private CircleCollider2D cc;
     private int coinCount;
 
@@ -39,7 +38,6 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
-		//bc = gameObject.GetComponent<BoxCollider2D> ();
 		cc = gameObject.GetComponent<CircleCollider2D> ();
         coinCount = 0;
         PlayerPrefs.SetInt("LevelCoins", coinCount);
@@ -139,8 +137,6 @@ public class PlayerScript : MonoBehaviour {
 
 		// Reset the max speed to be the original value for the walk/run
 		maxSpeed = walkingMaxSpeed;
-
-
     }
 
 	// Flip the sprite to face the other direction
@@ -164,6 +160,7 @@ public class PlayerScript : MonoBehaviour {
             conveyor = true;
         }
     }
+    
     //check if gets off the platform object
     void OnCollisionExit2D(Collision2D col)
     {
@@ -171,24 +168,10 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.parent = null; // set movement to null again
         }
-        if (col.gameObject.tag == "ground")
+        else if (col.gameObject.tag == "ground")
         {
             conveyor = false;
         }
 
     }
-
-    /* //method to increase player's number of coins when they collide with one
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Coin"))
-        {
-            //other.gameObject.SetActive(false);
-            coinCount = coinCount + 1;
-            Debug.Log(coinCount);
-            PlayerPrefs.SetInt("LevelCoins", coinCount);
-        }
-        
-    } */
-
 }
