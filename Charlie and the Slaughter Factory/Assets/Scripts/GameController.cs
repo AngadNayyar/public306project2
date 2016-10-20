@@ -230,6 +230,7 @@ public class GameController : MonoBehaviour {
 		}
 		if (currentLevel == -1) {
 			NextLevel();
+			return;
 		}
 		if ((levels[currentLevel] == "level_3") & (!currentPlayer.hasViewedCutScene2())) {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
@@ -266,7 +267,6 @@ public class GameController : MonoBehaviour {
 
 	// Play the next level, or if all levels have been finished, display the finish screen.
 	public void NextLevel() {
-		Debug.Log(currentLevel);
 		Time.timeScale = 1;
 		// If the player finishes, make it so they reset from the beginning.
 		if (currentLevel >= (levels.Length-1)) {
