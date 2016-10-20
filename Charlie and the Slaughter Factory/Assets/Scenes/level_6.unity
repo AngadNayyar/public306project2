@@ -1719,6 +1719,7 @@ GameObject:
   - 212: {fileID: 320796944}
   - 61: {fileID: 320796943}
   - 68: {fileID: 320796942}
+  - 68: {fileID: 320796945}
   m_Layer: 12
   m_Name: floortexture_left
   m_TagString: Untagged
@@ -1802,6 +1803,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &320796945
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320796940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.023365, y: 0.98043025}
+  - {x: 2.0238113, y: -1.0478361}
 --- !u!1 &321172325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,6 +3603,7 @@ GameObject:
   - 4: {fileID: 655210225}
   - 212: {fileID: 655210227}
   - 61: {fileID: 655210226}
+  - 68: {fileID: 655210228}
   m_Layer: 0
   m_Name: greytexture (3)
   m_TagString: Untagged
@@ -3615,7 +3632,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 655210224}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3654,6 +3671,21 @@ SpriteRenderer:
   m_Color: {r: 0.78431374, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &655210228
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655210224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.0101197, y: -1.0091214}
+  - {x: -2.017534, y: 0.9250278}
 --- !u!1 &662269640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4430,6 +4462,61 @@ Transform:
   - {fileID: 2113129215}
   m_Father: {fileID: 22860900}
   m_RootOrder: 0
+--- !u!1 &745801745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 745801748}
+  - 61: {fileID: 745801747}
+  - 114: {fileID: 745801746}
+  m_Layer: 0
+  m_Name: FurnaceExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &745801746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745801745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f281767e92bdbf42bc41434748e7ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &745801747
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745801745}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.64076996, y: 0.2402935}
+  serializedVersion: 2
+  m_Size: {x: 8.529088, y: 8.128593}
+--- !u!4 &745801748
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745801745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91.1, y: 56.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
 --- !u!1 &756634930
 GameObject:
   m_ObjectHideFlags: 0
@@ -10874,6 +10961,7 @@ GameObject:
   - 212: {fileID: 1958294086}
   - 61: {fileID: 1958294085}
   - 68: {fileID: 1958294084}
+  - 68: {fileID: 1958294087}
   m_Layer: 12
   m_Name: floortexture_left (1)
   m_TagString: Untagged
@@ -10957,6 +11045,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &1958294087
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958294082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 1.9995842, y: 1.033906}
+  - {x: 2.0272102, y: -0.6529932}
 --- !u!1 &1961587084
 GameObject:
   m_ObjectHideFlags: 0
