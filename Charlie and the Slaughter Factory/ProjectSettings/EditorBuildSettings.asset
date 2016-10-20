@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
   - enabled: 1
     path: Assets/Scenes/PlayerData.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScenes.unity
   - enabled: 0
     path: Assets/Scenes/MainMenu.unity
   - enabled: 0

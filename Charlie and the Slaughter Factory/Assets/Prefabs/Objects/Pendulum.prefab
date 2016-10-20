@@ -23,7 +23,8 @@ GameObject:
   - 50: {fileID: 50000011008193874}
   - 233: {fileID: 233000013529182634}
   - 114: {fileID: 114000013684332350}
-  - 60: {fileID: 60000012891683608}
+  - 60: {fileID: 60000013283997578}
+  - 114: {fileID: 114000011130447642}
   m_Layer: 0
   m_Name: Pendulum
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013909199234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.14, y: -1.58, z: 0}
+  m_LocalPosition: {x: 31.6, y: -15.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -61,7 +62,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60000012891683608
+--- !u!60 &60000013283997578
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,38 +76,45 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.08, y: -1.285}
-      - {x: 0.12, y: -1.275}
-      - {x: 0.31, y: -1.235}
-      - {x: 0.61, y: -1.485}
-      - {x: 0.74, y: -1.485}
-      - {x: 0.79999995, y: -1.4549999}
-      - {x: 0.84, y: -1.285}
-      - {x: 0.84, y: -0.73499995}
-      - {x: 0.78999996, y: -0.59499997}
-      - {x: 0.66999996, y: -0.53499997}
-      - {x: 0.53999996, y: -0.695}
-      - {x: 0.14, y: -0.84499997}
-      - {x: 0.13, y: 0.345}
-      - {x: 0.11, y: 1.2149999}
-      - {x: 0.12, y: 1.485}
-      - {x: -0.089999996, y: 1.485}
-      - {x: -0.099999994, y: 1.4549999}
-      - {x: -0.11, y: 1.115}
-      - {x: -0.12, y: 0.66499996}
-      - {x: -0.14, y: -0.84499997}
-      - {x: -0.35999998, y: -0.805}
-      - {x: -0.51, y: -0.715}
-      - {x: -0.66999996, y: -0.53499997}
-      - {x: -0.76, y: -0.585}
-      - {x: -0.81, y: -0.66499996}
-      - {x: -0.84, y: -0.775}
-      - {x: -0.84, y: -1.375}
-      - {x: -0.74, y: -1.485}
-      - {x: -0.65, y: -1.485}
-      - {x: -0.39999998, y: -1.275}
-      - {x: -0.14999999, y: -1.2049999}
-      - {x: -0.14, y: -1.255}
+    - - {x: 0.19999999, y: -0.585}
+      - {x: 0.24, y: -0.065}
+      - {x: 0.13, y: 0.024999999}
+      - {x: 0.14999999, y: 0.805}
+      - {x: 0.14, y: 1.305}
+      - {x: 0.08, y: 1.345}
+      - {x: -0.12, y: 1.345}
+      - {x: -0.16, y: 1.265}
+      - {x: -0.14999999, y: 0.024999999}
+      - {x: -0.26, y: -0.105}
+      - {x: -0.22999999, y: -0.59499997}
+      - {x: -0.35, y: -0.545}
+      - {x: -0.38, y: -0.615}
+      - {x: -0.38, y: -1.275}
+      - {x: -0.35999998, y: -1.305}
+      - {x: -0.35, y: -1.345}
+      - {x: 0.38, y: -1.345}
+      - {x: 0.38, y: -0.59499997}
+      - {x: 0.37, y: -0.525}
+    - - {x: -0.099999994, y: -1.2049999}
+      - {x: -0.11, y: -1.2149999}
+      - {x: -0.13, y: -1.2149999}
+      - {x: -0.13, y: -1.225}
+    - - {x: 0.099999994, y: -1.2049999}
+      - {x: 0.13, y: -1.225}
+      - {x: 0.13, y: -1.2149999}
+      - {x: 0.099999994, y: -1.2149999}
+--- !u!114 &114000011130447642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013909199234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae630297cddf44f8dfd2c807518adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
 --- !u!114 &114000013684332350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,10 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  leftPushRange: -0.3
-  rightPushRange: 0.3
+  leftPushRange: -1
+  rightPushRange: 1
   velocityThreshold: 120
-  pendulumDamage: 30
 --- !u!212 &212000013949502800
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -152,7 +159,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20ddabce8dc368a46826472aa7bd0b93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adb8f562881ced9429153add5ac76e26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,8 +176,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.08208656, y: 1.8570677}
-  m_ConnectedAnchor: {x: 20.222086, y: 0.27706766}
+  m_Anchor: {x: 0.08208656, y: 1.69}
+  m_ConnectedAnchor: {x: 31.682087, y: -14.26}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
