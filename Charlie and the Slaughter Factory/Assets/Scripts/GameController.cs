@@ -8,11 +8,11 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    //	"proto_lvl1",
-    //	"level_1",
-    //	"level_2",
-    //	"level_3",
-    //	"level_4",
+    	"proto_lvl1",
+    	"level_1",
+    	"level_2",
+    	"level_3",
+    	"level_4",
     	"level_5",
     	"level_6",
     	"level_7",
@@ -102,7 +102,8 @@ public class GameController : MonoBehaviour {
         return leaderboard;
 	}
 
-	// Update the strings contained in the leaderboard.
+	/*
+    // Update the strings contained in the leaderboard.
 	public void UpdateLeaderboardView(GameObject panel) {
 		Text[] textViews = panel.GetComponentsInChildren<Text>();
 		panel.SetActive(true);
@@ -115,6 +116,7 @@ public class GameController : MonoBehaviour {
 		textViews[4].GetComponentInChildren<Text>().text = usernames;
 		textViews[5].GetComponentInChildren<Text>().text = scores;
 	}
+    */
 
 	// Delete current User Data, and go back to the main menu (with popup visible for picking slot).
 	public void DeleteUser() {
@@ -126,7 +128,7 @@ public class GameController : MonoBehaviour {
 	public void ShowPopup(GameObject panel) {
 		panel.SetActive(true);
 		if (panel.name == "Leaderboard") {
-			UpdateLeaderboardView(panel);
+			//UpdateLeaderboardView(panel);
 		}
 		if (panel.name == "PickPlayer") {
 			UpdateGameSlots();
