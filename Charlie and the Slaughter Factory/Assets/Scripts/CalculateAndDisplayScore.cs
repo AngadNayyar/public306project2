@@ -10,9 +10,6 @@ public class CalculateAndDisplayScore : MonoBehaviour
     private float oldTotalScore;
     private float displayedScore;
     private float newTotalScore;
-    //time taken to increment to new current score
-    private float pointAnimDurationSec = 1f;
-    private float pointAnimTimer = 0f;
     
     void Start()
     {
@@ -63,13 +60,21 @@ public class CalculateAndDisplayScore : MonoBehaviour
         PlayerPrefs.SetInt(playerSlot + "Score", (int)newTotalScore);
     }
 
+
     void Update()
     {
-        // change the total score text to the latest increment until the new total score is displayed
-        pointAnimTimer += Time.deltaTime;
-        float prcComplete = pointAnimTimer / pointAnimDurationSec;
-        displayedScore = Mathf.Lerp(oldTotalScore, newTotalScore, prcComplete);
-        scoreText.text = displayedScore.ToString("0");
+        StartCoroutine(IncrementScoreDisplay());
+    }
+
+    //every 0.05 seconds increase the score
+    IEnumerator IncrementScoreDisplay()
+    {
+        if (displayedScore < newTotalScore)
+        {
+            displayedScore += 1;
+            scoreText.text = displayedScore.ToString();
+        }
+        yield return new WaitForSecondsRealtime(0.009f);
     }
 
 }
