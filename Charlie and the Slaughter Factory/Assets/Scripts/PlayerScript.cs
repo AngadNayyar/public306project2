@@ -33,6 +33,8 @@ public class PlayerScript : MonoBehaviour {
 	private CircleCollider2D cc;
     private int coinCount;
 
+    private bool conveyor;
+
 	// Use this for initialization
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
@@ -138,6 +140,7 @@ public class PlayerScript : MonoBehaviour {
 		// Reset the max speed to be the original value for the walk/run
 		maxSpeed = walkingMaxSpeed;
 
+
     }
 
 	// Flip the sprite to face the other direction
@@ -156,6 +159,10 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.parent = col.transform; // move at the rate of the platform
         }
+        if (col.gameObject.tag == "ground")
+        {
+            conveyor = true;
+        }
     }
     //check if gets off the platform object
     void OnCollisionExit2D(Collision2D col)
@@ -164,6 +171,11 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.parent = null; // set movement to null again
         }
+        if (col.gameObject.tag == "ground")
+        {
+            conveyor = false;
+        }
+
     }
 
     /* //method to increase player's number of coins when they collide with one
