@@ -53,7 +53,7 @@ public class CutScenes : MonoBehaviour {
     private string[] dialogue4 = new string[] {
         "I can see the road! We're finally free!",
         "Hmm, what's that noise?",
-        ""
+        "..."
     };
 
     // On awakening, save the cut scene objects before setting them to invisible so that they can be accessed later.
@@ -88,11 +88,12 @@ public class CutScenes : MonoBehaviour {
                 cutSceneImages3[i].SetActive(false);
             }
         }
-        cutScenes4 = GameObject.Find("CutScenes3");
+
+        cutScenes4 = GameObject.Find("CutScenes4");
         cutSceneImages4.Add(GameObject.Find("CutScene8"));
         cutSceneImages4.Add(GameObject.Find("CutScene9"));
         cutSceneImages4.Add(GameObject.Find("CutScene10"));
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 3; i++) {
             if (cutSceneImages4[i] != null) {
                 cutSceneImages4[i].SetActive(false);
             }
@@ -118,17 +119,22 @@ public class CutScenes : MonoBehaviour {
     }
 
     public void PlayNextScene() {
+        Debug.Log(gameController.getCurrentLevel());
         if ((gameController.getCurrentLevel() == null) & (!gameController.getCurrentPlayer().hasViewedCutScene1())) {
             PlayCutScene1();
+            return;
         }
         if ((gameController.getCurrentLevel() == "level_3") & (!gameController.getCurrentPlayer().hasViewedCutScene2())) {
             PlayCutScene2();
+            return;
         }
         if ((gameController.getCurrentLevel() == "level_6") & (!gameController.getCurrentPlayer().hasViewedCutScene3())) {
             PlayCutScene3();
+            return;
         }
         if (gameController.getCurrentLevel() == "level_9") {
             PlayCutScene4();
+            return;
         }
     }
 
@@ -164,6 +170,8 @@ public class CutScenes : MonoBehaviour {
         }
         cutSceneImages2[cutScenes2Order[index]].SetActive(true);
         button.GetComponentInChildren<Text>().text = dialogue2[index];
+
+        index = index + 1;
     }
 
     // Play the cut scenes, in the order specified above, until they are finished, and then set that the user has viewed them (so they don't have to next time)
@@ -180,6 +188,8 @@ public class CutScenes : MonoBehaviour {
         }
         cutSceneImages3[cutScenes3Order[index]].SetActive(true);
         button.GetComponentInChildren<Text>().text = dialogue3[index];
+
+        index = index + 1;
     }
 
     // Play the cut scenes, in the order specified above, until they are finished, and then set that the user has viewed them (so they don't have to next time)
@@ -191,10 +201,12 @@ public class CutScenes : MonoBehaviour {
         
         cutScenes4.SetActive(true);
         if (index != 0) {
-            cutSceneImages4[cutScenes3Order[index-1]].SetActive(false);
+            cutSceneImages4[cutScenes4Order[index-1]].SetActive(false);
         }
-        cutSceneImages4[cutScenes3Order[index]].SetActive(true);
+        cutSceneImages4[cutScenes4Order[index]].SetActive(true);
         button.GetComponentInChildren<Text>().text = dialogue4[index];
+
+        index = index + 1;
     }
 
     // Hide supplied popup
@@ -209,6 +221,16 @@ public class CutScenes : MonoBehaviour {
 
 	// Skip in video
 	public void nextLevel() {
+        if ((gameController.getCurrentLevel() == null) & (!gameController.getCurrentPlayer().hasViewedCutScene1())) {
+            gameController.getCurrentPlayer().SetHasViewedCutScene1();
+        }
+        if ((gameController.getCurrentLevel() == "level_3") & (!gameController.getCurrentPlayer().hasViewedCutScene2())) {
+            gameController.getCurrentPlayer().SetHasViewedCutScene2();
+        }
+        if ((gameController.getCurrentLevel() == "level_6") & (!gameController.getCurrentPlayer().hasViewedCutScene3())) {
+            gameController.getCurrentPlayer().SetHasViewedCutScene3();
+        }
+
 		gameController.NextLevel();
 	}
 }
