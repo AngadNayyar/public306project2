@@ -1199,7 +1199,7 @@ GameObject:
   - 4: {fileID: 375179144}
   - 212: {fileID: 375179146}
   - 61: {fileID: 375179145}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: greytexture (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5126,11 +5126,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.7
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 17.56
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5329,7 +5329,7 @@ GameObject:
   - 4: {fileID: 1703426951}
   - 212: {fileID: 1703426953}
   - 61: {fileID: 1703426952}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: greytexture (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
