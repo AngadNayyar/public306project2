@@ -8,11 +8,11 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    	"proto_lvl1",
-    	"level_1",
-    	"level_2",
-    	"level_3",
-    	"level_4",
+    //	"proto_lvl1",
+    //	"level_1",
+    //	"level_2",
+    //	"level_3",
+    //	"level_4",
     	"level_5",
     	"level_6",
     	"level_7",
@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour {
 	// When the gamecontroller is initially created make sure that only the original one exists.
 	// Grab references to popups that need to be manipulated by script, and then set to inactive (i.e. not visible).
 	public void Awake() {
-		usernameInput = GameObject.Find("UsernameInput");
+        usernameInput = GameObject.Find("UsernameInput");
 		usernameInput.SetActive(false);
 		finishedLevel = GameObject.Find("FinishedLevel");
 		finishedLevel.SetActive(false);
@@ -92,14 +92,50 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	// Set up the data for the leaderboard.
-	// Should be called whenever a new score is saved to the current user.
+	// Set up the data for the leaderboard
 	public List<User> SetUpLeaderboard() {
-		// Fetch data for leaderboard
-		for (int i = 1; i < 5; i++) {
-			leaderboard.Add(new User("Player" + i, PlayerPrefs.GetString("Player" + i), PlayerPrefs.GetInt("CurrentScorePlayer" + i)));
+        //Get all scores of all players
+		for (int i = 0; i < 4; i++) {
+            User newUser = new User("Player" + i, PlayerPrefs.GetString("Player" + i), PlayerPrefs.GetInt("Player" + i + "Score"));
+            //check username is not empty(empty player slot) - don't add if empty
+            if (newUser.GetUsername() != "")
+            {
+                leaderboard.Add(new User("Player" + i, PlayerPrefs.GetString("Player" + i), PlayerPrefs.GetInt("Player" + i + "Score")));
+            }
 		}
-        return leaderboard;
+
+        int indexOfMax = 0;
+        int highestScore = leaderboard[0].GetScore();
+        int score;
+        int numUsers = leaderboard.Count;
+        List<User> leaderboardSorted = new List<User>();
+
+        //sort the users by their scores from largest to smallest
+        
+        //loop through the whole list and get the highest
+        //score - end loop when smallest score is left
+        for (int i = 0; i < numUsers - 1; i++) {
+            for (int j = 0; j < leaderboard.Count; j++) {
+                score = leaderboard[j].GetScore();
+                if (score > highestScore) {
+                    indexOfMax = j;
+                    highestScore = score;
+                }
+            }
+            //add the user with the next highest score to the new list
+            //and remove them from the original list
+            leaderboardSorted.Add(leaderboard[indexOfMax]);
+            leaderboard.RemoveAt(indexOfMax);
+            //reset max's
+            indexOfMax = 0;
+            highestScore = leaderboard[0].GetScore();
+        }
+        
+        //add the last remaining and lowest scoring user to the sorted list
+        leaderboardSorted.Add(leaderboard[0]);
+        
+        //return the sorted leaderboard
+        return leaderboardSorted;
 	}
 
 	/*

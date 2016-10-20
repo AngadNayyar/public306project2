@@ -45,8 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <Compile Include="Assets\Prefabs\Objects\Editor\NewEditorTest.cs" />
+     <None Include="Assets\Sprites\LevelDesign\New Assets\Scifi Art Demo Pack\Demo Readme.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -82,8 +82,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{64500CB7-9F7A-3D03-10FF-0F2A28F4F3CD}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{49D04514-9F6F-BEA3-9198-171228FA8528}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
