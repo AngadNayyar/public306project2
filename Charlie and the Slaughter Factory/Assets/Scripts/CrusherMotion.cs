@@ -13,10 +13,6 @@ using System.Collections;
 
 public class CrusherMotion : MonoBehaviour {
 
-	PlayerHealth playerHealth;  // Reference to the Charlie's health.
-	GameObject player;  // Reference to Charlie
-	Rigidbody2D rigidBody;
-
 	Rigidbody2D rb2d; //reference to the crusher 
 	public float velocity = 2f; // speed of the crusher motion
 	private bool swap = false; 
@@ -25,10 +21,6 @@ public class CrusherMotion : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
-		playerHealth = player.GetComponent<PlayerHealth>();
-		rigidBody = player.GetComponent<Rigidbody2D>();
-
         rb2d = GetComponent<Rigidbody2D> (); 
 		source = GetComponent<AudioSource> ();
 	}
