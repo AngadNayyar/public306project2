@@ -10,11 +10,13 @@ public class PickupCollectable : MonoBehaviour
     // is incremented and the chicken object is destroyed
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("ChickenCollectable")) {
             int oldChickens = PlayerPrefs.GetInt("LevelCollectables");
+
             int newChickens = oldChickens + 1;
             PlayerPrefs.SetInt("LevelCollectables", newChickens);
-            Destroy(gameObject);
+
+            Destroy(other.gameObject);
         }
     }
 }
