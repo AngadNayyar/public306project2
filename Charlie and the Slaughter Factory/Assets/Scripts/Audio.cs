@@ -4,7 +4,7 @@ using System.Collections;
 //This class uses a collider so that when Charlie walks within a certain distance of the saw,
 //the audio for the saw will start.
 
-public class SawAudio : MonoBehaviour {
+public class Audio : MonoBehaviour {
 
 	GameObject player;  // Reference to Charlie
 
