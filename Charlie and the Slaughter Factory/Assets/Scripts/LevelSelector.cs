@@ -15,13 +15,15 @@ public class LevelSelector : MonoBehaviour
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         highestLevelUnlocked = gameController.getCurrentPlayer().GetHighestLevel();
-        levels = GameObject.Find("ChooseLevel").GetComponentsInChildren<Button>();
+        levels = GameObject.Find("Levels").GetComponentsInChildren<Button>();
 
-        for (int i = highestLevelUnlocked+3; i < levels.Length; i++)
+        Debug.Log(highestLevelUnlocked);
+
+        for (int i = highestLevelUnlocked+2; i < levels.Length; i++)
         {
-            if (levels[i].name != "BackButton") {
-                levels[i].interactable = false;
-            }
+            Debug.Log(i);
+            Debug.Log(levels[i]);
+            levels[i].interactable = false;
         }
     }
 

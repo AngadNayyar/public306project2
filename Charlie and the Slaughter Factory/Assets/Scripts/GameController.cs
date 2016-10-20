@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
     	"level_1",
     	"level_2",
     	"level_3",
-    	"level_4",
+	   	"level_4",
     	"level_5",
     	"level_6",
     	"level_7",
@@ -250,7 +250,6 @@ public class GameController : MonoBehaviour {
 
 	// Display Death popup.
 	public void PlayerDied() {
-		isFinished = true;
 		deathScreen.SetActive(true);
 		levelMusic.SetActive(false);
 		deathMusic.SetActive(true);
@@ -292,6 +291,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void GoToMainMenu() {
+		pauseLevel.SetActive(false);
 		currentLevel = -1;
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
 	}
