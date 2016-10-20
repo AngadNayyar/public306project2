@@ -3,25 +3,27 @@ using System.Collections;
 /**
  * This script is used by the Enemy dogs
  * Runs faster if the dog is facing charlie and he is within 4 units of charlie
- * If hits a "Wall", turns around
+ * If hits the detection layer (usually Ground), it will turn around
+ * 
+ * Charlie and the Slaughter Factory : Teven Studios
  * */
 public class EnemyScript : MonoBehaviour
 {
-    // instantiates the boundaries's and speed of the object
+    // instantiates the boundaries from inspector - depending on the enemy
     public float velocity;
-    private float start_velocity;
-    GameObject player;
     public Transform sightStart;
     public Transform sightEnd;
     public bool colliding;
     public LayerMask detectWhat;
+    
+    //private variables
+    private float start_velocity;
+    private GameObject player;
 
-    // Use this for initialization
     void Start(){
-        start_velocity = velocity;
+        start_velocity = velocity; // sets start velocity as that set in inspector
     }
 
-    // Update is called once per frame
     void Update()
     {
         Rigidbody2D rgb = GetComponent<Rigidbody2D>(); //gets the dog's rigid body
