@@ -2773,7 +2773,7 @@ GameObject:
   - 4: {fileID: 1072092356}
   - 212: {fileID: 1072092355}
   - 68: {fileID: 1072092358}
-  - 68: {fileID: 1072092357}
+  - 68: {fileID: 1072092359}
   m_Layer: 12
   m_Name: Wall02b
   m_TagString: Untagged
@@ -2827,23 +2827,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800979440}
   m_RootOrder: 0
---- !u!68 &1072092357
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1072092354}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 1.2799}
-  m_Points:
-  - {x: -1.2903225, y: -0.010322213}
-  - {x: -1.296314, y: -2.5602431}
-  - {x: 1.2888455, y: -2.5599766}
-  - {x: 1.286881, y: -0.00000011920929}
 --- !u!68 &1072092358
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2859,6 +2842,21 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.28, y: 0}
   - {x: 1.28, y: 0}
+--- !u!68 &1072092359
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072092354}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.3000572, y: -1.3207374}
+  - {x: -1.3054347, y: 1.2685287}
 --- !u!1 &1088048608
 GameObject:
   m_ObjectHideFlags: 0
