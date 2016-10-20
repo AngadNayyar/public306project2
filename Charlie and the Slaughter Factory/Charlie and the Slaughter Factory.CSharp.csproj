@@ -66,6 +66,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChickenAchievement.cs" />
+    <Compile Include="Assets\ChickenCountAchievement.cs" />
     <Compile Include="Assets\Scripts\Achievement.cs" />
     <Compile Include="Assets\Scripts\AchievementManager.cs" />
     <Compile Include="Assets\Scripts\AttachToGameController.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets\Scripts\Cog.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\Conveyor.cs" />
+    <Compile Include="Assets\Scripts\CountAchievement.cs" />
     <Compile Include="Assets\Scripts\CrusherMotion.cs" />
     <Compile Include="Assets\Scripts\CutScenes.cs" />
     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
