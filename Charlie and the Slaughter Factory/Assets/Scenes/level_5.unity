@@ -3489,7 +3489,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c2773f215782f094e9a7fef1727b006e,
+      objectReference: {fileID: 21300000, guid: 8cb9c32fb6b5b2447b88ba267e4fbd2e,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c464ba7ff9c50cb45b578d17bb38a438, type: 2}
@@ -5410,6 +5410,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1196259345 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012340957494, guid: c464ba7ff9c50cb45b578d17bb38a438,
+    type: 2}
+  m_PrefabInternal: {fileID: 749273561}
+--- !u!114 &1196259346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196259345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1199025092
 GameObject:
   m_ObjectHideFlags: 0
@@ -7563,11 +7579,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.16
+      value: 55.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.68
+      value: -24.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
