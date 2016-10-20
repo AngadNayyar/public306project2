@@ -15,8 +15,8 @@ public class GameController : MonoBehaviour {
 	   	"level_4",
     	"level_5",
     	"level_6",
-    	"level_7",
-    	"level_8",
+    //	"level_7",
+    //	"level_8",
     	"level_9"
 	};
 	private User currentPlayer;
