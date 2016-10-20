@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\SawAudio.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
+    <Compile Include="Assets\Scripts\ThemeSkin.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
     <Compile Include="Assets\Scripts\TutorialPopups.cs" />
     <Compile Include="Assets\Scripts\UpdateUserData.cs" />
