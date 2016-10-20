@@ -11,7 +11,7 @@ using UnityEngine.UI;
  */
 
 public class Achievement {
-
+	//fields in the object as follows
 	private User player;
 	public User Player {
 		get {return player;}
@@ -60,7 +60,7 @@ public class Achievement {
 		set {achievementRef = value;}
 	}
 
- //know which achievement to show when we earn it
+    //know which achievement to show when we earn it
 	public Achievement(User player, string playerName, string nameAchieve, string description, int points,  int spriteIndex, GameObject achievementRef){//constructor of Achievement
 		this.player = player; 
 		this.playerName = playerName;
@@ -70,47 +70,10 @@ public class Achievement {
 		this.points = points;
 		this.spriteIndex = spriteIndex;
 		this.achievementRef = achievementRef;
-		//LoadAchievement();
 	}
 
 	public void EarnAchievement(){
-		//if (!unlocked) {
-			//reference between actual achievement 
-			achievementRef.GetComponent<Image> ().sprite = AchievementManager.Instance.unlockedSprite;
-			//unlocked = true;
-		//	SaveAchievement (true);
-		//	return true;
-		//} 
-		//return false;
+		//changing the achievement sprite to be gold and unlocked
+		achievementRef.GetComponent<Image> ().sprite = AchievementManager.Instance.unlockedSprite;
 	}
-
-	/*
-	//saving achievement to playprefs
-	public void SaveAchievement(bool value) {
-		string playerAchievement = playerName + nameAchieve;
-		string playerPoints = playerName + Points;
-		//Debug.Log ("saveacheiveksdfkljment");
-		//Debug.Log (value);
-		unlocked = value; 
-
-		int tmpPoints = PlayerPrefs.GetInt ("Points");
-		PlayerPrefs.SetInt (playerPoints, tmpPoints += points);
-
-		PlayerPrefs.SetInt (playerAchievement, value ? 1 : 0);
-
-		PlayerPrefs.Save();
-	}
-
-	public void LoadAchievement(){
-		string playerAchievement = playerName + nameAchieve;
-		string playerPoints = playerName + Points;
-
-		unlocked = PlayerPrefs.GetInt(playerAchievement) == 1 ? true : false;
-//		Debug.Log (unlocked);
-		if (unlocked) {
-		//s	Debug.Log ("unlocked?");
-			AchievementManager.Instance.textPoints.text = "Points: " + PlayerPrefs.GetInt (playerPoints);
-			achievementRef.GetComponent<Image>().sprite = AchievementManager.Instance.unlockedSprite;
-		}
-	}*/ 
 }

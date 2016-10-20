@@ -4458,6 +4458,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 926080522}
   - 212: {fileID: 926080523}
+  - 114: {fileID: 926080524}
   m_Layer: 0
   m_Name: Background_Cloud2 (5)
   m_TagString: Untagged
@@ -4511,6 +4512,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &926080524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926080521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937505917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,6 +4532,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 937505918}
   - 212: {fileID: 937505919}
+  - 114: {fileID: 937505920}
   m_Layer: 0
   m_Name: Background_Cloud2
   m_TagString: Untagged
@@ -4573,6 +4586,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &937505920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937505917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &953365513
 GameObject:
   m_ObjectHideFlags: 0
@@ -6692,6 +6716,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1226810754}
   - 212: {fileID: 1226810755}
+  - 114: {fileID: 1226810756}
   m_Layer: 0
   m_Name: Background_Cloud2 (4)
   m_TagString: Untagged
@@ -6745,6 +6770,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1226810756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1226810753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1234008897
 GameObject:
   m_ObjectHideFlags: 0
@@ -6786,6 +6822,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1261475362}
   - 212: {fileID: 1261475363}
+  - 114: {fileID: 1261475364}
   m_Layer: 0
   m_Name: Background_Cloud2 (1)
   m_TagString: Untagged
@@ -6839,6 +6876,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1261475364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261475361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1281295861
 GameObject:
   m_ObjectHideFlags: 0
@@ -11218,6 +11266,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1988439303}
   - 212: {fileID: 1988439304}
+  - 114: {fileID: 1988439305}
   m_Layer: 0
   m_Name: Background_Cloud2 (2)
   m_TagString: Untagged
@@ -11271,6 +11320,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1988439305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988439302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1988964415
 GameObject:
   m_ObjectHideFlags: 0
@@ -11357,6 +11417,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2009904789}
   - 212: {fileID: 2009904790}
+  - 114: {fileID: 2009904791}
   m_Layer: 0
   m_Name: Background_Cloud2 (3)
   m_TagString: Untagged
@@ -11410,6 +11471,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2009904791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009904788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2009920738
 GameObject:
   m_ObjectHideFlags: 0
