@@ -73,10 +73,10 @@ public class GameController : MonoBehaviour {
 	public void Pause() {
 		if (isPaused) {
 			pauseLevel.SetActive(false);
-			//Time.timeScale = 1;
+			Time.timeScale = 1;
 		} else {
 			pauseLevel.SetActive(true);
-			//Time.timeScale = 0;
+			Time.timeScale = 0;
 		}
 		isPaused = !isPaused;
 	}
@@ -171,10 +171,12 @@ public class GameController : MonoBehaviour {
 
 	// Start game, based on data to do with the current user.
 	public void PlayGame(StartGame start) {
-		isFinished = false;
-		currentPlayer.ResetScore();
+		if (isFinished) {
+			isFinished = false;
+			currentPlayer.ResetScore();
+		}
+		
 		// If the user hasn't seen the cut scenes yet, play them.
-		Debug.Log(currentPlayer.hasViewedCutScene1());
 		if ((currentLevel == -1) & (!currentPlayer.hasViewedCutScene1())) {
 			start.PlayCutScene1();
 			return;
@@ -192,6 +194,7 @@ public class GameController : MonoBehaviour {
 
 	// Display Death popup.
 	public void PlayerDied() {
+		isFinished = true;
 		deathScreen.SetActive(true);
 	}
 
@@ -209,6 +212,7 @@ public class GameController : MonoBehaviour {
 		// If the player finishes, make it so they reset from the beginning.
 		if (currentLevel >= (levels.Length-1)) {
 			currentLevel = -1;
+			isPaused = false;
 			levelMusic.SetActive(false);
 			menuMusic.SetActive(true);
 			isFinished = true;
@@ -216,6 +220,7 @@ public class GameController : MonoBehaviour {
 			pauseButton.SetActive(false);
 			UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerData");
 		} else {
+			isPaused = false;
 			menuMusic.SetActive(false);
 			levelMusic.SetActive(true);
 			isPausable = true;
