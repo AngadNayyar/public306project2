@@ -5289,6 +5289,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50000013788928934, guid: 2062328dee20c9341bde8264265a97b0,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2062328dee20c9341bde8264265a97b0, type: 2}
   m_IsPrefabParent: 0
@@ -8717,11 +8722,6 @@ Prefab:
     - target: {fileID: 1000013886058558, guid: 2062328dee20c9341bde8264265a97b0, type: 2}
       propertyPath: m_Name
       value: FallingCoin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010247255828, guid: 2062328dee20c9341bde8264265a97b0,
-        type: 2}
-      propertyPath: triggerDistance
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2062328dee20c9341bde8264265a97b0, type: 2}

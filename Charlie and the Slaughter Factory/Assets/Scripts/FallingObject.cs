@@ -57,6 +57,8 @@ public class FallingObject : MonoBehaviour {
 	// When the object collides with player, take health and then destroy the object
 	void OnCollisionEnter2D(Collision2D other){
 
+		new WaitForSeconds (1); 
+
 		if (falling){
 			Destroy (this.gameObject);
 		}
