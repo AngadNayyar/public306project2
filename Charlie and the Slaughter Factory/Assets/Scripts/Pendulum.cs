@@ -22,12 +22,14 @@ public class Pendulum : MonoBehaviour
     public float leftPushRange;
     public float rightPushRange;
     public float velocityThreshold;
+	private AudioSource source;
 
 	// On starting get the rigidbody and angular velocity of the pendulum object. 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
 		rb2d.angularVelocity = velocityThreshold;
+		source = GetComponent<AudioSource> ();
     }
 
     //Update is called by Unity every frame - call the push the pendulum function
@@ -49,6 +51,7 @@ public class Pendulum : MonoBehaviour
 			&& (rb2d.angularVelocity > 0)
 			&& rb2d.angularVelocity < velocityThreshold)
         {
+			source.Play ();
 			rb2d.angularVelocity = velocityThreshold;
         }
 		// If the pendulum is on the left side, still within the range,
@@ -60,6 +63,7 @@ public class Pendulum : MonoBehaviour
 			&& (rb2d.angularVelocity < 0)
 			&& rb2d.angularVelocity > velocityThreshold * -1)
         {
+			source.Play ();
 			rb2d.angularVelocity = velocityThreshold * -1;
         }
 

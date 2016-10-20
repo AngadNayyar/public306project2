@@ -18,6 +18,8 @@ public class CalculateAndDisplayScore : MonoBehaviour
         GameObject gameO = GameObject.Find("GameController");
         GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
         User currentPlayer = gameC.getCurrentPlayer();
+        Debug.Log(currentPlayer);
+        Debug.Log(currentPlayer.GetPlayerSlot());
         string playerSlot = currentPlayer.GetPlayerSlot();
 
         /* 
