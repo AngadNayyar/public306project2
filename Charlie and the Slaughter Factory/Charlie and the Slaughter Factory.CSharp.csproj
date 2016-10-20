@@ -72,13 +72,13 @@
     <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Chasing_farmer.cs" />
-    <Compile Include="Assets\Scripts\ChooseGame.cs" />
     <Compile Include="Assets\Scripts\Claw_follow_player.cs" />
     <Compile Include="Assets\Scripts\Cog.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\Conveyor.cs" />
     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
     <Compile Include="Assets\Scripts\CrusherMotion.cs" />
+    <Compile Include="Assets\Scripts\CutScenes.cs" />
     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
     <Compile Include="Assets\Scripts\DisplayScore.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />

@@ -3099,6 +3099,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1128146503}
   - 212: {fileID: 1128146502}
+  - 61: {fileID: 1128146505}
+  - 114: {fileID: 1128146504}
   m_Layer: 0
   m_Name: door_exit
   m_TagString: Untagged
@@ -3152,6 +3154,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1128146504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128146501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f281767e92bdbf42bc41434748e7ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1128146505
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128146501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 4, y: 7.4}
 --- !u!1 &1145300704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4797,8 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: 0.38823533
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 81000012388139692, guid: e092835828449744a97da1bac74a7319, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e092835828449744a97da1bac74a7319, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1633494143
@@ -4782,11 +4810,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 16.49
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.01
+      value: 2.78
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
