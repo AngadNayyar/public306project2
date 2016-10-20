@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000013880136248}
   - 58: {fileID: 58000010609037416}
   - 114: {fileID: 114000013522532750}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: chicken
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
