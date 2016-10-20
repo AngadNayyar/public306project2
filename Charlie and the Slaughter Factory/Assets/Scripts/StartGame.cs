@@ -12,6 +12,8 @@ public class StartGame : MonoBehaviour {
     void Awake() {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         finishedGame = GameObject.Find("FinishedGame");
+        Debug.Log(gameController.hasFinished());
+        Debug.Log(finishedGame);
         if ((gameController.hasFinished() != true) & (finishedGame != null)) {
             finishedGame.SetActive(false);
         }
