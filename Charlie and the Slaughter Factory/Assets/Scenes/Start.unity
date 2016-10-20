@@ -1580,8 +1580,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 544.5, y: 135.5}
-  m_SizeDelta: {x: 1089, y: 271}
+  m_AnchoredPosition: {x: 420, y: 198}
+  m_SizeDelta: {x: 840, y: 396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309993051
 MonoBehaviour:
@@ -3696,8 +3696,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 544.5, y: 135.5}
-  m_SizeDelta: {x: 1089, y: 271}
+  m_AnchoredPosition: {x: 420, y: 198}
+  m_SizeDelta: {x: 840, y: 396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767172825
 MonoBehaviour:
@@ -4355,8 +4355,8 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 544.5, y: 135.5}
-  m_SizeDelta: {x: 1089, y: 271}
+  m_AnchoredPosition: {x: 420, y: 198}
+  m_SizeDelta: {x: 840, y: 396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892206080
 MonoBehaviour:
@@ -8287,7 +8287,6 @@ GameObject:
   - 224: {fileID: 1662303892}
   - 222: {fileID: 1662303895}
   - 114: {fileID: 1662303894}
-  - 114: {fileID: 1662303893}
   m_Layer: 5
   m_Name: NumberOfChickensText
   m_TagString: Untagged
@@ -8313,18 +8312,6 @@ RectTransform:
   m_AnchoredPosition: {x: 64.5, y: -44}
   m_SizeDelta: {x: 129, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1662303893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1662303891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df4934b62d36f04392fee6bdd5b4eb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chickenText: {fileID: 1662303894}
 --- !u!114 &1662303894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8718,6 +8705,7 @@ GameObject:
   - 224: {fileID: 1729985405}
   - 222: {fileID: 1729985407}
   - 114: {fileID: 1729985406}
+  - 114: {fileID: 1729985408}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -8782,6 +8770,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729985404}
+--- !u!114 &1729985408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729985404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1d7fb65838b2f4295a06dd47046c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 2126214323}
+  chickenText: {fileID: 1662303894}
 --- !u!1 &1731449260
 GameObject:
   m_ObjectHideFlags: 0
@@ -10554,7 +10555,6 @@ GameObject:
   - 224: {fileID: 2126214321}
   - 222: {fileID: 2126214324}
   - 114: {fileID: 2126214323}
-  - 114: {fileID: 2126214322}
   m_Layer: 5
   m_Name: ActualScoreText
   m_TagString: Untagged
@@ -10580,18 +10580,6 @@ RectTransform:
   m_AnchoredPosition: {x: 64.5, y: 12}
   m_SizeDelta: {x: 129, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2126214322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2126214320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7f501ff17264e418c69a5ab9aac379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 2126214323}
 --- !u!114 &2126214323
 MonoBehaviour:
   m_ObjectHideFlags: 0
