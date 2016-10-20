@@ -5127,7 +5127,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1244996825}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn10
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
