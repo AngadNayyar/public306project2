@@ -100,6 +100,7 @@ GameObject:
   - 4: {fileID: 12969116}
   - 212: {fileID: 12969118}
   - 61: {fileID: 12969117}
+  - 114: {fileID: 12969119}
   m_Layer: 0
   m_Name: pipemiddle (2)
   m_TagString: Untagged
@@ -167,6 +168,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &12969119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 12969115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &20701851
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +402,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 113562278}
   - 212: {fileID: 113562277}
+  - 114: {fileID: 113562279}
   m_Layer: 0
   m_Name: door_entry
   m_TagString: Untagged
@@ -443,6 +456,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &113562279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113562276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &143746260
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +477,7 @@ GameObject:
   - 4: {fileID: 143746261}
   - 212: {fileID: 143746263}
   - 61: {fileID: 143746262}
+  - 114: {fileID: 143746264}
   m_Layer: 17
   m_Name: pipemiddle (3)
   m_TagString: Untagged
@@ -520,6 +545,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &143746264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143746260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &188119332
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +566,7 @@ GameObject:
   - 4: {fileID: 188119333}
   - 212: {fileID: 188119335}
   - 61: {fileID: 188119334}
+  - 114: {fileID: 188119336}
   m_Layer: 17
   m_Name: pipemiddle (1)
   m_TagString: Untagged
@@ -597,6 +634,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &188119336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188119332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229182955
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +937,7 @@ GameObject:
   - 4: {fileID: 338957981}
   - 212: {fileID: 338957983}
   - 61: {fileID: 338957982}
+  - 114: {fileID: 338957984}
   m_Layer: 17
   m_Name: pipemiddle
   m_TagString: Untagged
@@ -956,6 +1005,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &338957984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338957980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &354201078
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1054,7 @@ GameObject:
   - 4: {fileID: 381154643}
   - 212: {fileID: 381154645}
   - 61: {fileID: 381154644}
+  - 114: {fileID: 381154646}
   m_Layer: 0
   m_Name: pipemiddle (3)
   m_TagString: Untagged
@@ -1061,6 +1122,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &381154646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381154642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410037346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1143,7 @@ GameObject:
   - 4: {fileID: 410037347}
   - 212: {fileID: 410037349}
   - 61: {fileID: 410037348}
+  - 114: {fileID: 410037350}
   m_Layer: 0
   m_Name: pipeend
   m_TagString: Untagged
@@ -1138,6 +1211,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &410037350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410037346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &434392459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,6 +1294,7 @@ GameObject:
   - 4: {fileID: 444006795}
   - 212: {fileID: 444006797}
   - 61: {fileID: 444006796}
+  - 114: {fileID: 444006798}
   m_Layer: 17
   m_Name: pipemiddle (5)
   m_TagString: Untagged
@@ -1277,6 +1362,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &444006798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444006794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &537918836
 Prefab:
   m_ObjectHideFlags: 0
@@ -1819,6 +1915,7 @@ GameObject:
   - 4: {fileID: 768480931}
   - 212: {fileID: 768480933}
   - 61: {fileID: 768480932}
+  - 114: {fileID: 768480934}
   m_Layer: 17
   m_Name: pipeend
   m_TagString: Untagged
@@ -1886,6 +1983,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &768480934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768480930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &788160621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,6 +2004,7 @@ GameObject:
   - 4: {fileID: 788160622}
   - 212: {fileID: 788160624}
   - 61: {fileID: 788160623}
+  - 114: {fileID: 788160625}
   m_Layer: 17
   m_Name: pipemiddle
   m_TagString: Untagged
@@ -1963,6 +2072,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &788160625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 788160621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834978413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +2093,7 @@ GameObject:
   - 4: {fileID: 834978414}
   - 212: {fileID: 834978416}
   - 61: {fileID: 834978415}
+  - 114: {fileID: 834978417}
   m_Layer: 0
   m_Name: pipemiddle
   m_TagString: Untagged
@@ -2040,6 +2161,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &834978417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834978413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886590372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2483,7 @@ GameObject:
   - 4: {fileID: 994351918}
   - 212: {fileID: 994351920}
   - 61: {fileID: 994351919}
+  - 114: {fileID: 994351921}
   m_Layer: 17
   m_Name: pipemiddle (4)
   m_TagString: Untagged
@@ -2418,6 +2551,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &994351921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 994351917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1006087657
 Prefab:
   m_ObjectHideFlags: 0
@@ -2601,6 +2745,7 @@ GameObject:
   - 4: {fileID: 1023446000}
   - 212: {fileID: 1023446002}
   - 61: {fileID: 1023446001}
+  - 114: {fileID: 1023446003}
   m_Layer: 0
   m_Name: pipemiddle (2)
   m_TagString: Untagged
@@ -2668,6 +2813,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1023446003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1023445999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1041932575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2929,7 @@ GameObject:
   - 4: {fileID: 1072092356}
   - 212: {fileID: 1072092355}
   - 68: {fileID: 1072092358}
-  - 68: {fileID: 1072092357}
+  - 68: {fileID: 1072092359}
   m_Layer: 12
   m_Name: Wall02b
   m_TagString: Untagged
@@ -2827,23 +2983,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800979440}
   m_RootOrder: 0
---- !u!68 &1072092357
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1072092354}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 1.2799}
-  m_Points:
-  - {x: -1.2903225, y: -0.010322213}
-  - {x: -1.296314, y: -2.5602431}
-  - {x: 1.2888455, y: -2.5599766}
-  - {x: 1.286881, y: -0.00000011920929}
 --- !u!68 &1072092358
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2859,6 +2998,21 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.28, y: 0}
   - {x: 1.28, y: 0}
+--- !u!68 &1072092359
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072092354}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.3000572, y: -1.3207374}
+  - {x: -1.3054347, y: 1.2685287}
 --- !u!1 &1088048608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +3100,7 @@ GameObject:
   - 4: {fileID: 1093874287}
   - 212: {fileID: 1093874289}
   - 61: {fileID: 1093874288}
+  - 114: {fileID: 1093874290}
   m_Layer: 0
   m_Name: pipemiddle (1)
   m_TagString: Untagged
@@ -3013,6 +3168,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1093874290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1093874286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1105452304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,6 +3267,7 @@ GameObject:
   - 212: {fileID: 1128146502}
   - 61: {fileID: 1128146505}
   - 114: {fileID: 1128146504}
+  - 114: {fileID: 1128146506}
   m_Layer: 0
   m_Name: door_exit
   m_TagString: Untagged
@@ -3179,6 +3346,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 7.4}
+--- !u!114 &1128146506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128146501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1145300704
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,6 +3472,7 @@ GameObject:
   - 4: {fileID: 1178624641}
   - 212: {fileID: 1178624643}
   - 61: {fileID: 1178624642}
+  - 114: {fileID: 1178624644}
   m_Layer: 17
   m_Name: pipemiddle (5)
   m_TagString: Untagged
@@ -3361,6 +3540,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1178624644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178624640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196583020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,6 +3638,7 @@ GameObject:
   - 4: {fileID: 1220202318}
   - 212: {fileID: 1220202320}
   - 61: {fileID: 1220202319}
+  - 114: {fileID: 1220202321}
   m_Layer: 17
   m_Name: pipemiddle (1)
   m_TagString: Untagged
@@ -3515,6 +3706,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1220202321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220202317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226963840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,6 +3804,7 @@ GameObject:
   - 4: {fileID: 1249012536}
   - 212: {fileID: 1249012535}
   - 61: {fileID: 1249012537}
+  - 114: {fileID: 1249012538}
   m_Layer: 17
   m_Name: pipeend
   m_TagString: Untagged
@@ -3669,6 +3872,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 5.93, y: 10.27}
+--- !u!114 &1249012538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1249012534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1255946251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3893,7 @@ GameObject:
   - 4: {fileID: 1255946252}
   - 212: {fileID: 1255946254}
   - 61: {fileID: 1255946253}
+  - 114: {fileID: 1255946255}
   m_Layer: 0
   m_Name: pipemiddle (1)
   m_TagString: Untagged
@@ -3746,6 +3961,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1255946255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255946251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311196674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,6 +3982,7 @@ GameObject:
   - 4: {fileID: 1311196675}
   - 212: {fileID: 1311196677}
   - 61: {fileID: 1311196676}
+  - 114: {fileID: 1311196678}
   m_Layer: 17
   m_Name: pipemiddle (2)
   m_TagString: Untagged
@@ -3823,6 +4050,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1311196678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311196674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1346122635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,6 +4594,7 @@ GameObject:
   - 4: {fileID: 1472553281}
   - 212: {fileID: 1472553283}
   - 61: {fileID: 1472553282}
+  - 114: {fileID: 1472553284}
   m_Layer: 0
   m_Name: pipeend
   m_TagString: Untagged
@@ -4423,6 +4662,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1472553284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472553280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1478368873
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,6 +5392,7 @@ GameObject:
   - 4: {fileID: 1726149090}
   - 212: {fileID: 1726149092}
   - 61: {fileID: 1726149091}
+  - 114: {fileID: 1726149093}
   m_Layer: 17
   m_Name: pipemiddle (3)
   m_TagString: Untagged
@@ -5209,6 +5460,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1726149093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726149089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1734420068
 GameObject:
   m_ObjectHideFlags: 0
@@ -5219,6 +5481,7 @@ GameObject:
   - 4: {fileID: 1734420069}
   - 212: {fileID: 1734420071}
   - 61: {fileID: 1734420070}
+  - 114: {fileID: 1734420072}
   m_Layer: 0
   m_Name: pipemiddle (3)
   m_TagString: Untagged
@@ -5286,6 +5549,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1734420072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734420068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1793321162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,6 +5570,7 @@ GameObject:
   - 4: {fileID: 1793321163}
   - 212: {fileID: 1793321165}
   - 61: {fileID: 1793321164}
+  - 114: {fileID: 1793321166}
   m_Layer: 17
   m_Name: pipemiddle (2)
   m_TagString: Untagged
@@ -5363,6 +5638,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1793321166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793321162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1800979439
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,6 +6475,7 @@ GameObject:
   - 4: {fileID: 2145597624}
   - 212: {fileID: 2145597626}
   - 61: {fileID: 2145597625}
+  - 114: {fileID: 2145597627}
   m_Layer: 17
   m_Name: pipemiddle (4)
   m_TagString: Untagged
@@ -6256,3 +6543,14 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2145597627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2145597623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

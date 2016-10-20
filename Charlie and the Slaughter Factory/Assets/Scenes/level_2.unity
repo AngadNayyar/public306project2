@@ -128,6 +128,7 @@ GameObject:
   - 4: {fileID: 86066071}
   - 212: {fileID: 86066073}
   - 61: {fileID: 86066072}
+  - 68: {fileID: 86066074}
   m_Layer: 12
   m_Name: floortile (3)
   m_TagString: Untagged
@@ -195,6 +196,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &86066074
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86066070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.543311, y: 2.4535022}
+  - {x: 2.5681534, y: -2.4194262}
 --- !u!1 &113562276
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +220,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 113562278}
   - 212: {fileID: 113562277}
+  - 114: {fileID: 113562279}
   m_Layer: 0
   m_Name: door_entry
   m_TagString: Untagged
@@ -257,6 +274,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &113562279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113562276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &163872599
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +483,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 321161523}
+--- !u!1 &321161525 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 321161523}
+--- !u!114 &321161526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321161525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333070727
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +858,7 @@ GameObject:
   - 212: {fileID: 526603545}
   - 61: {fileID: 526603548}
   - 114: {fileID: 526603547}
+  - 114: {fileID: 526603549}
   m_Layer: 0
   m_Name: door_exit
   m_TagString: Untagged
@@ -892,6 +937,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 7.4}
+--- !u!114 &526603549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526603544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &661266696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1217,8 @@ GameObject:
   - 4: {fileID: 890542935}
   - 212: {fileID: 890542937}
   - 61: {fileID: 890542936}
+  - 68: {fileID: 890542939}
+  - 68: {fileID: 890542938}
   m_Layer: 12
   m_Name: floortile (2)
   m_TagString: Untagged
@@ -1228,6 +1286,36 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &890542938
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890542934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.4972534, y: 2.3880684}
+  - {x: 2.5, y: -2.4765146}
+--- !u!68 &890542939
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890542934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.60223, y: -2.5548153}
+  - {x: -2.5893364, y: 2.4525855}
 --- !u!1 &907826480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1856,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1063781613}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2209,9 +2297,30 @@ Prefab:
       propertyPath: m_Name
       value: Saw_1
       objectReference: {fileID: 0}
+    - target: {fileID: 95000012792468158, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1118455387 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1118455386}
+--- !u!114 &1118455388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118455387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1121991113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,6 +3159,7 @@ GameObject:
   - 4: {fileID: 1633886402}
   - 212: {fileID: 1633886404}
   - 61: {fileID: 1633886403}
+  - 68: {fileID: 1633886405}
   m_Layer: 12
   m_Name: floortile (5)
   m_TagString: Untagged
@@ -3117,6 +3227,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &1633886405
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633886401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.5681534, y: -2.5898082}
+  - {x: -2.5433083, y: 2.4875789}
 --- !u!1 &1656321845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3731,6 +3856,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 1797611865}
+--- !u!1 &1797611867 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1797611865}
+--- !u!114 &1797611868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797611867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1800628506
 Transform:
   m_ObjectHideFlags: 0
@@ -3894,6 +4035,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 1850053558}
+--- !u!1 &1850053560 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1850053558}
+--- !u!114 &1850053561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850053560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860114423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,6 +4205,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 1872048839}
+--- !u!1 &1872048841 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1872048839}
+--- !u!114 &1872048842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872048841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1882219584 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000014105474376, guid: f675ac7007e32d948a0523ea243f1d33,
@@ -4161,6 +4334,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 1999766523}
+--- !u!1 &1999766525 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1999766523}
+--- !u!114 &1999766526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999766525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2011794751
 GameObject:
   m_ObjectHideFlags: 0

@@ -499,6 +499,7 @@ GameObject:
   - 4: {fileID: 87064888}
   - 212: {fileID: 87064890}
   - 61: {fileID: 87064889}
+  - 114: {fileID: 87064891}
   m_Layer: 0
   m_Name: pipemiddle (2)
   m_TagString: Untagged
@@ -566,6 +567,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &87064891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 87064887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &107674824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1290,7 @@ GameObject:
   - 4: {fileID: 249268573}
   - 212: {fileID: 249268575}
   - 61: {fileID: 249268574}
+  - 114: {fileID: 249268576}
   m_Layer: 0
   m_Name: pipemiddle (3)
   m_TagString: Untagged
@@ -1345,6 +1358,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &249268576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249268572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256956432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1546,11 @@ Prefab:
       propertyPath: m_Name
       value: Saw_2
       objectReference: {fileID: 0}
+    - target: {fileID: 50000013284724190, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7, type: 2}
   m_IsPrefabParent: 0
@@ -1530,6 +1559,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 288413963}
+--- !u!1 &288413965 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 288413963}
+--- !u!114 &288413966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288413965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292603355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,6 +1719,7 @@ GameObject:
   - 212: {fileID: 320796944}
   - 61: {fileID: 320796943}
   - 68: {fileID: 320796942}
+  - 68: {fileID: 320796945}
   m_Layer: 12
   m_Name: floortexture_left
   m_TagString: Untagged
@@ -1757,6 +1803,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &320796945
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320796940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.023365, y: 0.98043025}
+  - {x: 2.0238113, y: -1.0478361}
 --- !u!1 &321172325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,6 +3603,7 @@ GameObject:
   - 4: {fileID: 655210225}
   - 212: {fileID: 655210227}
   - 61: {fileID: 655210226}
+  - 68: {fileID: 655210228}
   m_Layer: 0
   m_Name: greytexture (3)
   m_TagString: Untagged
@@ -3570,7 +3632,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 655210224}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3609,6 +3671,21 @@ SpriteRenderer:
   m_Color: {r: 0.78431374, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &655210228
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655210224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.0101197, y: -1.0091214}
+  - {x: -2.017534, y: 0.9250278}
 --- !u!1 &662269640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3929,7 @@ GameObject:
   - 4: {fileID: 685755919}
   - 212: {fileID: 685755921}
   - 61: {fileID: 685755920}
+  - 114: {fileID: 685755922}
   m_Layer: 0
   m_Name: pipemiddle (5)
   m_TagString: Untagged
@@ -3919,6 +3997,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &685755922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685755918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &690823278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,6 +4136,11 @@ Prefab:
       propertyPath: m_Name
       value: Saw_1
       objectReference: {fileID: 0}
+    - target: {fileID: 50000013284724190, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7, type: 2}
   m_IsPrefabParent: 0
@@ -4055,6 +4149,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010742543458, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
     type: 2}
   m_PrefabInternal: {fileID: 697317167}
+--- !u!1 &697317169 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012790560828, guid: b72d07a57c2ee5e4c9032d9fd2e11cb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 697317167}
+--- !u!114 &697317170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697317169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &699172971
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,6 +4462,61 @@ Transform:
   - {fileID: 2113129215}
   m_Father: {fileID: 22860900}
   m_RootOrder: 0
+--- !u!1 &745801745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 745801748}
+  - 61: {fileID: 745801747}
+  - 114: {fileID: 745801746}
+  m_Layer: 0
+  m_Name: FurnaceExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &745801746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745801745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f281767e92bdbf42bc41434748e7ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &745801747
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745801745}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.64076996, y: 0.2402935}
+  serializedVersion: 2
+  m_Size: {x: 8.529088, y: 8.128593}
+--- !u!4 &745801748
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745801745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91.1, y: 56.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
 --- !u!1 &756634930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,6 +4669,7 @@ GameObject:
   - 4: {fileID: 770820060}
   - 212: {fileID: 770820062}
   - 61: {fileID: 770820061}
+  - 114: {fileID: 770820063}
   m_Layer: 0
   m_Name: pipemiddle (5)
   m_TagString: Untagged
@@ -4571,6 +4737,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &770820063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770820059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &771278241
 GameObject:
   m_ObjectHideFlags: 0
@@ -7045,6 +7222,7 @@ GameObject:
   - 4: {fileID: 1256848682}
   - 212: {fileID: 1256848684}
   - 61: {fileID: 1256848683}
+  - 114: {fileID: 1256848685}
   m_Layer: 0
   m_Name: pipeend
   m_TagString: Untagged
@@ -7112,6 +7290,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1256848685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256848681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1263065626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,6 +7388,7 @@ GameObject:
   - 4: {fileID: 1268275642}
   - 212: {fileID: 1268275644}
   - 61: {fileID: 1268275643}
+  - 114: {fileID: 1268275645}
   m_Layer: 0
   m_Name: pipeend
   m_TagString: Untagged
@@ -7266,6 +7456,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1268275645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268275641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285434544
 GameObject:
   m_ObjectHideFlags: 0
@@ -7442,6 +7643,7 @@ GameObject:
   - 4: {fileID: 1330728925}
   - 212: {fileID: 1330728927}
   - 61: {fileID: 1330728926}
+  - 114: {fileID: 1330728928}
   m_Layer: 0
   m_Name: pipemiddle (3)
   m_TagString: Untagged
@@ -7509,6 +7711,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1330728928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330728924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1331457140
 GameObject:
   m_ObjectHideFlags: 0
@@ -8000,6 +8213,7 @@ GameObject:
   - 4: {fileID: 1427864668}
   - 212: {fileID: 1427864670}
   - 61: {fileID: 1427864669}
+  - 114: {fileID: 1427864671}
   m_Layer: 0
   m_Name: pipemiddle (2)
   m_TagString: Untagged
@@ -8067,6 +8281,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1427864671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1427864667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1429962138
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,6 +9926,7 @@ GameObject:
   - 4: {fileID: 1755009559}
   - 212: {fileID: 1755009561}
   - 61: {fileID: 1755009560}
+  - 114: {fileID: 1755009562}
   m_Layer: 0
   m_Name: pipemiddle (4)
   m_TagString: Untagged
@@ -9768,6 +9994,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1755009562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755009558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1763921675
 GameObject:
   m_ObjectHideFlags: 0
@@ -9778,6 +10015,7 @@ GameObject:
   - 4: {fileID: 1763921676}
   - 212: {fileID: 1763921678}
   - 61: {fileID: 1763921677}
+  - 114: {fileID: 1763921679}
   m_Layer: 0
   m_Name: pipemiddle
   m_TagString: Untagged
@@ -9845,6 +10083,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1763921679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763921675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1771565482
 GameObject:
   m_ObjectHideFlags: 0
@@ -10070,6 +10319,7 @@ GameObject:
   - 4: {fileID: 1814493108}
   - 212: {fileID: 1814493110}
   - 61: {fileID: 1814493109}
+  - 114: {fileID: 1814493111}
   m_Layer: 0
   m_Name: pipemiddle (1)
   m_TagString: Untagged
@@ -10137,6 +10387,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1814493111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814493107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1845984889
 GameObject:
   m_ObjectHideFlags: 0
@@ -10700,6 +10961,7 @@ GameObject:
   - 212: {fileID: 1958294086}
   - 61: {fileID: 1958294085}
   - 68: {fileID: 1958294084}
+  - 68: {fileID: 1958294087}
   m_Layer: 12
   m_Name: floortexture_left (1)
   m_TagString: Untagged
@@ -10783,6 +11045,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &1958294087
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958294082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 1.9995842, y: 1.033906}
+  - {x: 2.0272102, y: -0.6529932}
 --- !u!1 &1961587084
 GameObject:
   m_ObjectHideFlags: 0
@@ -10793,6 +11070,7 @@ GameObject:
   - 4: {fileID: 1961587085}
   - 212: {fileID: 1961587087}
   - 61: {fileID: 1961587086}
+  - 114: {fileID: 1961587088}
   m_Layer: 0
   m_Name: pipemiddle
   m_TagString: Untagged
@@ -10860,6 +11138,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1961587088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961587084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1962688726
 Prefab:
   m_ObjectHideFlags: 0
@@ -11841,6 +12130,7 @@ GameObject:
   - 4: {fileID: 2057052961}
   - 212: {fileID: 2057052963}
   - 61: {fileID: 2057052962}
+  - 114: {fileID: 2057052964}
   m_Layer: 0
   m_Name: pipemiddle (4)
   m_TagString: Untagged
@@ -11908,6 +12198,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2057052964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057052960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2062765628
 GameObject:
   m_ObjectHideFlags: 0
@@ -12119,6 +12420,7 @@ GameObject:
   - 4: {fileID: 2100800314}
   - 212: {fileID: 2100800316}
   - 61: {fileID: 2100800315}
+  - 114: {fileID: 2100800317}
   m_Layer: 0
   m_Name: pipemiddle (1)
   m_TagString: Untagged
@@ -12186,6 +12488,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2100800317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100800313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2104846100
 GameObject:
   m_ObjectHideFlags: 0
@@ -12378,6 +12691,7 @@ GameObject:
   - 4: {fileID: 2113129215}
   - 212: {fileID: 2113129217}
   - 61: {fileID: 2113129216}
+  - 114: {fileID: 2113129218}
   m_Layer: 0
   m_Name: pipemiddle (6)
   m_TagString: Untagged
@@ -12445,6 +12759,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2113129218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2113129214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2132347605
 GameObject:
   m_ObjectHideFlags: 0
