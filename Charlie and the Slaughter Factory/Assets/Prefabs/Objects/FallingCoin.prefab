@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000010247255828}
   - 58: {fileID: 58000012800289282}
   - 50: {fileID: 50000013788928934}
+  - 114: {fileID: 114000013065978232}
   m_Layer: 0
   m_Name: FallingCoin
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013886058558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: 3.06, z: 0}
+  m_LocalPosition: {x: 28.36019, y: 10.235136, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -55,7 +56,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -85,8 +86,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89e48f9bbf1d234ab64eacf38f53900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 8
   spinSpeed: 250
+  triggerDistance: 5
+--- !u!114 &114000013065978232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013886058558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae630297cddf44f8dfd2c807518adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 30
 --- !u!212 &212000011338988680
 SpriteRenderer:
   m_ObjectHideFlags: 1
