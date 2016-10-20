@@ -25,35 +25,31 @@ public class Leaderboard : MonoBehaviour {
         
         //get the sorted list of users
         List<User> players = gameC.SetUpLeaderboard();
+        int numPlayers = players.Count;
 
-        //check username is not empty (empty player slot) and if not
-        //set the texts to the username and corresponding score
-        username = players[0].GetUsername();
-        if (username != "")
+        if (numPlayers > 0)
         {
             firstPlaceUsername.text = players[0].GetUsername();
             firstPlaceScore.text = players[0].GetScore().ToString();
-        }
 
-        username = players[1].GetUsername();
-        if (username != "")
-        {
-            secondPlaceUsername.text = players[1].GetUsername();
-            secondPlaceScore.text = players[1].GetScore().ToString();
-        }
+            if (numPlayers > 1)
+            {
+                secondPlaceUsername.text = players[1].GetUsername();
+                secondPlaceScore.text = players[1].GetScore().ToString();
 
-        username = players[2].GetUsername();
-        if (username != "")
-        {
-            thirdPlaceUsername.text = players[2].GetUsername();
-            thirdPlaceScore.text = players[2].GetScore().ToString();
-        }
+                if (numPlayers > 2)
+                {
+                    thirdPlaceUsername.text = players[2].GetUsername();
+                    thirdPlaceScore.text = players[2].GetScore().ToString();
 
-        username = players[3].GetUsername();
-        if (username != "")
-        {
-            fourthPlaceUsername.text = players[3].GetUsername();
-            fourthPlaceScore.text = players[3].GetScore().ToString();
+                    if (numPlayers > 3)
+                    {
+                        fourthPlaceUsername.text = players[3].GetUsername();
+                        fourthPlaceScore.text = players[3].GetScore().ToString();
+                    }
+                }
+            }
+
         }
     }
 
