@@ -8,6 +8,8 @@ public class User {
     private int score;
     private int collectables;
 
+    private int highestLevel = 1;
+
 	private bool viewedCutScene1;
 	private bool viewedCutScene2;
 	private bool viewedCutScene3;
@@ -66,8 +68,16 @@ public class User {
 		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene3");
 	}
 
-	// Multiple getters and setters for provate variables.
+    // Multiple getters and setters for provate variables.
 
+    public int GetHighestLevel() {
+        return highestLevel;
+    }
+
+    public void SetHighestLevel(int i) {
+        highestLevel = i;
+    }
+    
 	public string GetPlayerSlot() {
 		return playerGameSlot;
 	}
