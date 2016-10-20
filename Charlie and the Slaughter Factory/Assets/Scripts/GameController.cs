@@ -8,9 +8,9 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    	//"proto_lvl1",
-    	"level_1",
-    	"level_2",
+    //	"proto_lvl1",
+    //	"level_1",
+   // 	"level_2",
     	"level_3",
     	"level_4",
     	"level_5",
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour {
 	private GameObject deathMusic;
 	private GameObject pauseButton;
 	private GameObject deathScreen;
-    private string theme = "Xmas";
+    private string theme;
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
@@ -344,5 +344,9 @@ public class GameController : MonoBehaviour {
     public string getTheme()
     {
         return theme;
+    }
+
+    public void setTheme(string newTheme) {
+        theme = newTheme;
     }
 }
