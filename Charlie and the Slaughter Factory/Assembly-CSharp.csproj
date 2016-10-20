@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Achievement.cs" />
      <Compile Include="Assets\Scripts\AchievementManager.cs" />
      <Compile Include="Assets\Scripts\AttachToGameController.cs" />
+     <Compile Include="Assets\Scripts\Audio.cs" />
      <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Chasing_farmer.cs" />

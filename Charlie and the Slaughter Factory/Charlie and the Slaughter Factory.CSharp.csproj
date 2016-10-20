@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Achievement.cs" />
     <Compile Include="Assets\Scripts\AchievementManager.cs" />
     <Compile Include="Assets\Scripts\AttachToGameController.cs" />
+    <Compile Include="Assets\Scripts\Audio.cs" />
     <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Chasing_farmer.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
     <Compile Include="Assets\Scripts\Leaderboard.cs" />
+    <Compile Include="Assets\Scripts\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\Mincer.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
     <Compile Include="Assets\Scripts\Pendulum.cs" />
@@ -100,7 +102,6 @@
     <Compile Include="Assets\Scripts\QuitGame.cs" />
     <Compile Include="Assets\Scripts\ReboundDamage.cs" />
     <Compile Include="Assets\Scripts\RespawnFallingObjects.cs" />
-    <Compile Include="Assets\Scripts\SawAudio.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
     <Compile Include="Assets\Scripts\ThemeSkin.cs" />
