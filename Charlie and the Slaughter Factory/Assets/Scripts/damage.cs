@@ -17,12 +17,18 @@ public class damage : MonoBehaviour
         playerHealth = player.GetComponent<PlayerHealth>();
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject == player) // check if collided against player
-        {
-            // take health from Charlie
-            playerHealth.TakeDamage(attackDamage);
+	// Take health for objects that have a trigger - takes in a collider object 
+ 	void OnTriggerEnter2D(Collider2D collider) {
+		if (collider.gameObject == player) { 				// check if collided against player
+			playerHealth.TakeDamage(attackDamage); 			// take health from Charlie
         }
     }
+
+	// Take health for objects without trigger - takes in a collision object
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.gameObject.CompareTag("Player")) {  		// check if collided against player
+			playerHealth.TakeDamage(attackDamage);  			// take health from Charlie
+		}
+	}
+		
 }
