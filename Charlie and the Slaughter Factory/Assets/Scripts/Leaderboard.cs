@@ -4,8 +4,8 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 
 /*
- * This class displays the correct players in the correct order
- * for the leaderboard
+ * This class displays player usernames and their corresponding
+ * score for the leaderboard in order from highest score to lowest
  */
 public class Leaderboard : MonoBehaviour {
 
@@ -22,6 +22,7 @@ public class Leaderboard : MonoBehaviour {
         GameObject gameO = GameObject.Find("GameController");
         GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
         
+        //get the sorted list of users
         List<User> players = gameC.SetUpLeaderboard();
 
         firstPlaceUsername.text = players[0].GetUsername();
@@ -35,9 +36,6 @@ public class Leaderboard : MonoBehaviour {
 
         fourthPlaceUsername.text = players[3].GetUsername();
         fourthPlaceScore.text = players[3].GetScore().ToString();
-
-        //implement check to see if empty username - don't display anything
-
     }
 
 }
