@@ -2553,6 +2553,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224000010039136940, guid: f675ac7007e32d948a0523ea243f1d33,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010039136940, guid: f675ac7007e32d948a0523ea243f1d33,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f675ac7007e32d948a0523ea243f1d33, type: 2}
   m_IsPrefabParent: 0
@@ -2952,6 +2962,8 @@ GameObject:
   - 58: {fileID: 554768048}
   - 114: {fileID: 554768053}
   - 114: {fileID: 554768052}
+  - 50: {fileID: 554768054}
+  - 114: {fileID: 554768055}
   m_Layer: 0
   m_Name: Saw_1
   m_TagString: Untagged
@@ -3073,6 +3085,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
+--- !u!50 &554768054
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554768046}
+  m_UseAutoMass: 1
+  m_Mass: 14.379679
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &554768055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554768046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
 --- !u!1 &585624128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8033,11 +8074,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 32.11
+      value: 64.4
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 52.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8143,6 +8184,11 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50000011017570006, guid: 81413601e83e7d54f89b84676788f94c,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
@@ -9886,11 +9932,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012744944964, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 39.14
+      value: 39.05
       objectReference: {fileID: 0}
     - target: {fileID: 4000012744944964, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4000012744944964, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9915,14 +9961,6 @@ Prefab:
     - target: {fileID: 4000012744944964, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
       propertyPath: m_RootOrder
       value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012744944964, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012744944964, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0dc9b820948e43b43876824564add3c3, type: 2}
@@ -10052,6 +10090,8 @@ GameObject:
   - 58: {fileID: 1977667457}
   - 114: {fileID: 1977667462}
   - 114: {fileID: 1977667461}
+  - 114: {fileID: 1977667463}
+  - 50: {fileID: 1977667464}
   m_Layer: 0
   m_Name: Saw_2
   m_TagString: Untagged
@@ -10173,6 +10213,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce2ced3a846414e91be3dc2add7c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1977667463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977667455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb72649f0063b8545a6bd657ccc5a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: -500
+--- !u!50 &1977667464
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977667455}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1979201391
 GameObject:
   m_ObjectHideFlags: 0
