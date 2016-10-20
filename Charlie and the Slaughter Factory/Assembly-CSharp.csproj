@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{49D04514-9F6F-BEA3-9198-171228FA8528}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -46,62 +45,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Achievement.cs" />
-    <Compile Include="Assets\Scripts\AchievementManager.cs" />
-    <Compile Include="Assets\Scripts\AttachToGameController.cs" />
-    <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Chasing_farmer.cs" />
-    <Compile Include="Assets\Scripts\ChooseGame.cs" />
-    <Compile Include="Assets\Scripts\Claw_follow_player.cs" />
-    <Compile Include="Assets\Scripts\Cog.cs" />
-    <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
-    <Compile Include="Assets\Scripts\Conveyor.cs" />
-    <Compile Include="Assets\Scripts\CrusherDamage.cs" />
-    <Compile Include="Assets\Scripts\CrusherMotion.cs" />
-    <Compile Include="Assets\Scripts\CutScenes.cs" />
-    <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
-    <Compile Include="Assets\Scripts\DisplayScore.cs" />
-    <Compile Include="Assets\Scripts\DisplayUserData.cs" />
-    <Compile Include="Assets\Scripts\DogDamage.cs" />
-    <Compile Include="Assets\Scripts\EnemyScript.cs" />
-    <Compile Include="Assets\Scripts\FallingObject.cs" />
-    <Compile Include="Assets\Scripts\FallingPlatform.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
-    <Compile Include="Assets\Scripts\GetTime.cs" />
-    <Compile Include="Assets\Scripts\Leaderboard.cs" />
-    <Compile Include="Assets\Scripts\Mincer.cs" />
-    <Compile Include="Assets\Scripts\NextLevel.cs" />
-    <Compile Include="Assets\Scripts\Pendulum.cs" />
-    <Compile Include="Assets\Scripts\PickupCollectable.cs" />
-    <Compile Include="Assets\Scripts\Platform_path_def.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\PlayerScript.cs" />
-    <Compile Include="Assets\Scripts\QuitGame.cs" />
-    <Compile Include="Assets\Scripts\ReboundDamage.cs" />
-    <Compile Include="Assets\Scripts\SawAudio.cs" />
-    <Compile Include="Assets\Scripts\StartGame.cs" />
-    <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
-    <Compile Include="Assets\Scripts\ThemeSkin.cs" />
-    <Compile Include="Assets\Scripts\TimerScript.cs" />
-    <Compile Include="Assets\Scripts\TutorialPopups.cs" />
-    <Compile Include="Assets\Scripts\UpdateUserData.cs" />
-    <Compile Include="Assets\Scripts\User.cs" />
-    <Compile Include="Assets\Scripts\btnAch.cs" />
-    <Compile Include="Assets\Scripts\damage.cs" />
-    <Compile Include="Assets\Scripts\moving_platform.cs" />
-    <Compile Include="Assets\increase_gravity.cs" />
-    <None Include="Assets\Sprites\LevelDesign\New Assets\Scifi Art Demo Pack\Demo Readme.txt" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Scripts\Achievement.cs" />
+     <Compile Include="Assets\Scripts\AchievementManager.cs" />
+     <Compile Include="Assets\Scripts\AttachToGameController.cs" />
+     <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Chasing_farmer.cs" />
+     <Compile Include="Assets\Scripts\Claw_follow_player.cs" />
+     <Compile Include="Assets\Scripts\Cog.cs" />
+     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
+     <Compile Include="Assets\Scripts\Conveyor.cs" />
+     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
+     <Compile Include="Assets\Scripts\CrusherMotion.cs" />
+     <Compile Include="Assets\Scripts\CutScenes.cs" />
+     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
+     <Compile Include="Assets\Scripts\DisplayScore.cs" />
+     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
+     <Compile Include="Assets\Scripts\DogDamage.cs" />
+     <Compile Include="Assets\Scripts\EnemyScript.cs" />
+     <Compile Include="Assets\Scripts\FallingObject.cs" />
+     <Compile Include="Assets\Scripts\FallingPlatform.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
+     <Compile Include="Assets\Scripts\GetTime.cs" />
+     <Compile Include="Assets\Scripts\Leaderboard.cs" />
+     <Compile Include="Assets\Scripts\Mincer.cs" />
+     <Compile Include="Assets\Scripts\NextLevel.cs" />
+     <Compile Include="Assets\Scripts\Pendulum.cs" />
+     <Compile Include="Assets\Scripts\PickupCollectable.cs" />
+     <Compile Include="Assets\Scripts\Platform_path_def.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\QuitGame.cs" />
+     <Compile Include="Assets\Scripts\ReboundDamage.cs" />
+     <Compile Include="Assets\Scripts\SawAudio.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
+     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
+     <Compile Include="Assets\Scripts\ThemeSkin.cs" />
+     <Compile Include="Assets\Scripts\TimerScript.cs" />
+     <Compile Include="Assets\Scripts\TutorialPopups.cs" />
+     <Compile Include="Assets\Scripts\UpdateUserData.cs" />
+     <Compile Include="Assets\Scripts\User.cs" />
+     <Compile Include="Assets\Scripts\btnAch.cs" />
+     <Compile Include="Assets\Scripts\damage.cs" />
+     <Compile Include="Assets\Scripts\moving_platform.cs" />
+     <Compile Include="Assets\increase_gravity.cs" />
+     <None Include="Assets\Sprites\LevelDesign\New Assets\Scifi Art Demo Pack\Demo Readme.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -111,4 +109,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
