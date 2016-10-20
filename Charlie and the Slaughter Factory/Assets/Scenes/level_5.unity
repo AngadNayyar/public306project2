@@ -769,6 +769,17 @@ PolygonCollider2D:
       - {x: -0.13, y: 0}
       - {x: 0.06, y: 0.049999997}
       - {x: 0.099999994, y: -0.13}
+--- !u!114 &112841949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112841947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157932576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1738,17 @@ PolygonCollider2D:
       - {x: -0.13, y: 0}
       - {x: 0.06, y: 0.049999997}
       - {x: 0.099999994, y: -0.13}
+--- !u!114 &342466905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 342466903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &345785785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2301,17 @@ PolygonCollider2D:
       - {x: -0.13, y: 0}
       - {x: 0.06, y: 0.049999997}
       - {x: 0.099999994, y: -0.13}
+--- !u!114 &398170160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 398170158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &408623411
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3103,17 @@ PolygonCollider2D:
       - {x: -0.13, y: 0}
       - {x: 0.06, y: 0.049999997}
       - {x: 0.099999994, y: -0.13}
+--- !u!114 &563666335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563666333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &644239562
 GameObject:
   m_ObjectHideFlags: 0
