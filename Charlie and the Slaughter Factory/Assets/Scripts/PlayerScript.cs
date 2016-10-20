@@ -106,7 +106,8 @@ public class PlayerScript : MonoBehaviour {
 		// If the space bar is pressed and the character is gounded it will jump once
 		if (jump) {
 			anim.SetTrigger("Jump");
-			rb2d.AddForce(new Vector2(0f, jumpForce));
+            rb2d.Sleep();
+            rb2d.AddForce(new Vector2(0f, jumpForce));
 			jump = false;
 			canDoubleJump = true;
 		}
