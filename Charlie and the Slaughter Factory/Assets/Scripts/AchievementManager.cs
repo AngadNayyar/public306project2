@@ -49,15 +49,15 @@ public class AchievementManager : MonoBehaviour {
 		if (achievements [title].EarnAchievement()) {
 			//DO SOMETHING
 			GameObject achievement = (GameObject)Instantiate(visualAchievement);
-			StartCoroutine (HideAchievement (achievement));
+			//StartCoroutine (HideAchievement (achievement));
 		}
 	}
 
-	public IEnumerator HideAchievement() {
+	//public IEnumerator HideAchievement() {
 
-		yield return WaitForSeconds (3);
-		Destroy (achievement);
-	}
+		//yield return WaitForSeconds (3);
+	//	Destroy (achievement);
+	//}
 
 	public void CreateAchievement(string category, string title, string description, int points, int spriteIndex){
 		GameObject achievement = GameObject.Instantiate(achievementPrefab);
