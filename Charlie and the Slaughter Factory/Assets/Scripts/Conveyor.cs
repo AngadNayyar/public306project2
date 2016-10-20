@@ -14,10 +14,11 @@ using System.Collections;
 public class Conveyor : MonoBehaviour {
 
 	// set the speed for the conveyor
-	private int conveyorSpeed = 10; 
+	public int conveyorSpeed = 5; 
 	GameObject player;  // Reference to Charlie
 	Rigidbody2D playerBody;
-
+	public bool movementRight = true; 
+	private int maxOppositeSpeed = 3; 
 
 	// Use this for initialization
 	void Start () {
@@ -25,12 +26,26 @@ public class Conveyor : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerBody = player.GetComponent<Rigidbody2D>();
 	}
-	
+
 	// While charlie is on the conveyor add a speed to the right 
 	void OnCollisionStay2D(Collision2D other){
 		if (other.gameObject.CompareTag("Player")){
-			playerBody.velocity = playerBody.velocity + Vector2.right * conveyorSpeed; 
+			if (movementRight) {
+				if (Mathf.Abs(playerBody.velocity.x) < maxOppositeSpeed) {
+					playerBody.velocity = playerBody.velocity + Vector2.right * conveyorSpeed;
+				} else {
+					playerBody.velocity = Vector2.right * maxOppositeSpeed;
+				} 
+
+			}  else {
+				if (Mathf.Abs(playerBody.velocity.x) < maxOppositeSpeed) {
+					playerBody.velocity = playerBody.velocity + Vector2.left * conveyorSpeed;
+				} else {
+					playerBody.velocity = Vector2.left * maxOppositeSpeed;
+				} 
+			}  
 		}
 
 	}
 }
+
