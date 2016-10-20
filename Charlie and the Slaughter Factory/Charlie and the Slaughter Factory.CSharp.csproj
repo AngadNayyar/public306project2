@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\AchievementManager.cs" />
     <Compile Include="Assets\Scripts\AttachToGameController.cs" />
     <Compile Include="Assets\Scripts\Audio.cs" />
+    <Compile Include="Assets\Scripts\BackgroundAudio.cs" />
     <Compile Include="Assets\Scripts\CalculateAndDisplayScore.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Chasing_farmer.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\FallingObject.cs" />
     <Compile Include="Assets\Scripts\FallingObjectAudio.cs" />
     <Compile Include="Assets\Scripts\FallingPlatform.cs" />
+    <Compile Include="Assets\Scripts\FarmerAudio.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
