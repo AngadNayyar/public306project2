@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour {
 	private GameObject levelMusic;
 	private GameObject pauseButton;
 	private GameObject deathScreen;
+    private string theme = "Xmas";
 
 	// Variables that describe current state (likely to change)
 	private bool isFinished = false;
@@ -311,5 +312,10 @@ public class GameController : MonoBehaviour {
     public void SetPaused(bool pause)
     {
         isPaused = pause;
+    }
+
+    public string getTheme()
+    {
+        return theme;
     }
 }
