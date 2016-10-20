@@ -13,7 +13,7 @@ public class StartGame : MonoBehaviour {
 	private List<GameObject> cutSceneImages = new List<GameObject>();
 	private int[] cutScenes1 = new int[]{0,1,2,3,1,2,1,2};
 	private int index;
-	private string[] dialogue = new string[]{
+	private string[] dialogue1 = new string[]{
         "It's a rough place out in that factory for a little chicken like you ...",
         "Who ... who are you?",
         "Charlie, I'm your ticket out of here.",

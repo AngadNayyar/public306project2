@@ -174,11 +174,20 @@ public class GameController : MonoBehaviour {
 		isFinished = false;
 		currentPlayer.ResetScore();
 		// If the user hasn't seen the cut scenes yet, play them.
-		if (!currentPlayer.hasViewedCutScene1()) {
+		Debug.Log(currentPlayer.hasViewedCutScene1());
+		if ((currentLevel == -1) & (!currentPlayer.hasViewedCutScene1())) {
 			start.PlayCutScene1();
-		} else {
-			NextLevel();
+			return;
 		}
+		if ((currentLevel == 3) & (!currentPlayer.hasViewedCutScene2())) {
+			start.PlayCutScene2();
+			return;
+		}
+		if ((currentLevel == 6) & (!currentPlayer.hasViewedCutScene3())) {
+			start.PlayCutScene3();
+			return;
+		}
+		NextLevel();
 	}
 
 	// Display Death popup.
