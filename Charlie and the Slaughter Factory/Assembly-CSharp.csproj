@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ChickenAchievement.cs" />
+     <Compile Include="Assets\ChickenCountAchievement.cs" />
      <Compile Include="Assets\Scripts\Achievement.cs" />
      <Compile Include="Assets\Scripts\AchievementManager.cs" />
      <Compile Include="Assets\Scripts\AttachToGameController.cs" />
@@ -56,14 +58,13 @@
      <Compile Include="Assets\Scripts\Cog.cs" />
      <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
      <Compile Include="Assets\Scripts\Conveyor.cs" />
-     <Compile Include="Assets\Scripts\CrusherDamage.cs" />
+     <Compile Include="Assets\Scripts\CountAchievement.cs" />
      <Compile Include="Assets\Scripts\CrusherMotion.cs" />
      <Compile Include="Assets\Scripts\CutScenes.cs" />
      <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
      <Compile Include="Assets\Scripts\DisplayScore.cs" />
      <Compile Include="Assets\Scripts\DisplayScoreAndCollectables.cs" />
      <Compile Include="Assets\Scripts\DisplayUserData.cs" />
-     <Compile Include="Assets\Scripts\DogDamage.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\FallingObject.cs" />
      <Compile Include="Assets\Scripts\FallingObjectAudio.cs" />
@@ -71,10 +72,8 @@
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
      <Compile Include="Assets\Scripts\GetTime.cs" />
-     <Compile Include="Assets\Scripts\Harry.cs" />
      <Compile Include="Assets\Scripts\Leaderboard.cs" />
      <Compile Include="Assets\Scripts\LevelSelector.cs" />
-     <Compile Include="Assets\Scripts\Mincer.cs" />
      <Compile Include="Assets\Scripts\NextLevel.cs" />
      <Compile Include="Assets\Scripts\Pendulum.cs" />
      <Compile Include="Assets\Scripts\PickupCollectable.cs" />

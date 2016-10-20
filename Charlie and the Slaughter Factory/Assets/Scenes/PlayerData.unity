@@ -405,8 +405,8 @@ GameObject:
   - 224: {fileID: 23793986}
   - 222: {fileID: 23793990}
   - 114: {fileID: 23793989}
-  - 114: {fileID: 23793988}
   - 114: {fileID: 23793987}
+  - 114: {fileID: 23793988}
   m_Layer: 5
   m_Name: No. of Chickens Saved
   m_TagString: Untagged
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 23793985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df4934b62d36f04392fee6bdd5b4eb8, type: 3}
+  m_Script: {fileID: 11500000, guid: a401f78a4cd1c934ebc8abf1264a5e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chickenText: {fileID: 23793989}
@@ -2182,7 +2182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &410751262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2292,7 +2292,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.049987793, y: 0.0000076293945}
-  m_SizeDelta: {x: 0.1000061, y: 0}
+  m_SizeDelta: {x: 0.1000061, y: -175}
   m_Pivot: {x: -0.00000002142042, y: 0.99999994}
 --- !u!114 &452162160
 MonoBehaviour:
@@ -8132,7 +8132,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.04997015, y: 0.00000423193}
-  m_SizeDelta: {x: 0.10003662, y: 0}
+  m_SizeDelta: {x: 0.10003662, y: -175}
   m_Pivot: {x: -0.00000002142042, y: 0.99999994}
 --- !u!1 &1812951242
 GameObject:
@@ -9114,7 +9114,7 @@ RectTransform:
   m_Father: {fileID: 1703677035}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
