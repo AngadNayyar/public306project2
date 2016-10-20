@@ -99,7 +99,6 @@
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\QuitGame.cs" />
     <Compile Include="Assets\Scripts\ReboundDamage.cs" />
-    <Compile Include="Assets\Scripts\RespawnFallingObjects.cs" />
     <Compile Include="Assets\Scripts\SawAudio.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneScript.cs" />
