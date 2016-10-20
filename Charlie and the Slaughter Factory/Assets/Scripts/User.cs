@@ -8,9 +8,9 @@ public class User {
     private int score;
     private int collectables;
 
-    private int highestLevel = 1;
+    private int highestLevel;           // ADDED
 
-	private bool viewedCutScene1;
+    private bool viewedCutScene1;
 	private bool viewedCutScene2;
 	private bool viewedCutScene3;
 	// Implement some kind of list of achievements
@@ -30,6 +30,7 @@ public class User {
 		if (PlayerPrefs.HasKey(playerSlot)) {
 			username = PlayerPrefs.GetString(playerSlot);
             score = PlayerPrefs.GetInt(playerSlot + "Score");
+            highestLevel = PlayerPrefs.GetInt(playerSlot + "HighestLevel"); // ADDED
             collectables = PlayerPrefs.GetInt(playerSlot + "TotalCollectables");
 			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
 			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
@@ -43,7 +44,9 @@ public class User {
 			PlayerPrefs.SetInt(playerSlot + "Score", 0);
             collectables = 0;
             PlayerPrefs.SetInt(playerSlot + "TotalCollectables", 0);
-			viewedCutScene1 = false;
+            highestLevel = 0;                                       // ADDED
+            PlayerPrefs.SetInt(playerSlot + "HighestLevel", 0);     // ADDED
+            viewedCutScene1 = false;
 			viewedCutScene2 = false;
 			viewedCutScene3 = false;
 			PlayerPrefs.SetInt(playerSlot + "CutScene1", 0);
@@ -60,6 +63,8 @@ public class User {
         PlayerPrefs.DeleteKey(playerGameSlot + "Score");
         collectables = 0;
         PlayerPrefs.DeleteKey(playerGameSlot + "TotalCollectables");
+        highestLevel = 0;                                           // ADDED
+        PlayerPrefs.DeleteKey(playerGameSlot + "HighestLevel");     // ADDED
         viewedCutScene1 = false;
 		viewedCutScene2 = false;
 		viewedCutScene3 = false;
@@ -70,11 +75,11 @@ public class User {
 
     // Multiple getters and setters for provate variables.
 
-    public int GetHighestLevel() {
+    public int GetHighestLevel() {          // ADDED
         return highestLevel;
     }
 
-    public void SetHighestLevel(int i) {
+    public void SetHighestLevel(int i) {    // ADDED
         highestLevel = i;
     }
     
