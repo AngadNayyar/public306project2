@@ -453,7 +453,7 @@ GameObject:
   - 4: {fileID: 143746261}
   - 212: {fileID: 143746263}
   - 61: {fileID: 143746262}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - 4: {fileID: 188119333}
   - 212: {fileID: 188119335}
   - 61: {fileID: 188119334}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +889,7 @@ GameObject:
   - 4: {fileID: 338957981}
   - 212: {fileID: 338957983}
   - 61: {fileID: 338957982}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1210,7 @@ GameObject:
   - 4: {fileID: 444006795}
   - 212: {fileID: 444006797}
   - 61: {fileID: 444006796}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,7 +1719,7 @@ GameObject:
   - 4: {fileID: 768480931}
   - 212: {fileID: 768480933}
   - 61: {fileID: 768480932}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipeend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1796,7 +1796,7 @@ GameObject:
   - 4: {fileID: 788160622}
   - 212: {fileID: 788160624}
   - 61: {fileID: 788160623}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2251,7 +2251,7 @@ GameObject:
   - 4: {fileID: 994351918}
   - 212: {fileID: 994351920}
   - 61: {fileID: 994351919}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3167,7 +3167,7 @@ GameObject:
   - 4: {fileID: 1178624641}
   - 212: {fileID: 1178624643}
   - 61: {fileID: 1178624642}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3321,7 +3321,7 @@ GameObject:
   - 4: {fileID: 1220202318}
   - 212: {fileID: 1220202320}
   - 61: {fileID: 1220202319}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3475,7 +3475,7 @@ GameObject:
   - 4: {fileID: 1249012536}
   - 212: {fileID: 1249012535}
   - 61: {fileID: 1249012537}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipeend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3629,7 +3629,7 @@ GameObject:
   - 4: {fileID: 1311196675}
   - 212: {fileID: 1311196677}
   - 61: {fileID: 1311196676}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,7 +4304,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1478368874}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Pipe (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4682,11 +4682,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 16.49
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.17
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 4000011674597036, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4722,80 +4722,7 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1007989399}
-    - target: {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000010303422998, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Radius
-      value: 2.7191734
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000010303422998, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000013090971920, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000013090971920, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Radius
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000013090971920, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000013090971920, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000013090971920, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_UsedByEffector
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000014174154162, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1783731295
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000014174154162, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ec09840e9530b1140b2ee82abb5082f8,
-        type: 3}
-    - target: {fileID: 212000014174154162, guid: 81413601e83e7d54f89b84676788f94c,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 58000011292082242, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
-    - {fileID: 114000014127275600, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81413601e83e7d54f89b84676788f94c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1633886401
@@ -5050,7 +4977,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1697157123}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5087,7 +5014,7 @@ GameObject:
   - 4: {fileID: 1726149090}
   - 212: {fileID: 1726149092}
   - 61: {fileID: 1726149091}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5241,7 +5168,7 @@ GameObject:
   - 4: {fileID: 1793321163}
   - 212: {fileID: 1793321165}
   - 61: {fileID: 1793321164}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5865,22 +5792,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &1980872127 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012951671620, guid: 81413601e83e7d54f89b84676788f94c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1633494143}
---- !u!114 &1980872128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1980872127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc47199ee227514fa5a71742995a034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1991140590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6150,7 +6061,7 @@ GameObject:
   - 4: {fileID: 2145597624}
   - 212: {fileID: 2145597626}
   - 61: {fileID: 2145597625}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: pipemiddle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
