@@ -8,9 +8,9 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    //	"proto_lvl1",
-    //	"level_1",
-    //	"level_2",
+    	"proto_lvl1",
+    	"level_1",
+    	"level_2",
     	"level_3",
     	"level_4",
     	"level_5",
