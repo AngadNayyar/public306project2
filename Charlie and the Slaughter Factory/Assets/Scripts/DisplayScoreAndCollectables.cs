@@ -9,7 +9,7 @@ public class DisplayScoreAndCollectables : MonoBehaviour
     public Text chickenText;
 
     // display the players total score and chickens collected for the game
-    public void Start()
+    public void Update()
     {
         //get the current user
         GameObject gameO = GameObject.Find("GameController");

@@ -6,6 +6,7 @@ public class User {
 	private string playerGameSlot;
 	private string username;
     private int score;
+	private int oldScore;
     private int collectables;
 
     private int highestLevel;           
@@ -113,6 +114,14 @@ public class User {
 
     public void SetScore(int s) {
         score = s;
+    }
+	
+	public int GetOldScore() {
+        return oldScore;
+    }
+
+    public void SetOldScore(int s) {
+        oldScore = s;
     }
 
     public void ResetScore()

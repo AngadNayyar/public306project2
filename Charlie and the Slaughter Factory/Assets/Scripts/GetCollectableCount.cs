@@ -13,7 +13,13 @@ public class GetCollectableCount : MonoBehaviour
 
     void Start()
     {
-        //get the old number of collectables for the player
+
+
+    }
+
+    void Update()
+    {
+		//get the old number of collectables for the player
         GameObject gameO = GameObject.Find("GameController");
         GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
         User currentPlayer = gameC.getCurrentPlayer();
@@ -30,11 +36,6 @@ public class GetCollectableCount : MonoBehaviour
 
         //get the new total number of chickens to update the text to
         newTotalNumber = currentPlayer.GetCollectables();
-
-    }
-
-    void Update()
-    {
         StartCoroutine(IncrementCountDisplay());
     }
 

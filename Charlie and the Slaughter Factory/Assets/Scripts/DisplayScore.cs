@@ -8,7 +8,7 @@ public class DisplayScore : MonoBehaviour
     public Text scoreText;
 
     // display the players total score for the game
-    public void Start()
+    public void Update()
     {
         /*
          * Get the current player's score and set it to the text
