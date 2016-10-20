@@ -1,4 +1,3 @@
-
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charlie and the Slaughter Factory.CSharp", "Charlie and the Slaughter Factory.CSharp.csproj", "{E66094BA-2C96-502A-FA17-105CBE76ED5C}"
@@ -18,4 +17,3 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
-
