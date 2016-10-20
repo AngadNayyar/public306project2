@@ -588,6 +588,7 @@ GameObject:
   - 61: {fileID: 369854864}
   - 68: {fileID: 369854866}
   - 68: {fileID: 369854865}
+  - 114: {fileID: 369854867}
   m_Layer: 12
   m_Name: platform_1
   m_TagString: Untagged
@@ -686,6 +687,17 @@ EdgeCollider2D:
   - {x: 2.6245878, y: 0.77803475}
   - {x: 2.6415102, y: 0.7486203}
   - {x: 2.645309, y: -0.7946277}
+--- !u!114 &369854867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 369854861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &424300567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1339,7 @@ GameObject:
   - 212: {fileID: 907826484}
   - 68: {fileID: 907826483}
   - 68: {fileID: 907826482}
+  - 114: {fileID: 907826485}
   m_Layer: 12
   m_Name: Wall02b
   m_TagString: Untagged
@@ -1412,6 +1425,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &907826485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907826480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &919307652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1477,7 @@ GameObject:
   - 212: {fileID: 923846902}
   - 68: {fileID: 923846901}
   - 68: {fileID: 923846900}
+  - 114: {fileID: 923846903}
   m_Layer: 12
   m_Name: Wall02b (2)
   m_TagString: Untagged
@@ -1538,6 +1563,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &923846903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923846898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &943717217 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012951671620, guid: 81413601e83e7d54f89b84676788f94c,
@@ -3332,6 +3368,7 @@ GameObject:
   - 68: {fileID: 1661435384}
   - 68: {fileID: 1661435383}
   - 114: {fileID: 1661435388}
+  - 114: {fileID: 1661435387}
   m_Layer: 12
   m_Name: moving_platform
   m_TagString: Platform
@@ -3430,6 +3467,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1661435387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661435381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1661435388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4520,6 +4568,7 @@ GameObject:
   - 212: {fileID: 2107472000}
   - 68: {fileID: 2107471999}
   - 68: {fileID: 2107471998}
+  - 114: {fileID: 2107472001}
   m_Layer: 12
   m_Name: Wall02b (1)
   m_TagString: Untagged
@@ -4605,6 +4654,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2107472001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2107471996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2132347605
 GameObject:
   m_ObjectHideFlags: 0
