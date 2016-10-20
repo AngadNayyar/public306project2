@@ -102,7 +102,8 @@ public class GameController : MonoBehaviour {
         return leaderboard;
 	}
 
-	// Update the strings contained in the leaderboard.
+	/*
+    // Update the strings contained in the leaderboard.
 	public void UpdateLeaderboardView(GameObject panel) {
 		Text[] textViews = panel.GetComponentsInChildren<Text>();
 		panel.SetActive(true);
@@ -115,6 +116,7 @@ public class GameController : MonoBehaviour {
 		textViews[4].GetComponentInChildren<Text>().text = usernames;
 		textViews[5].GetComponentInChildren<Text>().text = scores;
 	}
+    */
 
 	// Delete current User Data, and go back to the main menu (with popup visible for picking slot).
 	public void DeleteUser() {
@@ -126,7 +128,7 @@ public class GameController : MonoBehaviour {
 	public void ShowPopup(GameObject panel) {
 		panel.SetActive(true);
 		if (panel.name == "Leaderboard") {
-			UpdateLeaderboardView(panel);
+			//UpdateLeaderboardView(panel);
 		}
 		if (panel.name == "PickPlayer") {
 			UpdateGameSlots();
