@@ -25,16 +25,16 @@ public class Leaderboard : MonoBehaviour {
         List<User> players = gameC.SetUpLeaderboard();
 
         firstPlaceUsername.text = players[0].GetUsername();
-        firstPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer1").ToString();
+        firstPlaceScore.text = players[0].GetScore().ToString();
 
         secondPlaceUsername.text = players[1].GetUsername();
-        secondPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer2").ToString();
+        secondPlaceScore.text = players[1].GetScore().ToString();
 
         thirdPlaceUsername.text = players[2].GetUsername();
-        thirdPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer3").ToString();
+        thirdPlaceScore.text = players[2].GetScore().ToString();
 
         fourthPlaceUsername.text = players[3].GetUsername();
-        fourthPlaceScore.text = PlayerPrefs.GetInt("CurrentScorePlayer4").ToString();
+        fourthPlaceScore.text = players[3].GetScore().ToString();
 
         //implement check to see if empty username - don't display anything
 
