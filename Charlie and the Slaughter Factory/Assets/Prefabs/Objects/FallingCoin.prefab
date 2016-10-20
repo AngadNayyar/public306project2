@@ -26,6 +26,7 @@ GameObject:
   - 114: {fileID: 114000013065978232}
   - 82: {fileID: 82000011291849942}
   - 114: {fileID: 114000011404172454}
+  - 114: {fileID: 114000010381135364}
   m_Layer: 0
   m_Name: FallingCoin
   m_TagString: Untagged
@@ -164,6 +165,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: 250
   triggerDistance: 5
+--- !u!114 &114000010381135364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013886058558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011404172454
 MonoBehaviour:
   m_ObjectHideFlags: 1
