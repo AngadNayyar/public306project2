@@ -68,4 +68,22 @@ public class moving_platform : MonoBehaviour
             current_point.MoveNext();
         }
     }
+
+    //checks if stays on a platform object
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.transform.parent = transform; // move at the rate of the platform
+        }
+
+    }
+    //check if gets off the platform object
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.transform.parent = null; // set movement to null again
+        }
+    }
 }
