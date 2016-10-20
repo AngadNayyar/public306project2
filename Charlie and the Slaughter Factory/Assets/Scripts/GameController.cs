@@ -73,10 +73,10 @@ public class GameController : MonoBehaviour {
 	public void Pause() {
 		if (isPaused) {
 			pauseLevel.SetActive(false);
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} else {
 			pauseLevel.SetActive(true);
-			Time.timeScale = 0;
+			//Time.timeScale = 0;
 		}
 		isPaused = !isPaused;
 	}
@@ -234,4 +234,14 @@ public class GameController : MonoBehaviour {
 	public GameObject getFinishedLevel() {
 		return finishedLevel;
 	}
+
+    public bool GetPaused()
+    {
+        return isPaused;
+    }
+
+    public void SetPaused(bool pause)
+    {
+        isPaused = pause;
+    }
 }
