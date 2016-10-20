@@ -22,7 +22,8 @@ public class Pendulum : MonoBehaviour
     public float leftPushRange;
     public float rightPushRange;
     public float velocityThreshold;
-	//public int pendulumDamage = 30; 
+	//public int pendulumDamage = 30;
+	private AudioSource source;
 
 	PlayerHealth playerHealth;  // Reference to the Charlie's health.
 	GameObject player;  // Reference to Charlie
@@ -38,6 +39,7 @@ public class Pendulum : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player");
 	//	playerHealth = player.GetComponent<PlayerHealth>();
 		playerBody = player.GetComponent<Rigidbody2D>();
+		source = GetComponent<AudioSource> ();
     }
 
     //Update is called by Unity every frame - call the push the pendulum function
@@ -59,6 +61,7 @@ public class Pendulum : MonoBehaviour
 			&& (rb2d.angularVelocity > 0)
 			&& rb2d.angularVelocity < velocityThreshold)
         {
+			source.Play ();
 			rb2d.angularVelocity = velocityThreshold;
         }
 		// If the pendulum is on the left side, still within the range,
@@ -70,6 +73,7 @@ public class Pendulum : MonoBehaviour
 			&& (rb2d.angularVelocity < 0)
 			&& rb2d.angularVelocity > velocityThreshold * -1)
         {
+			source.Play ();
 			rb2d.angularVelocity = velocityThreshold * -1;
         }
 
