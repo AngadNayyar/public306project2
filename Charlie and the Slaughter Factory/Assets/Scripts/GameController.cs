@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    //	"proto_lvl1",
+    	"proto_lvl1",
     	"level_1",
     	"level_2",
     	"level_3",
@@ -284,7 +284,9 @@ public class GameController : MonoBehaviour {
 			levelMusic.SetActive(true);
 			isPausable = true;
 			currentLevel = currentLevel + 1;
-			UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
+            CheckSetHighestLevel();
+
+            UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			pauseButton.SetActive(true);
 		}
 	}
@@ -294,6 +296,16 @@ public class GameController : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
 	}
 
+    // Checks if next scene is the furthest the User has gotten and if so,
+    // sets that level to highestLevel in User object
+    public void CheckSetHighestLevel() {
+        int highestLevel = gameController.getCurrentPlayer().GetHighestLevel();
+        if (highestLevel <= (currentLevel + 1))
+        {
+            print("yes");
+            gameController.getCurrentPlayer().SetHighestLevel(currentLevel + 1);
+        }
+    }
 
 	// Getters and setters
 	public bool hasFinished() {

@@ -8,9 +8,9 @@ public class User {
     private int score;
     private int collectables;
 
-    private int highestLevel = 1;
+    private int highestLevel;           
 
-	private bool viewedCutScene1;
+    private bool viewedCutScene1;
 	private bool viewedCutScene2;
 	private bool viewedCutScene3;
 	// Implement some kind of list of achievements
@@ -30,6 +30,7 @@ public class User {
 		if (PlayerPrefs.HasKey(playerSlot)) {
 			username = PlayerPrefs.GetString(playerSlot);
             score = PlayerPrefs.GetInt(playerSlot + "Score");
+            highestLevel = PlayerPrefs.GetInt(playerSlot + "HighestLevel");
             collectables = PlayerPrefs.GetInt(playerSlot + "TotalCollectables");
 			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
 			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
@@ -43,7 +44,9 @@ public class User {
 			PlayerPrefs.SetInt(playerSlot + "Score", 0);
             collectables = 0;
             PlayerPrefs.SetInt(playerSlot + "TotalCollectables", 0);
-			viewedCutScene1 = false;
+            highestLevel = 1;                                       
+            PlayerPrefs.SetInt(playerSlot + "HighestLevel", 1);     
+            viewedCutScene1 = false;
 			viewedCutScene2 = false;
 			viewedCutScene3 = false;
 			PlayerPrefs.SetInt(playerSlot + "CutScene1", 0);
@@ -60,6 +63,8 @@ public class User {
         PlayerPrefs.DeleteKey(playerGameSlot + "Score");
         collectables = 0;
         PlayerPrefs.DeleteKey(playerGameSlot + "TotalCollectables");
+        highestLevel = 1;                                           
+        PlayerPrefs.DeleteKey(playerGameSlot + "HighestLevel");     
         viewedCutScene1 = false;
 		viewedCutScene2 = false;
 		viewedCutScene3 = false;
@@ -76,6 +81,7 @@ public class User {
 
     public void SetHighestLevel(int i) {
         highestLevel = i;
+        PlayerPrefs.SetInt(playerGameSlot + "HighestLevel", i);
     }
     
 	public string GetPlayerSlot() {
