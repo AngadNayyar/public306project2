@@ -128,6 +128,7 @@ GameObject:
   - 4: {fileID: 86066071}
   - 212: {fileID: 86066073}
   - 61: {fileID: 86066072}
+  - 68: {fileID: 86066074}
   m_Layer: 12
   m_Name: floortile (3)
   m_TagString: Untagged
@@ -195,6 +196,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &86066074
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86066070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.543311, y: 2.4535022}
+  - {x: 2.5681534, y: -2.4194262}
 --- !u!1 &113562276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1217,8 @@ GameObject:
   - 4: {fileID: 890542935}
   - 212: {fileID: 890542937}
   - 61: {fileID: 890542936}
+  - 68: {fileID: 890542939}
+  - 68: {fileID: 890542938}
   m_Layer: 12
   m_Name: floortile (2)
   m_TagString: Untagged
@@ -1268,6 +1286,36 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &890542938
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890542934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.4972534, y: 2.3880684}
+  - {x: 2.5, y: -2.4765146}
+--- !u!68 &890542939
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890542934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.60223, y: -2.5548153}
+  - {x: -2.5893364, y: 2.4525855}
 --- !u!1 &907826480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1856,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1063781613}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3111,6 +3159,7 @@ GameObject:
   - 4: {fileID: 1633886402}
   - 212: {fileID: 1633886404}
   - 61: {fileID: 1633886403}
+  - 68: {fileID: 1633886405}
   m_Layer: 12
   m_Name: floortile (5)
   m_TagString: Untagged
@@ -3178,6 +3227,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &1633886405
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633886401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b729ae5957b1cbe41a81ac310cec6e28, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.5681534, y: -2.5898082}
+  - {x: -2.5433083, y: 2.4875789}
 --- !u!1 &1656321845
 GameObject:
   m_ObjectHideFlags: 0
