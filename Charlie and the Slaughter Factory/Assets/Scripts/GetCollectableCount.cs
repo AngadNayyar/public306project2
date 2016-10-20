@@ -7,11 +7,9 @@ public class GetCollectableCount : MonoBehaviour
 
     public Text chickenText;
 
-    private float pointAnimDurationSec = 1f;
-    private float pointAnimTimer = 0f;
-    private float newTotalNumber;
-    private float oldTotalNumber;
-    private float displayedNumber;
+    private int oldTotalNumber;
+    private int newTotalNumber;
+    private int displayedNumber;
 
     void Start()
     {
@@ -21,27 +19,36 @@ public class GetCollectableCount : MonoBehaviour
         User currentPlayer = gameC.getCurrentPlayer();
         string playerNumber = currentPlayer.GetPlayerSlot();
 
+        //get the player's old number of chickens collected
         oldTotalNumber = currentPlayer.GetCollectables();
 
         //the number of chickens to be updated and displayed (start at old number of chickens)
         displayedNumber = oldTotalNumber;
 
-        // reset the level collectables and set the total collectables player prefs
+        //reset the level collectables and set the total collectables player prefs
         SetResetCollectables(currentPlayer);
 
-        // get the new total number of chickens for the end point of the Lerp
+        //get the new total number of chickens to update the text to
         newTotalNumber = currentPlayer.GetCollectables();
- 
+
     }
 
     void Update()
     {
-        // change the chickens saved text to the latest increment until the new total is displayed
-        pointAnimTimer += Time.deltaTime;
-        float prcComplete = pointAnimTimer / pointAnimDurationSec;
-        displayedNumber = Mathf.Lerp(oldTotalNumber, newTotalNumber, prcComplete);
-        chickenText.text = displayedNumber.ToString("0");
+        StartCoroutine(IncrementCountDisplay());
     }
+
+    //every 0.05 seconds increase the number of chickens collected
+    IEnumerator IncrementCountDisplay()
+    {
+        if (displayedNumber < newTotalNumber)
+        {
+            displayedNumber += 1;
+            chickenText.text = displayedNumber.ToString();
+        }
+        yield return new WaitForSecondsRealtime(0.06f);
+    }
+
 
     void SetResetCollectables(User currentPlayer)
     {

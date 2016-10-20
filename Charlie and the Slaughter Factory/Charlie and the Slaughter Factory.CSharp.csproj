@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\CutScenes.cs" />
     <Compile Include="Assets\Scripts\DisplayPlayerData.cs" />
     <Compile Include="Assets\Scripts\DisplayScore.cs" />
+    <Compile Include="Assets\Scripts\DisplayScoreAndCollectables.cs" />
     <Compile Include="Assets\Scripts\DisplayUserData.cs" />
     <Compile Include="Assets\Scripts\DogDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
