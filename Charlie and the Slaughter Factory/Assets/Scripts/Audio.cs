@@ -29,13 +29,17 @@ public class Audio : MonoBehaviour {
 		//Get Charlie's x coordinate
 		float player_pos = player.transform.position.x;
 
-		if ((Mathf.Abs(player_pos - transform.position.x) < triggerDistance) && (!source.isPlaying)) {
-			print(gameController.getTheme());
+		if ((Mathf.Abs (player_pos - transform.position.x) < triggerDistance) && (!source.isPlaying)) {
 			if (gameController.getTheme () == "Normal") {
 				source.clip = normal;
-				source.Play();
+				source.Play ();
+			} else if (gameController.getTheme () == "Xmas") {
+				source.clip = xmas;
+				source.Play ();
+			} else {
+				source.clip = space;
+				source.Play ();
 			}
-
 		}
 	
 	}
