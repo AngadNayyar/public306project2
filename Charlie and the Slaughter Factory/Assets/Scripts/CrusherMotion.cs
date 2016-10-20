@@ -21,6 +21,7 @@ public class CrusherMotion : MonoBehaviour {
 	Rigidbody2D rb2d; //reference to the crusher 
 	public float velocity = 2f; // speed of the crusher motion
 	private bool swap = false; 
+	private AudioSource source;
 
 
 	// Use this for initialization
@@ -29,6 +30,7 @@ public class CrusherMotion : MonoBehaviour {
 		playerHealth = player.GetComponent<PlayerHealth>();
 		rigidBody = player.GetComponent<Rigidbody2D>();
 		rb2d = GetComponent<Rigidbody2D> (); 
+		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -41,7 +43,8 @@ public class CrusherMotion : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.CompareTag("ground")) {
-			// swap the direction of the crusher motion when hit ground or ceiling 
+			// swap the direction of the crusher motion when hit ground or ceiling
+			source.Play(); //play the audio clip when the crusher hits the ground
 			swap = !swap;
 			velocity *= -1; 
 			Vector3 theScale = transform.localScale;
