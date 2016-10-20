@@ -123,7 +123,8 @@ public class PlayerScript : MonoBehaviour {
 
 		// Slide functionality - set a slower max speed value
 		if (slide) {
-			maxSpeed = maxSlideSpeed;
+            rb2d.Sleep();
+            maxSpeed = maxSlideSpeed;
 		}
 
 		// Makes the character move left and right
