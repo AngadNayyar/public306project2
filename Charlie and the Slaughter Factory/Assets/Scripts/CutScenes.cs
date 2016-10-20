@@ -9,6 +9,7 @@ public class CutScenes : MonoBehaviour {
 	private GameObject cutScenes1;
     private GameObject cutScenes2;
     private GameObject cutScenes3;
+    private GameObject cutScenes4;
 
 	private GameObject button;
 	private GameObject skipbutton;
@@ -16,6 +17,7 @@ public class CutScenes : MonoBehaviour {
 	private List<GameObject> cutSceneImages1 = new List<GameObject>();
     private List<GameObject> cutSceneImages2 = new List<GameObject>();
     private List<GameObject> cutSceneImages3 = new List<GameObject>();
+    private List<GameObject> cutSceneImages4 = new List<GameObject>();
 	private int index;
 
     private int[] cutScenes1Order = new int[]{0,1,2,3,1,2,1,2,2};
@@ -45,6 +47,13 @@ public class CutScenes : MonoBehaviour {
     private string[] dialogue3 = new string[] {
         "Huh, looks like someone left this window open.",
         "Maybe I can get out this way!"
+    };
+
+    private int[] cutScenes4Order = new int[]{0,1,2};
+    private string[] dialogue4 = new string[] {
+        "I can see the road! We're finally free!",
+        "Hmm, what's that noise?",
+        ""
     };
 
     // On awakening, save the cut scene objects before setting them to invisible so that they can be accessed later.
@@ -79,6 +88,15 @@ public class CutScenes : MonoBehaviour {
                 cutSceneImages3[i].SetActive(false);
             }
         }
+        cutScenes4 = GameObject.Find("CutScenes3");
+        cutSceneImages4.Add(GameObject.Find("CutScene8"));
+        cutSceneImages4.Add(GameObject.Find("CutScene9"));
+        cutSceneImages4.Add(GameObject.Find("CutScene10"));
+        for (int i = 0; i < 1; i++) {
+            if (cutSceneImages4[i] != null) {
+                cutSceneImages4[i].SetActive(false);
+            }
+        }
 
         button = GameObject.Find("Button");
 		skipbutton = GameObject.Find("Skip");
@@ -92,21 +110,25 @@ public class CutScenes : MonoBehaviour {
         if (cutScenes3 != null) {
             cutScenes3.SetActive(false);
         }
-
-        GameObject.Find("CutScenes4").SetActive(false);
+        if (cutScenes4 != null) {
+            cutScenes4.SetActive(false);
+        }
 
         PlayNextScene();
     }
 
     public void PlayNextScene() {
-        if ((gameController.getCurrentLevel() == -1) & (!gameController.getCurrentPlayer().hasViewedCutScene1())) {
+        if ((gameController.getCurrentLevel() == null) & (!gameController.getCurrentPlayer().hasViewedCutScene1())) {
             PlayCutScene1();
         }
-        if ((gameController.getCurrentLevel() == 3) & (!gameController.getCurrentPlayer().hasViewedCutScene2())) {
+        if ((gameController.getCurrentLevel() == "level_3") & (!gameController.getCurrentPlayer().hasViewedCutScene2())) {
             PlayCutScene2();
         }
-        if ((gameController.getCurrentLevel() == 6) & (!gameController.getCurrentPlayer().hasViewedCutScene3())) {
+        if ((gameController.getCurrentLevel() == "level_6") & (!gameController.getCurrentPlayer().hasViewedCutScene3())) {
             PlayCutScene3();
+        }
+        if (gameController.getCurrentLevel() == "level_9") {
+            PlayCutScene4();
         }
     }
 
@@ -115,6 +137,7 @@ public class CutScenes : MonoBehaviour {
         if (index >= dialogue1.Length) {
             gameController.getCurrentPlayer().SetHasViewedCutScene1();
             gameController.NextLevel();
+            return;
         }
 		
         cutScenes1.SetActive(true);
@@ -132,6 +155,7 @@ public class CutScenes : MonoBehaviour {
         if (index >= dialogue2.Length) {
             gameController.getCurrentPlayer().SetHasViewedCutScene2();
             gameController.NextLevel();
+            return;
         }
         
         cutScenes2.SetActive(true);
@@ -147,6 +171,7 @@ public class CutScenes : MonoBehaviour {
         if (index >= dialogue3.Length) {
             gameController.getCurrentPlayer().SetHasViewedCutScene3();
             gameController.NextLevel();
+            return;
         }
         
         cutScenes3.SetActive(true);
@@ -155,6 +180,21 @@ public class CutScenes : MonoBehaviour {
         }
         cutSceneImages3[cutScenes3Order[index]].SetActive(true);
         button.GetComponentInChildren<Text>().text = dialogue3[index];
+    }
+
+    // Play the cut scenes, in the order specified above, until they are finished, and then set that the user has viewed them (so they don't have to next time)
+    public void PlayCutScene4() {
+        if (index >= dialogue4.Length) {
+            gameController.NextLevel();
+            return;
+        }
+        
+        cutScenes4.SetActive(true);
+        if (index != 0) {
+            cutSceneImages4[cutScenes3Order[index-1]].SetActive(false);
+        }
+        cutSceneImages4[cutScenes3Order[index]].SetActive(true);
+        button.GetComponentInChildren<Text>().text = dialogue4[index];
     }
 
     // Hide supplied popup
