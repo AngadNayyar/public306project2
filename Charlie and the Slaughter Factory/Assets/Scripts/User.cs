@@ -13,7 +13,11 @@ public class User {
     private bool viewedCutScene1;
 	private bool viewedCutScene2;
 	private bool viewedCutScene3;
+
 	// Implement some kind of list of achievements
+	private int achievements; 
+	private int achievements2; 
+	private int achievements3; 
 
 	// Check that this method works with a constructor!!
 
@@ -35,6 +39,10 @@ public class User {
 			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
 			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
 			viewedCutScene3 = PlayerPrefs.GetInt(playerSlot + "CutScene3") == 1;
+
+			achievements = PlayerPrefs.GetInt (playerSlot + "achievement1"); 
+			achievements2 = PlayerPrefs.GetInt (playerSlot + "achievement2"); 
+			achievements3 = PlayerPrefs.GetInt (playerSlot + "achievement3"); 
 		} else {
 			// If new player:
 			// Set up data for new player (i.e. no score and hasn't viewed cutscenes yet)
@@ -52,6 +60,13 @@ public class User {
 			PlayerPrefs.SetInt(playerSlot + "CutScene1", 0);
 			PlayerPrefs.SetInt(playerSlot + "CutScene2", 0);
 			PlayerPrefs.SetInt(playerSlot + "CutScene3", 0);
+
+			PlayerPrefs.SetInt (playerSlot + "achievement1", 0); 
+			PlayerPrefs.SetInt (playerSlot + "achievement2", 0); 
+			PlayerPrefs.SetInt (playerSlot + "achievement3", 0); 
+			achievements = 0; 
+			achievements2 = 0; 
+			achievements3 = 0; 
 		}
 	}
 
@@ -71,6 +86,10 @@ public class User {
 		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene1");
 		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene2");
 		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene3");
+		PlayerPrefs.DeleteKey(playerGameSlot + "achievement1");
+		PlayerPrefs.DeleteKey(playerGameSlot + "achievement2");
+		PlayerPrefs.DeleteKey(playerGameSlot + "achievement3");
+
 	}
 
     // Multiple getters and setters for provate variables.
@@ -145,5 +164,29 @@ public class User {
 	public void SetHasViewedCutScene3() {
 		viewedCutScene3 = true;
 		PlayerPrefs.SetInt(playerGameSlot + "CutScene3", 1);
+	}
+
+	public int GetAchievements(){
+		return achievements; 
+	}
+
+	public void SetAchievements(int val){
+		achievements = val; 
+	} 
+
+	public int GetAchievements2(){
+		return achievements; 
+	}
+
+	public void SetAchievements2(int val){
+		achievements = val; 
+	}
+
+	public int GetAchievements3(){
+		return achievements; 
+	}
+
+	public void SetAchievements3(int val){
+		achievements = val; 
 	}
 }

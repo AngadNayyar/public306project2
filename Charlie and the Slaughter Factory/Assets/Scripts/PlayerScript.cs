@@ -32,8 +32,6 @@ public class PlayerScript : MonoBehaviour {
 	private CircleCollider2D cc;
     private int coinCount;
 
-    private bool conveyor;
-
 	// Use this for initialization
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
@@ -155,10 +153,6 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.parent = col.transform; // move at the rate of the platform
         }
-        if (col.gameObject.tag == "ground")
-        {
-            conveyor = true;
-        }
     }
     
     //check if gets off the platform object
@@ -168,10 +162,5 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.parent = null; // set movement to null again
         }
-        else if (col.gameObject.tag == "ground")
-        {
-            conveyor = false;
-        }
-
     }
 }

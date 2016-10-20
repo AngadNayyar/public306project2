@@ -20,13 +20,11 @@ public class Conveyor : MonoBehaviour
     private bool conveyor;
 
     private GameObject player;  // Reference to Charlie
-    private Rigidbody2D playerBody;
 
     void Start()
     {
         // Get the player rigid body
         player = GameObject.FindGameObjectWithTag("Player");
-        playerBody = player.GetComponent<Rigidbody2D>();
     }
 
     void Update()
