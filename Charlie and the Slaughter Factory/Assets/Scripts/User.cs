@@ -8,7 +8,7 @@ public class User {
     private int score;
     private int collectables;
 
-    private int highestLevel;           // ADDED
+    private int highestLevel;           
 
     private bool viewedCutScene1;
 	private bool viewedCutScene2;
@@ -30,7 +30,7 @@ public class User {
 		if (PlayerPrefs.HasKey(playerSlot)) {
 			username = PlayerPrefs.GetString(playerSlot);
             score = PlayerPrefs.GetInt(playerSlot + "Score");
-            highestLevel = PlayerPrefs.GetInt(playerSlot + "HighestLevel"); // ADDED
+            highestLevel = PlayerPrefs.GetInt(playerSlot + "HighestLevel");
             collectables = PlayerPrefs.GetInt(playerSlot + "TotalCollectables");
 			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
 			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
@@ -44,8 +44,8 @@ public class User {
 			PlayerPrefs.SetInt(playerSlot + "Score", 0);
             collectables = 0;
             PlayerPrefs.SetInt(playerSlot + "TotalCollectables", 0);
-            highestLevel = 1;                                       // ADDED
-            PlayerPrefs.SetInt(playerSlot + "HighestLevel", 1);     // ADDED
+            highestLevel = 1;                                       
+            PlayerPrefs.SetInt(playerSlot + "HighestLevel", 1);     
             viewedCutScene1 = false;
 			viewedCutScene2 = false;
 			viewedCutScene3 = false;
@@ -63,8 +63,8 @@ public class User {
         PlayerPrefs.DeleteKey(playerGameSlot + "Score");
         collectables = 0;
         PlayerPrefs.DeleteKey(playerGameSlot + "TotalCollectables");
-        highestLevel = 1;                                           // ADDED
-        PlayerPrefs.DeleteKey(playerGameSlot + "HighestLevel");     // ADDED
+        highestLevel = 1;                                           
+        PlayerPrefs.DeleteKey(playerGameSlot + "HighestLevel");     
         viewedCutScene1 = false;
 		viewedCutScene2 = false;
 		viewedCutScene3 = false;
@@ -75,13 +75,13 @@ public class User {
 
     // Multiple getters and setters for provate variables.
 
-    public int GetHighestLevel() {          // ADDED
+    public int GetHighestLevel() {
         return highestLevel;
     }
 
-    public void SetHighestLevel(int i) {    // ADDED
+    public void SetHighestLevel(int i) {
         highestLevel = i;
-        //Something to do with getters and setters??
+        PlayerPrefs.SetInt(playerGameSlot + "HighestLevel", i);
     }
     
 	public string GetPlayerSlot() {

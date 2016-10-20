@@ -281,14 +281,11 @@ public class GameController : MonoBehaviour {
     // sets that level to highestLevel in User object
     public void CheckSetHighestLevel() {
         int highestLevel = gameController.getCurrentPlayer().GetHighestLevel();
-        print(highestLevel);
         if (highestLevel <= (currentLevel + 1))
         {
             print("yes");
             gameController.getCurrentPlayer().SetHighestLevel(currentLevel + 1);
         }
-        print(gameController.getCurrentPlayer().GetHighestLevel());
-        print(currentLevel + 1);
     }
 
 	// Getters and setters
