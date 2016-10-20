@@ -81,6 +81,7 @@ public class User {
 
     public void SetHighestLevel(int i) {    // ADDED
         highestLevel = i;
+        //Something to do with getters and setters??
     }
     
 	public string GetPlayerSlot() {
