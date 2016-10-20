@@ -17,7 +17,7 @@ public class moving_platform : MonoBehaviour
         Lerp // incremental increase between two points
     }
 
-    //instantiates
+    //instantiates public (Change in inspector)
     public Platform_path_def Path;
     public float Speed = 1;
 

@@ -5,7 +5,6 @@ using System;
 
 public class CalculateAndDisplayScore : MonoBehaviour
 {
-
     public Text scoreText;
     private float oldTotalScore;
     private float displayedScore;

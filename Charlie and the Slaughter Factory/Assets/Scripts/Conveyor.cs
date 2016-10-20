@@ -4,7 +4,7 @@ using System.Collections;
 
 /*
  * This script controls conveyor belt mechanics. 
- * When charlie touches the conveyor, his speed increases.  
+ * When charlie touches/ stays-on the conveyor, his speed increases.  
  * 
  * To use this script, attach it to the conveyor belt platform object, which will need a collision box.  
  *  
@@ -16,27 +16,24 @@ public class Conveyor : MonoBehaviour
 
     // set the speed for the conveyor
     public int conveyorSpeed = 5;
-    GameObject player;  // Reference to Charlie
-    Rigidbody2D playerBody;
     public bool movementRight = true;
-    private int maxOppositeSpeed = 3;
     private bool conveyor;
 
-    // Use this for initialization
+    private GameObject player;  // Reference to Charlie
+
     void Start()
     {
         // Get the player rigid body
         player = GameObject.FindGameObjectWithTag("Player");
-        playerBody = player.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (conveyor && !movementRight)
+        if (conveyor && !movementRight) // checks if colliding & moving left
         {
             player.transform.position = player.transform.position - (transform.right * conveyorSpeed * Time.deltaTime);
         }
-        else if (conveyor && movementRight)
+        else if (conveyor && movementRight) // checks if colliding & moving right
         {
             player.transform.position = player.transform.position + (transform.right * conveyorSpeed * Time.deltaTime);
         }
@@ -47,30 +44,17 @@ public class Conveyor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            /*if (movementRight) {
-				if (Mathf.Abs(playerBody.velocity.x) < maxOppositeSpeed) {
-					playerBody.velocity = playerBody.velocity + Vector2.right * conveyorSpeed;
-				} else {
-					playerBody.velocity = Vector2.right * maxOppositeSpeed;
-				} 
-
-			}  else {
-				if (Mathf.Abs(playerBody.velocity.x) < maxOppositeSpeed) {
-					playerBody.velocity = playerBody.velocity + Vector2.left * conveyorSpeed;
-				} else {
-					playerBody.velocity = Vector2.left * maxOppositeSpeed;
-				} 
-			}  */
-            conveyor = true;
+            conveyor = true; //sets boolean to true if the floor is on it/ colliding with it
         }
 
     }
 
+    //When Charlie hops off, stop accelerating
     void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            conveyor = false;
+            conveyor = false; //sets boolean to false if the player leaves the conveyer belt
 
         }
     }
