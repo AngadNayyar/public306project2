@@ -17,6 +17,7 @@ public class Leaderboard : MonoBehaviour {
     public Text thirdPlaceScore;
     public Text fourthPlaceUsername;
     public Text fourthPlaceScore;
+    private string username;
 
     void Start () {
         GameObject gameO = GameObject.Find("GameController");
@@ -25,17 +26,35 @@ public class Leaderboard : MonoBehaviour {
         //get the sorted list of users
         List<User> players = gameC.SetUpLeaderboard();
 
-        firstPlaceUsername.text = players[0].GetUsername();
-        firstPlaceScore.text = players[0].GetScore().ToString();
+        //check username is not empty (empty player slot) and if not
+        //set the texts to the username and corresponding score
+        username = players[0].GetUsername();
+        if (username != "")
+        {
+            firstPlaceUsername.text = players[0].GetUsername();
+            firstPlaceScore.text = players[0].GetScore().ToString();
+        }
 
-        secondPlaceUsername.text = players[1].GetUsername();
-        secondPlaceScore.text = players[1].GetScore().ToString();
+        username = players[1].GetUsername();
+        if (username != "")
+        {
+            secondPlaceUsername.text = players[1].GetUsername();
+            secondPlaceScore.text = players[1].GetScore().ToString();
+        }
 
-        thirdPlaceUsername.text = players[2].GetUsername();
-        thirdPlaceScore.text = players[2].GetScore().ToString();
+        username = players[2].GetUsername();
+        if (username != "")
+        {
+            thirdPlaceUsername.text = players[2].GetUsername();
+            thirdPlaceScore.text = players[2].GetScore().ToString();
+        }
 
-        fourthPlaceUsername.text = players[3].GetUsername();
-        fourthPlaceScore.text = players[3].GetScore().ToString();
+        username = players[3].GetUsername();
+        if (username != "")
+        {
+            fourthPlaceUsername.text = players[3].GetUsername();
+            fourthPlaceScore.text = players[3].GetScore().ToString();
+        }
     }
 
 }

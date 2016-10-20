@@ -39,10 +39,6 @@ public class CalculateAndDisplayScore : MonoBehaviour
         //the time taken to complete the level and the players remaining health
         int thisLevelScore = health - time;
 
-        Debug.Log("Health = " + health);
-        Debug.Log("Time = " + time);
-        Debug.Log("Level score = " + thisLevelScore);
-
         //if the player scored lower than 0, set the score to 0 so as not to
         //lower the score
         if (thisLevelScore < 0)
