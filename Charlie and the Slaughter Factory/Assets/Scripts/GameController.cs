@@ -266,6 +266,7 @@ public class GameController : MonoBehaviour {
 
 	// Play the next level, or if all levels have been finished, display the finish screen.
 	public void NextLevel() {
+		Debug.Log(currentLevel);
 		Time.timeScale = 1;
 		// If the player finishes, make it so they reset from the beginning.
 		if (currentLevel >= (levels.Length-1)) {
