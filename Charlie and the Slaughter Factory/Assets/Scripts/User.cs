@@ -123,11 +123,11 @@ public class User {
 
 	public void SetHasViewedCutScene2() {
 		viewedCutScene2 = true;
-		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 1);
+		PlayerPrefs.SetInt(playerGameSlot + "CutScene2", 1);
 	}
 
 	public void SetHasViewedCutScene3() {
 		viewedCutScene3 = true;
-		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 1);
+		PlayerPrefs.SetInt(playerGameSlot + "CutScene3", 1);
 	}
 }
