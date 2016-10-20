@@ -21,16 +21,17 @@ public class GetCollectableCount : MonoBehaviour
         User currentPlayer = gameC.getCurrentPlayer();
         string playerNumber = currentPlayer.GetPlayerSlot();
 
-        oldTotalNumber = PlayerPrefs.GetInt("TotalCollectables" + playerNumber);
+        oldTotalNumber = currentPlayer.GetCollectables();
 
         //the number of chickens to be updated and displayed (start at old number of chickens)
         displayedNumber = oldTotalNumber;
 
         // reset the level collectables and set the total collectables player prefs
-        SetResetCollectables(playerNumber);
+        SetResetCollectables(currentPlayer);
 
         // get the new total number of chickens for the end point of the Lerp
-        newTotalNumber = PlayerPrefs.GetInt("TotalCollectables" + playerNumber);
+        newTotalNumber = currentPlayer.GetCollectables();
+ 
     }
 
     void Update()
@@ -42,12 +43,15 @@ public class GetCollectableCount : MonoBehaviour
         chickenText.text = displayedNumber.ToString("0");
     }
 
-    void SetResetCollectables(string playerNumber)
+    void SetResetCollectables(User currentPlayer)
     {
+        string playerSlot = currentPlayer.GetPlayerSlot();
+
         // add the current level collectables to the total collectables
-        int oldTotal = PlayerPrefs.GetInt("TotalCollectables" + playerNumber);
+        int oldTotal = currentPlayer.GetCollectables();
         int newTotal = oldTotal + PlayerPrefs.GetInt("LevelCollectables");
-        PlayerPrefs.SetInt("TotalCollectables" + playerNumber, newTotal);
+        currentPlayer.SetCollectables(newTotal);
+        PlayerPrefs.SetInt(playerSlot + "TotalCollectables", newTotal);
 
         // reset the level collectables to 0
         PlayerPrefs.SetInt("LevelCollectables", 0);
