@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour{
 
         //Deduct amount from current health.
         currentHealth -= amount;
+        PlayerPrefs.SetInt("health", currentHealth);
 
         //Update the health bar to reflect new health.
         healthSlider.value = currentHealth;
@@ -47,11 +48,9 @@ public class PlayerHealth : MonoBehaviour{
         if (currentHealth <= 0 && !isDead)
         {
             Die();
-        } else
-        {
-            PlayerPrefs.SetInt("endHealth", currentHealth);
         }
     }
+
     void Die()
     {
         // Set the death flag so this function won't be called again.
