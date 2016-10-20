@@ -9,10 +9,10 @@ public class GameController : MonoBehaviour {
 	private static GameController gameController;
 	private string[] levels = new string[]{
     //	"proto_lvl1",
-    //	"level_1",
-    //	"level_2",
-    //	"level_3",
-    //	"level_4",
+    	"level_1",
+    	"level_2",
+    	"level_3",
+    	"level_4",
     	"level_5",
     	"level_6",
     	"level_7",
@@ -221,11 +221,18 @@ public class GameController : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
 			return;
 		}
-		if ((currentLevel == 3) & (!currentPlayer.hasViewedCutScene2())) {
+		if (currentLevel == -1) {
+			NextLevel();
+		}
+		if ((levels[currentLevel] == "level_3") & (!currentPlayer.hasViewedCutScene2())) {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
 			return;
 		}
-		if ((currentLevel == 6) & (!currentPlayer.hasViewedCutScene3())) {
+		if ((levels[currentLevel] == "level_6") & (!currentPlayer.hasViewedCutScene3())) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
+			return;
+		}
+		if (levels[currentLevel] == "level_9") {
 			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
 			return;
 		}
@@ -285,8 +292,11 @@ public class GameController : MonoBehaviour {
 		return currentPlayer;
 	}
 
-	public int getCurrentLevel() {
-		return currentLevel;
+	public string getCurrentLevel() {
+		if (currentLevel == -1) {
+			return null;
+		}
+		return levels[currentLevel];
 	}
 
 	public GameObject getFinishedLevel() {
