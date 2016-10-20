@@ -3,30 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 /**
  * This class calls Platform_path and transforms the platform along the dedicated path using the provided points
+ * 
+ * Charlie and the Slaughter Factory : Teven Studios
  * */
 
 public class moving_platform : MonoBehaviour
 {
 
-    //instantiates the enum
+    //instantiates the enum depending on the required movement
     public enum Path_Type
     {
-        MoveTowardsPoint,
+        MoveTowardsPoint, // move towards the next point in the path
         Lerp // incremental increase between two points
     }
 
-    //intstantiates
-    public Path_Type Type = Path_Type.MoveTowardsPoint; // default
+    //instantiates
     public Platform_path_def Path;
     public float Speed = 1;
-    public float MaxDistanceToGoal = .1f; // close enough to point, can move
+
+    // private 
     private IEnumerator<Transform> current_point;
+    private Path_Type Type = Path_Type.MoveTowardsPoint; // default value for the Path
+    private float MaxDistanceToGoal = .1f; // close enough to point, can move
 
     public void Start()
     {
         if (Path == null) // error handling (no given points for the path)
         {
-            Debug.LogError("Path is null, (no provided points)", gameObject);
+            Debug.LogError("Path is null, points provided", gameObject);
             return; //exit
         }
 
@@ -47,6 +51,7 @@ public class moving_platform : MonoBehaviour
         {
             return; // if there isn't a path moving towards
         }
+
         if (Type == Path_Type.MoveTowardsPoint)
         { // move towards target point
             transform.position = Vector3.MoveTowards(transform.position, current_point.Current.position, Time.deltaTime * Speed); //Time.deltaTime makes it smooth
@@ -64,5 +69,3 @@ public class moving_platform : MonoBehaviour
         }
     }
 }
-//other potential code to use
-//transform.position = new Vector2(Mathf.PingPong(Time.time, 3), transform.position.y);
