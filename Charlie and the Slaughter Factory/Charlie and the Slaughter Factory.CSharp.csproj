@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GetCollectableCount.cs" />
     <Compile Include="Assets\Scripts\GetTime.cs" />
+    <Compile Include="Assets\Scripts\Harry.cs" />
     <Compile Include="Assets\Scripts\Leaderboard.cs" />
     <Compile Include="Assets\Scripts\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\Mincer.cs" />
