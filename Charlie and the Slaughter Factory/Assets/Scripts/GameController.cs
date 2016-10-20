@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour {
 	private GameObject pauseLevel;
 	private GameObject menuMusic;
 	private GameObject levelMusic;
+	private GameObject deathMusic;
 	private GameObject pauseButton;
 	private GameObject deathScreen;
 
@@ -52,6 +53,8 @@ public class GameController : MonoBehaviour {
 		pauseButton.SetActive(false);
 		deathScreen = GameObject.Find("DeathScreen");
 		deathScreen.SetActive(false);
+		deathMusic = GameObject.Find("DeathMusic");
+		deathMusic.SetActive(false);
 		if (gameController != null) {
 			DestroyImmediate(gameObject);
 		} else {
@@ -214,6 +217,10 @@ public class GameController : MonoBehaviour {
 			currentPlayer.ResetScore();
 		}
 
+		levelMusic.SetActive(true);
+		menuMusic.SetActive(false);
+		deathMusic.SetActive(false);
+
 		pauseButton.SetActive(false);
 		
 		// If the user hasn't seen the cut scenes yet, play them.
@@ -243,6 +250,8 @@ public class GameController : MonoBehaviour {
 	public void PlayerDied() {
 		isFinished = true;
 		deathScreen.SetActive(true);
+		levelMusic.SetActive(false);
+		deathMusic.SetActive(true);
 	}
 
 	// If the player dies and want to continue, reset their score and run the game from the level they were on.
@@ -250,6 +259,8 @@ public class GameController : MonoBehaviour {
 		Time.timeScale = 1;
 		currentPlayer.ResetScore();
 		deathScreen.SetActive(false);
+		deathMusic.SetActive(false);
+		levelMusic.SetActive(true);
 		UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 	}
 
