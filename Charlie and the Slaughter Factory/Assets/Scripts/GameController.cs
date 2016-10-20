@@ -139,10 +139,7 @@ public class GameController : MonoBehaviour {
 	public void HidePopup(GameObject panel) {
 		panel.SetActive(false);
 		if (panel.name == "FinishedLevel") {
-			if (currentLevel == 3) {
-				return;
-			}
-			NextLevel();
+			StartGame();
 		}
 	}
 
@@ -175,23 +172,25 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Start game, based on data to do with the current user.
-	public void PlayGame(StartGame start) {
+	public void StartGame() {
 		if (isFinished) {
 			isFinished = false;
 			currentPlayer.ResetScore();
 		}
+
+		pauseButton.SetActive(false);
 		
 		// If the user hasn't seen the cut scenes yet, play them.
 		if ((currentLevel == -1) & (!currentPlayer.hasViewedCutScene1())) {
-			start.PlayCutScene1();
+			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
 			return;
 		}
 		if ((currentLevel == 3) & (!currentPlayer.hasViewedCutScene2())) {
-			start.PlayCutScene2();
+			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
 			return;
 		}
 		if ((currentLevel == 6) & (!currentPlayer.hasViewedCutScene3())) {
-			start.PlayCutScene3();
+			UnityEngine.SceneManagement.SceneManager.LoadScene("CutScenes");
 			return;
 		}
 		NextLevel();
@@ -248,6 +247,10 @@ public class GameController : MonoBehaviour {
 
 	public User getCurrentPlayer() {
 		return currentPlayer;
+	}
+
+	public int getCurrentLevel() {
+		return currentLevel;
 	}
 
 	public GameObject getFinishedLevel() {
