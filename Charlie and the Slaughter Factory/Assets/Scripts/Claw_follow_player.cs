@@ -115,6 +115,11 @@ public class Claw_follow_player : MonoBehaviour {
     //checks if it collides with anything on it's way down
     void OnTriggerEnter2D(Collider2D coll)
     {
+        if (coll.gameObject.tag == "ChickenCollectable")
+        {
+            return;
+        }
+
         if (coll.gameObject.tag == "Player") // sets the boolean as true for when it hits a player
         {
             hasPlayer = true;
