@@ -1985,7 +1985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &542637948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.049987793, y: 0.0000076293945}
-  m_SizeDelta: {x: 0.1000061, y: -175}
+  m_SizeDelta: {x: 0.1000061, y: 0}
   m_Pivot: {x: -0.00000002142042, y: 0.99999994}
 --- !u!114 &765870270
 MonoBehaviour:
@@ -3069,9 +3069,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159545353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8065973e62e4557993c257b0d273d6, type: 3}
+  m_Script: {fileID: 11500000, guid: a1b90df395462456f8718dbbf0341e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementList: {fileID: 1395811111}
+  neutral: {fileID: 21300000, guid: 915b759d272594065a8a04ff67fc58d5, type: 3}
+  highlight: {fileID: 21300000, guid: 593d2d314adf844558f41d8b60b41aa5, type: 3}
 --- !u!114 &1159545356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3560,7 +3563,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.04997015, y: 0.00000423193}
-  m_SizeDelta: {x: 0.10003662, y: -175}
+  m_SizeDelta: {x: 0.10003662, y: 0}
   m_Pivot: {x: -0.00000002142042, y: 0.99999994}
 --- !u!114 &1395811113
 MonoBehaviour:
@@ -4114,7 +4117,7 @@ RectTransform:
   m_Father: {fileID: 1886118910}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4351,9 +4354,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790343599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1949dfe875d4b59a2f4d5a1ab063b2, type: 3}
+  m_Script: {fileID: 11500000, guid: a274f0597e4814f42a5973135b27c1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementPrefab: {fileID: 0}
+  sprites: []
+  scrollRect: {fileID: 0}
+  visualAchievement: {fileID: 0}
 --- !u!224 &1790343601
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4570,7 +4577,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 277391925}
         m_MethodName: HidePopup
         m_Mode: 2
         m_Arguments:
@@ -5239,9 +5246,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2004462764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8065973e62e4557993c257b0d273d6, type: 3}
+  m_Script: {fileID: 11500000, guid: a1b90df395462456f8718dbbf0341e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementList: {fileID: 765870268}
+  neutral: {fileID: 21300000, guid: 915b759d272594065a8a04ff67fc58d5, type: 3}
+  highlight: {fileID: 21300000, guid: 593d2d314adf844558f41d8b60b41aa5, type: 3}
 --- !u!114 &2004462767
 MonoBehaviour:
   m_ObjectHideFlags: 0
