@@ -14,16 +14,20 @@ public class AchievementManager : MonoBehaviour {
 	//for the sprite image for the achievement set in unity
 	public Sprite[] sprites; 
 
+	//for the achievement panel
 	private btnAch activeButton;
 	public ScrollRect scrollRect;
 
-	public GameObject visualAchievement;
+	//the pop up 
+	//public GameObject visualAchievement;
 
-	public Dictionary<string, Achievement> achievements = new Dictionary<string, Achievement>();
-
+	//unlocked sprite the gold shield
 	public Sprite unlockedSprite;
 
-	public Text textPoints;
+	//the current player and the number of collected chickens. 
+	public int collectedChicks; //no. chickens er person
+	public User currentPlayer; //currentPlayer
+	public string currentPlayerName;
 
 	private static AchievementManager instance;
 	public static AchievementManager Instance {
@@ -33,89 +37,101 @@ public class AchievementManager : MonoBehaviour {
 			}
 			return instance;
 		}
-	}
+	} //singleton way of accessing object without having instance of the object
 
- //singleton way of accessing object without having instance of the object
-
-
+	public static Achievement achievement1;
+	public static Achievement achievement2;
+	public static Achievement achievement3;
+	public static List<Achievement> achList = new List<Achievement>(); 
 
 	// Use this for initialization
 	void Start () {
 		
+		//setting what player is alive right now
+		GameObject gameO = GameObject.Find ("GameController");
+		GameController gameC = (GameController)gameO.GetComponent (typeof(GameController));
+		User currentPlayer = gameC.getCurrentPlayer ();   // the actual player
+		currentPlayerName = currentPlayer.GetUsername ();
+		collectedChicks = currentPlayer.GetCollectables ();
+		
 		//setting achievement tab to be active
-		activeButton = GameObject.Find("GenBtn").GetComponent<btnAch> ();
+		activeButton = GameObject.Find ("GenBtn").GetComponent<btnAch> ();
 
+		achList.Add (achievement1);
+		achList.Add (achievement2);
+		achList.Add (achievement3);
 
-		CreateAchievement("General","10", "Chicken Saviour", 5, 0);
-		CreateAchievement("General","50", "Level 900", 5, 0);
-		CreateAchievement("General","100", "Press up arrow to jump", 10, 0);
-		CreateAchievement("General","200", "Press up arrow to jump", 20, 0);
-		CreateAchievement("General","500", "Press up arrow to jump", 50, 0);
-		CreateAchievement("Other","yo", "Press up arrow to jump", 5, 0);
-
-		//going through Achievementslist and putting 
-		foreach (GameObject achievementList in GameObject.FindGameObjectsWithTag("AchievementList"))
-		{
-			achievementList.SetActive (false);
-		}
+		CreateAchievement ("General","Saved 10 Chickens", "Chicken Saviour", 5, 0, 0);
+		CreateAchievement ("General", "Saved 50 Chickens", "Level 900", 5, 0, 1);
+		CreateAchievement ("General", "Saved 100 Chickens", "Press up arrow to jump", 10, 0, 2);
 
 		activeButton.Click ();
+
 	}
+
 
 	// Update is called once per frame
 	void Update () {
-		//check how many chickens you have 
+		GameObject gameO = GameObject.Find("GameController");
+		GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
+		User currentPlayer = gameC.getCurrentPlayer();
+		string playerSlot = currentPlayer.GetPlayerSlot();
+		int numChicks = currentPlayer.GetCollectables ();
+		//string currentPlayerName = currentPlayer.GetUsername ();
 
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			EarnAchievement ("100");
+		if (Input.GetKeyDown( KeyCode.A)  || numChicks > 9) {
+			currentPlayer.SetAchievements(1); //set ach to locked;
+			achList[0].EarnAchievement ();
+			PlayerPrefs.SetInt (playerSlot + "achievement1", 1); 
+		} 
+
+		if (Input.GetKeyDown( KeyCode.S) || numChicks > 49) {
+			currentPlayer.SetAchievements2(1); //set ach to locked;
+			achList[1].EarnAchievement ();
+			PlayerPrefs.SetInt (playerSlot + "achievement2", 1); 
+			
 		}
-		if (Input.GetKeyDown (KeyCode.W)) {
-			EarnAchievement ("yo");
-			print ("this happened");
+		if (Input.GetKeyDown( KeyCode.D)  || numChicks > 99) {
+			currentPlayer.SetAchievements3(1); //set ach to locked;
+			achList[2].EarnAchievement ();
+			PlayerPrefs.SetInt (playerSlot + "achievement3", 1); 
+			
 		}
+	
+
 	}
 
-	public void EarnAchievement(string title){
-		if (achievements [title].EarnAchievement()) { //looking into the dictionary
-			//DO SOMETHING
-			GameObject achievement = (GameObject)Instantiate(visualAchievement);
-			SetAchievementInfo ("EarnCanvas", achievement, title);
+	public void CreateAchievement(string parent, string title, string description, int points, int spriteIndex, int index){
 
-			StartCoroutine (HideAchievement (achievement));
-		}
-	}
-
-	public IEnumerator HideAchievement(GameObject achievement) {
-
-		yield return new WaitForSeconds (3);
-		Destroy (achievement);
-	}
-
-	public void CreateAchievement(string parent, string title, string description, int points, int spriteIndex){
 		GameObject achievement = GameObject.Instantiate(achievementPrefab);
 
-		Achievement newAchievement = new Achievement (name, description, points, spriteIndex, achievement); //create ach
-		//add entry to dictionary
-		achievements.Add(title, newAchievement);
+		achList[index] = new Achievement (currentPlayer, currentPlayerName, title, description, points, spriteIndex, achievement); //create ach
 
-		SetAchievementInfo (parent, achievement, title);
+		SetAchievementInfo (parent, achievement, title, index);
+
 	}
 
+
 	//SHOULD GET THE USER AND SET THAT TO THE USER. 
-	public void SetAchievementInfo(string parent, GameObject achievement, string title){
+	public void SetAchievementInfo(string parent, GameObject achievement, string title, int index){
 		//set parent, find game object and set category of this achievement
 		achievement.transform.SetParent(GameObject.Find(parent).transform);
 
 		//set the scale, cause in unity it changes when adding
 		achievement.transform.localScale = new Vector3(1,1,1);
-
+	
 		//Title = child 0, component text. So we can change the text
-		achievement.transform.GetChild(0).GetComponent<Text>().text = title;
-		achievement.transform.GetChild(1).GetComponent<Text>().text = achievements[title].Description;
-		achievement.transform.GetChild(2).GetComponent<Text>().text = achievements[title].Points.ToString();
-		achievement.transform.GetChild(3).GetComponent<Image>().sprite = sprites[achievements[title].SpriteIndex];
-
+		//achievement.transform.GetChild(0).GetComponent<Text>().text = title;
+		//achievement.transform.GetChild(1).GetComponent<Text>().text = currentPlayer.Description;
+		//achievement.transform.GetChild(2).GetComponent<Text>().text = currentPlayer.achievements[currentPlayerName + title].Points.ToString();
+		//achievement.transform.GetChild(3).GetComponent<Image>().sprite = sprites[currentPlayer.achievements[currentPlayerName + title].SpriteIndex];
+		achievement.transform.GetChild(0).GetComponent<Text>().text = achList[index].NameAchieve;
+		achievement.transform.GetChild (1).GetComponent<Text> ().text = achList[index].Description;
+		achievement.transform.GetChild(2).GetComponent<Text>().text = achList[index].Points.ToString();
+		achievement.transform.GetChild(3).GetComponent<Image>().sprite = sprites[achList[index].SpriteIndex];
+	
 	}
+
 
 	//changing tabs in the achievement category
 	public void ChangeCategory(GameObject button){
@@ -128,4 +144,23 @@ public class AchievementManager : MonoBehaviour {
 		activeButton.Click();
 		activeButton = achievementButton;
 	}
+
+	//public void EarnAchievement(string title){
+	//string achievementPlayerKey = currentPlayerName + title;
+	//if (currentPlayer.achievements[title].EarnAchievement()) { //looking into the dictionary
+	//DO SOMETHING - for pop up 
+	//GameObject achievement = (GameObject)Instantiate(visualAchievement);
+
+	//SetAchievementInfo ("EarnCanvas", achievement, title);
+	//StartCoroutine (HideAchievement (achievement));
+	//}
+
+	//}
+
+
+	/*the popup operations
+	public IEnumerator HideAchievement(GameObject achievement) {
+		yield return new WaitForSeconds (3);
+		Destroy (achievement);
+	}*/
 }

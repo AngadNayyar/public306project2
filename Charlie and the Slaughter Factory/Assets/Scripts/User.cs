@@ -1,12 +1,18 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class User {
 	private string playerGameSlot;
 	private string username;
     private int score;
     private int collectables;
+
+	//public Dictionary<string, Achievement> achievements = new Dictionary<string, Achievement> ();
+	private int achievements; 
+	private int achievements2; 
+	private int achievements3; 
 
 	private bool viewedCutScene1;
 	private bool viewedCutScene2;
@@ -32,6 +38,12 @@ public class User {
 			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
 			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
 			viewedCutScene3 = PlayerPrefs.GetInt(playerSlot + "CutScene3") == 1;
+
+			achievements = PlayerPrefs.GetInt (playerSlot + "achievement1"); 
+			achievements2 = PlayerPrefs.GetInt (playerSlot + "achievement2"); 
+			achievements3 = PlayerPrefs.GetInt (playerSlot + "achievement3"); 
+			//load create achievements
+
 		} else {
 			// If new player:
 			// Set up data for new player (i.e. no score and hasn't viewed cutscenes yet)
@@ -47,6 +59,32 @@ public class User {
 			PlayerPrefs.SetInt(playerSlot + "CutScene1", 0);
 			PlayerPrefs.SetInt(playerSlot + "CutScene2", 0);
 			PlayerPrefs.SetInt(playerSlot + "CutScene3", 0);
+
+			PlayerPrefs.SetInt (playerSlot + "achievement1", 0); 
+			PlayerPrefs.SetInt (playerSlot + "achievement2", 0); 
+			PlayerPrefs.SetInt (playerSlot + "achievement3", 0); 
+			achievements = 0; 
+			achievements2 = 0; 
+			achievements3 = 0; 
+
+			/*
+			AchievementManager.Instance.CreateAchievement("General","Saved 10 Chickens", "Chicken Saviour", 5, 0);
+			AchievementManager.Instance.CreateAchievement("General","Saved 50 Chickens", "Level 900", 5, 0);
+			AchievementManager.Instance.CreateAchievement("General","Saved 100 Chickens", "Press up arrow to jump", 10, 0);
+			AchievementManager.Instance.CreateAchievement("General","Saved 200 Chickens", "Press up arrow to jump", 20, 0);
+			AchievementManager.Instance.CreateAchievement("General","Saved 500 Chickens", "Press up arrow to jump", 50, 0);
+			AchievementManager.Instance.CreateAchievement("Other","yo", "Press up arrow to jump", 5, 0);
+
+			//going through Achievementslist and setting as false.  
+			foreach (GameObject achievementList in GameObject.FindGameObjectsWithTag("AchievementList"))
+			{
+				achievementList.SetActive (false);
+			}
+			foreach (KeyValuePair<string, Achievement> entry in achievements) {
+				entry.Value.SaveAchievement (false);
+				Debug.Log (entry.Value.NameAchieve);
+			}*/ 
+		
 		}
 	}
 
@@ -129,5 +167,29 @@ public class User {
 	public void SetHasViewedCutScene3() {
 		viewedCutScene3 = true;
 		PlayerPrefs.SetInt(playerGameSlot + "CutScene1", 1);
+	}
+
+	public int GetAchievements(){
+		return achievements; 
+	}
+
+	public void SetAchievements(int val){
+		achievements = val; 
+	} 
+
+	public int GetAchievements2(){
+		return achievements; 
+	}
+
+	public void SetAchievements2(int val){
+		achievements = val; 
+	}
+
+	public int GetAchievements3(){
+		return achievements; 
+	}
+
+	public void SetAchievements3(int val){
+		achievements = val; 
 	}
 }

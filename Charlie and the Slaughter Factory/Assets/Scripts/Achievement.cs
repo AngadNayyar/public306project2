@@ -12,90 +12,105 @@ using UnityEngine.UI;
 
 public class Achievement {
 
-	private string name;
+	private User player;
+	public User Player {
+		get {return player;}
+		set {player = value;}
+	}
 
-	public string Name {
-		get {return name;}
-		set {name = value;}
+	private string playerName;
+	public string PlayerName {
+		get {return playerName;}
+		set {playerName = value;}
+	}
+		
+	private string nameAchieve;
+	public string NameAchieve {
+		get {return nameAchieve;}
+		set {nameAchieve = value;}
 	}
 
 	private string description;
-
 	public string Description {
 		get {return description;}
 		set {description = value;}
 	}
 
 	private bool unlocked;
-
 	public bool Unlocked {
 		get {return unlocked;}
 		set {unlocked = value;}
 	}
 
 	private int points;
-
 	public int Points {
 		get {return points;}
 		set {points = value;}
 	}
 
 	private int spriteIndex;
-
 	public int SpriteIndex {
 		get { return spriteIndex;}
 		set { spriteIndex = value;}
 	}
 
 	private GameObject achievementRef;
-
 	public GameObject AchievementRef {
 		get {return achievementRef;}
 		set {achievementRef = value;}
 	}
 
  //know which achievement to show when we earn it
-
-	public Achievement(string name, string description, int points,  int spriteIndex, GameObject achievementRef){//constructor of Achievement
-		this.name = name;
+	public Achievement(User player, string playerName, string nameAchieve, string description, int points,  int spriteIndex, GameObject achievementRef){//constructor of Achievement
+		this.player = player; 
+		this.playerName = playerName;
+		this.nameAchieve = nameAchieve;
 		this.description = description;
 		this.unlocked = false;
 		this.points = points;
 		this.spriteIndex = spriteIndex;
 		this.achievementRef = achievementRef;
-		LoadAchivement ();
+		//LoadAchievement();
 	}
 
-	public bool EarnAchievement(){
-		if (!unlocked) {
+	public void EarnAchievement(){
+		//if (!unlocked) {
 			//reference between actual achievement 
 			achievementRef.GetComponent<Image> ().sprite = AchievementManager.Instance.unlockedSprite;
 			//unlocked = true;
-			SaveAchievement (true);
-			return true;
-		} 
-
-		return false;
-			
+		//	SaveAchievement (true);
+		//	return true;
+		//} 
+		//return false;
 	}
+
+	/*
 	//saving achievement to playprefs
 	public void SaveAchievement(bool value) {
+		string playerAchievement = playerName + nameAchieve;
+		string playerPoints = playerName + Points;
+		//Debug.Log ("saveacheiveksdfkljment");
+		//Debug.Log (value);
 		unlocked = value; 
+
 		int tmpPoints = PlayerPrefs.GetInt ("Points");
-		PlayerPrefs.SetInt ("Points", tmpPoints += points);
+		PlayerPrefs.SetInt (playerPoints, tmpPoints += points);
 
-		PlayerPrefs.SetInt (name, value ? 1 : 0);
+		PlayerPrefs.SetInt (playerAchievement, value ? 1 : 0);
 
-		PlayerPrefs.Save ();
+		PlayerPrefs.Save();
 	}
 
-	public void LoadAchivement(){
-		unlocked = PlayerPrefs.GetInt (name) == 1 ? true : false;
+	public void LoadAchievement(){
+		string playerAchievement = playerName + nameAchieve;
+		string playerPoints = playerName + Points;
 
+		unlocked = PlayerPrefs.GetInt(playerAchievement) == 1 ? true : false;
+//		Debug.Log (unlocked);
 		if (unlocked) {
-			AchievementManager.Instance.textPoints.text = "Points: " + PlayerPrefs.GetInt ("Points");
-			achievementRef.GetComponent<Image> ().sprite = AchievementManager.Instance.unlockedSprite;
-
+		//s	Debug.Log ("unlocked?");
+			AchievementManager.Instance.textPoints.text = "Points: " + PlayerPrefs.GetInt (playerPoints);
+			achievementRef.GetComponent<Image>().sprite = AchievementManager.Instance.unlockedSprite;
 		}
-	}
+	}*/ 
 }
