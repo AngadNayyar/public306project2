@@ -36,9 +36,12 @@ public class GetCollectableCount : MonoBehaviour
 
         //get the new total number of chickens to update the text to
         newTotalNumber = currentPlayer.GetCollectables();
-        StartCoroutine(IncrementCountDisplay());
+
+        chickenText.text = newTotalNumber.ToString();
+
     }
 
+    /*
     //every 0.05 seconds increase the number of chickens collected
     IEnumerator IncrementCountDisplay()
     {
@@ -49,6 +52,7 @@ public class GetCollectableCount : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(0.06f);
     }
+    */
 
 
     void SetResetCollectables(User currentPlayer)

@@ -5,17 +5,13 @@ using UnityEngine.SceneManagement;
 public class SwitchSceneScript : MonoBehaviour {
 
     private GameController gameController;
-	public Text scoreText;
+	//public Text scoreText;
 	private int displayedScore;
     private int newTotalScore;
 	private int oldTotalScore;
 
     void Awake() {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
-		
-		
-        GameObject gameO = GameObject.Find("door_exit");
-        gameC = (GameController)gameO.GetComponent(typeof(GameController));
     }
 
     // When you walk through the door, open the finished level popup
@@ -78,6 +74,9 @@ public class SwitchSceneScript : MonoBehaviour {
         newTotalScore = oldTotalScore + thisLevelScore;
         currentPlayer.SetScore((int)newTotalScore);
         PlayerPrefs.SetInt(playerSlot + "Score", (int)newTotalScore);
+
+        PlayerPrefs.SetInt("display", newTotalScore);
+
 	}
 	
 }
