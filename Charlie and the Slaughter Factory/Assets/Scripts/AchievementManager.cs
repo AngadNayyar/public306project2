@@ -4,11 +4,11 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 
 /*
- * Managing the Achievements in the achievement panel 
+ * Managing the Achievements in the achievement panel
 */
 public class AchievementManager : MonoBehaviour {
 
-	//Reference to the prefab of our achievmenet 
+	//Reference to the prefab of our achievmenet
 	public GameObject achievementPrefab;
 
 	public Sprite[] sprites; //for the sprite image for the achievement
@@ -37,7 +37,7 @@ public class AchievementManager : MonoBehaviour {
 		activeButton.Click ();
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
@@ -56,7 +56,7 @@ public class AchievementManager : MonoBehaviour {
 	//public IEnumerator HideAchievement() {
 
 		//yield return WaitForSeconds (3);
-	//	Destroy (achievement);
+		//Destroy (achievement);
 	//}
 
 	public void CreateAchievement(string category, string title, string description, int points, int spriteIndex){
@@ -91,5 +91,5 @@ public class AchievementManager : MonoBehaviour {
 		achievementButton.Click();
 		activeButton.Click();
 		activeButton = achievementButton;
-	}	
+	}
 }
