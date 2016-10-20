@@ -76,17 +76,39 @@ public class Claw_follow_player : MonoBehaviour {
             randomVar += Random.Range(2f, 6f); // seconds wait is between 2 and 6
         }
 
-        transform.position = newPosition; // set claw position as new value
+        
 
         if (hasPlayer) // checks if the claw has Charlie
         {
-            newPosition.y-= 2; // distance 2 away from the claw
-            player.position = newPosition; // sets this position as the chicken's position
-
             if (transform.position.y == yvalue) // checks if gets back to the top
             {
-                hasPlayer = false; // sets to false so Chicken drops back down
+                //newPosition = transform.position - (transform.right * speed * Time.deltaTime);
+                newPosition.x = transform.position.x + (5 * Time.deltaTime);
+                newPosition.y = yvalue;
+
+                if (newPosition.x >= xvalue)
+                {
+                    newPosition.x = xvalue;
+                    transform.position = newPosition;
+                    hasPlayer = false; // sets to false so Chicken drops back down
+                }
+                else
+                {
+                    // distance 2 away from the claw
+                    transform.position = newPosition;
+
+                    newPosition.y -= 2;
+                    player.position = newPosition;
+                }
+            } else
+            {
+                transform.position = newPosition; // set claw position as new value
+                newPosition.y -= 2;
+                player.position = newPosition; // sets this position as the chicken's position
             }
+        } else
+        {
+            transform.position = newPosition; // set claw position as new value
         }
     }
 
