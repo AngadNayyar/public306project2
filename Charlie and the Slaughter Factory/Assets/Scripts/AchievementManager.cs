@@ -62,8 +62,8 @@ public class AchievementManager : MonoBehaviour {
 		achList.Add (achievement3);
 
 		CreateAchievement ("General","Saved 10 Chickens", "Chicken Saviour", 5, 0, 0);
-		CreateAchievement ("General", "Saved 50 Chickens", "Level 900", 5, 0, 1);
-		CreateAchievement ("General", "Saved 100 Chickens", "Press up arrow to jump", 10, 0, 2);
+		CreateAchievement ("General", "Saved 50 Chickens", "Chicken Saint", 5, 0, 1);
+		CreateAchievement ("General", "Saved 100 Chickens", "Chicken God", 10, 0, 2);
 
 		activeButton.Click ();
 
