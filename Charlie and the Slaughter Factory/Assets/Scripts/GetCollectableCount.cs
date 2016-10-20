@@ -13,7 +13,13 @@ public class GetCollectableCount : MonoBehaviour
 
     void Start()
     {
-        //get the old number of collectables for the player
+
+
+    }
+
+    void Update()
+    {
+		//get the old number of collectables for the player
         GameObject gameO = GameObject.Find("GameController");
         GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
         User currentPlayer = gameC.getCurrentPlayer();
@@ -31,13 +37,11 @@ public class GetCollectableCount : MonoBehaviour
         //get the new total number of chickens to update the text to
         newTotalNumber = currentPlayer.GetCollectables();
 
+        chickenText.text = newTotalNumber.ToString();
+
     }
 
-    void Update()
-    {
-        StartCoroutine(IncrementCountDisplay());
-    }
-
+    /*
     //every 0.05 seconds increase the number of chickens collected
     IEnumerator IncrementCountDisplay()
     {
@@ -48,6 +52,7 @@ public class GetCollectableCount : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(0.06f);
     }
+    */
 
 
     void SetResetCollectables(User currentPlayer)

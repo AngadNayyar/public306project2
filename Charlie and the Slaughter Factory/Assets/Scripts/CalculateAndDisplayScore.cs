@@ -6,25 +6,24 @@ using System;
 public class CalculateAndDisplayScore : MonoBehaviour
 {
     public Text scoreText;
-    private float oldTotalScore;
-    private float displayedScore;
-    private float newTotalScore;
-    
-    void Start()
+    private int displayedScore;
+    private int newTotalScore;
+    private int oldTotalScore;
+
+
+    void Update()
     {
         /*
-         * Get the current player
-         */
+	
         GameObject gameO = GameObject.Find("GameController");
         GameController gameC = (GameController)gameO.GetComponent(typeof(GameController));
         User currentPlayer = gameC.getCurrentPlayer();
-        Debug.Log(currentPlayer);
-        Debug.Log(currentPlayer.GetPlayerSlot());
-        string playerSlot = currentPlayer.GetPlayerSlot();
+        string playerSlot = currentPlayer.GetPlayerSlot();	
+	
+		newTotalScore = currentPlayer.GetScore();
+		displayedScore = currentPlayer.GetOldScore();
 
-        /* 
-         * Calculate new score
-         */
+       
         //get the time it took the player to finish the level and the level 
         //that the player is on (higher levels give more points for completion)
         int time = (int)PlayerPrefs.GetFloat("endTime");
@@ -35,7 +34,7 @@ public class CalculateAndDisplayScore : MonoBehaviour
 
         //calculate the score for the level just finished based on the level number,
         //the time taken to complete the level and the players remaining health
-        int thisLevelScore = health - time;
+        int thisLevelScore = 500 - (100 - health) - time;
 
         //if the player scored lower than 0, set the score to 0 so as not to
         //lower the score
@@ -45,12 +44,10 @@ public class CalculateAndDisplayScore : MonoBehaviour
         }
 
 
-        /* 
-         * Set up variables for Lerp and set new current score
-         */
         // get the old total score for the start point of the Lerp and 
         // the calculation of the new score
         oldTotalScore = currentPlayer.GetScore();
+        currentPlayer.SetOldScore(oldTotalScore);
 
         // the score to be updated and displayed (start at old total score)
         displayedScore = oldTotalScore;
@@ -59,23 +56,12 @@ public class CalculateAndDisplayScore : MonoBehaviour
         newTotalScore = oldTotalScore + thisLevelScore;
         currentPlayer.SetScore((int)newTotalScore);
         PlayerPrefs.SetInt(playerSlot + "Score", (int)newTotalScore);
-    }
+        */
 
+        int display = PlayerPrefs.GetInt("display");
 
-    void Update()
-    {
-        StartCoroutine(IncrementScoreDisplay());
-    }
+        scoreText.text = display.ToString();
 
-    //every 0.05 seconds increase the score
-    IEnumerator IncrementScoreDisplay()
-    {
-        if (displayedScore < newTotalScore)
-        {
-            displayedScore += 1;
-            scoreText.text = displayedScore.ToString();
-        }
-        yield return new WaitForSecondsRealtime(0.009f);
     }
 
 }

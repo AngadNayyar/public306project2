@@ -12,6 +12,7 @@ public class TimerScript : MonoBehaviour {
     void Start() {
         gC = GameObject.Find("GameController").GetComponent<GameController>();
         pause = gC.GetPaused();
+		PlayerPrefs.SetFloat("endTime", 0);
     }
 
 	// Updates the timer text to the latest time elapsed since the level was loaded
@@ -24,9 +25,7 @@ public class TimerScript : MonoBehaviour {
         }
 	}
 
-    /*
-    void OnDestroy() {
-        
-    }
-    */
+    
+  
+    
 }
