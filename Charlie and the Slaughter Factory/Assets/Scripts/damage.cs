@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 /**
- * This script is the script used to add damage to charlie on a collision
+ * This script is used to add damage to charlie on a collision with the said object this script is attached to
+ *  
+ * Charlie and the Slaughter Factory : Teven Studios
  * */
 
 public class damage : MonoBehaviour
 {
-    public int attackDamage = 100;  //Damage taken due to hit
-    GameObject player;  // Reference to Charlie
-    PlayerHealth playerHealth;  // Reference to the Charlie's health.
+    //initialise values
+    public int attackDamage = 100;  //Damage taken due to hit: able to edit from inspector 
+    private GameObject player;  // Reference to Charlie
+    private PlayerHealth playerHealth;  // Reference to the Charlie's health.
 
     void Awake()
     {
