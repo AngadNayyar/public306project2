@@ -63,8 +63,9 @@ public class User {
 		PlayerPrefs.DeleteKey(playerGameSlot);
 		score = 0;
 		highScore = 0;
-		PlayerPrefs.DeleteKey(playerGameSlot + "Score");
-		viewedCutScene1 = false;
+		PlayerPrefs.DeleteKey("CurrentScore" + playerGameSlot);
+        PlayerPrefs.DeleteKey("TotalCollectables" + playerGameSlot);
+        viewedCutScene1 = false;
 		viewedCutScene2 = false;
 		viewedCutScene3 = false;
 		PlayerPrefs.DeleteKey(playerGameSlot + "CutScene1");
