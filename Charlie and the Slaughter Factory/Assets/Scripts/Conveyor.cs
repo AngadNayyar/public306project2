@@ -18,7 +18,7 @@ public class Conveyor : MonoBehaviour {
 	GameObject player;  // Reference to Charlie
 	Rigidbody2D playerBody;
 	public bool movementRight = true; 
-
+	private int maxOppositeSpeed = 3; 
 
 	// Use this for initialization
 	void Start () {
@@ -31,10 +31,18 @@ public class Conveyor : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D other){
 		if (other.gameObject.CompareTag("Player")){
 			if (movementRight) {
-				playerBody.velocity = playerBody.velocity + Vector2.right * conveyorSpeed;
+				if (Mathf.Abs(playerBody.velocity.x) < maxOppositeSpeed) {
+					playerBody.velocity = playerBody.velocity + Vector2.right * conveyorSpeed;
+				} else {
+					playerBody.velocity = Vector2.right * maxOppositeSpeed;
+				} 
+
 			}  else {
-				playerBody.velocity = playerBody.velocity + Vector2.left * conveyorSpeed; 
-				Debug.Log (playerBody.velocity); 
+				if (Mathf.Abs(playerBody.velocity.x) < maxOppositeSpeed) {
+					playerBody.velocity = playerBody.velocity + Vector2.left * conveyorSpeed;
+				} else {
+					playerBody.velocity = Vector2.left * maxOppositeSpeed;
+				} 
 			}  
 		}
 
