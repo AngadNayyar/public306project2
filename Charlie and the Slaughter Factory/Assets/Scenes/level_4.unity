@@ -1288,6 +1288,11 @@ Prefab:
       propertyPath: m_Name
       value: Conveyor2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010824445154, guid: bfc2930de0c81a249a78916358f32e08,
+        type: 2}
+      propertyPath: movementRight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfc2930de0c81a249a78916358f32e08, type: 2}
   m_IsPrefabParent: 0
@@ -6801,6 +6806,11 @@ Prefab:
     - target: {fileID: 1000012822675948, guid: bfc2930de0c81a249a78916358f32e08, type: 2}
       propertyPath: m_Name
       value: Conveyor3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010824445154, guid: bfc2930de0c81a249a78916358f32e08,
+        type: 2}
+      propertyPath: movementRight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfc2930de0c81a249a78916358f32e08, type: 2}
