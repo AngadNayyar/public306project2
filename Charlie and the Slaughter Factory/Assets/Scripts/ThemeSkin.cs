@@ -6,7 +6,7 @@ public class ThemeSkin : MonoBehaviour
 
     private GameController gameController;
 
-    void Awake()
+    void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         var subSprites = Resources.LoadAll<Sprite>(gameController.getTheme() + "/");
