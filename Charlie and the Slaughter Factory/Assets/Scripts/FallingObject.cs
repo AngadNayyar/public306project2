@@ -18,37 +18,37 @@ public class FallingObject : MonoBehaviour {
 	GameObject player;  // Reference to Charlie
 	//Rigidbody2D playerBody;
 
-	// Set the amount of damage to take off
-//	private int fallDamage = 20;
-
 	// Set the distance for when the object should start falling when Charlie is within a certain distance
-	private int triggerDistance = 3; 
+	public int triggerDistance = 3; 
 
 	//Set the gravity scale for the objects - a larger number is a faster fall
 	private float gravityScale = 0.1f;
+
+	//Boolean to keep track of if an object is falling or floating. 
+	private bool falling = false; 
 
 	private Rigidbody2D rb2d;
 
 	void Awake() {
 		player = GameObject.FindGameObjectWithTag("Player");
-//		playerHealth = player.GetComponent<PlayerHealth>();
-	//	playerBody = player.GetComponent<Rigidbody2D>();
-
 	}
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
 		rb2d.gravityScale = 0.0f;
+		rb2d.isKinematic = true; 
 	}
 
 	// Update is called once per frame
 	void Update() {
 
-		float player_pos = player.transform.position.x;
+		float player_pos = player.transform.position.y;
 
-		if (Mathf.Abs(player_pos - transform.position.x) < triggerDistance) {
+		if (Mathf.Abs(player_pos - transform.position.y) < triggerDistance) {
+			rb2d.isKinematic = false; 
 			rb2d.gravityScale = gravityScale;
+			falling = true; 
 		}
 
 		transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
@@ -56,10 +56,12 @@ public class FallingObject : MonoBehaviour {
 
 	// When the object collides with player, take health and then destroy the object
 	void OnCollisionEnter2D(Collision2D other){
-//		if (other.gameObject.CompareTag("Player")){
-	//		playerHealth.TakeDamage(fallDamage);
-		//}
-		Destroy (this.gameObject);
+
+		new WaitForSeconds (1); 
+
+		if (falling){
+			Destroy (this.gameObject);
+		}
 
 	}
 }
