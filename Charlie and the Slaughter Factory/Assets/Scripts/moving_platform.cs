@@ -54,7 +54,7 @@ public class moving_platform : MonoBehaviour
 
         if (Type == Path_Type.MoveTowardsPoint)
         { // move towards target point
-            transform.position = Vector3.MoveTowards(transform.position, current_point.Current.position, Time.deltaTime * Speed); //Time.deltaTime makes it smooth
+            //transform.position = Vector3.MoveTowards(transform.position, current_point.Current.position, Time.deltaTime * Speed); //Time.deltaTime makes it smooth
         }
         else if (Type == Path_Type.Lerp)
         { // linear, same input
@@ -62,10 +62,10 @@ public class moving_platform : MonoBehaviour
         }
 
         //see if close enough that hitting point, that can move towards the next point
-        float distanceSquared = (transform.position - current_point.Current.position).sqrMagnitude;
-        if (distanceSquared < MaxDistanceToGoal * MaxDistanceToGoal)
-        {
-            current_point.MoveNext();
-        }
+        //float distanceSquared = (transform.position - current_point.Current.position).sqrMagnitude;
+        //if (distanceSquared < MaxDistanceToGoal * MaxDistanceToGoal)
+        //{
+        //    current_point.MoveNext();
+        //}
     }
 }

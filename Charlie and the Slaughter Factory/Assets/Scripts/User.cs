@@ -44,8 +44,8 @@ public class User {
 			PlayerPrefs.SetInt(playerSlot + "Score", 0);
             collectables = 0;
             PlayerPrefs.SetInt(playerSlot + "TotalCollectables", 0);
-            highestLevel = 0;                                       // ADDED
-            PlayerPrefs.SetInt(playerSlot + "HighestLevel", 0);     // ADDED
+            highestLevel = 1;                                       // ADDED
+            PlayerPrefs.SetInt(playerSlot + "HighestLevel", 1);     // ADDED
             viewedCutScene1 = false;
 			viewedCutScene2 = false;
 			viewedCutScene3 = false;
@@ -63,7 +63,7 @@ public class User {
         PlayerPrefs.DeleteKey(playerGameSlot + "Score");
         collectables = 0;
         PlayerPrefs.DeleteKey(playerGameSlot + "TotalCollectables");
-        highestLevel = 0;                                           // ADDED
+        highestLevel = 1;                                           // ADDED
         PlayerPrefs.DeleteKey(playerGameSlot + "HighestLevel");     // ADDED
         viewedCutScene1 = false;
 		viewedCutScene2 = false;
