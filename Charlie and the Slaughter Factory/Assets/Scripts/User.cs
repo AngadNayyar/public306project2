@@ -6,6 +6,7 @@ public class User {
 	private string playerGameSlot;
 	private string username;
     private int score;
+    private int collectables;
 
 	private bool viewedCutScene1;
 	private bool viewedCutScene2;
@@ -27,6 +28,7 @@ public class User {
 		if (PlayerPrefs.HasKey(playerSlot)) {
 			username = PlayerPrefs.GetString(playerSlot);
             score = PlayerPrefs.GetInt(playerSlot + "Score");
+            collectables = PlayerPrefs.GetInt(playerSlot + "TotalCollectables");
 			viewedCutScene1 = PlayerPrefs.GetInt(playerSlot + "CutScene1") == 1;
 			viewedCutScene2 = PlayerPrefs.GetInt(playerSlot + "CutScene2") == 1;
 			viewedCutScene3 = PlayerPrefs.GetInt(playerSlot + "CutScene3") == 1;
@@ -37,6 +39,8 @@ public class User {
 			PlayerPrefs.SetString(playerSlot, username);
             score = 0;
 			PlayerPrefs.SetInt(playerSlot + "Score", 0);
+            collectables = 0;
+            PlayerPrefs.SetInt(playerSlot + "TotalCollectables", 0);
 			viewedCutScene1 = false;
 			viewedCutScene2 = false;
 			viewedCutScene3 = false;
@@ -52,7 +56,8 @@ public class User {
 		PlayerPrefs.DeleteKey(playerGameSlot);
 		score = 0;
         PlayerPrefs.DeleteKey(playerGameSlot + "Score");
-        PlayerPrefs.DeleteKey("TotalCollectables" + playerGameSlot);
+        collectables = 0;
+        PlayerPrefs.DeleteKey(playerGameSlot + "TotalCollectables");
         viewedCutScene1 = false;
 		viewedCutScene2 = false;
 		viewedCutScene3 = false;
@@ -78,6 +83,16 @@ public class User {
     public void ResetScore()
     {
         score = 0;
+    }
+
+    public int GetCollectables()
+    {
+        return collectables;
+    }
+
+    public void SetCollectables(int c)
+    {
+        collectables = c;
     }
 
     public string GetUsername() {
