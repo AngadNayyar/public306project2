@@ -180,7 +180,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 160904216}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn11
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 224726422}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn8
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -1497,7 +1497,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383093908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6008406, y: 0.44640866, z: 0}
+  m_LocalPosition: {x: -2.33, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1513,7 +1513,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 395025399}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn4
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -1784,7 +1784,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 510023350}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn12
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -1840,7 +1840,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 526583520}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn9
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -1941,11 +1941,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.1708407
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.0135914
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1975,29 +1975,14 @@ Prefab:
       propertyPath: m_Name
       value: Platform_1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 114000010219310082, guid: e31ccd35b61ac47468b6e8a030ace823,
         type: 2}
       propertyPath: Path
       value: 
       objectReference: {fileID: 2098557208}
-    - target: {fileID: 114000010219310082, guid: e31ccd35b61ac47468b6e8a030ace823,
-        type: 2}
-      propertyPath: Speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000011718487642, guid: e31ccd35b61ac47468b6e8a030ace823,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000011718487642, guid: e31ccd35b61ac47468b6e8a030ace823,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
+    - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -0.680727
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
@@ -2057,7 +2042,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 569468623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.980841, y: 0.44640866, z: 0}
+  m_LocalPosition: {x: -8.06, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2901,7 +2886,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 841425283}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn5
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -3339,7 +3324,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 963506848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6008406, y: 0.44640866, z: 0}
+  m_LocalPosition: {x: -2.43, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3907,7 +3892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: -0.680727
       objectReference: {fileID: 0}
     - target: {fileID: 114000010219310082, guid: e31ccd35b61ac47468b6e8a030ace823,
         type: 2}
@@ -3997,7 +3982,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1093899467}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn2
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -4139,7 +4124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: -0.680727
       objectReference: {fileID: 0}
     - target: {fileID: 114000010219310082, guid: e31ccd35b61ac47468b6e8a030ace823,
         type: 2}
@@ -4576,7 +4561,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1398123270}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn7
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -5090,7 +5075,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1537080089}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn10
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -5164,7 +5149,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
 --- !u!1001 &1579812325
 Prefab:
   m_ObjectHideFlags: 0
@@ -5278,6 +5263,11 @@ Prefab:
     - target: {fileID: 114000010824445154, guid: bfc2930de0c81a249a78916358f32e08,
         type: 2}
       propertyPath: movementRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000011447761248, guid: bfc2930de0c81a249a78916358f32e08,
+        type: 2}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5735,7 +5725,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012069883754, guid: e31ccd35b61ac47468b6e8a030ace823, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: -0.680727
       objectReference: {fileID: 0}
     - target: {fileID: 114000010219310082, guid: e31ccd35b61ac47468b6e8a030ace823,
         type: 2}
@@ -5758,7 +5748,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1777866626}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn3
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -5947,6 +5937,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9016b08206279744b1d7d28a09cf283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1841067990 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012822675948, guid: bfc2930de0c81a249a78916358f32e08,
+    type: 2}
+  m_PrefabInternal: {fileID: 1590006055}
+--- !u!61 &1841067991
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841067990}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 7.34457, y: -16.650677}
+  serializedVersion: 2
+  m_Size: {x: 17.304031, y: 1.7702401}
 --- !u!1 &1849921174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6337,7 +6346,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1976280346}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn6
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
@@ -6880,7 +6889,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098557207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.980841, y: 0.44640866, z: 0}
+  m_LocalPosition: {x: -8.15, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -6896,7 +6905,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2110589115}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spawn1
   m_TagString: ChickenCollectable
   m_Icon: {fileID: 0}
