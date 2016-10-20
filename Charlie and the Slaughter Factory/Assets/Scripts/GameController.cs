@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
 	// Variables set up early on (unlikely to change state)
 	private static GameController gameController;
 	private string[] levels = new string[]{
-    	"proto_lvl1",
+    	//"proto_lvl1",
     	"level_1",
     	"level_2",
     	"level_3",
@@ -286,7 +286,6 @@ public class GameController : MonoBehaviour {
 			isPausable = true;
 			currentLevel = currentLevel + 1;
             CheckSetHighestLevel();
-
             UnityEngine.SceneManagement.SceneManager.LoadScene(levels[currentLevel]);
 			pauseButton.SetActive(true);
 		}
@@ -303,7 +302,6 @@ public class GameController : MonoBehaviour {
         int highestLevel = gameController.getCurrentPlayer().GetHighestLevel();
         if (highestLevel <= (currentLevel + 1))
         {
-            print("yes");
             gameController.getCurrentPlayer().SetHighestLevel(currentLevel + 1);
         }
     }
@@ -323,6 +321,11 @@ public class GameController : MonoBehaviour {
 		}
 		return levels[currentLevel];
 	}
+
+    public void setCurrentLevel(int level)
+    {
+        currentLevel = level;
+    }
 
 	public GameObject getFinishedLevel() {
 		return finishedLevel;
