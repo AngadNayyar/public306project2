@@ -14,7 +14,8 @@ public class SwitchSceneScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll){
         // Make sure that it only runs when charlie collides with the door.
         if (coll.name == "Charlie") {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
+            gameController.SetPaused(true);
             Achievement.UpdatefirstReward ();
             gameController.ShowPopup(gameController.getFinishedLevel());
         }
