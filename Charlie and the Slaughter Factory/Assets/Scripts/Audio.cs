@@ -33,10 +33,12 @@ public class Audio : MonoBehaviour {
 			if (gameController.getTheme () == "Normal") {
 				source.clip = normal;
 				source.Play ();
-			} else if (gameController.getTheme () == "Xmas") {
+			} 
+			if (gameController.getTheme () == "Xmas") {
 				source.clip = xmas;
 				source.Play ();
-			} else {
+			} 
+			if (gameController.getTheme() == "Space"){
 				source.clip = space;
 				source.Play ();
 			}

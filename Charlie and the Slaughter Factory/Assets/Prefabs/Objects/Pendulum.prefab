@@ -219,7 +219,7 @@ MonoBehaviour:
   velocityThreshold: 120
   normal: {fileID: 8300000, guid: 9eb7bb134c624f243b25b7310f3c626b, type: 3}
   xmas: {fileID: 8300000, guid: aceecfe79e0bb784e97ff3ee99c6b79b, type: 3}
-  space: {fileID: 0}
+  space: {fileID: 8300000, guid: a8621ad9a11245e4c921170202ddaba6, type: 3}
 --- !u!212 &212000013949502800
 SpriteRenderer:
   m_ObjectHideFlags: 1

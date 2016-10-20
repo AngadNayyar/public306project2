@@ -51,9 +51,11 @@ public class Pendulum : MonoBehaviour
 
 		if (gameController.getTheme () == "Normal") {
 			source.clip = normal;
-		} else if (gameController.getTheme () == "Xmas") {
+		} 
+		if (gameController.getTheme () == "Xmas") {
 			source.clip = xmas;
-		} else {
+		} 
+		if (gameController.getTheme() == "Space") {
 			source.clip = space;
 		}
 		// If the pendulum is on the right side, still within the range,

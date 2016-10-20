@@ -9325,6 +9325,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1666079816}
   - 82: {fileID: 1666079815}
+  - 114: {fileID: 1666079817}
   m_Layer: 0
   m_Name: Stage3BackgroundSound
   m_TagString: Untagged
@@ -9419,6 +9420,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
+--- !u!114 &1666079817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666079814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d770db9e3725674418ce1926ca79cd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {fileID: 8300000, guid: cc174816a5dc85d478cf096199383d54, type: 3}
+  xmas: {fileID: 8300000, guid: d6462dc79c828014a86b3fa444e28bfa, type: 3}
+  space: {fileID: 8300000, guid: c6b6cad49d4ee78489ca579fa5e66c34, type: 3}
 --- !u!1 &1667363737
 GameObject:
   m_ObjectHideFlags: 0
